@@ -1,6 +1,6 @@
 # Decision log
 
-These are the decisions that shape `submission.csv`. Readings come from the contract text, never from their fit to the billing. Each alternative's effect is measured in the domains' `sensitivity.md`.
+These are the decisions that shape `submission.csv`. Readings are grounded in the contract text. Where competing readings remained, invoice reconciliation was used only as the calibration check described in the task README; billed values were never used to derive contractual terms. Each alternative's effect is measured in the domains' `sensitivity.md`.
 
 Full history:
 - civil works: `docs/civil_works/decision_log.md`;
