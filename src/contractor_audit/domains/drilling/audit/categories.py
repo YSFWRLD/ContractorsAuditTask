@@ -9,6 +9,9 @@ charge whose price is consistent with an entitlement the contractor claims is ne
 payable. It is a standing query recorded on the invoice; it blocks a canonical corrected total. A billed rate that
 matches a class other than the one the invoice describes is also only this query: the invoice's well class is a
 descriptive field outside the contractual billing basis (cl. 34, Appendix B; the class is the call-off's, P2, P3).
+`well_class_inconsistent` is different: it does not compare with the descriptive field at all. The call-off fixes one
+class for the whole well (cl. 4, P2, P3), so billed class-rated rates that no single class can produce together are
+wrong whatever the call-off says, although which class is right stays unknown.
 """
 
 from dataclasses import dataclass
@@ -43,6 +46,7 @@ class Category(str, Enum):
     FACTOR_MISAPPLIED = "factor_misapplied"
     INDEX_MISAPPLIED = "index_misapplied"
     LOST_IN_HOLE_VALUATION = "lost_in_hole_valuation"
+    WELL_CLASS_INCONSISTENT = "well_class_inconsistent"
     BACKDATED_ADJUSTMENT_MISSING = "backdated_adjustment_missing"
     BACKDATED_ADJUSTMENT_INCORRECT = "backdated_adjustment_incorrect"
     NOT_CHARGEABLE_ON_STANDBY = "not_chargeable_on_standby"
@@ -92,6 +96,8 @@ CATEGORY_INFO: dict[Category, CategoryInfo] = {
     Category.FACTOR_MISAPPLIED: _I(Check.ADJUSTMENTS, "hole-section or well-class factor applied where it does not belong, or omitted", ("17B", "18", "Schedule 3 Parts 1-2")),
     Category.INDEX_MISAPPLIED: _I(Check.ADJUSTMENTS, "Rig Services Index omitted or taken for the wrong month", ("17A", "Schedule 2C")),
     Category.LOST_IN_HOLE_VALUATION: _I(Check.ADJUSTMENTS, "lost-in-hole value not the Schedule 2D value converted and depreciated", ("31", "31A", "P12", "Schedule 2D")),
+    Category.WELL_CLASS_INCONSISTENT: _I(Check.ADJUSTMENTS, "the billed class-rated rates on one well cannot all come from a single well class; the class "
+                                         "(not known: no call-off) governs the whole well", ("4", "18", "P2", "P3", "Schedule 3 Part 2", "Appendix A")),
     Category.BACKDATED_ADJUSTMENT_MISSING: _I(Check.ADJUSTMENTS, "the Clause 36A adjustment for a back-dated rate is not shown where the contract puts it", ("36A", "A3")),
     Category.BACKDATED_ADJUSTMENT_INCORRECT: _I(Check.ADJUSTMENTS, "an adjustment shown where, or in an amount, Clause 36A does not support", ("36A", "A3")),
     Category.NOT_CHARGEABLE_ON_STANDBY: _I(Check.LIMITS, "service charged on a Standby day although the contract excludes it on Standby", ("20", "21", "Schedule 3 Part 3")),
@@ -137,6 +143,7 @@ CATEGORY_PRECEDENCE: tuple[Category, ...] = (
     Category.INDEX_MISAPPLIED,
     Category.LOST_IN_HOLE_VALUATION,
     Category.RATE_MISMATCH,
+    Category.WELL_CLASS_INCONSISTENT,
     Category.LINE_ARITHMETIC,
     Category.INVOICE_DISCOUNT_ERROR,
     Category.VAT_ERROR,

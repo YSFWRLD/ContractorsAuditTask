@@ -47,7 +47,7 @@ def test_no_drilling_total_is_invented_or_taken_from_a_conditional_amount():
     conditional = {r["invoice_no"]: r["conditional_total_cents"] for r in _rows(paths.outputs_dir("drilling") / "invoice_audit.csv")}
     assert all(conditional[r["invoice_id"]] and r["expected_total_cents"] != conditional[r["invoice_id"]] for r in rows)
     civil = [r for r in _rows(paths.submission_path()) if r["invoice_id"].startswith("PA-")]
-    assert sum(r["expected_total_cents"] == "" for r in civil) == 40                  # the frozen STRICT blanks, not zeros
+    assert sum(r["expected_total_cents"] == "" for r in civil) == 21                  # the STRICT blanks, not zeros
     assert all(r["expected_total_cents"] == r["billed_total_cents"] for r in civil if r["flagged"] == "0")
 
 
@@ -62,7 +62,7 @@ def test_billed_totals_are_the_task_source_totals(data_root):
 def test_counts():
     rows = _rows(paths.submission_path())
     flagged = Counter((r["invoice_id"][:3], r["flagged"]) for r in rows)
-    assert flagged == {("PA-", "1"): 77, ("PA-", "0"): 823, ("MDS", "1"): 114, ("MDS", "0"): 1792}
+    assert flagged == {("PA-", "1"): 77, ("PA-", "0"): 823, ("MDS", "1"): 116, ("MDS", "0"): 1790}
     assert all((r["error_category"] != "") == (r["flagged"] == "1") for r in rows)
 
 

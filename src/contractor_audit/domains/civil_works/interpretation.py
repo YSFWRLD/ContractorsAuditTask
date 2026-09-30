@@ -127,12 +127,14 @@ SWITCHES: tuple[SwitchInfo, ...] = (
                {"contract_year": "Sch 4 Part 3: 'Clause 30 is substituted ... counted from zero at the start of each Contract Year (Clause 3A)'.",
                 "whole_works": "Clause 30 as printed: cumulative across the whole of the Works from the Commencement Date."},
                "Schedule 4 Part 3 expressly substitutes Clause 30, and Clause 2 makes a Schedule prevail over the General Conditions."),
-    SwitchInfo("indexed_rate_method", "AMB-INDEX-APPENDIX-B", ("29A", "Sch 2A", "App B"), (21, 32, 36), SwitchStatus.UNRESOLVED,
+    SwitchInfo("indexed_rate_method", "AMB-INDEX-APPENDIX-B", ("29A", "Sch 2A", "App B", "2"), (3, 21, 32, 36), SwitchStatus.TEXT_RESOLVED,
                "Are C.31.010 and D.41.030 priced at the Schedule 2A index, or at the Schedule 1 rate as the Appendix B example does?",
                {"clause_29a": "29A: base x SMI(month of execution) / 100, rounded half-even; Sch 2A: the Schedule 1 rate 'is not payable as it stands'.",
                 "appendix_b_unindexed": "Appendix B prices C.31.010 on 13/05/2025 at 86.20 x 1.06 = 91.37, i.e. with no index."},
-               "29A and Schedule 2A are operative provisions; Appendix B is an illustrative form and is not among the Clause 2 documents. "
-               "The conflict is inside the contract itself, so the alternative is retained as genuinely open."),
+               "Clause 2 defines the whole agreement as the Agreement, the General Conditions, Schedules 1 to 5 and Appendix A, and makes a "
+               "Schedule prevail. Schedule 2A is inside that set and says the Schedule 1 rate 'is not payable as it stands', priced under 29A. "
+               "Appendix B is an illustrative form outside the whole agreement, so its unindexed example cannot override an operative "
+               "Schedule. Settled by the text (targeted correctness patch); the Appendix B reading is kept for sensitivity only."),
     SwitchInfo("usd_reading", "AMB-USD-CURRENCY", ("2", "26A", "38", "Sch 1", "Sch 2B"), (3, 7, 17, 22, 32), SwitchStatus.TEXT_RESOLVED,
                "Are the Schedule 1 figures for B.23.020, B.25.010 and C.32.040 USD or SAR?",
                {"convert_from_usd": "Sch 2B: 'The rate stated in Schedule 1 for the items below is in USD'; converted under 26A.",

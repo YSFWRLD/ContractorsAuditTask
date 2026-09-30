@@ -30,12 +30,12 @@ def _assessed(case, policy=TotalPolicy.STRICT):
 # --------------------------------------------------------------------------- total policy
 
 def test_strict_policy_blanks_a_total_an_unresolved_reading_changes(case):
-    case.app("PA-1", d("2025-03-20"))
-    case.line("PA-1", "C.31.010", 48, d("2025-03-04"), ground="G2 Firm Sabkha")          # indexed, billed at 29A
-    case.line("PA-1", "A.11.010", 100, d("2025-03-03"), rate="4.00", amount=40000)       # overbilled: flags the application
+    case.app("PA-1", d("2025-07-25"))
+    case.line("PA-1", "D.41.020", 10, d("2025-07-15"), zone="Z2 North Spur")            # monthly rate: depends on an unresolved reading
+    case.line("PA-1", "A.11.010", 100, d("2025-07-14"), rate="4.00", amount=40000)       # overbilled: flags the application
     strict = _assessed(case)["PA-1"]
     assert strict.flagged and strict.expected_total_cents is None
-    assert strict.primary_blank_reason == "unresolved_interpretation:indexed_rate_method" and strict.total_status == "undetermined"
+    assert strict.primary_blank_reason == "unresolved_interpretation:monthly_rate_treatment" and strict.total_status == "undetermined"
     graded = _assessed(case, TotalPolicy.GRADED)["PA-1"]
     assert graded.expected_total_cents == strict.contract_total_cents                     # analysis only, never the default
 
@@ -132,8 +132,9 @@ def test_indexation_uncertainty(case):
     alt = run_audit(case.build(), interp=W.with_(indexed_rate_method=IndexedRateMethod.APPENDIX_B_UNINDEXED))
     assert categories(alt, ref) == ["unit_rate_mismatch"] and alt.findings[0].expected == "91.37"
     a = _assessed(case)["PA-1"]
-    assert not a.flagged and a.confidence is ConfidenceBand.MEDIUM
-    assert {d.switch for d in a.would_flag_under if d.band is not ConfidenceBand.HIGH} == {"indexed_rate_method"}
+    assert not a.flagged and a.confidence is ConfidenceBand.HIGH           # settled by the text (Clause 2, Sch 2A); App B kept as sensitivity
+    assert {d.switch for d in a.would_flag_under} == {"indexed_rate_method"}
+    assert all(d.band is ConfidenceBand.HIGH for d in a.would_flag_under)
 
 
 @pytest.mark.parametrize("day, rate", [("2025-04-30", "67.31"), ("2025-05-01", "227.37"), ("2025-09-30", "233.73"),

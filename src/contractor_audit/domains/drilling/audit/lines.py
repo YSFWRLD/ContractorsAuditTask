@@ -27,7 +27,7 @@ from contractor_audit.domains.drilling.audit.bundle import PD210, PricingBundle
 from contractor_audit.domains.drilling.audit.categories import Category, info
 from contractor_audit.domains.drilling.audit.diagnosis import diagnose
 from contractor_audit.domains.drilling.audit.models import LineAssessment, LineStatus
-from contractor_audit.domains.drilling.audit.policy import AuditPolicy
+from contractor_audit.domains.drilling.audit.policy import AuditPolicy, submission_order_dependency
 from contractor_audit.domains.drilling.contract.models import ContractTerms
 from contractor_audit.domains.drilling.ingestion.models import DailyReport, DrillingInvoice, InvoiceLine
 from contractor_audit.domains.drilling.pricing.models import PricedQuantity, PricingStatus
@@ -45,7 +45,7 @@ def cents(value: Decimal) -> int:
 
 @dataclass
 class Ledger:
-    """Report evidence already charged, in submission order: qid -> quantity consumed, and by which lines."""
+    """Report evidence already charged, in processing order (invoice-date proxy, AMB-25): qid -> quantity consumed, and by which lines."""
     consumed: dict[str, Decimal] = field(default_factory=dict)
     consumers: dict[str, list[tuple[str, str]]] = field(default_factory=dict)
     pd210: dict[str, list[tuple[int, int, str, str]]] = field(default_factory=dict)   # well -> (from, to, invoice, line)
@@ -73,13 +73,13 @@ class _Line:
         self.a = LineAssessment(line, LineStatus.DETERMINED)
 
     def finding(self, category: Category, rule: str, message: str, *, outcome=Outcome.PART_REJECT, observed=None, expected=None,
-                impact=None, affects=True, blocks=False, band=ConfidenceBand.HIGH, evidence=(), clause_ids=()) -> Finding:
+                impact=None, affects=True, blocks=False, band=ConfidenceBand.HIGH, evidence=(), clause_ids=(), deps=()) -> Finding:
         meta = info(category.value)
         citations = tuple(Citation(cid, *self.ctx.terms.clauses[cid]) for cid in clause_ids if cid in self.ctx.terms.clauses)
         f = Finding(check=meta.check, outcome=outcome, message=message, clause=", ".join(meta.clauses), line_ref=self.line.line_ref,
                     evidence=(self.billed(),) + tuple(evidence), invoice_id=self.invoice.invoice_no, category=category.value, rule=rule,
                     observed=observed, expected=expected, impact_cents=impact, citations=citations, affects_total=affects,
-                    blocks_total=blocks, confidence=band)
+                    blocks_total=blocks, confidence=band, dependencies=tuple(deps))
         self.a.findings.append(f)
         return f
 
@@ -294,9 +294,10 @@ def _duplicate(L: _Line, p: PricedQuantity, ledger: Ledger, impact: int, ev: Evi
     earlier = ledger.consumers.get(p.qid, [])
     same = any(inv == L.invoice.invoice_no for inv, _ in earlier)
     L.finding(Category.DUPLICATE_CHARGE, "duplicates.within_invoice" if same else "duplicates.across_invoices",
-              f"{p.service_code} for {p.well} on {p.date} (report {p.report_ids[0]}) already charged on "
-              + ", ".join(ref for _, ref in earlier), observed=str(L.line.quantity), expected="0 (already charged)", impact=impact,
-              evidence=(ev, priced_evidence(p)), clause_ids=("CL-29",))
+              f"{p.service_code} for {p.well} on {p.date} (report {p.report_ids[0]}) also charged on "
+              + ", ".join(ref for _, ref in earlier) + ("" if same else " (reported on the invoice later in invoice-date order; the evidence is charged twice whichever came first, but which invoice carries the repeat depends on the submission order, which is not in the data: AMB-25)"), observed=str(L.line.quantity),
+              expected="0 (already charged)", impact=impact, evidence=(ev, priced_evidence(p)), clause_ids=("CL-29",),
+              deps=() if same else (submission_order_dependency(),))
     L.not_payable()
 
 
@@ -313,9 +314,11 @@ def _quantity(L: _Line, p: PricedQuantity, available: Decimal, ledger: Ledger, e
         return billed
     if ledger.consumed.get(p.qid):
         excess = billed - available
-        L.finding(Category.DUPLICATE_CHARGE, "duplicates.partial", f"{excess} of the {billed} {p.unit} already charged on "
-                  + ", ".join(r for _, r in ledger.consumers[p.qid]), observed=str(billed), expected=str(available),
-                  evidence=(ev, priced_evidence(p)), clause_ids=("CL-29",))
+        across = any(inv != L.invoice.invoice_no for inv, _ in ledger.consumers[p.qid])
+        L.finding(Category.DUPLICATE_CHARGE, "duplicates.partial", f"{excess} of the {billed} {p.unit} also charged on "
+                  + ", ".join(r for _, r in ledger.consumers[p.qid]) + (" (reported on the invoice later in invoice-date order; the evidence is charged twice whichever came first, but which invoice carries the repeat depends on the submission order, which is not in the data: AMB-25)" if across else ""), observed=str(billed),
+                  expected=str(available), evidence=(ev, priced_evidence(p)), clause_ids=("CL-29",),
+                  deps=(submission_order_dependency(),) if across else ())
         return available
     unit_is_metre = p.unit == "metre"
     if unit_is_metre and billed <= p.chargeable_quantity * METRE_TOLERANCE:
@@ -353,6 +356,10 @@ def _price(L: _Line, p: PricedQuantity, payable: Decimal, ev: Evidence) -> None:
         by_class = ctx.bundle.conditional(p.qid)
         claimed = L.invoice.well_class_stated
         rates = {c: _expected_rate(L, q)[0] for c, q in by_class.items() if q.parts}
+        # which contract classes could produce the billed rate (the invoice's descriptive class plays no part): P2/P3 make the
+        # class govern the whole well, so engine.well_class_consistency intersects these sets across the well's lines
+        L.a.permissible_classes = frozenset(c for c, r in rates.items() if r == billed_rate)
+        L.a.class_constrains = len(set(rates.values())) > 1
         by_rate = ", ".join(f"{c} {r / 100:.2f}" for c, r in sorted(rates.items()))
         if claimed not in rates:
             # the invoice's well class is a descriptive field (not in cl. 34 or the Appendix B form); the class is the call-off's
@@ -412,12 +419,14 @@ def _rate_finding(L: _Line, p: PricedQuantity, payable: Decimal, billed_rate: in
     expected, alt = _expected_rate(L, p)
     d = diagnose(L.ctx.terms, p.service_code, p.parts[0], billed_rate, expected, alt)
     impact = half_even_cents(payable * billed_rate) - half_even_cents(payable * expected)
-    retro = " (Clause 36A: invoiced before Amendment No. 3 was issued, so the rate then in force applies)" if alt and expected == p.rate_without_retroactive_cents else ""
+    retro = (" (Clause 36A: an invoice dated before Amendment No. 3 was issued is taken as submitted before it, so the rate then in force "
+             "applies; invoice-date order is a proxy, AMB-25)") if alt and expected == p.rate_without_retroactive_cents else ""
     L.finding(d.category, d.rule, f"billed rate {billed_rate / 100:.2f}; the contract rate in force is {expected / 100:.2f}{retro}: {d.explanation}"
               + ("; conditional on the claimed entitlement, but no entitlement produces the billed rate" if conditional else ""),
               observed=f"{billed_rate / 100:.2f}", expected=f"{expected / 100:.2f}", impact=impact,
               affects=not conditional, blocks=conditional, evidence=(ev, priced_evidence(p, expected)),
-              clause_ids=("BR-SOV", "BR-36A") if alt else ("BR-SOV",))
+              clause_ids=("BR-SOV", "BR-36A") if alt else ("BR-SOV",),
+              deps=(submission_order_dependency(),) if d.rule == "rates.backdated_timing" else ())   # only the 36A side is in question
 
 
 def _arithmetic(L: _Line) -> None:
@@ -444,8 +453,9 @@ def _match_pd210(L: _Line, report: DailyReport, ledger: Ledger, dry: bool) -> No
     if earlier:
         same = any(inv == L.invoice.invoice_no for *_, inv, _ in earlier)
         L.finding(Category.DUPLICATE_CHARGE, "duplicates.within_invoice" if same else "duplicates.across_invoices",
-                  f"metres {lo}-{hi} on {line.well_name} overlap metres already charged on " + ", ".join(r for *_, r in earlier),
-                  impact=line.amount_cents, evidence=(ev,), clause_ids=("CL-29",))
+                  f"metres {lo}-{hi} on {line.well_name} overlap metres also charged on " + ", ".join(r for *_, r in earlier)
+                  + ("" if same else " (reported on the invoice later in invoice-date order; the evidence is charged twice whichever came first, but which invoice carries the repeat depends on the submission order, which is not in the data: AMB-25)"), impact=line.amount_cents, evidence=(ev,), clause_ids=("CL-29",),
+                  deps=() if same else (submission_order_dependency(),))
         L.not_payable()
         return
     if dry:

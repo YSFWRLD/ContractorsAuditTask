@@ -32,6 +32,8 @@ class LineAssessment:
     findings: list[Finding] = field(default_factory=list)
     observations: list[str] = field(default_factory=list)   # recorded, never findings (e.g. billed below the record)
     retro_difference_cents: int | None = None     # 36A: (A3 rate - rate known before it) x payable quantity, if billed before issue
+    permissible_classes: frozenset[str] | None = None   # class-rated lines: the contract classes whose rate equals the billed rate
+    class_constrains: bool = False                # the classes do not all give the same rate, so the billed rate narrows them
 
 
 @dataclass(frozen=True)

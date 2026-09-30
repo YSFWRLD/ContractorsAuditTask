@@ -92,6 +92,16 @@ def test_known_cases(drilling_audit):
     adj = by_id["MDS-01625"]
     assert adj.result.error_category == "backdated_adjustment_missing" and adj.band is ConfidenceBand.LOW
     assert "not_chargeable_on_standby" in cats("MDS-00626") and "discount_misapplied" in cats("MDS-00121")
+    # whole-well class consistency: found from the billed rates, not the invoice's descriptive class
+    assert {i for i in by_id if "well_class_inconsistent" in cats(i)} == {"MDS-00215", "MDS-01445"}
+    for i in ("MDS-00215", "MDS-01445"):
+        f = next(f for f in by_id[i].findings if f.category == "well_class_inconsistent")
+        assert f.rule == "class.inconsistent_within_invoice" and by_id[i].result.expected_total_cents is None
+    # approval does not raise a grade: the per-day rig-up reading (AMB-05) is LOW
+    assert by_id["MDS-01877"].band is ConfidenceBand.LOW
+    # the 36A placement rests on the invoice-date proxy (AMB-25) as well as on AMB-12
+    adj = next(f for f in by_id["MDS-01625"].findings if f.category == "backdated_adjustment_missing")
+    assert {"submission_date", "backdated_adjustment"} <= {d.switch for d in adj.dependencies if d.effect == "finding_absent"}
 
 
 def test_dependencies_are_measured_for_every_alternative(drilling_audit):

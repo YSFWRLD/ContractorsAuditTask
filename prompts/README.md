@@ -14,6 +14,9 @@ The task requires AI assistance to be disclosed and prompts kept as versioned fi
 | `03-phase3-audit-engine.md` | civil works audit layer, findings, confidence, draft outputs |
 | `04-civil-works-freeze.md` | civil works review and freeze: checklist, adversarial review, policies |
 | `05-final-packaging.md` | final packaging: combined `submission.csv`, `REPORT.md`, `DECISION_LOG.md`, dependency pins, reproduction (both domains) |
+| `06-targeted-correctness-patch.md` | independent-review fixes: whole-well class consistency, civil works indexation settled, no approval confidence floor, explicit submission-date proxy |
+| `07-confidence-review.md` | confidence-only review of AMB-10's LOW grade: provenance, contract text, effect on the 554 invoices (no changes) |
+| `08-confidence-correction.md` | AMB-10 re-graded LOW to MEDIUM on the contract text; AMB-05's LOW documented as its current reading's grade |
 | `drilling/00-drilling-architecture.md` | drilling inspection, domain layout and scaffold (no contract logic) |
 | `drilling/01-contract-extraction.md` | drilling contract extraction: reviewed terms, ambiguity register, typed contract model (no pricing) |
 | `drilling/02-data-ingestion.md` | drilling ingestion: typed invoices, lines and reports, indexes, timelines, structural validation (no mapping, pricing or findings) |
@@ -116,3 +119,13 @@ The AI assistant wrote the domain-neutral submission combiner (`shared/submissio
 tests, the final report and the one-page decision log, and pinned the dependencies. It verified the whole README
 reproduction in a fresh virtual environment. The frozen audit results were not changed: the submission rows are the two
 domains' draft predictions, copied verbatim after validation.
+
+## How AI was used in the targeted correctness patch
+
+The AI assistant applied the four fixes from an independent adversarial review:
+- the whole-well class consistency check, found from billed rates without the descriptive class or any hard-coded invoice;
+- a direct re-review of the civil works indexation clause hierarchy before settling it;
+- removal of the approval-based confidence floor;
+- one explicit submission-date proxy with AMB-25 dependencies.
+
+It regenerated every affected artifact and output, and reported each change against the pre-patch snapshot. No other reading was changed.

@@ -15,8 +15,9 @@ This section is authoritative. The phase notes below are history. The figures ar
 **Result:**
 - 900 applications and 7,746 lines were audited.
 - 77 applications are flagged, with 95 findings.
-- 37 corrected totals are published and 40 are blank.
-- Flagged confidence: HIGH 66, MEDIUM 9, LOW 2. Unflagged confidence: HIGH 571, MEDIUM 250, LOW 2.
+- 56 corrected totals are published and 21 are blank.
+- Flagged confidence: HIGH 66, MEDIUM 9, LOW 2. Unflagged confidence: HIGH 759, MEDIUM 62, LOW 2.
+- Changed by the targeted correctness patch (prompts/06): indexation is now settled by the text (see below). Before it: 37 published, 40 blank, unflagged HIGH 571 / MEDIUM 250 / LOW 2. No flag or category changed.
 
 ### Accepted readings (contract text settles them; the alternative is only measured)
 
@@ -30,12 +31,12 @@ This section is authoritative. The phase notes below are history. The figures ar
 | The later discount replaces the earlier (A2 8% replaces S2 5%) | closing words of every instrument |
 | D.41.020 monthly rate is per m² | S1 1.2; S2 2.1; Clause 26 |
 | A1 rates apply from 2025-10-01 | A1 1.2: "the effective date stated against each" |
+| C.31.010 and D.41.030 are indexed under Clause 29A (not priced as Appendix B's example) | Clause 2: the whole agreement is Schedules 1 to 5 and Appendix A, a Schedule prevails; Schedule 2A: the Schedule 1 rate "is not payable as it stands"; Appendix B is an illustrative form outside the whole agreement |
 
 ### Unresolved readings (working value, grade, measured effect)
 
 | Reading | Working | Grade | Alternative flags / unflags | Flagged totals changed |
 |---|---|---|---|---|
-| `indexed_rate_method` | 29A index | MEDIUM | flags 215 more | 22 |
 | `monthly_rate_treatment` | base rate in build-up | MEDIUM | flags 33 more | 4 |
 | `survey_quantity_rule` | 33A 2% tolerance | MEDIUM | flags 25 more | 0 |
 | `measurement_order` (Clause 44 "later") | later submission | MEDIUM | 7 findings move between applications | 7 |
@@ -47,9 +48,10 @@ This section is authoritative. The phase notes below are history. The figures ar
 | `chargeable_hour_scope` | per record | MEDIUM | 0 | 0 |
 | `concurrent_uplifts` | rest-day only without an instruction | MEDIUM (evidence absent) | 0 | 0 |
 
-**Indexation:** reviewed in Phase 4.
-- Clause 2 lists "Schedules 1 to 5 and Appendix A" as the whole agreement. Schedule 2A is inside that list; Appendix B's unindexed example is not.
-- That favours 29A more strongly than Phase 2 recorded. The conflict is still inside the document, so the reading stays MEDIUM; it was not upgraded for the freeze.
+**Indexation:** reviewed in Phase 4 and settled in the targeted correctness patch.
+- Clause 2 lists "Schedules 1 to 5 and Appendix A" as the whole agreement and makes a Schedule prevail. Schedule 2A is inside that list; Appendix B's unindexed example is not.
+- Phase 4 kept the reading at MEDIUM because the contradiction is printed in the same document. On re-review, a document outside the whole agreement cannot create a conflict with an operative Schedule, so the reading is TEXT_RESOLVED. The Appendix B alternative is still measured in `sensitivity.md` (it would flag 215 more applications).
+- Effect: the 19 flagged applications whose only blocker was this reading now publish their contract-side total (e.g. PA-00043: 23,142,526 against 23,145,744 billed). Three stay blank for another unresolved reading as well (PA-00019, PA-00262, PA-00672). No flag or category changed.
 
 **Daily cap:**
 - The consequence is contract-defined. Clause 31 makes the payable quantity the limit.
@@ -211,7 +213,7 @@ A flagged application's corrected total is published only if:
 - every line is priced and its payable quantity determined; and
 - no unresolved or evidence-dependent reading changes the total.
 
-Otherwise it is left blank, and `blank_reasons` says why. Result: 37 of 77 totals are published; 40 are blank, 22 of them because of `indexed_rate_method`. Under the GRADED alternative, which blanks only on LOW-grade readings, 75 would be published. A finding is emitted whether or not the total can be published.
+Otherwise it is left blank, and `blank_reasons` says why. Result: 56 of 77 totals are published and 21 are blank (before the targeted correctness patch: 37 and 40, 22 of the blanks because of `indexed_rate_method`). Under the GRADED alternative, which blanks only on LOW-grade readings, 75 would be published. A finding is emitted whether or not the total can be published.
 
 ### Confidence policy
 

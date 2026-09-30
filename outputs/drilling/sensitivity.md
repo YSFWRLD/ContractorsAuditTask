@@ -6,31 +6,31 @@ Each row re-runs the whole audit with one reading flipped (only the services it 
 
 | switch | reading used | alternative | grade | flags added | flags removed | findings removed | findings added | totals changed | conditional totals changed | invoices it would clear |
 |---|---|---|---|---|---|---|---|---|---|---|
-| appendix_g_reading | LITERAL (approved) | LWD_ROWS_SHIFTED | medium | 831 | 0 | 2968 | 2972 | 881 | 881 |  |
+| appendix_g_reading | LITERAL (approved) | LWD_ROWS_SHIFTED | medium | 829 | 0 | 2970 | 2972 | 881 | 881 |  |
 | dd102_basis | PER_COORDINATOR_RECORDED (approved) | PER_DAY_TOOL_IN_HOLE | low | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | hc630_basis | DAILY_COUNT (approved) | PER_BHA_RUN | medium | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | dd120_hours | CIRCULATING_ONLY (approved) | CIRCULATING_PLUS_BACK_REAMING | medium | 0 | 1 | 1 | 0 | 1 | 1 | MDS-01651 |
-| metre_source | DAILY_DEPTH_ADVANCE (approved) | PART_B_RUN_METRES | medium | 926 | 0 | 5175 | 5726 | 990 | 990 |  |
+| metre_source | DAILY_DEPTH_ADVANCE (approved) | PART_B_RUN_METRES | medium | 924 | 0 | 5177 | 5726 | 990 | 990 |  |
 | lih_hours | PART_E_STATED (approved) | TOOL_ACCUMULATED | medium | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | rig_up_hour | PER_DAY_THEN_MINIMUM (approved) | PER_BHA_RUN | low | 0 | 1 | 1 | 0 | 5 | 5 | MDS-01877 |
 | rig_up_hour | PER_DAY_THEN_MINIMUM (approved) | NO_DEDUCTION | low | 0 | 3 | 3 | 0 | 7 | 7 | MDS-00856, MDS-01338, MDS-01877 |
 | rig_up_hour | PER_DAY_THEN_MINIMUM (approved) | MINIMUM_THEN_PER_DAY | low | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | pd210_class_factor | DO_NOT_APPLY (approved) | APPLY | medium | 231 | 0 | 3 | 938 | 248 | 248 |  |
-| standby_section_factor | OMIT (approved) | APPLY | medium | 221 | 2 | 3 | 398 | 240 | 240 | MDS-00653, MDS-01302 |
-| rig_services_index | APPLY_FROM_FIRST_MONTH (approved) | NOT_APPLIED | medium | 1724 | 0 | 13 | 15630 | 1836 | 1836 |  |
+| standby_section_factor | OMIT (approved) | APPLY | medium | 220 | 2 | 3 | 398 | 240 | 240 | MDS-00653, MDS-01302 |
+| rig_services_index | APPLY_FROM_FIRST_MONTH (approved) | NOT_APPLIED | medium | 1722 | 0 | 13 | 15656 | 1836 | 1836 |  |
 | dd120_rate_from_feb_2026 | LATER_ISSUED_GOVERNS (approved) | LATER_EFFECTIVE_GOVERNS | medium | 190 | 0 | 0 | 777 | 213 | 213 |  |
 | dd120_rate_from_feb_2026 | LATER_ISSUED_GOVERNS (approved) | MONTHLY_TABLE_SEPARATE | medium | 190 | 0 | 0 | 777 | 213 | 213 |  |
 | monthly_rate_basis | BASE_RATE_THEN_BUILD_UP (approved) | FINAL_RATE | medium | 200 | 0 | 0 | 644 | 219 | 219 |  |
-| volume_tier_scope | PER_WELL (approved) | CONTRACT_WIDE | low | 560 | 0 | 7 | 2251 | 605 | 605 |  |
+| volume_tier_scope | PER_WELL (approved) | CONTRACT_WIDE | medium | 560 | 0 | 7 | 2251 | 605 | 605 |  |
 | contract_year_2 | STARTS_2026_01_01 (approved) | YEAR_1_EXTENDED | medium | 0 | 0 | 0 | 0 | 0 | 0 |  |
 | lih_replacement_value | SCHEDULE_2D_CONVERTED (approved) | SCHEDULE_6_USD | medium | 37 | 0 | 0 | 40 | 47 | 47 |  |
 | backdated_adjustment | CONTRACT_WIDE_ON_OR_AFTER (approved) | CONTRACT_WIDE_AFTER | low | 1 | 1 | 1 | 1 | 2 | 2 | MDS-01625 |
 | backdated_adjustment | CONTRACT_WIDE_ON_OR_AFTER (approved) | PER_WELL | low | 9 | 0 | 0 | 11 | 12 | 12 |  |
 | backdated_adjustment | CONTRACT_WIDE_ON_OR_AFTER (approved) | NO_REPRICING | low | 0 | 1 | 1 | 0 | 1 | 1 | MDS-01625 |
-| record_signatories | DDR_SIGNATURES_COVER_PARTS (approved) | FORM_SIGNATORIES_REQUIRED | medium | 1508 | 0 | 6631 | 8845 | 1602 | 1602 |  |
+| record_signatories | DDR_SIGNATURES_COVER_PARTS (approved) | FORM_SIGNATORIES_REQUIRED | medium | 1506 | 0 | 6633 | 8845 | 1602 | 1602 |  |
 | missing_record_consequence | PART_REJECT (approved) | QUERY | medium | 0 | 0 | 0 | 0 | 12 | 12 |  |
 | submission_date | UNKNOWN_QUERY (approved) | INVOICE_DATE_IS_SUBMISSION | medium | 6 | 0 | 0 | 6 | 0 | 0 |  |
-| report_vocabulary | RIG_WORDS_VALID (approved) | CODES_REQUIRED | medium | 1792 | 0 | 29250 | 91137 | 1906 | 1906 |  |
+| report_vocabulary | RIG_WORDS_VALID (approved) | CODES_REQUIRED | medium | 1790 | 0 | 29252 | 91137 | 1906 | 1906 |  |
 
 ## Claims below the approved reading's quantity
 

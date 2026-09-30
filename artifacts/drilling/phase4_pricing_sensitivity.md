@@ -29,7 +29,7 @@ Totals: canonical $147,426,868.78; claimed-class background $266,767,090.42.
 | dd120_rate_from_feb_2026 | AMB-07 | MEDIUM | LATER_ISSUED_GOVERNS → LATER_EFFECTIVE_GOVERNS | canonical | $0.00 | 0 |  |  |
 | dd120_rate_from_feb_2026 | AMB-07 | MEDIUM | LATER_ISSUED_GOVERNS → MONTHLY_TABLE_SEPARATE | canonical | $0.00 | 0 |  |  |
 | monthly_rate_basis | AMB-08 | MEDIUM | BASE_RATE_THEN_BUILD_UP → FINAL_RATE | canonical | $19,347.45 | 53 |  | HC-601 $19,347.45 |
-| volume_tier_scope | AMB-10 | LOW | PER_WELL → CONTRACT_WIDE | canonical | $0.00 | 0 |  |  |
+| volume_tier_scope | AMB-10 | MEDIUM | PER_WELL → CONTRACT_WIDE | canonical | $0.00 | 0 |  |  |
 | contract_year_2 | AMB-11 | MEDIUM | STARTS_2026_01_01 → YEAR_1_EXTENDED | canonical | $0.00 | 0 |  |  |
 | lih_replacement_value | AMB-21 | MEDIUM | SCHEDULE_2D_CONVERTED → SCHEDULE_6_USD | canonical | $55,391.01 | 47 |  | LH-711 $2,775.97, LH-712 $35,934.73, LH-713 $9,185.13, LH-714 $7,495.18 |
 | calloff_evidence | AMB-13 | LOW | UNVERIFIABLE_QUERY → INVOICE_STATEMENT_UNVERIFIED | canonical | $119,340,221.64 | 31,316 | {'EVIDENCE_NOT_PROVIDED': 31316, 'NOT_CHARGEABLE': 3074} → {'NOT_CHARGEABLE': 3074, 'PRICED': 31316} | DD-120 $31,640,298.95, LW-410 $3,935,313.48, LW-411 $4,714,160.56, LW-412 $1,582,948.44, LW-413 $5,839,810.21, MW-310 $21,734,264.83, MW-320 $4,045,402.51, PD-201 $5,311,701.66, PD-210 $40,536,321.00 |
@@ -48,7 +48,7 @@ Totals: canonical $147,426,868.78; claimed-class background $266,767,090.42.
 | dd120_rate_from_feb_2026 | AMB-07 | MEDIUM | LATER_ISSUED_GOVERNS → LATER_EFFECTIVE_GOVERNS | claimed_class | $167,991.77 | 1,578 |  | DD-120 $167,991.77 |
 | dd120_rate_from_feb_2026 | AMB-07 | MEDIUM | LATER_ISSUED_GOVERNS → MONTHLY_TABLE_SEPARATE | claimed_class | $167,991.77 | 1,578 |  | DD-120 $167,991.77 |
 | monthly_rate_basis | AMB-08 | MEDIUM | BASE_RATE_THEN_BUILD_UP → FINAL_RATE | claimed_class | $19,347.45 | 53 |  | HC-601 $19,347.45 |
-| volume_tier_scope | AMB-10 | LOW | PER_WELL → CONTRACT_WIDE | claimed_class | -$2,784,778.89 | 4,271 |  | PD-210 -$2,784,778.89 |
+| volume_tier_scope | AMB-10 | MEDIUM | PER_WELL → CONTRACT_WIDE | claimed_class | -$2,784,778.89 | 4,271 |  | PD-210 -$2,784,778.89 |
 | contract_year_2 | AMB-11 | MEDIUM | STARTS_2026_01_01 → YEAR_1_EXTENDED | claimed_class | $0.00 | 0 |  |  |
 | lih_replacement_value | AMB-21 | MEDIUM | SCHEDULE_2D_CONVERTED → SCHEDULE_6_USD | claimed_class | $55,391.01 | 47 |  | LH-711 $2,775.97, LH-712 $35,934.73, LH-713 $9,185.13, LH-714 $7,495.18 |
 

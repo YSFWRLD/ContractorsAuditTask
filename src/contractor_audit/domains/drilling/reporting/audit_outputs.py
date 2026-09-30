@@ -205,7 +205,7 @@ def uncertainty(report: AuditReport, outcomes) -> str:
                     [["flagged"] + [band.get((True, b.value), 0) for b in ConfidenceBand],
                      ["unflagged"] + [band.get((False, b.value), 0) for b in ConfidenceBand]])
     lines += ["", "An unflagged invoice is MEDIUM at best: its class-rated charges are consistent with the class the contractor claims, "
-              "but the call-off that would prove it is not in the data. It is LOW where the alternative of a LOW-graded reading would flag it (AMB-12 per well).", ""]
+              "but the call-off that would prove it is not in the data. It is LOW where the alternative of a LOW-graded reading would flag it; approval never raises a reading's grade.", ""]
     return "\n".join(lines) + "\n"
 
 

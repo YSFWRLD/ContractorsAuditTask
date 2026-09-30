@@ -284,6 +284,7 @@ def test_amendment_3_rate_before_and_after_issue(a3, terms):
         o = one(a3, inv(with_line(lines, dd101.line_ref, unit_rate=Decimal(other) / 100)))
         f = next(f for f in o.findings if f.line_ref == dd101.line_ref)
         assert f.category == "superseded_rate" and "36A" in f.message
+        assert f.rule == "rates.backdated_timing" and [d.switch for d in f.dependencies] == ["submission_date"]
 
 
 def test_discount_and_factor_diagnosis(a3, world, terms):
@@ -322,6 +323,7 @@ def test_backdated_adjustment(terms):
     assert backdated_adjustments(invs, assessed, "NO_REPRICING", issue) == {}
     missing = _adjustment_findings(terms, invs[1], (1000, TotalStatus.DETERMINED))
     assert [f.category for f in missing] == ["backdated_adjustment_missing"] and missing[0].impact_cents == -1000
+    assert [d.switch for d in missing[0].dependencies] == ["submission_date"] and "proxy" in missing[0].message
     assert _adjustment_findings(terms, replace(invs[1], adjustment_cents=1000), (1000, TotalStatus.DETERMINED)) == []
     wrong = _adjustment_findings(terms, replace(invs[0], adjustment_cents=500), None)
     assert [f.category for f in wrong] == ["backdated_adjustment_incorrect"]
@@ -336,6 +338,7 @@ def test_duplicate_within_invoice(world, terms):
     o = one(world, build(world, terms, lines + [copy]))
     f = next(f for f in o.findings if f.category == "duplicate_charge")
     assert f.line_ref == copy.line_ref and f.rule == "duplicates.within_invoice" and line_of(o, copy.line_ref).amount_cents == 0
+    assert f.dependencies == () and f.confidence is ConfidenceBand.HIGH    # one invoice: no submission order in question
 
 
 def test_duplicate_across_invoices(world, terms):
@@ -346,6 +349,8 @@ def test_duplicate_across_invoices(world, terms):
     assert not out["MDS-90001"].result.flagged
     f = next(f for f in out["MDS-90002"].findings if f.category == "duplicate_charge")
     assert f.rule == "duplicates.across_invoices" and first[1][1].line_ref in f.message
+    # which of the two invoices carries the repeat rests on the invoice-date proxy, not on a known submission order
+    assert [d.switch for d in f.dependencies] == ["submission_date"] and f.confidence is ConfidenceBand.MEDIUM
 
 
 def test_line_and_invoice_arithmetic(world, terms):
@@ -484,7 +489,7 @@ def test_confidence_grading():
     assert grade(f, m).confidence is ConfidenceBand.LOW
     m = Measured()
     m.finding_deps[f.key].append(Dependency("x", "a", "b", "finding_absent", approved_low.effective_band))
-    assert grade(f, m).confidence is ConfidenceBand.MEDIUM          # an approved reading is a decision: MEDIUM at worst
+    assert grade(f, m).confidence is ConfidenceBand.LOW             # approval is a decision, not evidence: LOW stays LOW
     m = Measured()
     m.finding_deps[f.key].append(Dependency("x", "a", "b", "superseded", ConfidenceBand.LOW))
     assert grade(f, m).confidence is ConfidenceBand.HIGH            # rejected for another reason under the alternative
@@ -527,3 +532,44 @@ def test_contract_side_prices_never_read_an_invoice(world):
     before = [(p.qid, p.status, p.amount_cents) for p in world.bundle.canonical]
     world.audit(build(world, world.terms, cls="HPHT"))
     assert [(p.qid, p.status, p.amount_cents) for p in world.bundle.canonical] == before
+
+
+# ---------------------------------------------------------------- whole-well class consistency (cl. 4, P2, P3)
+def _at_class(world, lines, code, cls, n=0):
+    """The lines with the n-th `code` line re-priced at the conditional rate of well class `cls`."""
+    target = find(lines, code, n)
+    q = world.priced(target.report_ref, code)[0]
+    rate = world.bundle.conditional(q.qid)[cls].parts[0].rate_cents
+    return with_line(lines, target.line_ref, unit_rate=Decimal(rate) / 100), target
+
+
+@pytest.mark.parametrize("described", ["Standard", "HPHT"])
+def test_mixed_class_rates_on_one_invoice_are_flagged(world, terms, described):
+    lines = world.correct_lines("MDS-90001", ids(world), DATED, claimed="Standard")
+    lines, target = _at_class(world, lines, "MW-310", "HPHT", 1)
+    o = one(world, build(world, terms, lines, cls=described))          # the descriptive class plays no part
+    f = next(f for f in o.findings if f.category == "well_class_inconsistent")
+    assert f.rule == "class.inconsistent_within_invoice" and o.result.flagged and f.blocks_total and not f.affects_total
+    assert target.line_ref in f.observed and "HPHT" in f.observed and "Standard" in f.observed
+    assert "not known" in f.message                                    # no class is claimed to be the right one
+    assert o.result.expected_total_cents is None and "entitlement_unverified:AMB-13" in o.blank_reasons
+
+
+@pytest.mark.parametrize("cls", ["Standard", "Extended Reach", "HPHT"])
+def test_consistent_class_rates_are_not_flagged(world, terms, cls):
+    lines = world.correct_lines("MDS-90001", ids(world), DATED, claimed=cls)
+    o = one(world, build(world, terms, lines, cls="Standard"))         # described Standard, billed consistently at `cls`
+    assert "well_class_inconsistent" not in categories(o) and not o.result.flagged
+    assert o.result.expected_total_cents is None                       # the call-off is still missing
+
+
+def test_invoices_of_one_well_that_disagree_are_flagged_across(world, terms):
+    rids = ids(world)
+    a = invoice("MDS-90001", W1, D1, D2, DATED, world.correct_lines("MDS-90001", rids[:2], DATED, claimed="Standard"), terms=terms)
+    b = invoice("MDS-90002", W1, D3, D3, DATED, world.correct_lines("MDS-90002", rids[2:], DATED, claimed="HPHT"), terms=terms)
+    out = world.audit(a, b)
+    for no in ("MDS-90001", "MDS-90002"):
+        f = next(f for f in out[no].findings if f.category == "well_class_inconsistent")
+        assert f.rule == "class.inconsistent_across_invoices" and f.confidence is ConfidenceBand.MEDIUM
+    same = world.audit(a, invoice("MDS-90002", W1, D3, D3, DATED, world.correct_lines("MDS-90002", rids[2:], DATED), terms=terms))
+    assert not any(f.category == "well_class_inconsistent" for o in same.values() for f in o.findings)

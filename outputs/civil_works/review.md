@@ -46,7 +46,7 @@ Check 9 'once-only items and minimum charges': the contract has no minimum-charg
 | duplicate_line | 10 | 44 | audit/test_rules.py::test_duplicate_line_same_item_area_date | 1 | yes | — | — |
 | daily_limit_exceeded | 9 | 31; Sch 4 Part 4; 19; P6 | audit/test_rules.py::test_daily_limit | 2 | yes | — | — |
 | exclusion_window_violation | 9 | 32; Sch 4 Part 5; P19; P21 | audit/test_rules.py::test_exclusion_window_boundary | 1 | yes | exclusion_window (low) | — |
-| unit_rate_mismatch | 7 | 27; 28 | audit/test_pricing_rules.py::test_wrong_zone_factor | 34 | yes | night_zone_cap (high); post_completion_ground (high) | indexed_rate_method (medium); monthly_rate_treatment (medium); retro_adjustment_trigger (low) |
+| unit_rate_mismatch | 7 | 27; 28 | audit/test_pricing_rules.py::test_wrong_zone_factor | 34 | yes | night_zone_cap (high); post_completion_ground (high) | monthly_rate_treatment (medium); retro_adjustment_trigger (low) |
 | rebate_incorrectly_applied | 8 | Sch 4 Part 3; 28 | audit/test_pricing_rules.py::test_rebate_band_omitted | 4 | yes | — | — |
 | discount_incorrectly_applied | 8 | S2 2.2; A2 2.3 | audit/test_pricing_rules.py::test_discount_omitted | 1 | yes | — | — |
 | line_total_arithmetic | 11 | 28 | audit/test_pricing_rules.py::test_line_arithmetic_and_rate_on_one_line | 3 | yes | — | — |
@@ -96,27 +96,23 @@ Findings that exist only because of a working reading (each carries the dependen
 
 | Would be flagged under (non-HIGH readings) | Applications |
 |---|---|
-| no unresolved reading | 571 |
-| indexed_rate_method | 188 |
-| monthly_rate_treatment | 21 |
-| indexed_rate_method, survey_quantity_rule | 13 |
-| indexed_rate_method, monthly_rate_treatment | 10 |
-| survey_quantity_rule | 10 |
+| no unresolved reading | 759 |
+| monthly_rate_treatment | 31 |
+| survey_quantity_rule | 23 |
 | measurement_order | 5 |
-| indexed_rate_method, retro_adjustment_trigger | 2 |
-| indexed_rate_method, measurement_order, monthly_rate_treatment | 1 |
-| indexed_rate_method, monthly_rate_treatment, survey_quantity_rule | 1 |
+| retro_adjustment_trigger | 2 |
+| measurement_order, monthly_rate_treatment | 1 |
 | measurement_order, survey_quantity_rule | 1 |
+| monthly_rate_treatment, survey_quantity_rule | 1 |
 
 | Reading | Unflagged applications it would flag |
 |---|---|
-| indexed_rate_method | 215 |
 | monthly_rate_treatment | 33 |
 | survey_quantity_rule | 25 |
 | measurement_order | 7 |
 | retro_adjustment_trigger | 2 |
 
-571 unflagged applications are HIGH. None of them is flagged by any unresolved or evidence-dependent reading (violations: none). 389 of them would be flagged only by a text-resolved alternative (e.g. Schedule 2B read as SAR), which the contract text rules out.
+759 unflagged applications are HIGH. None of them is flagged by any unresolved or evidence-dependent reading (violations: none). 577 of them would be flagged only by a text-resolved alternative (e.g. Schedule 2B read as SAR), which the contract text rules out.
 
 ## 5. Duplicate groups and the 'later measurement'
 
@@ -199,19 +195,18 @@ P21 (E.51.020 on a surfacing day): 0 findings.
 | Measure | Count |
 |---|---|
 | flagged applications | 77 |
-| published corrected totals | 37 |
-| blank corrected totals | 40 |
-| published totals re-priced line by line from their payable quantities (fresh engine instance, same contract rules) and matched | 37 |
+| published corrected totals | 56 |
+| blank corrected totals | 21 |
+| published totals re-priced line by line from their payable quantities (fresh engine instance, same contract rules) and matched | 56 |
 | published totals failing the check | none |
-| published totals equal to the billed total (breach without a total effect) | 3 |
+| published totals equal to the billed total (breach without a total effect) | 4 |
 
 Blank totals, mutually exclusive primary reason:
 
 | Primary reason | Applications |
 |---|---|
-| unresolved_interpretation:indexed_rate_method | 22 |
-| unresolved_interpretation:missing_record_consequence | 7 |
-| unresolved_interpretation:measurement_order | 5 |
+| unresolved_interpretation:missing_record_consequence | 8 |
+| unresolved_interpretation:measurement_order | 7 |
 | unresolved_interpretation:monthly_rate_treatment | 4 |
 | unresolved_interpretation:exclusion_window | 1 |
 | unresolved_interpretation:retro_adjustment_trigger | 1 |

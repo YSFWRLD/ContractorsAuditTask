@@ -1,8 +1,8 @@
 """From an audit run and its measured dependencies to graded findings and one InvoiceResult per invoice.
 
 Confidence is evidence quality (shared bands):
-    a finding              its rule's own band, lowered to the band of every reading without which it disappears
-                           (an approved reading counts as MEDIUM at worst, a working one at its own grade);
+    a finding              its rule's own band, lowered to the grade of every reading without which it disappears
+                           (approval never raises a grade), and of the submission-order proxy where it depends on it;
                            timing findings are capped at MEDIUM (the contract prices nothing off them)
     a flagged invoice      the strongest band among its flagging findings (any one of them makes it wrong), and no
                            stronger than any reading under which it would not be flagged at all
@@ -42,7 +42,7 @@ class InvoiceOutcome:
 
 
 def grade(f: Finding, measured: Measured) -> Finding:
-    deps = tuple(measured.finding_deps.get(f.key, ()))
+    deps = tuple(f.dependencies) + tuple(measured.finding_deps.get(f.key, ()))   # static (AMB-25 proxy) and measured
     band = ConfidenceBand.weakest([f.confidence] + [d.band for d in deps if d.effect == "finding_absent"])
     if Category(f.category) in NO_CONSEQUENCE_CATEGORIES:
         band = ConfidenceBand.weakest([band, NO_CONSEQUENCE_CAP])

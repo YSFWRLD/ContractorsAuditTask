@@ -33,7 +33,7 @@ STRICT policy: a corrected total is published only when every line is valued fro
 
 | blank reason (flagged invoices) | invoices |
 |---|---|
-| entitlement_unverified:AMB-13 | 114 |
+| entitlement_unverified:AMB-13 | 116 |
 | backdated_adjustment_conditional | 1 |
 
 ## Confidence
@@ -42,8 +42,8 @@ Evidence quality, not probability (HIGH 0.95, MEDIUM 0.75, LOW 0.55).
 
 |  | HIGH | MEDIUM | LOW |
 |---|---|---|---|
-| flagged | 99 | 14 | 1 |
-| unflagged | 0 | 1783 | 9 |
+| flagged | 99 | 13 | 4 |
+| unflagged | 0 | 1781 | 9 |
 
-An unflagged invoice is MEDIUM at best: its class-rated charges are consistent with the class the contractor claims, but the call-off that would prove it is not in the data. It is LOW where the alternative of a LOW-graded reading would flag it (AMB-12 per well).
+An unflagged invoice is MEDIUM at best: its class-rated charges are consistent with the class the contractor claims, but the call-off that would prove it is not in the data. It is LOW where the alternative of a LOW-graded reading would flag it; approval never raises a reading's grade.
 

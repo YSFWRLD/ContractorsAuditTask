@@ -8,9 +8,8 @@ way). One whose amount changes depends on it for its value (`value_changes`). An
 would flag records `would_flag`, a flagged one it would clear `would_unflag`; a changed total `total_changes`.
 AMB-13 is not flipped here: its effect is the conditional valuation itself.
 
-The band a dependency carries: an approved pricing reading is a decision, so a conclusion resting on it is MEDIUM at
-worst; an audit-phase reading keeps its own grade whether approved or not (the approval records the decision; it does
-not remove the uncertainty the text leaves).
+The band a dependency carries is the reading's own evidential grade. Approval is a workflow decision, not evidence:
+it never raises the grade, for pricing and audit-phase readings alike.
 """
 
 from collections import defaultdict
@@ -35,8 +34,7 @@ class Alternative:
 
     @property
     def effective_band(self) -> ConfidenceBand:
-        if self.approved and self.switch not in AUDIT_SWITCHES:
-            return ConfidenceBand.strongest([self.band, ConfidenceBand.MEDIUM])
+        """The reading's evidential grade; approval does not change it."""
         return self.band
 
 

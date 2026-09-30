@@ -101,7 +101,7 @@
       }
     },
     "indexed_rate_method": {
-      "status": "unresolved",
+      "status": "text_resolved",
       "ambiguity_id": "AMB-INDEX-APPENDIX-B",
       "question": "Are C.31.010 and D.41.030 priced at the Schedule 2A index, or at the Schedule 1 rate as the Appendix B example does?",
       "working": "clause_29a",

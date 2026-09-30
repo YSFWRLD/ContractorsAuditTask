@@ -178,9 +178,12 @@ def review_md(report, outcomes, dataset: DrillingDataset) -> str:
           f"Total status: {dict(cond)}. Every invoice charges a class-rated service, so none has a determined total. "
           f"Entitlement queries: {len(queries)} on {len({f.invoice_id for f in queries})} invoices. "
           f"Class-rated charges billed at the rate of a class other than the one the invoice describes: {len(differs)} "
-          f"({', '.join(f.line_ref for f in differs) or 'none'}); a non-flagging query, since the invoice's well class is descriptive "
-          "(cl. 34, Appendix B) and the class is the call-off's (P2, P3). Unflagged invoices whose conditional total (at the described "
-          f"class) differs from the billed total: {len(exceptions)} ({', '.join(exceptions) or 'none'}), exactly those with that query.", ""]
+          f"({', '.join(f.line_ref for f in differs) or 'none'}); by itself a non-flagging query, since the invoice's well class is "
+          "descriptive (cl. 34, Appendix B) and the class is the call-off's (P2, P3). Whole-well consistency (cl. 4, P2, P3): invoices "
+          "whose billed class-rated rates no single class can produce together, found from the rates alone: "
+          f"{', '.join(sorted({f.invoice_id + ' (' + f.rule.split('.')[-1] + ')' for f in findings if f.category == 'well_class_inconsistent'})) or 'none'}. "
+          f"Unflagged invoices whose conditional total (at the described class) differs from the billed total: {len(exceptions)} "
+          f"({', '.join(exceptions) or 'none'}).", ""]
     # m: reconciling totals
     arith = {"invoice_arithmetic", "vat_error", "line_arithmetic", "invoice_discount_error"}
     reconciling = [o for o in flagged if not any(f.category in arith for f in o.findings if flags(f.category))]

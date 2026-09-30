@@ -443,7 +443,7 @@
    },
    "delta_by_service_cents": {},
    "background": "canonical",
-   "confidence": "LOW"
+   "confidence": "MEDIUM"
   },
   {
    "switch": "contract_year_2",
@@ -970,7 +970,7 @@
     "PD-210": -278477889
    },
    "background": "claimed_class",
-   "confidence": "LOW"
+   "confidence": "MEDIUM"
   },
   {
    "switch": "contract_year_2",

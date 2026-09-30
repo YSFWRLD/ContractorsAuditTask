@@ -13,18 +13,20 @@ Grades describe evidence quality, never how well a reading fits the billing:
     contract text resolves it                          HIGH
     approved pricing reading                           the confidence recorded when it was recommended
     AMB-13 (the call-off is not in the data)           MEDIUM: the absence is certain, the class is not
-    audit-phase reading                                the grade below, approved or not: an approval records the
-                                                       decision but does not remove the uncertainty (AMB-12 stays LOW)
+    audit-phase reading                                the grade below
+An approval records a decision; it adds no evidence, so it never raises a grade (AMB-05 and AMB-12 stay LOW). A grade
+changes only on contractual grounds, recorded with its history (AMB-10: LOW to MEDIUM, `phase4_recommendations.json`).
 """
 
 import json
 from dataclasses import dataclass, replace
+from datetime import date
 from pathlib import Path
 
 from contractor_audit.domains.drilling.contract.models import Ambiguity
 from contractor_audit.domains.drilling.interpretation.switches import Switch
 from contractor_audit.domains.drilling.pricing.selection import Selection, Source
-from contractor_audit.shared.findings import ConfidenceBand
+from contractor_audit.shared.findings import ConfidenceBand, Dependency
 
 RECOMMENDATIONS_FILENAME = "phase4_recommendations.json"
 AUDIT_SWITCHES = ("backdated_adjustment", "record_signatories", "missing_record_consequence", "submission_date", "report_vocabulary")
@@ -60,6 +62,25 @@ WORKING_READINGS: dict[str, WorkingReading] = {w.switch: w for w in (
 )}
 
 _BANDS = {"HIGH": ConfidenceBand.HIGH, "MEDIUM": ConfidenceBand.MEDIUM, "LOW": ConfidenceBand.LOW}
+
+# The submission-date proxy (AMB-25). The data carries no submission date. The invoice date is used for one purpose
+# only: a deterministic processing order (ties by invoice number), which decides which of two charges of the same
+# evidence is reported as the repeat, and which invoice Clause 36A's "first invoice submitted on or after" and "an
+# invoice submitted before the date of issue" point at. It is never presented as the submission date, and no Clause 33
+# timing finding is raised from it. A conclusion whose correctness depends on the actual submission order carries the
+# AMB-25 dependency below; conclusions resting on work dates or the invoice's own period do not.
+SUBMISSION_PROXY = ("invoice-date order (processing proxy; the submission date is not in the data, AMB-25)")
+
+
+def processing_key(invoice) -> tuple:
+    """Deterministic processing order: invoice date, then invoice number. A proxy, not the submission order."""
+    return (invoice.invoice_date or date.max, invoice.invoice_no)
+
+
+def submission_order_dependency(effect: str = "finding_absent") -> Dependency:
+    """AMB-25: under another (unknown) submission order this conclusion may move to another invoice or disappear."""
+    return Dependency("submission_date", SUBMISSION_PROXY, "the actual submission order (not in the data)", effect,
+                      WORKING_READINGS["submission_date"].band)
 
 
 @dataclass(frozen=True)

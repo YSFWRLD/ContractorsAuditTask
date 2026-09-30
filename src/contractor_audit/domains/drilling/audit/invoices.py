@@ -26,7 +26,7 @@ WINDOW_DAYS = 30   # cl. 33 / Form of Agreement
 
 
 def _finding(terms, invoice, category: Category, rule: str, message: str, *, outcome=Outcome.QUERY, observed=None, expected=None,
-             impact=None, affects=False, blocks=False, band=ConfidenceBand.HIGH, evidence=(), clause_ids=()) -> Finding:
+             impact=None, affects=False, blocks=False, band=ConfidenceBand.HIGH, evidence=(), clause_ids=(), deps=()) -> Finding:
     meta = info(category.value)
     citations = tuple(Citation(cid, *terms.clauses[cid]) for cid in clause_ids if cid in terms.clauses)
     head = Evidence("invoice", invoice.invoice_no, f"{invoice.contract_ref}; {invoice.contractor}; {invoice.well_name}; period {invoice.period_start}.."
@@ -34,7 +34,8 @@ def _finding(terms, invoice, category: Category, rule: str, message: str, *, out
                     f"total {_m(invoice.total_cents)} adjustment {_m(invoice.adjustment_cents)}", source=invoice.source.file)
     return Finding(check=meta.check, outcome=outcome, message=message, clause=", ".join(meta.clauses), invoice_id=invoice.invoice_no,
                    evidence=(head,) + tuple(evidence), category=category.value, rule=rule, observed=observed, expected=expected,
-                   impact_cents=impact, citations=citations, affects_total=affects, blocks_total=blocks, confidence=band)
+                   impact_cents=impact, citations=citations, affects_total=affects, blocks_total=blocks, confidence=band,
+                   dependencies=tuple(deps))
 
 
 def _m(c: int | None) -> str:

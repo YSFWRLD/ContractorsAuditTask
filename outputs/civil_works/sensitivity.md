@@ -7,7 +7,7 @@ Each row re-runs the whole audit with one reading flipped. Counts compare that r
 | Switch | Status | Grade | Working | Alternative | Findings lost | Findings gained | Apps unflagged | Apps flagged | Lines changed | Totals changed | Flagged totals changed |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | rebate_counting | text_resolved | high | contract_year | whole_works | 0 | 282 | 0 | 164 | 270 | 181 | 17 |
-| indexed_rate_method | unresolved | medium | clause_29a | appendix_b_unindexed | 0 | 274 | 0 | 215 | 279 | 237 | 22 |
+| indexed_rate_method | text_resolved | high | clause_29a | appendix_b_unindexed | 0 | 274 | 0 | 215 | 279 | 237 | 22 |
 | usd_reading | text_resolved | high | convert_from_usd | sar_as_printed | 0 | 386 | 0 | 291 | 388 | 312 | 21 |
 | conversion_rounding | text_resolved | high | round_before_build_up | unrounded_into_build_up | 0 | 162 | 0 | 126 | 165 | 140 | 14 |
 | post_completion_ground | text_resolved | high | datum_g2_all_work | datum_g2_eot_areas_only | 2 | 455 | 1 | 209 | 459 | 231 | 22 |

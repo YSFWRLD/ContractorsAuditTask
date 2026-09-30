@@ -13,7 +13,7 @@ Readings approved by the user on 2026-09-30 (`approved_readings.json`), with the
 | AMB-05 | `rig_up_hour` | **PER_DAY_THEN_MINIMUM** (A) | PER_BHA_RUN (LOW) | → PER_BHA_RUN (canonical): $0.00 over 0 quantities; → NO_DEDUCTION (canonical): $249,470.65 over 943 quantities; → MINIMUM_THEN_PER_DAY (canonical): $0.00 over 0 quantities; → PER_BHA_RUN (with claimed classes (hypothetical)): $1,638,193.55 over 3,903 quantities; → NO_DEDUCTION (with claimed classes (hypothetical)): $2,182,854.20 over 5,549 quantities; → MINIMUM_THEN_PER_DAY (with claimed classes (hypothetical)): $0.00 over 0 quantities |
 | AMB-07 | `dd120_rate_from_feb_2026` | **LATER_ISSUED_GOVERNS** (A) | LATER_ISSUED_GOVERNS (MEDIUM) | → LATER_EFFECTIVE_GOVERNS (canonical): $0.00 over 0 quantities; → MONTHLY_TABLE_SEPARATE (canonical): $0.00 over 0 quantities; → LATER_EFFECTIVE_GOVERNS (with claimed classes (hypothetical)): $167,991.77 over 1,578 quantities; → MONTHLY_TABLE_SEPARATE (with claimed classes (hypothetical)): $167,991.77 over 1,578 quantities |
 | AMB-08 | `monthly_rate_basis` | **BASE_RATE_THEN_BUILD_UP** (A) | BASE_RATE_THEN_BUILD_UP (MEDIUM) | → FINAL_RATE (canonical): $19,347.45 over 53 quantities; → FINAL_RATE (with claimed classes (hypothetical)): $19,347.45 over 53 quantities |
-| AMB-10 | `volume_tier_scope` | **PER_WELL** (A) | PER_WELL (LOW) | → CONTRACT_WIDE (canonical): $0.00 over 0 quantities; → CONTRACT_WIDE (with claimed classes (hypothetical)): -$2,784,778.89 over 4,271 quantities |
+| AMB-10 | `volume_tier_scope` | **PER_WELL** (A) | PER_WELL (MEDIUM) | → CONTRACT_WIDE (canonical): $0.00 over 0 quantities; → CONTRACT_WIDE (with claimed classes (hypothetical)): -$2,784,778.89 over 4,271 quantities |
 | AMB-11 | `contract_year_2` | **STARTS_2026_01_01** (A) | STARTS_2026_01_01 (MEDIUM) | → YEAR_1_EXTENDED (canonical): $0.00 over 0 quantities; → YEAR_1_EXTENDED (with claimed classes (hypothetical)): $0.00 over 0 quantities |
 | AMB-21 | `lih_replacement_value` | **SCHEDULE_2D_CONVERTED** (A) | SCHEDULE_2D_CONVERTED (MEDIUM) | → SCHEDULE_6_USD (canonical): $55,391.01 over 47 quantities; → SCHEDULE_6_USD (with claimed classes (hypothetical)): $55,391.01 over 47 quantities |
 | AMB-26 | `ds900_threshold_basis` | **SERVICES_ONLY** (A) | SERVICES_ONLY (MEDIUM) | None in this data (DS-900 is invoice-level; no invoice carries a non-service charge besides DS-900). |
@@ -134,7 +134,7 @@ Readings approved by the user on 2026-09-30 (`approved_readings.json`), with the
 4. **Reading B:** Contract-wide: cumulative metres across all wells within the Contract Year.
 5. **Phase 1 preference:** none
 6. **Measured effect of the alternatives:** → CONTRACT_WIDE (canonical): $0.00 over 0 quantities; → CONTRACT_WIDE (with claimed classes (hypothetical)): -$2,784,778.89 over 4,271 quantities
-7. **Recommendation:** PER_WELL (LOW). The only operative sentence says 'metres already drilled on the well in the Contract Year'.
+7. **Recommendation:** PER_WELL (MEDIUM). The only operative sentence says 'metres already drilled on the well in the Contract Year'.
 8. **Approved:** PER_WELL (reading A).
 9. **Still uncertain:** The heading and the column say 'in the Contract Year' without 'well'. Under PER_WELL no well reaches 40,000 m in this data, so the tiers never engage; that is context, not evidence, but it is why this needs your judgment.
 

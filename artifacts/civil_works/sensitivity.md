@@ -28,7 +28,7 @@ Outside the measured total:
 | Switch | Status | Working | Alternative | Lines | Applications | Σ|Δ| (SAR) | Net Δ (SAR) | Same price? | Billing consistency on affected lines (working / alternative) |
 |---|---|---|---|---|---|---|---|---|---|
 | rebate_counting | text_resolved | contract_year | whole_works | 270 | 181 | 180417.24 | -180417.24 | no | 268 / 0 |
-| indexed_rate_method | unresolved | clause_29a | appendix_b_unindexed | 279 | 237 | 716967.32 | -716967.32 | no | 274 / 0 |
+| indexed_rate_method | text_resolved | clause_29a | appendix_b_unindexed | 279 | 237 | 716967.32 | -716967.32 | no | 274 / 0 |
 | usd_reading | text_resolved | convert_from_usd | sar_as_printed | 390 | 314 | 8324270.32 | -8324270.32 | no | 387 / 0 |
 | conversion_rounding | text_resolved | round_before_build_up | unrounded_into_build_up | 165 | 140 | 378.94 | -79.82 | no | 162 / 0 |
 | post_completion_ground | text_resolved | datum_g2_all_work | datum_g2_eot_areas_only | 461 | 231 | 2142118.90 | 1986900.40 | no | 457 / 2 |

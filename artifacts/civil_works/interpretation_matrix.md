@@ -19,18 +19,18 @@ Clauses: 30, Sch 4 Part 3, 3A, 2; pages 6, 24, 32, 3; Phase 1 ambiguity AMB-BAND
 
 Why the working reading: Schedule 4 Part 3 expressly substitutes Clause 30, and Clause 2 makes a Schedule prevail over the General Conditions.
 
-## `indexed_rate_method` — unresolved
+## `indexed_rate_method` — text_resolved
 
 Are C.31.010 and D.41.030 priced at the Schedule 2A index, or at the Schedule 1 rate as the Appendix B example does?
 
-Clauses: 29A, Sch 2A, App B; pages 21, 32, 36; Phase 1 ambiguity AMB-INDEX-APPENDIX-B
+Clauses: 29A, Sch 2A, App B, 2; pages 3, 21, 32, 36; Phase 1 ambiguity AMB-INDEX-APPENDIX-B
 
 | Reading | Working? | Basis |
 |---|---|---|
 | clause_29a | **working** | 29A: base x SMI(month of execution) / 100, rounded half-even; Sch 2A: the Schedule 1 rate 'is not payable as it stands'. |
 | appendix_b_unindexed |  | Appendix B prices C.31.010 on 13/05/2025 at 86.20 x 1.06 = 91.37, i.e. with no index. |
 
-Why the working reading: 29A and Schedule 2A are operative provisions; Appendix B is an illustrative form and is not among the Clause 2 documents. The conflict is inside the contract itself, so the alternative is retained as genuinely open.
+Why the working reading: Clause 2 defines the whole agreement as the Agreement, the General Conditions, Schedules 1 to 5 and Appendix A, and makes a Schedule prevail. Schedule 2A is inside that set and says the Schedule 1 rate 'is not payable as it stands', priced under 29A. Appendix B is an illustrative form outside the whole agreement, so its unindexed example cannot override an operative Schedule. Settled by the text (targeted correctness patch); the Appendix B reading is kept for sensitivity only.
 
 ## `usd_reading` — text_resolved
 
