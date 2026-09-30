@@ -1,0 +1,1557 @@
+{
+  "items": [
+    "A.14.010",
+    "A.16.010",
+    "B.21.020",
+    "B.23.010",
+    "C.32.010",
+    "C.32.030",
+    "D.41.020",
+    "E.54.010"
+  ],
+  "provisions": {
+    "A.14.010": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "53.20",
+        "monthly": [],
+        "page": 17
+      },
+      {
+        "instrument": "A3",
+        "issued": "2026-05-12",
+        "effective_from": "2025-11-01",
+        "kind": "substituted",
+        "rate": "56.80",
+        "monthly": [],
+        "page": 43
+      }
+    ],
+    "A.16.010": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "1480.00",
+        "monthly": [],
+        "page": 17
+      },
+      {
+        "instrument": "S1",
+        "issued": "2025-03-24",
+        "effective_from": "2025-05-01",
+        "kind": "substituted",
+        "rate": "1524.00",
+        "monthly": [],
+        "page": 39
+      }
+    ],
+    "B.21.020": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "415.00",
+        "monthly": [],
+        "page": 17
+      },
+      {
+        "instrument": "S1",
+        "issued": "2025-03-24",
+        "effective_from": "2025-05-01",
+        "kind": "substituted",
+        "rate": "431.50",
+        "monthly": [],
+        "page": 39
+      }
+    ],
+    "B.23.010": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "4120.00",
+        "monthly": [],
+        "page": 17
+      },
+      {
+        "instrument": "S1",
+        "issued": "2025-03-24",
+        "effective_from": "2025-05-01",
+        "kind": "substituted",
+        "rate": "4385.00",
+        "monthly": [],
+        "page": 39
+      },
+      {
+        "instrument": "A1",
+        "issued": "2025-08-18",
+        "effective_from": "2025-10-01",
+        "kind": "substituted",
+        "rate": "4450.00",
+        "monthly": [],
+        "page": 40
+      }
+    ],
+    "C.32.010": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "1860.00",
+        "monthly": [],
+        "page": 18
+      },
+      {
+        "instrument": "A3",
+        "issued": "2026-05-12",
+        "effective_from": "2025-11-01",
+        "kind": "substituted",
+        "rate": "1984.00",
+        "monthly": [],
+        "page": 43
+      }
+    ],
+    "C.32.030": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "3120.00",
+        "monthly": [],
+        "page": 18
+      }
+    ],
+    "D.41.020": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "63.50",
+        "monthly": [],
+        "page": 18
+      },
+      {
+        "instrument": "S1",
+        "issued": "2025-03-24",
+        "effective_from": "2025-05-01",
+        "kind": "monthly",
+        "rate": null,
+        "monthly": [
+          [
+            "2025-05",
+            "214.50"
+          ],
+          [
+            "2025-06",
+            "219.80"
+          ],
+          [
+            "2025-07",
+            "226.40"
+          ],
+          [
+            "2025-08",
+            "223.10"
+          ],
+          [
+            "2025-09",
+            "220.50"
+          ]
+        ],
+        "page": 39
+      },
+      {
+        "instrument": "S2",
+        "issued": "2025-11-12",
+        "effective_from": "2025-12-01",
+        "kind": "substituted",
+        "rate": "228.00",
+        "monthly": [],
+        "page": 41
+      }
+    ],
+    "E.54.010": [
+      {
+        "instrument": "BOQ",
+        "issued": null,
+        "effective_from": "2025-01-05",
+        "kind": "bill_of_quantities",
+        "rate": "876.00",
+        "monthly": [],
+        "page": 19
+      },
+      {
+        "instrument": "A1",
+        "issued": "2025-08-18",
+        "effective_from": "2025-10-01",
+        "kind": "substituted",
+        "rate": "948.00",
+        "monthly": [],
+        "page": 40
+      },
+      {
+        "instrument": "A2",
+        "issued": "2026-02-16",
+        "effective_from": "2026-04-01",
+        "kind": "monthly",
+        "rate": null,
+        "monthly": [
+          [
+            "2026-04",
+            "976.00"
+          ],
+          [
+            "2026-05",
+            "991.00"
+          ],
+          [
+            "2026-06",
+            "1013.00"
+          ],
+          [
+            "2026-07",
+            "1038.00"
+          ],
+          [
+            "2026-08",
+            "1038.00"
+          ],
+          [
+            "2026-09",
+            "1052.00"
+          ]
+        ],
+        "page": 42
+      }
+    ]
+  },
+  "boundaries": [
+    {
+      "date": "2025-01-04",
+      "weekday": "Sat",
+      "A.14.010": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "none",
+        "source": "before Commencement",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-01-05",
+      "weekday": "Sun",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1480.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "415.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "63.50",
+        "source": "BOQ",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-01-06",
+      "weekday": "Mon",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1480.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "415.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "63.50",
+        "source": "BOQ",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-04-30",
+      "weekday": "Wed",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1480.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "415.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "63.50",
+        "source": "BOQ",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-05-01",
+      "weekday": "Thu",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4385.00",
+        "source": "S1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "214.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-05-02",
+      "weekday": "Fri",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4385.00",
+        "source": "S1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "214.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-09-27",
+      "weekday": "Sat",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4385.00",
+        "source": "S1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-09-28",
+      "weekday": "Sun",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4385.00",
+        "source": "S1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-09-29",
+      "weekday": "Mon",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4385.00",
+        "source": "S1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-09-30",
+      "weekday": "Tue",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4385.00",
+        "source": "S1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "876.00",
+        "source": "BOQ",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-10-01",
+      "weekday": "Wed",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-10-02",
+      "weekday": "Thu",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-10-31",
+      "weekday": "Fri",
+      "A.14.010": {
+        "rate": "53.20",
+        "source": "BOQ",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1860.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-11-01",
+      "weekday": "Sat",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-11-02",
+      "weekday": "Sun",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-11-30",
+      "weekday": "Sun",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": null
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": null
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": null
+      },
+      "D.41.020": {
+        "rate": "220.50",
+        "source": "S1",
+        "discount": null
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-12-01",
+      "weekday": "Mon",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "S2:5%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "S2:5%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "S2:5%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "S2:5%"
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2025-12-02",
+      "weekday": "Tue",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "S2:5%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "S2:5%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "S2:5%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "S2:5%"
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-01-04",
+      "weekday": "Sun",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "S2:5%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "S2:5%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "S2:5%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "S2:5%"
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-01-05",
+      "weekday": "Mon",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "S2:5%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "S2:5%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "S2:5%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "S2:5%"
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-01-06",
+      "weekday": "Tue",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "S2:5%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "S2:5%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "S2:5%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "S2:5%"
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "Tue",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "S2:5%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "S2:5%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "S2:5%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "S2:5%"
+      },
+      "E.54.010": {
+        "rate": "948.00",
+        "source": "A1",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "Wed",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "A2:8%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "A2:8%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "A2:8%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "A2:8%"
+      },
+      "E.54.010": {
+        "rate": "976.00",
+        "source": "A2",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "Thu",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "A2:8%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "A2:8%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "A2:8%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "A2:8%"
+      },
+      "E.54.010": {
+        "rate": "976.00",
+        "source": "A2",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": "Tue",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "A2:8%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "A2:8%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "A2:8%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "A2:8%"
+      },
+      "E.54.010": {
+        "rate": "1052.00",
+        "source": "A2",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "weekday": "Wed",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "A2:8%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "A2:8%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "A2:8%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "A2:8%"
+      },
+      "E.54.010": {
+        "rate": "1052.00",
+        "source": "A2",
+        "discount": null
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "Thu",
+      "A.14.010": {
+        "rate": "56.80",
+        "source": "A3",
+        "discount": null
+      },
+      "A.16.010": {
+        "rate": "1524.00",
+        "source": "S1",
+        "discount": null
+      },
+      "B.21.020": {
+        "rate": "431.50",
+        "source": "S1",
+        "discount": null
+      },
+      "B.23.010": {
+        "rate": "4450.00",
+        "source": "A1",
+        "discount": "A2:8%"
+      },
+      "C.32.010": {
+        "rate": "1984.00",
+        "source": "A3",
+        "discount": "A2:8%"
+      },
+      "C.32.030": {
+        "rate": "3120.00",
+        "source": "BOQ",
+        "discount": "A2:8%"
+      },
+      "D.41.020": {
+        "rate": "228.00",
+        "source": "S2",
+        "discount": "A2:8%"
+      },
+      "E.54.010": {
+        "rate": "1052.00",
+        "source": "A2",
+        "discount": null
+      }
+    }
+  ],
+  "retroactive_view": [
+    {
+      "item": "C.32.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-11",
+      "instrument_issued_on_known_at_counts": true,
+      "rate": "1860.00",
+      "source": "BOQ"
+    },
+    {
+      "item": "C.32.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-11",
+      "instrument_issued_on_known_at_counts": false,
+      "rate": "1860.00",
+      "source": "BOQ"
+    },
+    {
+      "item": "C.32.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-12",
+      "instrument_issued_on_known_at_counts": true,
+      "rate": "1984.00",
+      "source": "A3"
+    },
+    {
+      "item": "C.32.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-12",
+      "instrument_issued_on_known_at_counts": false,
+      "rate": "1860.00",
+      "source": "BOQ"
+    },
+    {
+      "item": "C.32.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-13",
+      "instrument_issued_on_known_at_counts": true,
+      "rate": "1984.00",
+      "source": "A3"
+    },
+    {
+      "item": "C.32.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-13",
+      "instrument_issued_on_known_at_counts": false,
+      "rate": "1984.00",
+      "source": "A3"
+    },
+    {
+      "item": "A.14.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-11",
+      "instrument_issued_on_known_at_counts": true,
+      "rate": "53.20",
+      "source": "BOQ"
+    },
+    {
+      "item": "A.14.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-11",
+      "instrument_issued_on_known_at_counts": false,
+      "rate": "53.20",
+      "source": "BOQ"
+    },
+    {
+      "item": "A.14.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-12",
+      "instrument_issued_on_known_at_counts": true,
+      "rate": "56.80",
+      "source": "A3"
+    },
+    {
+      "item": "A.14.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-12",
+      "instrument_issued_on_known_at_counts": false,
+      "rate": "53.20",
+      "source": "BOQ"
+    },
+    {
+      "item": "A.14.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-13",
+      "instrument_issued_on_known_at_counts": true,
+      "rate": "56.80",
+      "source": "A3"
+    },
+    {
+      "item": "A.14.010",
+      "work_date": "2025-11-01",
+      "known_at": "2026-05-13",
+      "instrument_issued_on_known_at_counts": false,
+      "rate": "56.80",
+      "source": "A3"
+    }
+  ],
+  "contract_period": {
+    "commencement": "2025-01-05",
+    "original_completion": "2025-09-27",
+    "extensions": [
+      {
+        "instrument": "A1",
+        "issued": "2025-08-18",
+        "effective": "2025-09-28",
+        "new_completion": "2026-03-31"
+      },
+      {
+        "instrument": "A2",
+        "issued": "2026-02-16",
+        "effective": "2026-04-01",
+        "new_completion": "2026-09-30"
+      }
+    ],
+    "final_completion": "2026-09-30",
+    "contract_years": [
+      [
+        1,
+        "2025-01-05",
+        "2026-01-04"
+      ],
+      [
+        2,
+        "2026-01-05",
+        "2026-09-30"
+      ]
+    ]
+  }
+}

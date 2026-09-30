@@ -1,0 +1,5564 @@
+{
+ "schema": "contractor-audit/drilling-contract-terms",
+ "schema_version": "1.0",
+ "contract_ref": "DDS-2025-118",
+ "status_definitions": {
+  "STATED": "Directly stated in the contract package; transcription verified in two passes.",
+  "INTERPRETED": "A reviewed reading of stated text (a derivation, classification or cross-reference). The note says what was inferred.",
+  "AMBIGUOUS": "Legible, but the package supports more than one reading or two provisions conflict; see contract_ambiguities.json.",
+  "NOT_PROVIDED": "The contract refers to evidence the task data does not supply."
+ },
+ "money_convention": "Money is integer minor units: *_cents are USD cents, *_halalas are SAR halalas. Rates of exchange, index values, factors and percentages are decimal strings. No float appears in this file.",
+ "extraction": {
+  "method": "Visual transcription of page renders (PyMuPDF; pass A at 150 dpi full page, pass B at 220 dpi half-page crops) by an AI assistant (Claude Code, model claude-opus-5-5). No OCR engine, no external sources. Invoice, line and report data were not consulted to choose, correct or confirm any value or reading.",
+  "date": "2026-09-29",
+  "passes": 2,
+  "pass_files": [
+   "review/transcription_pass_a.json",
+   "review/transcription_pass_b.json"
+  ],
+  "cross_check": {
+   "leaf_values_compared": 462,
+   "discrepancies": 0,
+   "tables": [
+    "Schedule 1",
+    "Schedule 2 and Part 2",
+    "Schedule 2C and index",
+    "Schedule 2D and exchange rates",
+    "Schedule 3 Parts 1-7",
+    "Schedule 4",
+    "Schedule 5 table",
+    "Schedule 6",
+    "Appendix B",
+    "Appendix G",
+    "Schedule of Variations",
+    "all five instruments"
+   ]
+  },
+  "clause_text": "Narrative pages (clauses, Parts, schedule notes) were read in full in pass A (150 dpi) and transcribed verbatim from the pass B 220 dpi crops; every source_text is a verbatim excerpt. Table values were compared programmatically across both passes; quotations were not.",
+  "runtime_note": "The audit reads this file; it never re-reads the PDF."
+ },
+ "source_files": [
+  {
+   "file": "drilling_services/contract/DDS-2025-118.pdf",
+   "sha256": "0f14d8a7e222d4c5a13f2a1651098d089aaa783b1d6b6f1c75ebd313da611e5a",
+   "bytes": 8146739,
+   "pages": 42,
+   "text_layer": false,
+   "document_type": "scanned contract package: Form of Agreement, Parts I-IX, Schedules 1-8 (with 2C, 2D), Appendices A-G, Schedule of Variations and five instruments",
+   "page_numbering": "The printed page number equals the PDF page number on every page (checked on all 42 renders)."
+  },
+  {
+   "file": "drilling_services/guidelines/INVOICE_AUDIT_GUIDELINES.md",
+   "sha256": "621c507ed3a3300321966dd36435c608bdff54dbeca7157c9d754815f84d51f5",
+   "bytes": 2099,
+   "pages": null,
+   "text_layer": true,
+   "document_type": "audit guidelines (not a contract document; states that the contract governs where they differ)",
+   "page_numbering": null
+  }
+ ],
+ "documents": [
+  {
+   "id": "AGREEMENT",
+   "title": "Directional Drilling Services Contract — Drilling Campaign 2025 (Form of Agreement)",
+   "kind": "agreement",
+   "pages": [
+    1,
+    1
+   ],
+   "printed_pages": [
+    1,
+    1
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "CONTENTS",
+   "title": "Contents",
+   "kind": "contents",
+   "pages": [
+    2,
+    2
+   ],
+   "printed_pages": [
+    2,
+    2
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false
+  },
+  {
+   "id": "PART-I",
+   "title": "Part I — General Conditions",
+   "kind": "part",
+   "pages": [
+    3,
+    4
+   ],
+   "printed_pages": [
+    3,
+    4
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-II",
+   "title": "Part II — Operations and Field Records",
+   "kind": "part",
+   "pages": [
+    5,
+    5
+   ],
+   "printed_pages": [
+    5,
+    5
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-III",
+   "title": "Part III — Pricing",
+   "kind": "part",
+   "pages": [
+    6,
+    7
+   ],
+   "printed_pages": [
+    6,
+    7
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-IV",
+   "title": "Part IV — Invoicing and Payment",
+   "kind": "part",
+   "pages": [
+    8,
+    8
+   ],
+   "printed_pages": [
+    8,
+    8
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-V",
+   "title": "Part V — Technical Requirements",
+   "kind": "part",
+   "pages": [
+    9,
+    10
+   ],
+   "printed_pages": [
+    9,
+    10
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-VI",
+   "title": "Part VI — Particular Conditions",
+   "kind": "part",
+   "pages": [
+    11,
+    12
+   ],
+   "printed_pages": [
+    11,
+    12
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-VII",
+   "title": "Part VII — Health, Safety and Environment",
+   "kind": "part",
+   "pages": [
+    13,
+    13
+   ],
+   "printed_pages": [
+    13,
+    13
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "PART-VIII",
+   "title": "Part VIII — Reporting and Data",
+   "kind": "part",
+   "pages": [
+    14,
+    14
+   ],
+   "printed_pages": [
+    14,
+    14
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "SCH-1",
+   "title": "Schedule 1 — Service Rates",
+   "kind": "schedule",
+   "pages": [
+    15,
+    16
+   ],
+   "printed_pages": [
+    15,
+    16
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "SCH-2",
+   "title": "Schedule 2 — Performance Drilling Depth Bands",
+   "kind": "schedule",
+   "pages": [
+    17,
+    17
+   ],
+   "printed_pages": [
+    17,
+    17
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "SCH-2C",
+   "title": "Schedule 2C — Indexed Services",
+   "kind": "schedule",
+   "pages": [
+    18,
+    18
+   ],
+   "printed_pages": [
+    18,
+    18
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "SCH-2D",
+   "title": "Schedule 2D — Replacement Values in Saudi Riyals",
+   "kind": "schedule",
+   "pages": [
+    19,
+    19
+   ],
+   "printed_pages": [
+    19,
+    19
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "SCH-3",
+   "title": "Schedule 3 — Factors, Standby and Limits",
+   "kind": "schedule",
+   "pages": [
+    20,
+    22
+   ],
+   "printed_pages": [
+    20,
+    22
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "SCH-4",
+   "title": "Schedule 4 — Personnel",
+   "kind": "schedule",
+   "pages": [
+    23,
+    23
+   ],
+   "printed_pages": [
+    23,
+    23
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "SCH-5",
+   "title": "Schedule 5 — The Daily Drilling Report and its Parts",
+   "kind": "schedule",
+   "pages": [
+    24,
+    24
+   ],
+   "printed_pages": [
+    24,
+    24
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package",
+   "note": "The Contents (p.2) calls Schedule 5 \"Documents Required as a Condition of Payment\"; the page heading (p.24) is \"The Daily Drilling Report and its Parts\"."
+  },
+  {
+   "id": "SCH-6",
+   "title": "Schedule 6 — Lost in Hole Replacement Values",
+   "kind": "schedule",
+   "pages": [
+    25,
+    25
+   ],
+   "printed_pages": [
+    25,
+    25
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "SCH-7",
+   "title": "Schedule 7 — Tool Specifications",
+   "kind": "schedule",
+   "pages": [
+    26,
+    26
+   ],
+   "printed_pages": [
+    26,
+    26
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "SCH-8",
+   "title": "Schedule 8 — Scope of Services",
+   "kind": "schedule",
+   "pages": [
+    27,
+    28
+   ],
+   "printed_pages": [
+    27,
+    28
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "APP-A",
+   "title": "Appendix A — Definitions",
+   "kind": "appendix",
+   "pages": [
+    29,
+    29
+   ],
+   "printed_pages": [
+    29,
+    29
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "APP-B",
+   "title": "Appendix B — Form of Invoice",
+   "kind": "appendix",
+   "pages": [
+    30,
+    30
+   ],
+   "printed_pages": [
+    30,
+    30
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "APP-C",
+   "title": "Appendix C — Insurances and Notices (with Execution)",
+   "kind": "appendix",
+   "pages": [
+    31,
+    31
+   ],
+   "printed_pages": [
+    31,
+    31
+   ],
+   "in_contents": true,
+   "listed_in_clause_2": true,
+   "relationship": "part of the base contract package"
+  },
+  {
+   "id": "APP-D",
+   "title": "Appendix D — Form of Daily Drilling Report",
+   "kind": "appendix",
+   "pages": [
+    32,
+    32
+   ],
+   "printed_pages": [
+    32,
+    32
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "APP-E",
+   "title": "Appendix E — Form of BHA Run Report",
+   "kind": "appendix",
+   "pages": [
+    33,
+    33
+   ],
+   "printed_pages": [
+    33,
+    33
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "APP-F",
+   "title": "Appendix F — Forms of Gyro Survey and Lost in Hole Reports",
+   "kind": "appendix",
+   "pages": [
+    34,
+    34
+   ],
+   "printed_pages": [
+    34,
+    34
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "PART-IX",
+   "title": "Part IX — Particular Conditions (Second Series)",
+   "kind": "part",
+   "pages": [
+    35,
+    35
+   ],
+   "printed_pages": [
+    35,
+    35
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "APP-G",
+   "title": "Appendix G — Terms Used in the Field Reports",
+   "kind": "appendix",
+   "pages": [
+    36,
+    36
+   ],
+   "printed_pages": [
+    36,
+    36
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "SOV",
+   "title": "Schedule of Variations",
+   "kind": "variation_schedule",
+   "pages": [
+    37,
+    37
+   ],
+   "printed_pages": [
+    37,
+    37
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "relationship": "bound into the contract package but not listed in Clause 2 or the Contents; rank not stated (AMB-01)"
+  },
+  {
+   "id": "S1",
+   "title": "Supplement No. 1 to Contract DDS-2025-118",
+   "kind": "instrument",
+   "pages": [
+    38,
+    38
+   ],
+   "printed_pages": [
+    38,
+    38
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "reference": "DDS-2025-118/S1",
+   "issued": "2025-05-19",
+   "effective": "2025-07-01",
+   "relationship": "instrument varying the base contract; read with it in the order issued (Schedule of Variations)"
+  },
+  {
+   "id": "A1",
+   "title": "Amendment No. 1 to Contract DDS-2025-118",
+   "kind": "instrument",
+   "pages": [
+    39,
+    39
+   ],
+   "printed_pages": [
+    39,
+    39
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "reference": "DDS-2025-118/A1",
+   "issued": "2025-11-07",
+   "effective": "2026-01-01",
+   "relationship": "instrument varying the base contract; read with it in the order issued (Schedule of Variations)"
+  },
+  {
+   "id": "S2",
+   "title": "Supplement No. 2 to Contract DDS-2025-118",
+   "kind": "instrument",
+   "pages": [
+    40,
+    40
+   ],
+   "printed_pages": [
+    40,
+    40
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "reference": "DDS-2025-118/S2",
+   "issued": "2026-02-24",
+   "effective": "2026-04-01",
+   "relationship": "instrument varying the base contract; read with it in the order issued (Schedule of Variations)"
+  },
+  {
+   "id": "A2",
+   "title": "Amendment No. 2 to Contract DDS-2025-118",
+   "kind": "instrument",
+   "pages": [
+    41,
+    41
+   ],
+   "printed_pages": [
+    41,
+    41
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "reference": "DDS-2025-118/A2",
+   "issued": "2026-05-21",
+   "effective": "2026-07-01",
+   "relationship": "instrument varying the base contract; read with it in the order issued (Schedule of Variations)"
+  },
+  {
+   "id": "A3",
+   "title": "Amendment No. 3 to Contract DDS-2025-118",
+   "kind": "instrument",
+   "pages": [
+    42,
+    42
+   ],
+   "printed_pages": [
+    42,
+    42
+   ],
+   "in_contents": false,
+   "listed_in_clause_2": false,
+   "reference": "DDS-2025-118/A3",
+   "issued": "2026-08-17",
+   "effective": "2026-02-01",
+   "relationship": "instrument varying the base contract; read with it in the order issued (Schedule of Variations)"
+  }
+ ],
+ "identity": {
+  "contract_ref": {
+   "value": "DDS-2025-118",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Contract reference: DDS-2025-118"
+    }
+   ]
+  },
+  "title": {
+   "value": "Directional Drilling Services Contract — Drilling Campaign 2025",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "DIRECTIONAL DRILLING SERVICES CONTRACT DRILLING CAMPAIGN 2025"
+    }
+   ]
+  },
+  "company": {
+   "value": "Northgate Petroleum Operating Company",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "NORTHGATE PETROLEUM OPERATING COMPANY (\"the Company\")"
+    }
+   ]
+  },
+  "contractor": {
+   "value": "Meridian Downhole Services Ltd",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "MERIDIAN DOWNHOLE SERVICES LTD (\"the Contractor\")"
+    }
+   ]
+  },
+  "currency": {
+   "value": "USD",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Currency United States Dollars (USD)"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 12,
+     "printed_page": 12,
+     "section": "P14 Currency of payment",
+     "source_text": "All invoices are stated and paid in USD."
+    }
+   ]
+  },
+  "vat_percent": {
+   "value": "15",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Value Added Tax 15 per cent"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 8,
+     "printed_page": 8,
+     "section": "Clause 39",
+     "source_text": "Value Added Tax is charged at 15 per cent of the net amount of the invoice, rounded under Clause 17."
+    }
+   ]
+  },
+  "rounding": {
+   "value": {
+    "unit": "cent",
+    "mode": "HALF_EVEN",
+    "when": "at each step of the Clause 18 build-up"
+   },
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Rounding to the cent, half to even, at each step"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 17",
+     "source_text": "Every amount is ascertained in cents. Where a step of the build-up in Clause 18 produces a fraction of a cent, the result of that step is rounded to the nearest cent before the next step is applied, and a result exactly half way between two cents is rounded to the even cent."
+    }
+   ]
+  },
+  "commencement": {
+   "value": "2025-01-01",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Commencement date 01 January 2025"
+    }
+   ]
+  },
+  "original_expiry": {
+   "value": "2025-12-31",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Expiry date 31 December 2025"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 37,
+     "printed_page": 37,
+     "section": "Schedule of Variations",
+     "source_text": "The Term as let ran from 1 January 2025 to 31 December 2025."
+    }
+   ]
+  },
+  "expiry_extensions": [
+   {
+    "instrument": "A1",
+    "new_expiry": "2026-06-30",
+    "extension_days": 181,
+    "effective": "2026-01-01",
+    "issued": "2025-11-07"
+   },
+   {
+    "instrument": "A2",
+    "new_expiry": "2026-12-31",
+    "extension_days": 184,
+    "effective": "2026-07-01",
+    "issued": "2026-05-21"
+   }
+  ],
+  "final_expiry": {
+   "value": "2026-12-31",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 37,
+     "printed_page": 37,
+     "section": "Schedule of Variations",
+     "source_text": "As twice extended it runs from 1 January 2025 to 31 December 2026."
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 41,
+     "printed_page": 41,
+     "section": "Amendment No. 2, 2.1",
+     "source_text": "The Expiry Date stated in the Form of Agreement is extended to 31 December 2026"
+    }
+   ]
+  },
+  "term_chargeability": {
+   "value": "services performed on or before the (extended) Expiry Date are chargeable; services performed after it are not",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 39,
+     "printed_page": 39,
+     "section": "Amendment No. 1, 1.1",
+     "source_text": "Services performed on or before the extended Expiry Date are chargeable under this Contract; services performed after it are not."
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 3,
+     "printed_page": 3,
+     "section": "Clause 5",
+     "source_text": "The Contract runs from the Commencement Date to the Expiry Date."
+    }
+   ]
+  },
+  "invoicing": {
+   "value": "per well, within 30 days of period end",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Invoicing per well, within 30 days of period end"
+    }
+   ]
+  },
+  "operations": {
+   "value": "24 hours a day, 7 days a week",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "Operations 24 hours a day, 7 days a week"
+    }
+   ]
+  },
+  "contract_price": {
+   "value": "services actually provided at Schedule 1 and 2 rates, as adjusted by Schedules 3 and 6 and Part III, invoiced as Part IV requires; no lump sum other than those Schedule 1 states",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement",
+     "source_text": "The Contract Price is ascertained from the services actually provided, at the rates in Schedule 1 and Schedule 2, as adjusted by Schedules 3 and 6 and by Part III, and invoiced as Part IV requires."
+    }
+   ]
+  },
+  "execution": {
+   "value": "signature lines blank; no execution date",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 31,
+     "printed_page": 31,
+     "section": "Appendix C — Execution",
+     "source_text": "For and on behalf of the Company ____ For and on behalf of the Contractor ____"
+    }
+   ]
+  }
+ },
+ "contract_years": {
+  "rule": {
+   "value": "first Contract Year from Commencement to the day before its first anniversary; each following one from that anniversary; the final one ends on the Expiry Date as extended; an extension does not begin a new Contract Year",
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 3A",
+     "source_text": "The first Contract Year runs from the Commencement Date to the day before its first anniversary, and each following Contract Year from that anniversary. The final Contract Year ends on the Expiry Date as extended by any Amendment; an extension does not begin a new Contract Year."
+    }
+   ]
+  },
+  "years": [
+   {
+    "year": 1,
+    "start": "2025-01-01",
+    "end": "2025-12-31",
+    "status": "STATED",
+    "note": "Commencement to the day before the first anniversary."
+   },
+   {
+    "year": 2,
+    "start": "2026-01-01",
+    "end": "2026-12-31",
+    "status": "AMBIGUOUS",
+    "ambiguities": [
+     "AMB-11"
+    ],
+    "note": "Working reading: a second Contract Year begins on the first anniversary and, as the final year, ends on the extended Expiry Date. Alternative: the extension leaves one Contract Year running to 2026-12-31."
+   }
+  ]
+ },
+ "precedence": {
+  "rules": [
+   {
+    "id": "PR-01",
+    "rule": "The Contract comprises the Agreement, Parts I to VII, Schedules 1 to 6 and Appendices A to C.",
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 3,
+      "printed_page": 3,
+      "section": "Clause 2",
+      "source_text": "This Contract comprises this Agreement, Parts I to VII, Schedules 1 to 6 and Appendices A to C."
+     }
+    ]
+   },
+   {
+    "id": "PR-02",
+    "rule": "A Schedule prevails over a Part.",
+    "applies_to": [
+     "SCH-1",
+     "SCH-2",
+     "SCH-3",
+     "SCH-4",
+     "SCH-5",
+     "SCH-6",
+     "PART-I",
+     "PART-II",
+     "PART-III",
+     "PART-IV",
+     "PART-V",
+     "PART-VI",
+     "PART-VII"
+    ],
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 3,
+      "printed_page": 3,
+      "section": "Clause 2",
+      "source_text": "A Schedule prevails over a Part"
+     }
+    ]
+   },
+   {
+    "id": "PR-03",
+    "rule": "Part VI amends Parts I to V and prevails over them.",
+    "applies_to": [
+     "PART-VI",
+     "PART-I",
+     "PART-II",
+     "PART-III",
+     "PART-IV",
+     "PART-V"
+    ],
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 3,
+      "printed_page": 3,
+      "section": "Clause 2",
+      "source_text": "Part VI prevails over Parts I to V."
+     },
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 11,
+      "printed_page": 11,
+      "section": "P1 Precedence",
+      "source_text": "This Part amends Parts I to V and prevails over them."
+     }
+    ]
+   },
+   {
+    "id": "PR-04",
+    "rule": "The Contract is read with the instruments in the order issued; each governs services performed on or after its own effective date; nothing in an instrument reopens a service already charged at the rate then chargeable.",
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-07",
+     "AMB-12"
+    ],
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 37,
+      "printed_page": 37,
+      "section": "Schedule of Variations",
+      "source_text": "This Contract is to be read with the instruments below, in the order issued. Each takes effect on its own effective date and governs services performed on or after it; nothing in an instrument reopens a service already charged at the rate then chargeable."
+     }
+    ]
+   },
+   {
+    "id": "PR-05",
+    "rule": "Where an instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date.",
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-07",
+     "AMB-09"
+    ],
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 38,
+      "printed_page": 38,
+      "section": "closing paragraph of each instrument (pp. 38-42)",
+      "source_text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it."
+     }
+    ]
+   },
+   {
+    "id": "PR-06",
+    "rule": "A rate stated in Schedule 1 is chargeable only until an instrument substitutes another; pricing follows the date the service was performed, not the invoice date.",
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 37,
+      "printed_page": 37,
+      "section": "Schedule of Variations",
+      "source_text": "A rate stated in Schedule 1 is the rate chargeable only until an instrument substitutes another for it. Pricing a service therefore requires the date on which it was performed, not the date of the invoice."
+     }
+    ]
+   },
+   {
+    "id": "PR-07",
+    "rule": "Schedule 2D (SAR values) governs over Schedule 6 (USD values as let).",
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-21"
+    ],
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 35,
+      "printed_page": 35,
+      "section": "Clause 31A",
+      "source_text": "Schedule 6 states the same values in the currency of the Contract as they stood when it was let, and Schedule 2D governs."
+     }
+    ]
+   },
+   {
+    "id": "PR-08",
+    "rule": "Words defined in Appendix A have those meanings throughout.",
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 3,
+      "printed_page": 3,
+      "section": "Clause 1",
+      "source_text": "Words defined in Appendix A have those meanings throughout."
+     }
+    ]
+   },
+   {
+    "id": "PR-09",
+    "rule": "Where the audit guidelines and the contract differ, the contract governs.",
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/guidelines/INVOICE_AUDIT_GUIDELINES.md",
+      "page": null,
+      "printed_page": null,
+      "section": "closing line",
+      "source_text": "Where these guidelines and the contract differ, the contract governs — and the difference is worth reporting."
+     }
+    ]
+   }
+  ],
+  "unranked_documents": [
+   "PART-VIII",
+   "PART-IX",
+   "SCH-2C",
+   "SCH-2D",
+   "SCH-7",
+   "SCH-8",
+   "APP-D",
+   "APP-E",
+   "APP-F",
+   "APP-G",
+   "SOV",
+   "APP-A",
+   "APP-B",
+   "APP-C"
+  ],
+  "unranked_note": "Clause 2 ranks Schedules over Parts and Part VI over Parts I-V only. It gives no rank to Appendices A-C (which it lists) or to any document it does not list. Only the instruments' own ordering (PR-04, PR-05) and Clause 31A's statement about Schedule 2D (PR-07) rank anything outside Clause 2. See AMB-01.",
+  "ambiguities": [
+   "AMB-01"
+  ]
+ },
+ "services": [
+  {
+   "code": "DD-101",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Directional driller, 24-hour coverage",
+   "unit": "person-day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 184735,
+    "printed": "1,847.35"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "80",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 2,
+    "unit": "person-day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [
+    "A1",
+    "A3"
+   ],
+   "rate_discounted_by": [
+    "S2",
+    "A2"
+   ],
+   "appendix_g_terms": [
+    "directional hands"
+   ],
+   "personnel_normally_on_rig": "2, whole well",
+   "charged_for": "each person recorded on the rig on the Daily Drilling Report, per day",
+   "charge_timing": null,
+   "governing_clauses": [
+    "22",
+    "P7",
+    "P13"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-101 Directional driller, 24-hour coverage person-day 1,847.35"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-101: each person recorded on the rig on the Daily Drilling Report, per day"
+    }
+   ]
+  },
+  {
+   "code": "DD-102",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Directional coordinator, office based",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 94860,
+    "printed": "948.60"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "100",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "night man"
+   ],
+   "personnel_normally_on_rig": "1, office based, whole well",
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "Schedule 8 intro"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-102 Directional coordinator, office based day 948.60"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-102: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "DD-110",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Positive displacement motor rental",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 141775,
+    "printed": "1,417.75"
+   },
+   "section_rated": true,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "mud motor"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28",
+    "P6"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-110 Positive displacement motor rental day 1,417.75"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-110: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "DD-111",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Motor redress and inspection",
+   "unit": "run",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 358945,
+    "printed": "3,589.45"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "100",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "B",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each BHA run, as Clause 26 describes",
+   "charge_timing": "once for each BHA run carrying a positive displacement motor, on the last day of that run (cl. 26)",
+   "governing_clauses": [
+    "26",
+    "T5"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-111 Motor redress and inspection run 3,589.45"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-111: each BHA run, as Clause 26 describes"
+    }
+   ]
+  },
+  {
+   "code": "DD-120",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Rotary steerable system, circulating",
+   "unit": "hour",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 38415,
+    "printed": "384.15"
+   },
+   "section_rated": true,
+   "class_rated": true,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 24,
+    "unit": "hour"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": 6,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": "S2",
+   "rate_amended_by": [
+    "S1",
+    "A3"
+   ],
+   "rate_discounted_by": [
+    "S2",
+    "A2"
+   ],
+   "appendix_g_terms": [
+    "rotary steerable"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each circulating or back-reaming hour recorded on the report",
+   "charge_timing": null,
+   "governing_clauses": [
+    "21",
+    "P10",
+    "21A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-120 Rotary steerable system, circulating hour 384.15"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-120: each circulating or back-reaming hour recorded on the report"
+    }
+   ]
+  },
+  {
+   "code": "DD-121",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Rotary steerable system on standby",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 289365,
+    "printed": "2,893.65"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "STANDBY_ONLY",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [
+    "S1"
+   ],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "21",
+    "Schedule 3 Part 4"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-121 Rotary steerable system on standby day 2,893.65"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-121: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "DD-130",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Gyro survey",
+   "unit": "survey",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 244615,
+    "printed": "2,446.15"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 3,
+    "unit": "survey"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "C",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each gyro survey recorded on the report",
+   "charge_timing": null,
+   "governing_clauses": [
+    "30"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-130 Gyro survey survey 2,446.15"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-130: each gyro survey recorded on the report"
+    }
+   ]
+  },
+  {
+   "code": "DD-140",
+   "series": 100,
+   "series_title": "Directional Drilling",
+   "description": "Well planning and anti-collision study",
+   "unit": "well",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 1248950,
+    "printed": "12,489.50"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": true,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "once for the well, as Clause 27 describes",
+   "charge_timing": "once for the well, on the first day on the well (cl. 27)",
+   "governing_clauses": [
+    "27"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 100 — Directional Drilling",
+     "source_text": "DD-140 Well planning and anti-collision study well 12,489.50"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "DD-140: once for the well, as Clause 27 describes"
+    }
+   ]
+  },
+  {
+   "code": "PD-201",
+   "series": 200,
+   "series_title": "Performance Drilling",
+   "description": "Drilling optimisation engineer",
+   "unit": "person-day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 209485,
+    "printed": "2,094.85"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "80",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "person-day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "performance engineer"
+   ],
+   "personnel_normally_on_rig": "1, performance-drilled sections",
+   "charged_for": "each person recorded on the rig on the Daily Drilling Report, per day",
+   "charge_timing": null,
+   "governing_clauses": [
+    "22",
+    "P13"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 200 — Performance Drilling",
+     "source_text": "PD-201 Drilling optimisation engineer person-day 2,094.85"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "PD-201: each person recorded on the rig on the Daily Drilling Report, per day"
+    }
+   ]
+  },
+  {
+   "code": "PD-210",
+   "series": 200,
+   "series_title": "Performance Drilling",
+   "description": "Performance drilling footage",
+   "unit": "metre",
+   "rate": {
+    "basis": "SCHEDULE_2",
+    "base_rate_cents": null,
+    "printed": "Schedule 2"
+   },
+   "section_rated": false,
+   "class_rated": true,
+   "class_rating_ambiguity": "AMB-02",
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each metre drilled, logged or reamed as Clauses 23 to 25 describe",
+   "charge_timing": null,
+   "governing_clauses": [
+    "23",
+    "25A",
+    "17B"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 200 — Performance Drilling",
+     "source_text": "PD-210 Performance drilling footage metre Schedule 2"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "PD-210: each metre drilled, logged or reamed as Clauses 23 to 25 describe"
+    }
+   ]
+  },
+  {
+   "code": "PD-220",
+   "series": 200,
+   "series_title": "Performance Drilling",
+   "description": "Downhole vibration mitigation tool",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 114835,
+    "printed": "1,148.35"
+   },
+   "section_rated": true,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "bit and reamer"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 200 — Performance Drilling",
+     "source_text": "PD-220 Downhole vibration mitigation tool day 1,148.35"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "PD-220: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "PD-230",
+   "series": 200,
+   "series_title": "Performance Drilling",
+   "description": "Drilling dynamics memory sub",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 63915,
+    "printed": "639.15"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "hydraulics package"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 200 — Performance Drilling",
+     "source_text": "PD-230 Drilling dynamics memory sub day 639.15"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "PD-230: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "MW-301",
+   "series": 300,
+   "series_title": "Measurement While Drilling",
+   "description": "MWD engineer",
+   "unit": "person-day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 164655,
+    "printed": "1,646.55"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "80",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 2,
+    "unit": "person-day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [
+    "A1",
+    "A2"
+   ],
+   "rate_discounted_by": [
+    "S2",
+    "A2"
+   ],
+   "appendix_g_terms": [
+    "MWD engineers"
+   ],
+   "personnel_normally_on_rig": "2, whole well",
+   "charged_for": "each person recorded on the rig on the Daily Drilling Report, per day",
+   "charge_timing": null,
+   "governing_clauses": [
+    "22",
+    "P13"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 300 — Measurement While Drilling",
+     "source_text": "MW-301 MWD engineer person-day 1,646.55"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "MW-301: each person recorded on the rig on the Daily Drilling Report, per day"
+    }
+   ]
+  },
+  {
+   "code": "MW-310",
+   "series": 300,
+   "series_title": "Measurement While Drilling",
+   "description": "MWD directional and gamma tool",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 224585,
+    "printed": "2,245.85"
+   },
+   "section_rated": true,
+   "class_rated": true,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": true,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "MWD collar"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28",
+    "17A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 300 — Measurement While Drilling",
+     "source_text": "MW-310 MWD directional and gamma tool day 2,245.85"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "MW-310: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "MW-320",
+   "series": 300,
+   "series_title": "Measurement While Drilling",
+   "description": "Pressure while drilling module",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 77965,
+    "printed": "779.65"
+   },
+   "section_rated": false,
+   "class_rated": true,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "survey package"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 300 — Measurement While Drilling",
+     "source_text": "MW-320 Pressure while drilling module day 779.65"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "MW-320: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "MW-330",
+   "series": 300,
+   "series_title": "Measurement While Drilling",
+   "description": "Real-time data transmission",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 30975,
+    "printed": "309.75"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "100",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "real-time link"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 300 — Measurement While Drilling",
+     "source_text": "MW-330 Real-time data transmission day 309.75"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "MW-330: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "LW-401",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "LWD engineer",
+   "unit": "person-day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 189845,
+    "printed": "1,898.45"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "80",
+    "status": "STATED",
+    "page": 20
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "person-day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [
+    "A1"
+   ],
+   "rate_discounted_by": [
+    "S2",
+    "A2"
+   ],
+   "appendix_g_terms": [
+    "logging engineers"
+   ],
+   "personnel_normally_on_rig": "1, while LWD tools are in the hole",
+   "charged_for": "each person recorded on the rig on the Daily Drilling Report, per day",
+   "charge_timing": null,
+   "governing_clauses": [
+    "22",
+    "P13"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-401 LWD engineer person-day 1,898.45"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-401: each person recorded on the rig on the Daily Drilling Report, per day"
+    }
+   ]
+  },
+  {
+   "code": "LW-410",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "LWD resistivity, logged",
+   "unit": "metre",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 1137,
+    "printed": "11.37"
+   },
+   "section_rated": false,
+   "class_rated": true,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "B",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "gamma tool"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each metre drilled, logged or reamed as Clauses 23 to 25 describe",
+   "charge_timing": null,
+   "governing_clauses": [
+    "24",
+    "25A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-410 LWD resistivity, logged metre 11.37"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-410: each metre drilled, logged or reamed as Clauses 23 to 25 describe"
+    }
+   ]
+  },
+  {
+   "code": "LW-411",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "LWD density and neutron, logged",
+   "unit": "metre",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 1683,
+    "printed": "16.83"
+   },
+   "section_rated": false,
+   "class_rated": true,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "B",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "resistivity tool"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each metre drilled, logged or reamed as Clauses 23 to 25 describe",
+   "charge_timing": null,
+   "governing_clauses": [
+    "24",
+    "25A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-411 LWD density and neutron, logged metre 16.83"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-411: each metre drilled, logged or reamed as Clauses 23 to 25 describe"
+    }
+   ]
+  },
+  {
+   "code": "LW-412",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "LWD sonic, logged",
+   "unit": "metre",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 1329,
+    "printed": "13.29"
+   },
+   "section_rated": false,
+   "class_rated": true,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "B",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "density-neutron"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each metre drilled, logged or reamed as Clauses 23 to 25 describe",
+   "charge_timing": null,
+   "governing_clauses": [
+    "24",
+    "25A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-412 LWD sonic, logged metre 13.29"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-412: each metre drilled, logged or reamed as Clauses 23 to 25 describe"
+    }
+   ]
+  },
+  {
+   "code": "LW-413",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "Formation pressure tester, per pressure point",
+   "unit": "point",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 184965,
+    "printed": "1,849.65"
+   },
+   "section_rated": false,
+   "class_rated": true,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 12,
+    "unit": "point"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "B",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each formation pressure point recorded on the report",
+   "charge_timing": null,
+   "governing_clauses": [
+    "30",
+    "T11"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-413 Formation pressure tester, per pressure point point 1,849.65"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-413: each formation pressure point recorded on the report"
+    }
+   ]
+  },
+  {
+   "code": "LW-420",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "Radioactive source handling",
+   "unit": "run",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 274655,
+    "printed": "2,746.55"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "100",
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "D",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each BHA run, as Clause 26 describes",
+   "charge_timing": "once for each BHA run carrying a radioactive source, on the first day of that run (cl. 26)",
+   "governing_clauses": [
+    "26",
+    "H6"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 15,
+     "printed_page": 15,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-420 Radioactive source handling run 2,746.55"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-420: each BHA run, as Clause 26 describes"
+    }
+   ]
+  },
+  {
+   "code": "LW-430",
+   "series": 400,
+   "series_title": "Logging While Drilling",
+   "description": "LWD data processing and final log",
+   "unit": "well",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 839475,
+    "printed": "8,394.75"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": true,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "once for the well, as Clause 27 describes",
+   "charge_timing": "once for the well, on the last day on the well; only where logging while drilling was run (cl. 27)",
+   "governing_clauses": [
+    "27"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 400 — Logging While Drilling",
+     "source_text": "LW-430 LWD data processing and final log well 8,394.75"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LW-430: once for the well, as Clause 27 describes"
+    }
+   ]
+  },
+  {
+   "code": "RM-510",
+   "series": 500,
+   "series_title": "Reaming and Hole Enlargement",
+   "description": "Hydraulic underreaming, reamed",
+   "unit": "metre",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 3845,
+    "printed": "38.45"
+   },
+   "section_rated": true,
+   "class_rated": false,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "B",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each metre drilled, logged or reamed as Clauses 23 to 25 describe",
+   "charge_timing": null,
+   "governing_clauses": [
+    "25",
+    "25A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 500 — Reaming and Hole Enlargement",
+     "source_text": "RM-510 Hydraulic underreaming, reamed metre 38.45"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "RM-510: each metre drilled, logged or reamed as Clauses 23 to 25 describe"
+    }
+   ]
+  },
+  {
+   "code": "RM-511",
+   "series": 500,
+   "series_title": "Reaming and Hole Enlargement",
+   "description": "Underreamer rental",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 137915,
+    "printed": "1,379.15"
+   },
+   "section_rated": true,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "hole opener"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 500 — Reaming and Hole Enlargement",
+     "source_text": "RM-511 Underreamer rental day 1,379.15"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "RM-511: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "RM-520",
+   "series": 500,
+   "series_title": "Reaming and Hole Enlargement",
+   "description": "Roller reamer and stabiliser rental",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 41985,
+    "printed": "419.85"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "stabiliser string"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 500 — Reaming and Hole Enlargement",
+     "source_text": "RM-520 Roller reamer and stabiliser rental day 419.85"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "RM-520: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "RM-530",
+   "series": 500,
+   "series_title": "Reaming and Hole Enlargement",
+   "description": "Back-reaming while tripping",
+   "unit": "hour",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 26455,
+    "printed": "264.55"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 24,
+    "unit": "hour"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each circulating or back-reaming hour recorded on the report",
+   "charge_timing": null,
+   "governing_clauses": [
+    "30",
+    "21A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 500 — Reaming and Hole Enlargement",
+     "source_text": "RM-530 Back-reaming while tripping hour 264.55"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "RM-530: each circulating or back-reaming hour recorded on the report"
+    }
+   ]
+  },
+  {
+   "code": "HC-601",
+   "series": 600,
+   "series_title": "Hole Conditioning",
+   "description": "Hole cleaning circulating sub",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 68935,
+    "printed": "689.35"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": "S1",
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "circulating sub"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 600 — Hole Conditioning",
+     "source_text": "HC-601 Hole cleaning circulating sub day 689.35"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "HC-601: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "HC-610",
+   "series": 600,
+   "series_title": "Hole Conditioning",
+   "description": "Wiper trip supervision",
+   "unit": "trip",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 194715,
+    "printed": "1,947.15"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 2,
+    "unit": "trip"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each wiper trip recorded on the report",
+   "charge_timing": null,
+   "governing_clauses": [
+    "30"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 600 — Hole Conditioning",
+     "source_text": "HC-610 Wiper trip supervision trip 1,947.15"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "HC-610: each wiper trip recorded on the report"
+    }
+   ]
+  },
+  {
+   "code": "HC-620",
+   "series": 600,
+   "series_title": "Hole Conditioning",
+   "description": "Drilling jar rental",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 53965,
+    "printed": "539.65"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "PERCENT",
+    "percent": "50",
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": true,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "drilling jars"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28",
+    "17A"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 600 — Hole Conditioning",
+     "source_text": "HC-620 Drilling jar rental day 539.65"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "HC-620: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "HC-630",
+   "series": 600,
+   "series_title": "Hole Conditioning",
+   "description": "Casing drift and clean-out run",
+   "unit": "run",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 429585,
+    "printed": "4,295.85"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each BHA run, as Clause 26 describes",
+   "charge_timing": null,
+   "governing_clauses": [
+    "30"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 600 — Hole Conditioning",
+     "source_text": "HC-630 Casing drift and clean-out run run 4,295.85"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "HC-630: each BHA run, as Clause 26 describes"
+    }
+   ]
+  },
+  {
+   "code": "HC-640",
+   "series": 600,
+   "series_title": "Hole Conditioning",
+   "description": "Cuttings bed monitoring",
+   "unit": "day",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 71955,
+    "printed": "719.55"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "NOT_CHARGEABLE",
+    "percent": null,
+    "status": "STATED",
+    "page": 21
+   },
+   "daily_limit": {
+    "quantity": 1,
+    "unit": "day"
+   },
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "float sub"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each day the Daily Drilling Report records the tool in the hole",
+   "charge_timing": null,
+   "governing_clauses": [
+    "28"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 600 — Hole Conditioning",
+     "source_text": "HC-640 Cuttings bed monitoring day 719.55"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "HC-640: each day the Daily Drilling Report records the tool in the hole"
+    }
+   ]
+  },
+  {
+   "code": "MB-701",
+   "series": 700,
+   "series_title": "Mobilisation and Lost in Hole",
+   "description": "Mobilisation to rig site",
+   "unit": "well",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 1849750,
+    "printed": "18,497.50"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": true,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [
+    "A2"
+   ],
+   "rate_discounted_by": [
+    "S2",
+    "A2"
+   ],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "once for the well, as Clause 27 describes",
+   "charge_timing": "once for the well, on the first day on the well (cl. 27)",
+   "governing_clauses": [
+    "27"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 700 — Mobilisation and Lost in Hole",
+     "source_text": "MB-701 Mobilisation to rig site well 18,497.50"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "MB-701: once for the well, as Clause 27 describes"
+    }
+   ]
+  },
+  {
+   "code": "MB-702",
+   "series": 700,
+   "series_title": "Mobilisation and Lost in Hole",
+   "description": "Demobilisation from rig site",
+   "unit": "well",
+   "rate": {
+    "basis": "SCHEDULE_1",
+    "base_rate_cents": 1419625,
+    "printed": "14,196.25"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": true,
+   "minimum_hours_operating_day": null,
+   "record_part_required": null,
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [],
+   "personnel_normally_on_rig": null,
+   "charged_for": "once for the well, as Clause 27 describes",
+   "charge_timing": "once for the well, on the last day on the well (cl. 27)",
+   "governing_clauses": [
+    "27"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 700 — Mobilisation and Lost in Hole",
+     "source_text": "MB-702 Demobilisation from rig site well 14,196.25"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "MB-702: once for the well, as Clause 27 describes"
+    }
+   ]
+  },
+  {
+   "code": "LH-711",
+   "series": 700,
+   "series_title": "Mobilisation and Lost in Hole",
+   "description": "Lost in hole, positive displacement motor",
+   "unit": "each",
+   "rate": {
+    "basis": "CLAUSE_31",
+    "base_rate_cents": null,
+    "printed": "Clause 31"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "E",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "mud motor"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each tool lost in the hole, as Clause 31 describes",
+   "charge_timing": "replacement value less depreciation, charged as one unit on the day of the loss (cl. 31)",
+   "governing_clauses": [
+    "31",
+    "31A",
+    "P12"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 700 — Mobilisation and Lost in Hole",
+     "source_text": "LH-711 Lost in hole, positive displacement motor each Clause 31"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LH-711: each tool lost in the hole, as Clause 31 describes"
+    }
+   ]
+  },
+  {
+   "code": "LH-712",
+   "series": 700,
+   "series_title": "Mobilisation and Lost in Hole",
+   "description": "Lost in hole, rotary steerable system",
+   "unit": "each",
+   "rate": {
+    "basis": "CLAUSE_31",
+    "base_rate_cents": null,
+    "printed": "Clause 31"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "E",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "rotary steerable"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each tool lost in the hole, as Clause 31 describes",
+   "charge_timing": "replacement value less depreciation, charged as one unit on the day of the loss (cl. 31)",
+   "governing_clauses": [
+    "31",
+    "31A",
+    "P12"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 700 — Mobilisation and Lost in Hole",
+     "source_text": "LH-712 Lost in hole, rotary steerable system each Clause 31"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LH-712: each tool lost in the hole, as Clause 31 describes"
+    }
+   ]
+  },
+  {
+   "code": "LH-713",
+   "series": 700,
+   "series_title": "Mobilisation and Lost in Hole",
+   "description": "Lost in hole, MWD tool",
+   "unit": "each",
+   "rate": {
+    "basis": "CLAUSE_31",
+    "base_rate_cents": null,
+    "printed": "Clause 31"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "E",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "MWD collar"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each tool lost in the hole, as Clause 31 describes",
+   "charge_timing": "replacement value less depreciation, charged as one unit on the day of the loss (cl. 31)",
+   "governing_clauses": [
+    "31",
+    "31A",
+    "P12"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 700 — Mobilisation and Lost in Hole",
+     "source_text": "LH-713 Lost in hole, MWD tool each Clause 31"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LH-713: each tool lost in the hole, as Clause 31 describes"
+    }
+   ]
+  },
+  {
+   "code": "LH-714",
+   "series": 700,
+   "series_title": "Mobilisation and Lost in Hole",
+   "description": "Lost in hole, LWD resistivity tool",
+   "unit": "each",
+   "rate": {
+    "basis": "CLAUSE_31",
+    "base_rate_cents": null,
+    "printed": "Clause 31"
+   },
+   "section_rated": false,
+   "class_rated": false,
+   "standby": {
+    "treatment": "FULL_WHATEVER_STATUS",
+    "percent": null,
+    "status": "INTERPRETED",
+    "page": 20,
+    "note": "Not in the Part 3 table; the Part 3 intro says services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   "daily_limit": null,
+   "once_per_well": false,
+   "minimum_hours_operating_day": null,
+   "record_part_required": "E",
+   "indexed": false,
+   "monthly_republished_by": null,
+   "rate_amended_by": [],
+   "rate_discounted_by": [],
+   "appendix_g_terms": [
+    "gamma tool"
+   ],
+   "personnel_normally_on_rig": null,
+   "charged_for": "each tool lost in the hole, as Clause 31 describes",
+   "charge_timing": "replacement value less depreciation, charged as one unit on the day of the loss (cl. 31)",
+   "governing_clauses": [
+    "31",
+    "31A",
+    "P12"
+   ],
+   "status": "STATED",
+   "review_passes": 2,
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 16,
+     "printed_page": 16,
+     "section": "Schedule 1, Series 700 — Mobilisation and Lost in Hole",
+     "source_text": "LH-714 Lost in hole, LWD resistivity tool each Clause 31"
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 — Scope of Services",
+     "source_text": "LH-714: each tool lost in the hole, as Clause 31 describes"
+    }
+   ]
+  }
+ ],
+ "invoice_discount": {
+  "code": "DS-900",
+  "in_schedule_1": false,
+  "threshold_cents": 25000000,
+  "comparison": "GREATER_THAN",
+  "comparison_note": "INTERPRETED from \"exceeds\": a sum of exactly 250,000.00 attracts no discount.",
+  "percent": "4",
+  "basis": "the excess of the sum of the amounts of the services charged on the invoice over the threshold",
+  "rounding": "Clause 17 (half to even, to the cent)",
+  "presentation": "a single charge under code DS-900 with a negative amount",
+  "scope": "each invoice alone, not the Contractor's invoices taken together (P11)",
+  "order": "rate discounts under Supplement No. 2 / Amendment No. 2 are taken before it; the net amount includes the DS-900 charge (Clause 36)",
+  "worked_example": {
+   "services_total_cents": 31240000,
+   "discount_cents": -249600,
+   "page": 30
+  },
+  "status": "STATED",
+  "ambiguities": [
+   "AMB-26"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 8,
+    "printed_page": 8,
+    "section": "Clause 38",
+    "source_text": "Where the sum of the amounts of the services charged on an invoice exceeds 250,000.00 USD, the Contractor allows a discount of 4 per cent of the excess, rounded under Clause 17, stated as a single charge under code DS-900 with a negative amount."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 11,
+    "printed_page": 11,
+    "section": "P11 Discount basis",
+    "source_text": "The discount under Clause 38 is calculated on each invoice alone and not on the Contractor's invoices taken together."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 8,
+    "printed_page": 8,
+    "section": "Clause 36",
+    "source_text": "The net amount of an invoice is the sum of the amounts of its charges, including the discount charge under Clause 38."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 30,
+    "printed_page": 30,
+    "section": "Appendix B footnote",
+    "source_text": "On an invoice whose services total 312,400.00, the discount charge under Clause 38 is -2,496.00."
+   }
+  ]
+ },
+ "cost_build_up": {
+  "order": [
+   {
+    "step": 0,
+    "name": "index",
+    "applies_when": "service listed in Schedule 2C",
+    "rule": "base rate x Rig Services Index for the month performed / base index, rounded half to even; that figure is the rate for Clause 17",
+    "clause": "17A",
+    "page": 35,
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-04"
+    ]
+   },
+   {
+    "step": 1,
+    "name": "hole_section_factor",
+    "applies_when": "service is section-rated (Schedule 3 Part 1)",
+    "clause": "18",
+    "page": 6,
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-03"
+    ]
+   },
+   {
+    "step": 2,
+    "name": "well_class_factor",
+    "applies_when": "service is class-rated (Schedule 3 Part 2)",
+    "clause": "18",
+    "page": 6,
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-02"
+    ]
+   },
+   {
+    "step": 3,
+    "name": "standby_percentage",
+    "applies_when": "the day is a Standby day (Schedule 3 Part 3)",
+    "clause": "18",
+    "page": 6,
+    "status": "STATED"
+   },
+   {
+    "step": 4,
+    "name": "principal_services_discount",
+    "applies_when": "service listed by Supplement No. 2 / Amendment No. 2, performed on or after their effective date",
+    "rule": "applied to the rate as the last factor, before the rounding",
+    "clause": "S2 2.2 / A2 2.3",
+    "page": 40,
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-09"
+    ]
+   }
+  ],
+  "each_step_rounded": true,
+  "amount_rule": "The amount for the charge is the quantity multiplied by the rate so built up.",
+  "exclusions": [
+   {
+    "rule": "The hole-section factor is not applied on a day the rig is on Standby.",
+    "clause": "17B",
+    "status": "AMBIGUOUS",
+    "ambiguities": [
+     "AMB-03"
+    ],
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 35,
+      "printed_page": 35,
+      "section": "Clause 17B",
+      "source_text": "The hole-section factor in Schedule 3 Part 1 is not applied on a day the rig is on Standby, the section not being drilled."
+     }
+    ]
+   },
+   {
+    "rule": "The well-class factor is not applied to item PD-210.",
+    "clause": "17B",
+    "status": "AMBIGUOUS",
+    "ambiguities": [
+     "AMB-02"
+    ],
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 35,
+      "printed_page": 35,
+      "section": "Clause 17B",
+      "source_text": "The well-class factor in Schedule 3 Part 2 is not applied to item PD-210, Schedule 2 having already priced the metre by depth."
+     }
+    ]
+   },
+   {
+    "rule": "No uplift for night work or public holidays.",
+    "clause": "P8, P9",
+    "status": "STATED",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 11,
+      "printed_page": 11,
+      "section": "P8/P9",
+      "source_text": "No uplift is payable for work at night; the rates in Schedule 1 cover continuous operations. No uplift is payable for work on a public holiday."
+     }
+    ]
+   }
+  ],
+  "hole_section_factors": {
+   "26\"": "1.315",
+   "17-1/2\"": "1.145",
+   "12-1/4\"": "1.00",
+   "8-1/2\"": "0.945",
+   "6\"": "0.885"
+  },
+  "section_rated_services": [
+   "DD-110",
+   "DD-120",
+   "PD-220",
+   "MW-310",
+   "RM-510",
+   "RM-511"
+  ],
+  "well_class_factors": {
+   "Standard": "1.00",
+   "Extended Reach": "1.175",
+   "HPHT": "1.325"
+  },
+  "class_rated_services_as_printed": [
+   "DD-120",
+   "PD-210",
+   "MW-310",
+   "MW-320",
+   "LW-410",
+   "LW-411",
+   "LW-412",
+   "LW-413"
+  ],
+  "well_class_basis": "stated in the call-off; governs the whole well; not revised while drilled (cl. 4, P2, P3, Appendix A)",
+  "standby": {
+   "rule": "On a Standby day a service is charged at the Schedule 3 Part 3 percentage of its operating rate; a service marked not chargeable is not charged on a Standby day in any quantity. Services charged per well or for a loss are charged in full whatever the status of the day. DD-121 is charged only on a Standby day, in place of DD-120.",
+   "personnel": "Personnel are charged on a Standby day at the standby percentage for their position (P13).",
+   "status_source": "The status of the day is as recorded on the Daily Drilling Report (cl. 19), recorded by the Company Representative and final (R7)."
+  },
+  "status": "STATED",
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 6,
+    "printed_page": 6,
+    "section": "Clause 18",
+    "source_text": "The rate for a charge is the Schedule 1 rate, or for item PD-210 the Schedule 2 rate, to which is applied, in this order and no other: first the hole section factor in Schedule 3 Part 1, where the service is section-rated; then the well class factor in Schedule 3 Part 2, where the service is class-rated; then the standby percentage in Schedule 3 Part 3, where the day is a Standby day. Each step is rounded under Clause 17. The amount for the charge is the quantity multiplied by the rate so built up."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 20,
+    "printed_page": 20,
+    "section": "Schedule 3 Part 1",
+    "source_text": "Section-rated services: DD-110, DD-120, PD-220, MW-310, RM-510, RM-511."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 20,
+    "printed_page": 20,
+    "section": "Schedule 3 Part 2",
+    "source_text": "Class-rated services: DD-120, PD-210, MW-310, MW-320, LW-410, LW-411, LW-412, LW-413."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 20,
+    "printed_page": 20,
+    "section": "Schedule 3 Part 3",
+    "source_text": "The percentage of the operating rate charged on a Standby day (Clause 20). Services charged per well or for a loss are charged in full whatever the status of the day."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 21,
+    "printed_page": 21,
+    "section": "Schedule 3 Part 4",
+    "source_text": "DD-121 is charged only on a Standby day, in place of item DD-120 (Clause 21)."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 21,
+    "printed_page": 21,
+    "section": "Schedule 3 Part 5 — Daily limits",
+    "source_text": "Code | Description | Limit per day | Unit (table continues on p.22)"
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 22,
+    "printed_page": 22,
+    "section": "Schedule 3 Part 6 — Charges once per well",
+    "source_text": "DD-140, LW-430, MB-701, MB-702 (Clause 27)."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 22,
+    "printed_page": 22,
+    "section": "Schedule 3 Part 7 — Minimum hours",
+    "source_text": "DD-120: not less than 6 hours on an Operating day (Clause 21)."
+   }
+  ]
+ },
+ "depth_bands": {
+  "service": "PD-210",
+  "bands": [
+   {
+    "band": 1,
+    "over_m": 0,
+    "to_m": 1500,
+    "rate_cents": 4235
+   },
+   {
+    "band": 2,
+    "over_m": 1500,
+    "to_m": 3000,
+    "rate_cents": 5815
+   },
+   {
+    "band": 3,
+    "over_m": 3000,
+    "to_m": 4500,
+    "rate_cents": 7645
+   },
+   {
+    "band": 4,
+    "over_m": 4500,
+    "to_m": null,
+    "rate_cents": 9870
+   }
+  ],
+  "boundary_rule": "A boundary depth belongs to the shallower band (Band 1 is 0 m to 1,500 m; Band 2 over 1,500 m to 3,000 m; ...).",
+  "split_rule": "Where the metres drilled on a day cross a band boundary, the metres in each band are charged as a separate charge stating the depths at which that part starts and ends.",
+  "metres_source": "metres drilled on the day, taken from the measured depths on the Daily Drilling Report (whole metres, R3)",
+  "eligibility": "only on the performance-drilled sections nominated in the call-off (a 12-1/4 or 8-1/2 inch section, Appendix A)",
+  "not_section_rated": true,
+  "class_rated_per_schedule": true,
+  "class_factor_conflict": "AMB-02",
+  "unaffected_by_instruments": true,
+  "status": "STATED",
+  "ambiguities": [
+   "AMB-02",
+   "AMB-13"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 17,
+    "printed_page": 17,
+    "section": "Schedule 2",
+    "source_text": "Item PD-210 is charged at the rate for the band in which the metres lie (Clause 23). A boundary depth belongs to the shallower band."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 17,
+    "printed_page": 17,
+    "section": "Schedule 2 note",
+    "source_text": "The rate is class-rated under Schedule 3 Part 2 and is not section-rated."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 6,
+    "printed_page": 6,
+    "section": "Clause 23",
+    "source_text": "Where the metres drilled on a day cross a band boundary, the metres in each band are charged as a separate charge stating the depths at which that part starts and ends. A boundary depth belongs to the shallower band. Bands end at 1,500 m, 3,000 m and 4,500 m. Item PD-210 is charged only on the performance-drilled sections nominated in the call-off."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 38,
+    "printed_page": 38,
+    "section": "each instrument's substitution paragraph",
+    "source_text": "Schedule 2 footage rates are unaffected."
+   }
+  ]
+ },
+ "volume_tiers": {
+  "service": "PD-210",
+  "tiers": [
+   {
+    "band": 1,
+    "from_m": 1,
+    "to_m": 40000,
+    "percent_of_rate": "100"
+   },
+   {
+    "band": 2,
+    "from_m": 40001,
+    "to_m": 120000,
+    "percent_of_rate": "96"
+   },
+   {
+    "band": 3,
+    "above_m": 120000,
+    "percent_of_rate": "92"
+   }
+  ],
+  "counting_rule": "according to the metres already drilled on the well in the Contract Year; counted from zero at the start of each Contract Year; an interval that crosses a band is divided at the band",
+  "contract_year_rule": "Clause 3A",
+  "scope": "AMBIGUOUS — per well (operative sentence) or contract-wide (heading/column); which metres count is also open",
+  "status": "AMBIGUOUS",
+  "ambiguities": [
+   "AMB-10",
+   "AMB-11"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 17,
+    "printed_page": 17,
+    "section": "Schedule 2 Part 2 — Metres drilled in the Contract Year",
+    "source_text": "The rate for item PD-210 is taken at the percentage below according to the metres already drilled on the well in the Contract Year (Clause 3A). Metres are counted from zero at the start of each Contract Year, and an interval that crosses a band is divided at the band."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 17,
+    "printed_page": 17,
+    "section": "Schedule 2 Part 2 table",
+    "source_text": "Band 1 1 m to 40,000 m 100%; Band 2 40,001 m to 120,000 m 96%; Band 3 above 120,000 m 92%"
+   }
+  ]
+ },
+ "price_index": {
+  "name": "Rig Services Index",
+  "base_index": "100.00",
+  "services": [
+   {
+    "code": "MW-310",
+    "base_rate_cents": 224585
+   },
+   {
+    "code": "HC-620",
+    "base_rate_cents": 53965
+   }
+  ],
+  "monthly_index": {
+   "2025-01": "100.00",
+   "2025-02": "100.70",
+   "2025-03": "101.50",
+   "2025-04": "102.30",
+   "2025-05": "103.10",
+   "2025-06": "103.60",
+   "2025-07": "104.80",
+   "2025-08": "105.40",
+   "2025-09": "104.90",
+   "2025-10": "106.20",
+   "2025-11": "107.10",
+   "2025-12": "108.00",
+   "2026-01": "109.30",
+   "2026-02": "110.00",
+   "2026-03": "110.60",
+   "2026-04": "111.40",
+   "2026-05": "110.90",
+   "2026-06": "112.20",
+   "2026-07": "113.00",
+   "2026-08": "112.60",
+   "2026-09": "113.90",
+   "2026-10": "114.70",
+   "2026-11": "115.30",
+   "2026-12": "116.10"
+  },
+  "months_published": [
+   "2025-01",
+   "2026-12"
+  ],
+  "index_month": "the calendar month in which the service was performed",
+  "rule": "rate = Schedule 1 base rate x index for the month / base index, rounded half to even; that figure is the rate for Clause 17 (i.e. the start of the Clause 18 build-up)",
+  "after_last_month": "NOT_PROVIDED — no index is published after 2026-12 and no carry-forward rule is stated",
+  "status": "STATED",
+  "ambiguities": [
+   "AMB-04"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 18,
+    "printed_page": 18,
+    "section": "Schedule 2C",
+    "source_text": "The services below are priced against the Rig Services Index, base 100.00 (Clause 17A). The rate stated in Schedule 1 for them is a base rate."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 35,
+    "printed_page": 35,
+    "section": "Clause 17A",
+    "source_text": "The rate for a service listed in Schedule 2C is the base rate stated in Schedule 1 multiplied by the Rig Services Index published for the calendar month in which the service was performed and divided by the base index, rounded half to even. That figure is the rate for the purposes of Clause 17."
+   }
+  ]
+ },
+ "lost_in_hole": {
+  "services": [
+   "LH-711",
+   "LH-712",
+   "LH-713",
+   "LH-714"
+  ],
+  "replacement_values_sar": {
+   "LH-711": {
+    "value_halalas": 54375000,
+    "currency": "SAR"
+   },
+   "LH-712": {
+    "value_halalas": 468750000,
+    "currency": "SAR"
+   },
+   "LH-713": {
+    "value_halalas": 144375000,
+    "currency": "SAR"
+   },
+   "LH-714": {
+    "value_halalas": 195000000,
+    "currency": "SAR"
+   }
+  },
+  "replacement_values_usd_as_let": {
+   "LH-711": {
+    "value_cents": 14500000,
+    "currency": "USD"
+   },
+   "LH-712": {
+    "value_cents": 125000000,
+    "currency": "USD"
+   },
+   "LH-713": {
+    "value_cents": 38500000,
+    "currency": "USD"
+   },
+   "LH-714": {
+    "value_cents": 52000000,
+    "currency": "USD"
+   }
+  },
+  "exchange_rates": {
+   "unit": "halalas per USD",
+   "months": {
+    "2025-01": "375.00",
+    "2025-02": "375.10",
+    "2025-03": "375.00",
+    "2025-04": "374.90",
+    "2025-05": "375.20",
+    "2025-06": "375.30",
+    "2025-07": "375.10",
+    "2025-08": "375.00",
+    "2025-09": "374.80",
+    "2025-10": "375.40",
+    "2025-11": "375.60",
+    "2025-12": "375.50",
+    "2026-01": "376.00",
+    "2026-02": "375.80",
+    "2026-03": "375.90",
+    "2026-04": "376.20",
+    "2026-05": "376.40",
+    "2026-06": "376.10",
+    "2026-07": "375.70",
+    "2026-08": "376.30",
+    "2026-09": "376.60",
+    "2026-10": "376.80",
+    "2026-11": "377.00",
+    "2026-12": "376.50"
+   },
+   "months_published": [
+    "2025-01",
+    "2026-12"
+   ],
+   "month_basis": "the month in which the tool was lost"
+  },
+  "conversion": "SAR value converted into USD at the published rate for the month of the loss, rounded half to even, before depreciation (31A)",
+  "depreciation": {
+   "percent_per_block": "1",
+   "block_hours": 25,
+   "complete_blocks_only": true,
+   "cap_percent": "50",
+   "hours_basis": "circulating hours the tool accumulated on the well on which it was lost, including the day of the loss, as stated on the Lost in Hole Report (Part E)"
+  },
+  "charge": "the result rounded under Clause 17 and charged as one unit on the day of the loss",
+  "standby": "charged in full whatever the status of the day (Schedule 3 Part 3 intro)",
+  "worked_example": {
+   "circulating_hours": 412,
+   "depreciation_percent": "16",
+   "page": 34
+  },
+  "schedule_6_consistency": "Schedule 6 USD values equal the Schedule 2D SAR values at 375.00 halalas per USD (2025-01), matching 31A's statement that Schedule 6 states the values as they stood when the Contract was let.",
+  "status": "STATED",
+  "ambiguities": [
+   "AMB-21",
+   "AMB-22"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 7,
+    "printed_page": 7,
+    "section": "Clause 31",
+    "source_text": "Where a tool cannot be recovered, the charge is its replacement value in Schedule 6 less depreciation of 1 per cent for each complete 25 circulating hours the tool accumulated on the well, as stated on the Lost in Hole Report, to a depreciation of not more than 50 per cent. The result is rounded under Clause 17 and charged as one unit on the day of the loss."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 35,
+    "printed_page": 35,
+    "section": "Clause 31A",
+    "source_text": "The replacement values in Schedule 2D are stated in SAR and are converted into the currency of the Contract at the rate of exchange published in that Schedule for the month in which the tool was lost, rounded half to even, before the depreciation in Clause 31 is applied."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 11,
+    "printed_page": 11,
+    "section": "P12 Lost in hole hours",
+    "source_text": "Circulating hours for Clause 31 are those the tool accumulated on the well on which it was lost, including the day of the loss."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 19,
+    "printed_page": 19,
+    "section": "Schedule 2D",
+    "source_text": "The tools were bought in riyals and the values below are stated in SAR. They are converted into the currency of the Contract under Clause 31A at the rate published for the month of the loss."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 25,
+    "printed_page": 25,
+    "section": "Schedule 6",
+    "source_text": "Depreciation is 1 per cent for each complete 25 circulating hours, to not more than 50 per cent (Clause 31)."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 34,
+    "printed_page": 34,
+    "section": "Appendix F",
+    "source_text": "With 412 hours the depreciation under Clause 31 is 16 per cent."
+   }
+  ]
+ },
+ "monthly_rates": [
+  {
+   "code": "HC-601",
+   "instrument": "S1",
+   "index_reference": "Circulating Equipment Index (Gulf, per day)",
+   "unit": "day",
+   "months": {
+    "2025-07": 70150,
+    "2025-08": 71400,
+    "2025-09": 72260,
+    "2025-10": 71980,
+    "2025-11": 73100,
+    "2025-12": 73640
+   },
+   "first_month": "2025-07",
+   "last_month": "2025-12",
+   "carry_forward": "the rate last published applies until it is superseded",
+   "status": "STATED",
+   "ambiguities": [
+    "AMB-08"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 38,
+     "printed_page": 38,
+     "section": "Supplement No. 1, 1.2",
+     "source_text": "Item HC-601 (Hole cleaning circulating sub) is re-published monthly against the Circulating Equipment Index (Gulf, per day). The rate chargeable is the rate published for the calendar month in which the service was performed. Where a service is performed in a month later than the last month stated below, the rate last published applies until it is superseded."
+    }
+   ]
+  },
+  {
+   "code": "DD-120",
+   "instrument": "S2",
+   "index_reference": "Steerable Tool Index (Gulf, per hour)",
+   "unit": "hour",
+   "months": {
+    "2026-04": 40600,
+    "2026-05": 41150,
+    "2026-06": 41150,
+    "2026-07": 42300,
+    "2026-08": 42950,
+    "2026-09": 43400,
+    "2026-10": 43400,
+    "2026-11": 44100,
+    "2026-12": 44750
+   },
+   "first_month": "2026-04",
+   "last_month": "2026-12",
+   "carry_forward": "the rate last published applies until it is superseded",
+   "status": "STATED",
+   "ambiguities": [
+    "AMB-07",
+    "AMB-08"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 40,
+     "printed_page": 40,
+     "section": "Supplement No. 2, 2.1",
+     "source_text": "Item DD-120 (Rotary steerable system, circulating) is re-published monthly against the Steerable Tool Index (Gulf, per hour). The rate chargeable is the rate published for the calendar month in which the service was performed. Where a service is performed in a month later than the last month stated below, the rate last published applies until it is superseded."
+    }
+   ]
+  }
+ ],
+ "instruments": [
+  {
+   "id": "S1",
+   "title": "Supplement No. 1",
+   "reference": "DDS-2025-118/S1",
+   "issued": "2025-05-19",
+   "effective": "2025-07-01",
+   "retroactive": false,
+   "page": 38,
+   "cited_clauses": [
+    "19.3"
+   ],
+   "purpose": "Re-publication of the tool rental rates under Clause 19.3, the parties having agreed that the rates in Schedule 1 no longer reflect the cost of the steerable fleet.",
+   "changes": [
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "DD-120",
+     "unit": "hour",
+     "previous_rate_cents": 38415,
+     "rate_cents": 39850,
+     "effective": "2025-07-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 38,
+       "printed_page": 38,
+       "section": "Substituted rates",
+       "source_text": "DD-120 hour 384.15 -> 398.50 effective 2025-07-01"
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "DD-121",
+     "unit": "day",
+     "previous_rate_cents": 289365,
+     "rate_cents": 298400,
+     "effective": "2025-07-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 38,
+       "printed_page": 38,
+       "section": "Substituted rates",
+       "source_text": "DD-121 day 2893.65 -> 2984.00 effective 2025-07-01"
+      }
+     ]
+    },
+    {
+     "kind": "MONTHLY_RATES",
+     "code": "HC-601",
+     "index_reference": "Circulating Equipment Index (Gulf, per day)",
+     "months": {
+      "2025-07": 70150,
+      "2025-08": 71400,
+      "2025-09": 72260,
+      "2025-10": 71980,
+      "2025-11": 73100,
+      "2025-12": 73640
+     },
+     "carry_forward": true,
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 38,
+       "printed_page": 38,
+       "section": "1.2 Monthly re-publication, item HC-601",
+       "source_text": "Item HC-601 ... is re-published monthly against the Circulating Equipment Index (Gulf, per day). The rate chargeable is the rate published for the calendar month in which the service was performed. Where a service is performed in a month later than the last month stated below, the rate last published applies until it is superseded."
+      }
+     ]
+    }
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 38,
+     "printed_page": 38,
+     "section": "Supplement No. 1 heading",
+     "source_text": "Reference DDS-2025-118/S1. Issued 19 May 2025 and taking effect 1 July 2025."
+    }
+   ],
+   "closing_rule": {
+    "text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it.",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 38,
+      "printed_page": 38,
+      "section": "closing paragraph",
+      "source_text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it."
+     }
+    ]
+   },
+   "substitution_rule": "The rates below are substituted for the rates in Schedule 1 for services performed on or after the effective date stated against each. Services performed before that date are charged at the rate previously chargeable. Schedule 2 footage rates are unaffected.",
+   "added_services": [],
+   "removed_services": []
+  },
+  {
+   "id": "A1",
+   "title": "Amendment No. 1",
+   "reference": "DDS-2025-118/A1",
+   "issued": "2025-11-07",
+   "effective": "2026-01-01",
+   "retroactive": false,
+   "page": 39,
+   "cited_clauses": [
+    "19.1"
+   ],
+   "purpose": "Extension of the Term for the second phase of the campaign, and the anniversary escalation of the personnel day rates under Clause 19.1.",
+   "changes": [
+    {
+     "kind": "TERM_EXTENSION",
+     "new_expiry": "2026-06-30",
+     "extension_days": 181,
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 39,
+       "printed_page": 39,
+       "section": "1.1 Extension of the Term",
+       "source_text": "The Expiry Date stated in the Form of Agreement is extended to 2026-06-30 (extension of the Term, 181 days). The Commencement Date is unchanged. Services performed on or before the extended Expiry Date are chargeable under this Contract; services performed after it are not."
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "DD-101",
+     "unit": "person-day",
+     "previous_rate_cents": 184735,
+     "rate_cents": 191650,
+     "effective": "2026-01-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 39,
+       "printed_page": 39,
+       "section": "Substituted rates",
+       "source_text": "DD-101 person-day 1847.35 -> 1916.50 effective 2026-01-01"
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "MW-301",
+     "unit": "person-day",
+     "previous_rate_cents": 164655,
+     "rate_cents": 170800,
+     "effective": "2026-01-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 39,
+       "printed_page": 39,
+       "section": "Substituted rates",
+       "source_text": "MW-301 person-day 1646.55 -> 1708.00 effective 2026-01-01"
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "LW-401",
+     "unit": "person-day",
+     "previous_rate_cents": 189845,
+     "rate_cents": 196900,
+     "effective": "2026-01-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 39,
+       "printed_page": 39,
+       "section": "Substituted rates",
+       "source_text": "LW-401 person-day 1898.45 -> 1969.00 effective 2026-01-01"
+      }
+     ]
+    }
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 39,
+     "printed_page": 39,
+     "section": "Amendment No. 1 heading",
+     "source_text": "Reference DDS-2025-118/A1. Issued 7 November 2025 and taking effect 1 January 2026."
+    }
+   ],
+   "closing_rule": {
+    "text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it.",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 39,
+      "printed_page": 39,
+      "section": "closing paragraph",
+      "source_text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it."
+     }
+    ]
+   },
+   "substitution_rule": "The rates below are substituted for the rates in Schedule 1 for services performed on or after the effective date stated against each. Services performed before that date are charged at the rate previously chargeable. Schedule 2 footage rates are unaffected.",
+   "added_services": [],
+   "removed_services": []
+  },
+  {
+   "id": "S2",
+   "title": "Supplement No. 2",
+   "reference": "DDS-2025-118/S2",
+   "issued": "2026-02-24",
+   "effective": "2026-04-01",
+   "retroactive": false,
+   "page": 40,
+   "cited_clauses": [
+    "17",
+    "38"
+   ],
+   "purpose": "Discount on the principal services, the Operator having committed a second rig to this Contract. This discount is applied to the rate and is separate from the Clause 38 volume discount on the invoice subtotal.",
+   "changes": [
+    {
+     "kind": "MONTHLY_RATES",
+     "code": "DD-120",
+     "index_reference": "Steerable Tool Index (Gulf, per hour)",
+     "months": {
+      "2026-04": 40600,
+      "2026-05": 41150,
+      "2026-06": 41150,
+      "2026-07": 42300,
+      "2026-08": 42950,
+      "2026-09": 43400,
+      "2026-10": 43400,
+      "2026-11": 44100,
+      "2026-12": 44750
+     },
+     "carry_forward": true,
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 40,
+       "printed_page": 40,
+       "section": "2.1 Monthly re-publication, item DD-120",
+       "source_text": "Item DD-120 ... is re-published monthly against the Steerable Tool Index (Gulf, per hour). The rate chargeable is the rate published for the calendar month in which the service was performed. Where a service is performed in a month later than the last month stated below, the rate last published applies until it is superseded."
+      }
+     ]
+    },
+    {
+     "kind": "RATE_DISCOUNT",
+     "percent": "4",
+     "codes": [
+      "DD-101",
+      "MW-301",
+      "LW-401",
+      "DD-120",
+      "MB-701"
+     ],
+     "effective": "2026-04-01",
+     "application": "applied to the rate as the last factor of the build-up, before its rounding; taken before the Clause 38 discount",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 40,
+       "printed_page": 40,
+       "section": "2.2 Discount on principal services",
+       "source_text": "A discount of 4 per cent is allowed on the services listed below for services performed on or after 2026-04-01. The discount is applied to the rate, as the last factor in the build-up required by Clause 17 and before the rounding it requires. It is separate from, and taken before, the Clause 38 discount on the invoice subtotal. Services performed before that date carry no discount."
+      }
+     ]
+    }
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 40,
+     "printed_page": 40,
+     "section": "Supplement No. 2 heading",
+     "source_text": "Reference DDS-2025-118/S2. Issued 24 February 2026 and taking effect 1 April 2026."
+    }
+   ],
+   "closing_rule": {
+    "text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it.",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 40,
+      "printed_page": 40,
+      "section": "closing paragraph",
+      "source_text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it."
+     }
+    ]
+   },
+   "substitution_rule": null,
+   "added_services": [],
+   "removed_services": []
+  },
+  {
+   "id": "A2",
+   "title": "Amendment No. 2",
+   "reference": "DDS-2025-118/A2",
+   "issued": "2026-05-21",
+   "effective": "2026-07-01",
+   "retroactive": false,
+   "page": 41,
+   "cited_clauses": [
+    "17",
+    "38"
+   ],
+   "purpose": "Second extension of the Term to the end of the campaign, the second anniversary escalation, and the deepening of the Supplement No. 2 discount.",
+   "changes": [
+    {
+     "kind": "TERM_EXTENSION",
+     "new_expiry": "2026-12-31",
+     "extension_days": 184,
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 41,
+       "printed_page": 41,
+       "section": "2.1 Extension of the Term",
+       "source_text": "The Expiry Date stated in the Form of Agreement is extended to 2026-12-31 (second extension of the Term, 184 days). The Commencement Date is unchanged. Services performed on or before the extended Expiry Date are chargeable under this Contract; services performed after it are not."
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "MW-301",
+     "unit": "person-day",
+     "previous_rate_cents": 170800,
+     "rate_cents": 176300,
+     "effective": "2026-07-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 41,
+       "printed_page": 41,
+       "section": "Substituted rates",
+       "source_text": "MW-301 person-day 1708.00 -> 1763.00 effective 2026-07-01"
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "MB-701",
+     "unit": "well",
+     "previous_rate_cents": 1849750,
+     "rate_cents": 1923700,
+     "effective": "2026-07-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 41,
+       "printed_page": 41,
+       "section": "Substituted rates",
+       "source_text": "MB-701 well 18497.50 -> 19237.00 effective 2026-07-01"
+      }
+     ]
+    },
+    {
+     "kind": "RATE_DISCOUNT",
+     "percent": "7",
+     "codes": [
+      "DD-101",
+      "MW-301",
+      "LW-401",
+      "DD-120",
+      "MB-701"
+     ],
+     "effective": "2026-07-01",
+     "application": "applied to the rate as the last factor of the build-up, before its rounding; taken before the Clause 38 discount",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 41,
+       "printed_page": 41,
+       "section": "2.3 Discount on principal services",
+       "source_text": "A discount of 7 per cent is allowed on the services listed below for services performed on or after 2026-07-01. The discount is applied to the rate, as the last factor in the build-up required by Clause 17 and before the rounding it requires. It is separate from, and taken before, the Clause 38 discount on the invoice subtotal. Services performed before that date carry no discount."
+      }
+     ]
+    }
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 41,
+     "printed_page": 41,
+     "section": "Amendment No. 2 heading",
+     "source_text": "Reference DDS-2025-118/A2. Issued 21 May 2026 and taking effect 1 July 2026."
+    }
+   ],
+   "closing_rule": {
+    "text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it.",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 41,
+      "printed_page": 41,
+      "section": "closing paragraph",
+      "source_text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it."
+     }
+    ]
+   },
+   "substitution_rule": "The rates below are substituted for the rates in Schedule 1 for services performed on or after the effective date stated against each. Services performed before that date are charged at the rate previously chargeable. Schedule 2 footage rates are unaffected.",
+   "added_services": [],
+   "removed_services": []
+  },
+  {
+   "id": "A3",
+   "title": "Amendment No. 3",
+   "reference": "DDS-2025-118/A3",
+   "issued": "2026-08-17",
+   "effective": "2026-02-01",
+   "retroactive": true,
+   "page": 42,
+   "cited_clauses": [
+    "16.4",
+    "36A"
+   ],
+   "purpose": "Settlement of the Contractor's rate review under Clause 16.4.",
+   "retroactivity": {
+    "status": "STATED",
+    "ambiguities": [
+     "AMB-12"
+    ],
+    "text": "The rates below are substituted with effect from 1 February 2026, which is before the date of this Amendment. Services performed on or after that date and already invoiced shall be re-priced at the substituted rates and the difference shown as a single adjustment on the first invoice submitted after the date of issue (Clause 36A).",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 42,
+      "printed_page": 42,
+      "section": "Amendment No. 3 recital",
+      "source_text": "Services performed on or after that date and already invoiced shall be re-priced at the substituted rates and the difference shown as a single adjustment on the first invoice submitted after the date of issue (Clause 36A)."
+     }
+    ]
+   },
+   "changes": [
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "DD-120",
+     "unit": "hour",
+     "previous_rate_cents": 39850,
+     "rate_cents": 41600,
+     "effective": "2026-02-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 42,
+       "printed_page": 42,
+       "section": "Substituted rates",
+       "source_text": "DD-120 hour 398.50 -> 416.00 effective 2026-02-01"
+      }
+     ]
+    },
+    {
+     "kind": "RATE_SUBSTITUTION",
+     "code": "DD-101",
+     "unit": "person-day",
+     "previous_rate_cents": 191650,
+     "rate_cents": 195400,
+     "effective": "2026-02-01",
+     "status": "STATED",
+     "provenance": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 42,
+       "printed_page": 42,
+       "section": "Substituted rates",
+       "source_text": "DD-101 person-day 1916.50 -> 1954.00 effective 2026-02-01"
+      }
+     ]
+    }
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 42,
+     "printed_page": 42,
+     "section": "Amendment No. 3 heading",
+     "source_text": "Reference DDS-2025-118/A3. Issued 17 August 2026 and taking effect 1 February 2026."
+    }
+   ],
+   "closing_rule": {
+    "text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it.",
+    "provenance": [
+     {
+      "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+      "page": 42,
+      "printed_page": 42,
+      "section": "closing paragraph",
+      "source_text": "Save as stated above, the Contract is unchanged and remains in full force. Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date, and the earlier governs services performed before it."
+     }
+    ]
+   },
+   "substitution_rule": "The rates below are substituted for the rates in Schedule 1 for services performed on or after the effective date stated against each. Services performed before that date are charged at the rate previously chargeable. Schedule 2 footage rates are unaffected.",
+   "added_services": [],
+   "removed_services": []
+  }
+ ],
+ "variations_table": {
+  "rows": [
+   {
+    "instrument": "Supplement No. 1",
+    "issued": "2025-05-19",
+    "effective": "2025-07-01"
+   },
+   {
+    "instrument": "Amendment No. 1",
+    "issued": "2025-11-07",
+    "effective": "2026-01-01"
+   },
+   {
+    "instrument": "Supplement No. 2",
+    "issued": "2026-02-24",
+    "effective": "2026-04-01"
+   },
+   {
+    "instrument": "Amendment No. 2",
+    "issued": "2026-05-21",
+    "effective": "2026-07-01"
+   },
+   {
+    "instrument": "Amendment No. 3",
+    "issued": "2026-08-17",
+    "effective": "2026-02-01"
+   }
+  ],
+  "status": "STATED",
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 37,
+    "printed_page": 37,
+    "section": "Schedule of Variations table",
+    "source_text": "Supplement No. 1 2025-05-19 2025-07-01 ... Amendment No. 3 2026-08-17 2026-02-01 rates: DD-120, DD-101"
+   }
+  ]
+ },
+ "appendix_g": {
+  "intro": "The Daily Drilling Report is written in the ordinary words of the rig (Clause 19A). The terms below are the ones it uses for the items Schedule 1 prices.",
+  "rows": [
+   {
+    "row": 1,
+    "code": "DD-101",
+    "schedule_1_description": "Directional driller, 24-hour coverage",
+    "report_term": "directional hands"
+   },
+   {
+    "row": 2,
+    "code": "DD-102",
+    "schedule_1_description": "Directional coordinator, office based",
+    "report_term": "night man"
+   },
+   {
+    "row": 3,
+    "code": "DD-110",
+    "schedule_1_description": "Positive displacement motor rental",
+    "report_term": "mud motor"
+   },
+   {
+    "row": 4,
+    "code": "DD-120",
+    "schedule_1_description": "Rotary steerable system, circulating",
+    "report_term": "rotary steerable"
+   },
+   {
+    "row": 5,
+    "code": "HC-601",
+    "schedule_1_description": "Hole cleaning circulating sub",
+    "report_term": "circulating sub"
+   },
+   {
+    "row": 6,
+    "code": "HC-620",
+    "schedule_1_description": "Drilling jar rental",
+    "report_term": "drilling jars"
+   },
+   {
+    "row": 7,
+    "code": "HC-640",
+    "schedule_1_description": "Cuttings bed monitoring",
+    "report_term": "float sub"
+   },
+   {
+    "row": 8,
+    "code": "LH-711",
+    "schedule_1_description": "Lost in hole, positive displacement motor",
+    "report_term": "mud motor"
+   },
+   {
+    "row": 9,
+    "code": "LH-712",
+    "schedule_1_description": "Lost in hole, rotary steerable system",
+    "report_term": "rotary steerable"
+   },
+   {
+    "row": 10,
+    "code": "LH-713",
+    "schedule_1_description": "Lost in hole, MWD tool",
+    "report_term": "MWD collar"
+   },
+   {
+    "row": 11,
+    "code": "LH-714",
+    "schedule_1_description": "Lost in hole, LWD resistivity tool",
+    "report_term": "gamma tool"
+   },
+   {
+    "row": 12,
+    "code": "LW-401",
+    "schedule_1_description": "LWD engineer",
+    "report_term": "logging engineers"
+   },
+   {
+    "row": 13,
+    "code": "LW-410",
+    "schedule_1_description": "LWD resistivity, logged",
+    "report_term": "gamma tool"
+   },
+   {
+    "row": 14,
+    "code": "LW-411",
+    "schedule_1_description": "LWD density and neutron, logged",
+    "report_term": "resistivity tool"
+   },
+   {
+    "row": 15,
+    "code": "LW-412",
+    "schedule_1_description": "LWD sonic, logged",
+    "report_term": "density-neutron"
+   },
+   {
+    "row": 16,
+    "code": "MW-301",
+    "schedule_1_description": "MWD engineer",
+    "report_term": "MWD engineers"
+   },
+   {
+    "row": 17,
+    "code": "MW-310",
+    "schedule_1_description": "MWD directional and gamma tool",
+    "report_term": "MWD collar"
+   },
+   {
+    "row": 18,
+    "code": "MW-320",
+    "schedule_1_description": "Pressure while drilling module",
+    "report_term": "survey package"
+   },
+   {
+    "row": 19,
+    "code": "MW-330",
+    "schedule_1_description": "Real-time data transmission",
+    "report_term": "real-time link"
+   },
+   {
+    "row": 20,
+    "code": "PD-201",
+    "schedule_1_description": "Drilling optimisation engineer",
+    "report_term": "performance engineer"
+   },
+   {
+    "row": 21,
+    "code": "PD-220",
+    "schedule_1_description": "Downhole vibration mitigation tool",
+    "report_term": "bit and reamer"
+   },
+   {
+    "row": 22,
+    "code": "PD-230",
+    "schedule_1_description": "Drilling dynamics memory sub",
+    "report_term": "hydraulics package"
+   },
+   {
+    "row": 23,
+    "code": "RM-511",
+    "schedule_1_description": "Underreamer rental",
+    "report_term": "hole opener"
+   },
+   {
+    "row": 24,
+    "code": "RM-520",
+    "schedule_1_description": "Roller reamer and stabiliser rental",
+    "report_term": "stabiliser string"
+   }
+  ],
+  "footnote": "A tool lost in the hole is recorded by the term above; the item charged is the replacement value Schedule 6 states against it.",
+  "note": "Transcribed literally. Terms that map to more than one code, and pairings that look shifted, are preserved as printed (AMB-16, AMB-17).",
+  "status": "STATED",
+  "ambiguities": [
+   "AMB-15",
+   "AMB-16",
+   "AMB-17"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 36,
+    "printed_page": 36,
+    "section": "Appendix G",
+    "source_text": "Code | As Schedule 1 describes it | As the report writes it"
+   }
+  ]
+ },
+ "records": {
+  "daily_drilling_report": {
+   "issued": "for every day on which the Contractor is on the well; one per well and day",
+   "content": [
+    "well",
+    "rig",
+    "date",
+    "hole section",
+    "measured depth at start and end of day",
+    "status (Operating or Standby)",
+    "circulating hours",
+    "BHA run number",
+    "tools in the hole",
+    "Contractor's personnel on the rig",
+    "number of gyro surveys",
+    "formation pressure points",
+    "wiper trips",
+    "back-reaming hours",
+    "clean-out runs"
+   ],
+   "signatories": [
+    "Company Representative",
+    "Contractor's lead directional driller"
+   ],
+   "number": "each report bears a number in the series DDR, quoted against every line of that day on the invoice (19A)",
+   "language": "written by the Contractor's supervisor in the ordinary words of the rig; does not repeat Schedule 1 descriptions or carry service codes (19A)",
+   "status": "STATED",
+   "ambiguities": [
+    "AMB-14",
+    "AMB-15"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 5,
+     "printed_page": 5,
+     "section": "Clause 15",
+     "source_text": "A Daily Drilling Report shall be issued for every day on which the Contractor is on the well. ... It is signed by the Company Representative and the Contractor's lead directional driller."
+    },
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 19A",
+     "source_text": "Each Daily Drilling Report bears a number in the series DDR, and that number is quoted against every line of that day on the invoice. The report is written by the Contractor's supervisor in the ordinary words of the rig and does not repeat the descriptions in Schedule 1 or carry the service codes."
+    }
+   ]
+  },
+  "parts": [
+   {
+    "part": "A",
+    "name": "Operations summary",
+    "contents": "section, status, depths, circulating hours, BHA run number, tools in hole, personnel on the rig, and the quantities measured that day",
+    "completed": "every day"
+   },
+   {
+    "part": "B",
+    "name": "BHA run record",
+    "contents": "run number, first and last day of the run, tools in the run, circulating hours, metres logged and reamed, and whether a radioactive source was carried",
+    "completed": "every day of a run"
+   },
+   {
+    "part": "C",
+    "name": "Gyro survey record",
+    "contents": "surveys taken that day",
+    "completed": "a day on which surveys were taken"
+   },
+   {
+    "part": "D",
+    "name": "Radioactive source handling",
+    "contents": "the sources handled and their certification",
+    "completed": "a day on which a source was run"
+   },
+   {
+    "part": "E",
+    "name": "Lost in hole",
+    "contents": "the tool, its service code, the run, and the circulating hours accumulated on the well at the time of the loss",
+    "completed": "a day on which a tool was lost"
+   }
+  ],
+  "parts_rule": "One Daily Drilling Report per well and day carries, as numbered parts, every other record the Contract makes a condition of payment; there are no separate run, survey, source or loss documents. A part that does not apply to the day is omitted; a part that applies and is absent is a record not delivered.",
+  "condition_of_payment": {
+   "rule": "A charge for a service Schedule 5 lists is not payable until the part named has been completed in the Daily Drilling Report for the day or run the charge is for (cl. 37).",
+   "requirements": [
+    {
+     "code": "DD-111",
+     "part": "B"
+    },
+    {
+     "code": "DD-130",
+     "part": "C"
+    },
+    {
+     "code": "LW-410",
+     "part": "B"
+    },
+    {
+     "code": "LW-411",
+     "part": "B"
+    },
+    {
+     "code": "LW-412",
+     "part": "B"
+    },
+    {
+     "code": "LW-413",
+     "part": "B"
+    },
+    {
+     "code": "LW-420",
+     "part": "D"
+    },
+    {
+     "code": "RM-510",
+     "part": "B"
+    },
+    {
+     "code": "LH-711",
+     "part": "E"
+    },
+    {
+     "code": "LH-712",
+     "part": "E"
+    },
+    {
+     "code": "LH-713",
+     "part": "E"
+    },
+    {
+     "code": "LH-714",
+     "part": "E"
+    }
+   ]
+  },
+  "other_field_records_clause_16": "A BHA Run Report at the end of each run; a Gyro Survey Report for each day a gyro survey is taken; a Source Handling Certificate for each run carrying a radioactive source; a Lost in Hole Report for each tool that cannot be recovered.",
+  "illustrative_forms": [
+   {
+    "appendix": "D",
+    "form": "Daily Drilling Report",
+    "page": 32,
+    "signed_by": [
+     "Company Representative",
+     "lead directional driller"
+    ],
+    "lists_tools_and_personnel_by_service_code": true
+   },
+   {
+    "appendix": "E",
+    "form": "BHA Run Report",
+    "page": 33,
+    "signed_by": [
+     "Lead directional driller",
+     "MWD engineer"
+    ]
+   },
+   {
+    "appendix": "F",
+    "form": "Gyro Survey Report",
+    "page": 34,
+    "signed_by": [
+     "Survey engineer",
+     "Company Representative"
+    ]
+   },
+   {
+    "appendix": "F",
+    "form": "Lost in Hole Report",
+    "page": 34,
+    "signed_by": [
+     "Company Representative",
+     "Contractor's field manager"
+    ]
+   }
+  ],
+  "reporting_rules": [
+   {
+    "id": "R1",
+    "text": "The lead directional driller is responsible for the accuracy of the Contractor's entries on the Daily Drilling Report."
+   },
+   {
+    "id": "R2",
+    "text": "The Daily Drilling Report for a day is issued by 06:00 on the following day."
+   },
+   {
+    "id": "R3",
+    "text": "Measured depths are stated in whole metres from the rotary table."
+   },
+   {
+    "id": "R4",
+    "text": "Circulating hours are stated in whole hours, any part hour of thirty minutes or more counting as a whole hour."
+   },
+   {
+    "id": "R5",
+    "text": "The report lists by service code every rental tool in the hole at any time during the day."
+   },
+   {
+    "id": "R6",
+    "text": "The report states, by service code, the number of the Contractor's personnel on the rig during the day."
+   },
+   {
+    "id": "R7",
+    "text": "The status of the day is recorded by the Company Representative and is final for the purposes of Clause 19."
+   },
+   {
+    "id": "R8",
+    "text": "A report may be corrected only by a revision signed by both signatories before the invoice for the day is submitted."
+   },
+   {
+    "id": "R9",
+    "text": "The BHA Run Report is issued within two days of the end of the run and totals the circulating hours and metres of the Daily Drilling Reports for the run."
+   },
+   {
+    "id": "R10",
+    "text": "Survey data are delivered in the Company's format within twelve hours of each survey."
+   },
+   {
+    "id": "R11",
+    "text": "LWD data are delivered in real time where the tools allow and in memory form at the end of each run."
+   },
+   {
+    "id": "R12",
+    "text": "The Contractor shall retain all field records for seven years after the end of the Contract."
+   }
+  ],
+  "status": "STATED",
+  "ambiguities": [
+   "AMB-14",
+   "AMB-15",
+   "AMB-23"
+  ],
+  "provenance": [
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 24,
+    "printed_page": 24,
+    "section": "Schedule 5",
+    "source_text": "One Daily Drilling Report is issued for each well and day (Clause 19). It carries the operations summary and, as numbered parts, every other record this Contract makes a condition of payment. There are no separate run, survey, source or loss documents."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 24,
+    "printed_page": 24,
+    "section": "Schedule 5",
+    "source_text": "A charge for a service below is not payable until the part named has been completed in the Daily Drilling Report for the day or run the charge is for (Clause 37). A part that does not apply to the day is omitted; a part that applies and is absent is a record not delivered."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 5,
+    "printed_page": 5,
+    "section": "Clause 16",
+    "source_text": "A BHA Run Report is issued at the end of each BHA run ... A Gyro Survey Report is issued for each day on which a gyro survey is taken, a Source Handling Certificate for each run carrying a radioactive source, and a Lost in Hole Report for each tool that cannot be recovered."
+   },
+   {
+    "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+    "page": 14,
+    "printed_page": 14,
+    "section": "Part VIII — Reporting and Data",
+    "source_text": "R1-R12"
+   }
+  ]
+ },
+ "chargeability": [
+  {
+   "id": "CL-19",
+   "clause": "19",
+   "page": 6,
+   "text": "The status of a day, Operating or Standby, and the hole section for that day are as recorded on the Daily Drilling Report for that day. A charge shall state the status and the hole section of the day it is for."
+  },
+  {
+   "id": "CL-20",
+   "clause": "20",
+   "page": 6,
+   "text": "On a Standby day a service is charged at the percentage of its operating rate stated in Schedule 3 Part 3. A service Schedule 3 Part 3 marks as not chargeable is not charged on a Standby day in any quantity."
+  },
+  {
+   "id": "CL-21",
+   "clause": "21",
+   "page": 6,
+   "services": [
+    "DD-120",
+    "DD-121"
+   ],
+   "text": "Item DD-120 is charged per circulating hour recorded on the Daily Drilling Report for an Operating day, subject to a minimum of 6 hours on any Operating day on which the tool is in the hole. On a Standby day item DD-120 is not charged and item DD-121 is charged instead.",
+   "ambiguities": [
+    "AMB-05",
+    "AMB-06",
+    "AMB-20"
+   ]
+  },
+  {
+   "id": "CL-22",
+   "clause": "22",
+   "page": 6,
+   "text": "Personnel are charged per person-day for the persons recorded on the rig on the Daily Drilling Report. No service is charged on any day in a quantity above the daily limit in Schedule 3 Part 5."
+  },
+  {
+   "id": "CL-23",
+   "clause": "23",
+   "page": 6,
+   "services": [
+    "PD-210"
+   ],
+   "text": "Item PD-210 is charged for the metres drilled on the day, taken from the measured depths on the Daily Drilling Report, at the rate of the Schedule 2 depth band in which the metres lie. ... Item PD-210 is charged only on the performance-drilled sections nominated in the call-off.",
+   "ambiguities": [
+    "AMB-13"
+   ]
+  },
+  {
+   "id": "CL-24",
+   "clause": "24",
+   "page": 6,
+   "services": [
+    "LW-410",
+    "LW-411",
+    "LW-412"
+   ],
+   "text": "Items LW-410, LW-411 and LW-412 are charged for the metres drilled on an Operating day while the tool is in the hole, which are the metres logged.",
+   "ambiguities": [
+    "AMB-24"
+   ]
+  },
+  {
+   "id": "CL-25",
+   "clause": "25",
+   "page": 6,
+   "services": [
+    "RM-510"
+   ],
+   "text": "Item RM-510 is charged for the metres drilled on an Operating day while the underreamer is in the hole, which are the metres reamed.",
+   "ambiguities": [
+    "AMB-24"
+   ]
+  },
+  {
+   "id": "CL-26",
+   "clause": "26",
+   "page": 7,
+   "services": [
+    "DD-111",
+    "LW-420"
+   ],
+   "text": "Item DD-111 is charged once for each BHA run carrying a positive displacement motor, on the last day of that run. Item LW-420 is charged once for each BHA run carrying a radioactive source, on the first day of that run."
+  },
+  {
+   "id": "CL-27",
+   "clause": "27",
+   "page": 7,
+   "services": [
+    "MB-701",
+    "DD-140",
+    "LW-430",
+    "MB-702"
+   ],
+   "text": "Items MB-701 and DD-140 are charged once for the well, on the first day on the well. Items LW-430 and MB-702 are charged once for the well, on the last day on the well; item LW-430 only where logging while drilling was run."
+  },
+  {
+   "id": "CL-28",
+   "clause": "28",
+   "page": 7,
+   "text": "A rental charged by the day is charged for a day only where the Daily Drilling Report records the tool in the hole on that day."
+  },
+  {
+   "id": "CL-29",
+   "clause": "29",
+   "page": 7,
+   "text": "No service is charged twice for the same well and the same day, save that item PD-210 may be charged more than once on a day for different depth intervals under Clause 23."
+  },
+  {
+   "id": "CL-30",
+   "clause": "30",
+   "page": 7,
+   "services": [
+    "DD-130",
+    "LW-413",
+    "HC-610",
+    "RM-530",
+    "HC-630"
+   ],
+   "text": "Gyro surveys, formation pressure points, wiper trips, back-reaming hours and clean-out runs are charged in the numbers recorded on the Daily Drilling Report for an Operating day.",
+   "ambiguities": [
+    "AMB-19"
+   ]
+  },
+  {
+   "id": "CL-31",
+   "clause": "31",
+   "page": 7,
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "text": "Where a tool cannot be recovered, the charge is its replacement value in Schedule 6 less depreciation ... charged as one unit on the day of the loss.",
+   "ambiguities": [
+    "AMB-21",
+    "AMB-22"
+   ]
+  },
+  {
+   "id": "CL-P4",
+   "clause": "P4",
+   "page": 11,
+   "text": "No service is charged for a day on which the rig is moving between wells; such days are not days on the well."
+  },
+  {
+   "id": "CL-P5",
+   "clause": "P5",
+   "page": 11,
+   "text": "A day lost to weather is recorded as Standby on the Daily Drilling Report."
+  },
+  {
+   "id": "CL-P6",
+   "clause": "P6",
+   "page": 11,
+   "text": "Where a tool fails in the hole, the day remains an Operating day for the other services; the failed tool is charged only on days the report records it in the hole."
+  },
+  {
+   "id": "CL-P7",
+   "clause": "P7",
+   "page": 11,
+   "text": "A person on a crew change day is counted once, whether arriving or departing."
+  },
+  {
+   "id": "CL-P10",
+   "clause": "P10",
+   "page": 11,
+   "services": [
+    "DD-120"
+   ],
+   "text": "The minimum in Clause 21 applies to each Operating day separately and is not averaged over a run."
+  },
+  {
+   "id": "CL-P13",
+   "clause": "P13",
+   "page": 11,
+   "text": "Personnel are charged on a Standby day at the standby percentage for their position in Schedule 3 Part 3."
+  },
+  {
+   "id": "CL-13",
+   "clause": "13",
+   "page": 4,
+   "text": "The Company may suspend the services on any well. A day of suspension recorded as Standby on the Daily Drilling Report is charged under Clause 20."
+  },
+  {
+   "id": "CL-21A",
+   "clause": "21A",
+   "page": 35,
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "text": "For a service charged by the hour, the first hour of each period in the hole is rig-up and is not a Chargeable Hour. The report states the hours run; the invoice charges one fewer.",
+   "ambiguities": [
+    "AMB-05"
+   ]
+  },
+  {
+   "id": "CL-25A",
+   "clause": "25A",
+   "page": 35,
+   "services": [
+    "PD-210",
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "RM-510"
+   ],
+   "text": "Metres charged not exceeding the metres the report supports by more than 1 per cent are payable as charged. Metres exceeding that are payable at the figure the report supports.",
+   "ambiguities": [
+    "AMB-24"
+   ]
+  },
+  {
+   "id": "CL-SCH4",
+   "clause": "Schedule 4 note",
+   "page": 23,
+   "text": "The number charged on a day is the number recorded on the Daily Drilling Report (Clause 22), not the number shown here."
+  },
+  {
+   "id": "CL-SCH7",
+   "clause": "Schedule 7 intro",
+   "page": 26,
+   "text": "The hole sections shown are those the tool is designed for; which tools are in the hole on a day, and are charged, is as the Daily Drilling Report records (Clause 28)."
+  },
+  {
+   "id": "CL-SCH8",
+   "clause": "Schedule 8 intro",
+   "page": 27,
+   "text": "What each service covers and the event its charge is for. Item DD-102 is office based and is charged per day for each coordinator the Daily Drilling Report records.",
+   "ambiguities": [
+    "AMB-06",
+    "AMB-18",
+    "AMB-19",
+    "AMB-20"
+   ]
+  }
+ ],
+ "billing_rules": [
+  {
+   "id": "BR-32",
+   "clause": "32",
+   "page": 8,
+   "text": "The Contractor shall invoice each well separately, for a period of consecutive days on the well. Every charge on an invoice is for a day within the period the invoice states."
+  },
+  {
+   "id": "BR-33",
+   "clause": "33",
+   "page": 8,
+   "text": "An invoice shall not be submitted before the last day of its period and shall be submitted within 30 days after it.",
+   "ambiguities": [
+    "AMB-25"
+   ]
+  },
+  {
+   "id": "BR-34",
+   "clause": "34",
+   "page": 8,
+   "text": "Each charge states the date, the service code, the description, the hole section, the status of the day, the quantity, the unit, the rate and the amount, and for item PD-210 the depths at which the charged interval starts and ends."
+  },
+  {
+   "id": "BR-35",
+   "clause": "35",
+   "page": 8,
+   "text": "A charge is stated in the unit Schedule 1 gives for the service, and in no other."
+  },
+  {
+   "id": "BR-36",
+   "clause": "36",
+   "page": 8,
+   "text": "The net amount of an invoice is the sum of the amounts of its charges, including the discount charge under Clause 38."
+  },
+  {
+   "id": "BR-37",
+   "clause": "37",
+   "page": 8,
+   "text": "A charge for a service Schedule 5 lists is not payable until the document Schedule 5 names has been delivered for the day or run the charge is for.",
+   "ambiguities": [
+    "AMB-23"
+   ]
+  },
+  {
+   "id": "BR-38",
+   "clause": "38",
+   "page": 8,
+   "text": "Clause 38 discount — see invoice_discount."
+  },
+  {
+   "id": "BR-39",
+   "clause": "39",
+   "page": 8,
+   "text": "Value Added Tax is charged at 15 per cent of the net amount of the invoice, rounded under Clause 17."
+  },
+  {
+   "id": "BR-40",
+   "clause": "40",
+   "page": 8,
+   "text": "The total of an invoice is its net amount plus Value Added Tax."
+  },
+  {
+   "id": "BR-41",
+   "clause": "41",
+   "page": 8,
+   "text": "The Company may withhold a disputed charge and shall pay the undisputed balance."
+  },
+  {
+   "id": "BR-42",
+   "clause": "42",
+   "page": 8,
+   "text": "The Company shall pay within forty-five days of receipt of a correct invoice."
+  },
+  {
+   "id": "BR-19A",
+   "clause": "19A",
+   "page": 35,
+   "text": "Each Daily Drilling Report bears a number in the series DDR, and that number is quoted against every line of that day on the invoice."
+  },
+  {
+   "id": "BR-36A",
+   "clause": "36A",
+   "page": 35,
+   "text": "Where an Amendment substitutes a rate with effect from a date before the date it was issued, an invoice submitted before that date of issue was correct at the rate then in force. The difference on services already invoiced is shown as a single adjustment on the first invoice submitted on or after the date of issue, and on no other.",
+   "ambiguities": [
+    "AMB-12"
+   ]
+  },
+  {
+   "id": "BR-TERM",
+   "clause": "5; A1 1.1; A2 2.1",
+   "page": 39,
+   "text": "Services performed on or before the extended Expiry Date are chargeable under this Contract; services performed after it are not."
+  },
+  {
+   "id": "BR-REF",
+   "clause": "Form of Agreement",
+   "page": 1,
+   "text": "Contract reference: DDS-2025-118 (instrument references DDS-2025-118/S1, /A1, /S2, /A2, /A3)."
+  },
+  {
+   "id": "BR-CUR",
+   "clause": "P14",
+   "page": 12,
+   "text": "All invoices are stated and paid in USD."
+  },
+  {
+   "id": "BR-SOV",
+   "clause": "Schedule of Variations",
+   "page": 37,
+   "text": "Pricing a service requires the date on which it was performed, not the date of the invoice; nothing in an instrument reopens a service already charged at the rate then chargeable."
+  }
+ ],
+ "definitions": [
+  {
+   "term": "BHA run",
+   "definition": "the period from the running of a bottom hole assembly into the hole to its recovery."
+  },
+  {
+   "term": "Circulating hours",
+   "definition": "hours during which drilling fluid is pumped through the tool, as recorded on the Daily Drilling Report."
+  },
+  {
+   "term": "Company Representative",
+   "definition": "the person the Company appoints on the rig."
+  },
+  {
+   "term": "Day",
+   "definition": "a calendar day from 00:00 to 24:00."
+  },
+  {
+   "term": "Hole section",
+   "definition": "the part of a well drilled with one bit size, identified by that size."
+  },
+  {
+   "term": "Operating day",
+   "definition": "a day recorded as Operating on the Daily Drilling Report."
+  },
+  {
+   "term": "Standby day",
+   "definition": "a day recorded as Standby on the Daily Drilling Report."
+  },
+  {
+   "term": "Well class",
+   "definition": "Standard, Extended Reach or HPHT, as stated in the call-off."
+  },
+  {
+   "term": "Performance-drilled section",
+   "definition": "a 12-1/4 inch or 8-1/2 inch section of a well the call-off nominates for performance drilling."
+  }
+ ],
+ "worked_examples": {
+  "appendix_b": {
+   "description": "Charges on an HPHT well, showing a Standby day, the circulating-hour minimum not engaged, and footage split at a band boundary.",
+   "lines": [
+    {
+     "date": "03-Jun-2025",
+     "code": "DD-101",
+     "section": "12-1/4\"",
+     "status": "Standby",
+     "depths": null,
+     "quantity": 2,
+     "rate_cents": 147788,
+     "amount_cents": 295576
+    },
+    {
+     "date": "04-Jun-2025",
+     "code": "MW-310",
+     "section": "12-1/4\"",
+     "status": "Operating",
+     "depths": null,
+     "quantity": 1,
+     "rate_cents": 297575,
+     "amount_cents": 297575
+    },
+    {
+     "date": "04-Jun-2025",
+     "code": "DD-120",
+     "section": "12-1/4\"",
+     "status": "Operating",
+     "depths": null,
+     "quantity": 18,
+     "rate_cents": 50900,
+     "amount_cents": 916200
+    },
+    {
+     "date": "04-Jun-2025",
+     "code": "PD-210",
+     "section": "12-1/4\"",
+     "status": "Operating",
+     "depths": "2,930-3,000",
+     "quantity": 70,
+     "rate_cents": 5815,
+     "amount_cents": 407050
+    },
+    {
+     "date": "04-Jun-2025",
+     "code": "PD-210",
+     "section": "12-1/4\"",
+     "status": "Operating",
+     "depths": "3,000-3,085",
+     "quantity": 85,
+     "rate_cents": 7645,
+     "amount_cents": 649825
+    }
+   ],
+   "net_cents": 2566226,
+   "vat_cents": 384934,
+   "total_cents": 2951160,
+   "net_label": "Net amount (below the discount threshold)",
+   "status": "STATED",
+   "ambiguities": [
+    "AMB-02",
+    "AMB-04",
+    "AMB-05"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 30,
+     "printed_page": 30,
+     "section": "Appendix B — Form of Invoice",
+     "source_text": "03-Jun-2025 DD-101 12-1/4\" Standby 2 1,477.88 2,955.76 ... Invoice total 29,511.60"
+    }
+   ]
+  },
+  "clause_38": {
+   "services_total_cents": 31240000,
+   "discount_cents": -249600,
+   "page": 30
+  },
+  "appendix_f": {
+   "circulating_hours": 412,
+   "depreciation_percent": "16",
+   "page": 34
+  }
+ },
+ "evidence_not_provided": [
+  {
+   "id": "NP-01",
+   "item": "Call-off notices",
+   "needed_for": "well class (cl. 4, P2, P3, Appendix A) and the performance-drilled sections nominated for PD-210 and PD-201 (cl. 23, Schedule 4, Appendix A)",
+   "ambiguities": [
+    "AMB-13"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 3,
+     "printed_page": 3,
+     "section": "Clause 4",
+     "source_text": "Each well is called off by a written notice stating the well name, the rig, the field and the well class."
+    }
+   ]
+  },
+  {
+   "id": "NP-02",
+   "item": "Clauses 19.1, 19.3 and 16.4",
+   "needed_for": "cited by Amendment No. 1, Supplement No. 1 and Amendment No. 3 as their basis; the contract has no such sub-clauses",
+   "ambiguities": [
+    "AMB-27"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 42,
+     "printed_page": 42,
+     "section": "Amendment No. 3",
+     "source_text": "Settlement of the Contractor's rate review under Clause 16.4."
+    }
+   ]
+  },
+  {
+   "id": "NP-03",
+   "item": "Circulating Equipment Index and Steerable Tool Index values",
+   "needed_for": "not needed: the instruments publish the resulting monthly rates directly",
+   "ambiguities": [],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 38,
+     "printed_page": 38,
+     "section": "Supplement No. 1, 1.2",
+     "source_text": "re-published monthly against the Circulating Equipment Index (Gulf, per day)"
+    }
+   ]
+  },
+  {
+   "id": "NP-04",
+   "item": "Rig Services Index and rate of exchange after 2026-12",
+   "needed_for": "services after the published months (all after the final Expiry Date); no carry-forward rule is stated for either table",
+   "ambiguities": [],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 18,
+     "printed_page": 18,
+     "section": "Schedule 2C",
+     "source_text": "Rig Services Index, as published:"
+    }
+   ]
+  },
+  {
+   "id": "NP-05",
+   "item": "Separate BHA Run Reports, Gyro Survey Reports, Source Handling Certificates and Lost in Hole Reports",
+   "needed_for": "Clause 16 and H6 name them; Schedule 5 says they are parts of the Daily Drilling Report",
+   "ambiguities": [
+    "AMB-14"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 24,
+     "printed_page": 24,
+     "section": "Schedule 5",
+     "source_text": "There are no separate run, survey, source or loss documents."
+    }
+   ]
+  },
+  {
+   "id": "NP-06",
+   "item": "Invoice submission dates",
+   "needed_for": "Clause 33 window and the Clause 36A placement are stated by submission; the data carries an invoice date only",
+   "ambiguities": [
+    "AMB-12",
+    "AMB-25"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 8,
+     "printed_page": 8,
+     "section": "Clause 33",
+     "source_text": "An invoice shall not be submitted before the last day of its period and shall be submitted within 30 days after it."
+    }
+   ]
+  },
+  {
+   "id": "NP-07",
+   "item": "Report revisions and issue times",
+   "needed_for": "R8 corrections and R2 issue deadline",
+   "ambiguities": [
+    "AMB-23"
+   ],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 14,
+     "printed_page": 14,
+     "section": "R8",
+     "source_text": "A report may be corrected only by a revision signed by both signatories before the invoice for the day is submitted."
+    }
+   ]
+  },
+  {
+   "id": "NP-08",
+   "item": "Rig-move days",
+   "needed_for": "P4 (no service charged on a rig-move day); only the Daily Drilling Reports record days on the well",
+   "ambiguities": [],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 11,
+     "printed_page": 11,
+     "section": "P4",
+     "source_text": "No service is charged for a day on which the rig is moving between wells; such days are not days on the well."
+    }
+   ]
+  },
+  {
+   "id": "NP-09",
+   "item": "Execution of the contract",
+   "needed_for": "signature lines and date in Appendix C are blank (no effect on pricing noted)",
+   "ambiguities": [],
+   "provenance": [
+    {
+     "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+     "page": 31,
+     "printed_page": 31,
+     "section": "Execution",
+     "source_text": "For and on behalf of the Company ____"
+    }
+   ]
+  }
+ ]
+}

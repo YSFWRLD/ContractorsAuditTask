@@ -1,0 +1,993 @@
+{
+ "schema_version": "1.0",
+ "note": "Phase 3 mapping and coverage statistics from the Daily Drilling Reports. Not prices, not findings; no invoice data was read.",
+ "schema": "contractor-audit/drilling-phase3-quantities",
+ "quantities": 114745,
+ "by_basis": {
+  "COUNT": 2296,
+  "HOUR": 10523,
+  "LOST_IN_HOLE": 54,
+  "METRE": 19151,
+  "PERSON_DAY": 30444,
+  "RENTAL_DAY": 49729,
+  "RUN": 1451,
+  "STANDBY_DAY": 241,
+  "WELL": 856
+ },
+ "reading_independent_quantities": 76034,
+ "switch_dependent_quantities": 38711,
+ "quantities_by_switch_reading": {
+  "appendix_g_reading": {
+   "LITERAL": 7202,
+   "LWD_ROWS_SHIFTED": 3730
+  },
+  "dd102_basis": {
+   "PER_COORDINATOR_RECORDED": 8151,
+   "PER_DAY_TOOL_IN_HOLE": 8151
+  },
+  "dd120_hours": {
+   "CIRCULATING_ONLY": 4790,
+   "CIRCULATING_PLUS_BACK_REAMING": 4790
+  },
+  "dd121_condition": {
+   "STANDBY_DAY_RSS_IN_HOLE": 241
+  },
+  "hc630_basis": {
+   "DAILY_COUNT": 428,
+   "PER_BHA_RUN": 428
+  },
+  "metre_source": {
+   "DAILY_DEPTH_ADVANCE": 10053,
+   "PART_B_RUN_METRES": 1671
+  }
+ },
+ "by_service_and_reading": [
+  {
+   "service": "DD-101",
+   "readings": "(reading-independent)",
+   "unit": "person-day",
+   "basis": "PERSON_DAY",
+   "records": 8151,
+   "total_quantity": "16302",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "CREW_COUNT"
+   ]
+  },
+  {
+   "service": "DD-102",
+   "readings": "dd102_basis=PER_COORDINATOR_RECORDED",
+   "unit": "day",
+   "basis": "PERSON_DAY",
+   "records": 8151,
+   "total_quantity": "8151",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "CREW_COUNT"
+   ]
+  },
+  {
+   "service": "DD-102",
+   "readings": "dd102_basis=PER_DAY_TOOL_IN_HOLE",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 8151,
+   "total_quantity": "8151",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "ANY_TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "DD-110",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 3304,
+   "total_quantity": "3304",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 3164,
+    "Standby": 140
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 2,
+    "REPORT_SIGNED=True": 3302
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "DD-111",
+   "readings": "(reading-independent)",
+   "unit": "run",
+   "basis": "RUN",
+   "records": 654,
+   "total_quantity": "654",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 654
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 654,
+    "REPORT_SIGNED=True": 654
+   },
+   "derivations": [
+    "RUN_CARRYING_PDM"
+   ]
+  },
+  {
+   "service": "DD-120",
+   "readings": "dd120_hours=CIRCULATING_ONLY",
+   "unit": "hour",
+   "basis": "HOUR",
+   "records": 4790,
+   "total_quantity": "80334",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 4606,
+    "Standby": 184
+   },
+   "conditions": {
+    "OPERATING_DAY=False": 184,
+    "OPERATING_DAY=True": 4606,
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 4789
+   },
+   "derivations": [
+    "DAILY_HOURS"
+   ]
+  },
+  {
+   "service": "DD-120",
+   "readings": "dd120_hours=CIRCULATING_PLUS_BACK_REAMING",
+   "unit": "hour",
+   "basis": "HOUR",
+   "records": 4790,
+   "total_quantity": "82738",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 4606,
+    "Standby": 184
+   },
+   "conditions": {
+    "OPERATING_DAY=False": 184,
+    "OPERATING_DAY=True": 4606,
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 4789
+   },
+   "derivations": [
+    "DAILY_HOURS"
+   ]
+  },
+  {
+   "service": "DD-121",
+   "readings": "dd121_condition=STANDBY_DAY_RSS_IN_HOLE",
+   "unit": "day",
+   "basis": "STANDBY_DAY",
+   "records": 241,
+   "total_quantity": "241",
+   "wells": 146,
+   "by_day_status": {
+    "Standby": 241
+   },
+   "conditions": {
+    "REPORT_SIGNED=True": 241,
+    "STANDBY_DAY=True": 241
+   },
+   "derivations": [
+    "STANDBY_WITH_RSS_IN_HOLE"
+   ]
+  },
+  {
+   "service": "DD-130",
+   "readings": "(reading-independent)",
+   "unit": "survey",
+   "basis": "COUNT",
+   "records": 480,
+   "total_quantity": "717",
+   "wells": 189,
+   "by_day_status": {
+    "Operating": 480
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 480,
+    "RECORD_PART_C=False": 1,
+    "RECORD_PART_C=True": 479,
+    "REPORT_SIGNED=True": 480
+   },
+   "derivations": [
+    "COUNT_FIELD"
+   ]
+  },
+  {
+   "service": "DD-140",
+   "readings": "(reading-independent)",
+   "unit": "well",
+   "basis": "WELL",
+   "records": 214,
+   "total_quantity": "214",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 214
+   },
+   "conditions": {},
+   "derivations": [
+    "FIRST_DAY_ON_WELL"
+   ]
+  },
+  {
+   "service": "HC-601",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 1767,
+   "total_quantity": "1767",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 1682,
+    "Standby": 85
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 2,
+    "REPORT_SIGNED=True": 1765
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "HC-610",
+   "readings": "(reading-independent)",
+   "unit": "trip",
+   "basis": "COUNT",
+   "records": 943,
+   "total_quantity": "943",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 943
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 943,
+    "REPORT_SIGNED=True": 943
+   },
+   "derivations": [
+    "COUNT_FIELD"
+   ]
+  },
+  {
+   "service": "HC-620",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 8151,
+   "total_quantity": "8151",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "HC-630",
+   "readings": "hc630_basis=DAILY_COUNT",
+   "unit": "run",
+   "basis": "COUNT",
+   "records": 428,
+   "total_quantity": "428",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 428
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 428,
+    "REPORT_SIGNED=True": 428
+   },
+   "derivations": [
+    "COUNT_FIELD"
+   ]
+  },
+  {
+   "service": "HC-630",
+   "readings": "hc630_basis=PER_BHA_RUN",
+   "unit": "run",
+   "basis": "RUN",
+   "records": 428,
+   "total_quantity": "428",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 428
+   },
+   "conditions": {},
+   "derivations": [
+    "RUN_WITH_CLEAN_OUT"
+   ]
+  },
+  {
+   "service": "HC-640",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 2257,
+   "total_quantity": "2257",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 2142,
+    "Standby": 115
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 2256
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "LH-711",
+   "readings": "(reading-independent)",
+   "unit": "each",
+   "basis": "LOST_IN_HOLE",
+   "records": 10,
+   "total_quantity": "10",
+   "wells": 10,
+   "by_day_status": {
+    "Operating": 10
+   },
+   "conditions": {
+    "RECORD_PART_E=True": 10,
+    "REPORT_SIGNED=True": 10
+   },
+   "derivations": [
+    "PART_E_LOST_TOOL"
+   ]
+  },
+  {
+   "service": "LH-712",
+   "readings": "(reading-independent)",
+   "unit": "each",
+   "basis": "LOST_IN_HOLE",
+   "records": 17,
+   "total_quantity": "17",
+   "wells": 17,
+   "by_day_status": {
+    "Operating": 17
+   },
+   "conditions": {
+    "RECORD_PART_E=True": 17,
+    "REPORT_SIGNED=True": 17
+   },
+   "derivations": [
+    "PART_E_LOST_TOOL"
+   ]
+  },
+  {
+   "service": "LH-713",
+   "readings": "(reading-independent)",
+   "unit": "each",
+   "basis": "LOST_IN_HOLE",
+   "records": 19,
+   "total_quantity": "19",
+   "wells": 19,
+   "by_day_status": {
+    "Operating": 19
+   },
+   "conditions": {
+    "RECORD_PART_E=True": 19,
+    "REPORT_SIGNED=True": 19
+   },
+   "derivations": [
+    "PART_E_LOST_TOOL"
+   ]
+  },
+  {
+   "service": "LH-714",
+   "readings": "appendix_g_reading=LITERAL",
+   "unit": "each",
+   "basis": "LOST_IN_HOLE",
+   "records": 8,
+   "total_quantity": "8",
+   "wells": 8,
+   "by_day_status": {
+    "Operating": 8
+   },
+   "conditions": {
+    "RECORD_PART_E=True": 8,
+    "REPORT_SIGNED=True": 8
+   },
+   "derivations": [
+    "PART_E_LOST_TOOL"
+   ]
+  },
+  {
+   "service": "LW-401",
+   "readings": "(reading-independent)",
+   "unit": "person-day",
+   "basis": "PERSON_DAY",
+   "records": 3430,
+   "total_quantity": "3430",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 3265,
+    "Standby": 165
+   },
+   "conditions": {
+    "REPORT_SIGNED=True": 3430
+   },
+   "derivations": [
+    "CREW_COUNT"
+   ]
+  },
+  {
+   "service": "LW-410",
+   "readings": "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LITERAL",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 2964,
+   "total_quantity": "315300",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 2964
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 2964,
+    "RECORD_PART_B=True": 2964,
+    "REPORT_SIGNED=True": 2964
+   },
+   "derivations": [
+    "DAILY_DEPTH_ADVANCE"
+   ]
+  },
+  {
+   "service": "LW-410",
+   "readings": "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LWD_ROWS_SHIFTED",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 2250,
+   "total_quantity": "255195",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 2250
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 2250,
+    "RECORD_PART_B=True": 2250,
+    "REPORT_SIGNED=True": 2250
+   },
+   "derivations": [
+    "DAILY_DEPTH_ADVANCE"
+   ]
+  },
+  {
+   "service": "LW-410",
+   "readings": "metre_source=PART_B_RUN_METRES;appendix_g_reading=LITERAL",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 500,
+   "total_quantity": "315300",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 500
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 500
+   },
+   "derivations": [
+    "PART_B_METRES_LOGGED"
+   ]
+  },
+  {
+   "service": "LW-410",
+   "readings": "metre_source=PART_B_RUN_METRES;appendix_g_reading=LWD_ROWS_SHIFTED",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 369,
+   "total_quantity": "255195",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 369
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 369
+   },
+   "derivations": [
+    "PART_B_METRES_LOGGED"
+   ]
+  },
+  {
+   "service": "LW-411",
+   "readings": "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LITERAL",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 2250,
+   "total_quantity": "255195",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 2250
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 2250,
+    "RECORD_PART_B=True": 2250,
+    "REPORT_SIGNED=True": 2250
+   },
+   "derivations": [
+    "DAILY_DEPTH_ADVANCE"
+   ]
+  },
+  {
+   "service": "LW-411",
+   "readings": "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LWD_ROWS_SHIFTED",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 955,
+   "total_quantity": "108074",
+   "wells": 90,
+   "by_day_status": {
+    "Operating": 955
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 955,
+    "RECORD_PART_B=True": 955,
+    "REPORT_SIGNED=True": 955
+   },
+   "derivations": [
+    "DAILY_DEPTH_ADVANCE"
+   ]
+  },
+  {
+   "service": "LW-411",
+   "readings": "metre_source=PART_B_RUN_METRES;appendix_g_reading=LITERAL",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 369,
+   "total_quantity": "255195",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 369
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 369
+   },
+   "derivations": [
+    "PART_B_METRES_LOGGED"
+   ]
+  },
+  {
+   "service": "LW-411",
+   "readings": "metre_source=PART_B_RUN_METRES;appendix_g_reading=LWD_ROWS_SHIFTED",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 156,
+   "total_quantity": "108074",
+   "wells": 90,
+   "by_day_status": {
+    "n/a": 156
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 156
+   },
+   "derivations": [
+    "PART_B_METRES_LOGGED"
+   ]
+  },
+  {
+   "service": "LW-412",
+   "readings": "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LITERAL",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 955,
+   "total_quantity": "108074",
+   "wells": 90,
+   "by_day_status": {
+    "Operating": 955
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 955,
+    "RECORD_PART_B=True": 955,
+    "REPORT_SIGNED=True": 955
+   },
+   "derivations": [
+    "DAILY_DEPTH_ADVANCE"
+   ]
+  },
+  {
+   "service": "LW-412",
+   "readings": "metre_source=PART_B_RUN_METRES;appendix_g_reading=LITERAL",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 156,
+   "total_quantity": "108074",
+   "wells": 90,
+   "by_day_status": {
+    "n/a": 156
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 156
+   },
+   "derivations": [
+    "PART_B_METRES_LOGGED"
+   ]
+  },
+  {
+   "service": "LW-413",
+   "readings": "(reading-independent)",
+   "unit": "point",
+   "basis": "COUNT",
+   "records": 445,
+   "total_quantity": "2870",
+   "wells": 188,
+   "by_day_status": {
+    "Operating": 445
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 445,
+    "RECORD_PART_B=True": 445,
+    "REPORT_SIGNED=True": 445
+   },
+   "derivations": [
+    "COUNT_FIELD"
+   ]
+  },
+  {
+   "service": "LW-420",
+   "readings": "(reading-independent)",
+   "unit": "run",
+   "basis": "RUN",
+   "records": 369,
+   "total_quantity": "369",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 369
+   },
+   "conditions": {
+    "RECORD_PART_D=False": 2,
+    "RECORD_PART_D=True": 367,
+    "REPORT_SIGNED=True": 369
+   },
+   "derivations": [
+    "RUN_CARRYING_SOURCE"
+   ]
+  },
+  {
+   "service": "LW-430",
+   "readings": "(reading-independent)",
+   "unit": "well",
+   "basis": "WELL",
+   "records": 214,
+   "total_quantity": "214",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 214
+   },
+   "conditions": {},
+   "derivations": [
+    "LAST_DAY_ON_WELL_WITH_LWD"
+   ]
+  },
+  {
+   "service": "MB-701",
+   "readings": "(reading-independent)",
+   "unit": "well",
+   "basis": "WELL",
+   "records": 214,
+   "total_quantity": "214",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 214
+   },
+   "conditions": {},
+   "derivations": [
+    "FIRST_DAY_ON_WELL"
+   ]
+  },
+  {
+   "service": "MB-702",
+   "readings": "(reading-independent)",
+   "unit": "well",
+   "basis": "WELL",
+   "records": 214,
+   "total_quantity": "214",
+   "wells": 214,
+   "by_day_status": {
+    "n/a": 214
+   },
+   "conditions": {},
+   "derivations": [
+    "LAST_DAY_ON_WELL"
+   ]
+  },
+  {
+   "service": "MW-301",
+   "readings": "(reading-independent)",
+   "unit": "person-day",
+   "basis": "PERSON_DAY",
+   "records": 8151,
+   "total_quantity": "16302",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "CREW_COUNT"
+   ]
+  },
+  {
+   "service": "MW-310",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 8151,
+   "total_quantity": "8151",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "MW-320",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 4847,
+   "total_quantity": "4847",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 4606,
+    "Standby": 241
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 4846
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "MW-330",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 8151,
+   "total_quantity": "8151",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7770,
+    "Standby": 381
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 3,
+    "REPORT_SIGNED=True": 8148
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "PD-201",
+   "readings": "(reading-independent)",
+   "unit": "person-day",
+   "basis": "PERSON_DAY",
+   "records": 2561,
+   "total_quantity": "2561",
+   "wells": 114,
+   "by_day_status": {
+    "Operating": 2434,
+    "Standby": 127
+   },
+   "conditions": {
+    "PERFORMANCE_SECTION_NOMINATED=None": 2561,
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 2560
+   },
+   "derivations": [
+    "CREW_COUNT"
+   ]
+  },
+  {
+   "service": "PD-210",
+   "readings": "(reading-independent)",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 7427,
+   "total_quantity": "1064300",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 7427
+   },
+   "conditions": {
+    "PERFORMANCE_SECTION_NOMINATED=False": 2890,
+    "PERFORMANCE_SECTION_NOMINATED=None": 4537,
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 7426
+   },
+   "derivations": [
+    "DEPTH_BAND_SPLIT"
+   ]
+  },
+  {
+   "service": "PD-220",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 1190,
+   "total_quantity": "1190",
+   "wells": 114,
+   "by_day_status": {
+    "Operating": 1130,
+    "Standby": 60
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 1189
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "PD-230",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 1190,
+   "total_quantity": "1190",
+   "wells": 114,
+   "by_day_status": {
+    "Operating": 1130,
+    "Standby": 60
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 1189
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "RM-510",
+   "readings": "metre_source=DAILY_DEPTH_ADVANCE",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 679,
+   "total_quantity": "108886",
+   "wells": 74,
+   "by_day_status": {
+    "Operating": 679
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 679,
+    "RECORD_PART_B=True": 679,
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 678
+   },
+   "derivations": [
+    "DAILY_DEPTH_ADVANCE_UNDERREAMER"
+   ]
+  },
+  {
+   "service": "RM-510",
+   "readings": "metre_source=PART_B_RUN_METRES",
+   "unit": "metre",
+   "basis": "METRE",
+   "records": 121,
+   "total_quantity": "108886",
+   "wells": 74,
+   "by_day_status": {
+    "n/a": 121
+   },
+   "conditions": {
+    "RECORD_PART_B=True": 121
+   },
+   "derivations": [
+    "PART_B_METRES_REAMED"
+   ]
+  },
+  {
+   "service": "RM-511",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 803,
+   "total_quantity": "803",
+   "wells": 74,
+   "by_day_status": {
+    "Operating": 753,
+    "Standby": 50
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 1,
+    "REPORT_SIGNED=True": 802
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "RM-520",
+   "readings": "(reading-independent)",
+   "unit": "day",
+   "basis": "RENTAL_DAY",
+   "records": 1767,
+   "total_quantity": "1767",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 1682,
+    "Standby": 85
+   },
+   "conditions": {
+    "REPORT_SIGNED=False": 2,
+    "REPORT_SIGNED=True": 1765
+   },
+   "derivations": [
+    "TOOL_IN_HOLE"
+   ]
+  },
+  {
+   "service": "RM-530",
+   "readings": "(reading-independent)",
+   "unit": "hour",
+   "basis": "HOUR",
+   "records": 943,
+   "total_quantity": "5199",
+   "wells": 214,
+   "by_day_status": {
+    "Operating": 943
+   },
+   "conditions": {
+    "OPERATING_DAY=True": 943,
+    "REPORT_SIGNED=True": 943
+   },
+   "derivations": [
+    "COUNT_FIELD"
+   ]
+  }
+ ],
+ "canonical_sha256": "b7b89e99ca4b39dcca0fa8026c69345753db677d9971a3475118e64a58e6f513"
+}

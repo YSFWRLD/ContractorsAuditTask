@@ -1,0 +1,47 @@
+{
+  "domain": "civil_works",
+  "data_root_layout": "invoice-auditing-level-2/",
+  "files": [
+    {
+      "path": "civilwork/contract/CW-2025-0417-CIV.pdf",
+      "kind": "contract (scanned PDF, no text layer)",
+      "bytes": 8782707,
+      "sha256": "e53aadcee8d4cd741e3abd2deec6dbd2c290aeb5ce285e0694617ee4700e4980"
+    },
+    {
+      "path": "civilwork/guidelines/INVOICE_AUDIT_GUIDELINES.md",
+      "kind": "audit guidelines",
+      "bytes": 2115,
+      "sha256": "08425dfb7de79a18948fc7c9b0d2e038bf9c746f37f7c0877d81956576b0e1cf"
+    },
+    {
+      "path": "civilwork/invoices/applications.csv",
+      "kind": "applications",
+      "bytes": 147645,
+      "sha256": "96a5a5d21af4839a34b062d618cb173254c88b272e6761d66215bd26749f1eae",
+      "data_rows": 900
+    },
+    {
+      "path": "civilwork/invoices/application_lines.csv",
+      "kind": "application lines",
+      "bytes": 1199766,
+      "sha256": "473eb79ac94156940ebd5c40dc92107a3067a9affff50debfc0dc9324cdb724a",
+      "data_rows": 7746
+    }
+  ],
+  "records": {
+    "path": "civilwork/records",
+    "kind": "site records (.txt)",
+    "files": 2169,
+    "tree_sha256": "c8a55cdcc28cfa97b116623a91e7f02443bbe4c3bec6a85c7bd5eede92bbd303"
+  },
+  "task_wide": [
+    {
+      "path": "submission_template.csv",
+      "kind": "submission template (all domains)",
+      "bytes": 44082,
+      "sha256": "14f570a2eb3f050f624477eaba3738b13889385490b2c703b6cd3804e89ba54e",
+      "data_rows": 2806
+    }
+  ]
+}

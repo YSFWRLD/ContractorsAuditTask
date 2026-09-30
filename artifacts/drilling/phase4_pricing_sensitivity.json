@@ -1,0 +1,1152 @@
+{
+ "schema": "contractor-audit/drilling-phase4-sensitivity",
+ "schema_version": "1.1",
+ "note": "Reference: the canonical selection (approved and contract-text readings). Each approved reading is flipped alone to each alternative; flipped figures are HYPOTHETICAL, never canonical. Totals of priced report evidence only: no invoice is compared, flagged or totalled.",
+ "backgrounds": {
+  "canonical": "the canonical selection: class-rated services, PD-210 and PD-201 stay EVIDENCE_NOT_PROVIDED (AMB-13)",
+  "claimed_class": "HYPOTHETICAL background: calloff_evidence = INVOICE_STATEMENT_UNVERIFIED with the contractor's claimed classes, and every allowed-size PD-210 / PD-201 day treated as nominated, so readings that act on those services show their effect"
+ },
+ "background_totals_cents": {
+  "canonical": 14742686878,
+  "claimed_class": 26840528397
+ },
+ "reference_canonical": true,
+ "reference_total_cents": 14742686878,
+ "switches": [
+  {
+   "switch": "appendix_g_reading",
+   "ambiguity": "AMB-17",
+   "approved": "LITERAL",
+   "alternative": "LWD_ROWS_SHIFTED",
+   "services": [
+    "LH-714",
+    "LW-410",
+    "LW-411",
+    "LW-412"
+   ],
+   "approved_total_cents": 394970482,
+   "alternative_total_cents": 0,
+   "delta_cents": -394970482,
+   "quantities_changed": 9382,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 6169,
+    "PRICED": 8
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 3205
+   },
+   "delta_by_service_cents": {
+    "LH-714": -394970482
+   },
+   "background": "canonical",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "dd102_basis",
+   "ambiguity": "AMB-18",
+   "approved": "PER_COORDINATOR_RECORDED",
+   "alternative": "PER_DAY_TOOL_IN_HOLE",
+   "services": [
+    "DD-102"
+   ],
+   "approved_total_cents": 773203860,
+   "alternative_total_cents": 773203860,
+   "delta_cents": 0,
+   "quantities_changed": 16302,
+   "status_approved": {
+    "PRICED": 8151
+   },
+   "status_alternative": {
+    "PRICED": 8151
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "Phase 1 preferred reading A (LOW, OPEN)"
+  },
+  {
+   "switch": "hc630_basis",
+   "ambiguity": "AMB-19",
+   "approved": "DAILY_COUNT",
+   "alternative": "PER_BHA_RUN",
+   "services": [
+    "HC-630"
+   ],
+   "approved_total_cents": 183862380,
+   "alternative_total_cents": 183862380,
+   "delta_cents": 0,
+   "quantities_changed": 856,
+   "status_approved": {
+    "PRICED": 428
+   },
+   "status_alternative": {
+    "PRICED": 428
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "dd120_hours",
+   "ambiguity": "AMB-06",
+   "approved": "CIRCULATING_ONLY",
+   "alternative": "CIRCULATING_PLUS_BACK_REAMING",
+   "services": [
+    "DD-120"
+   ],
+   "approved_total_cents": 0,
+   "alternative_total_cents": 0,
+   "delta_cents": 0,
+   "quantities_changed": 9580,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "metre_source",
+   "ambiguity": "AMB-24",
+   "approved": "DAILY_DEPTH_ADVANCE",
+   "alternative": "PART_B_RUN_METRES",
+   "services": [
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "RM-510"
+   ],
+   "approved_total_cents": 418666670,
+   "alternative_total_cents": 418666670,
+   "delta_cents": 0,
+   "quantities_changed": 7994,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 6169,
+    "PRICED": 679
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 1025,
+    "PRICED": 121
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "lih_hours",
+   "ambiguity": "AMB-22",
+   "approved": "PART_E_STATED",
+   "alternative": "TOOL_ACCUMULATED",
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "approved_total_cents": 3142795899,
+   "alternative_total_cents": 3142795899,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "PRICED": 54
+   },
+   "status_alternative": {
+    "PRICED": 54
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "approved": "PER_BHA_RUN",
+   "alternative": "PER_DAY_THEN_MINIMUM",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "approved_total_cents": 112592480,
+   "alternative_total_cents": 112592480,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 943
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 943
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "approved": "PER_BHA_RUN",
+   "alternative": "NO_DEDUCTION",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "approved_total_cents": 112592480,
+   "alternative_total_cents": 137539545,
+   "delta_cents": 24947065,
+   "quantities_changed": 943,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 943
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 943
+   },
+   "delta_by_service_cents": {
+    "RM-530": 24947065
+   },
+   "background": "canonical",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "approved": "PER_BHA_RUN",
+   "alternative": "MINIMUM_THEN_PER_DAY",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "approved_total_cents": 112592480,
+   "alternative_total_cents": 112592480,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 943
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 943
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "pd210_class_factor",
+   "ambiguity": "AMB-02",
+   "approved": "DO_NOT_APPLY",
+   "alternative": "APPLY",
+   "services": [
+    "PD-210"
+   ],
+   "approved_total_cents": 0,
+   "alternative_total_cents": 0,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4537,
+    "NOT_CHARGEABLE": 2890
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4537,
+    "NOT_CHARGEABLE": 2890
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "standby_section_factor",
+   "ambiguity": "AMB-03",
+   "approved": "OMIT",
+   "alternative": "APPLY",
+   "services": [
+    "DD-110",
+    "DD-120",
+    "MW-310",
+    "PD-220",
+    "RM-510",
+    "RM-511"
+   ],
+   "approved_total_cents": 1169603764,
+   "alternative_total_cents": 1170516730,
+   "delta_cents": 912966,
+   "quantities_changed": 140,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 12757,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5976
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 12757,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5976
+   },
+   "delta_by_service_cents": {
+    "DD-110": 912966
+   },
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "rig_services_index",
+   "ambiguity": "AMB-04",
+   "approved": "APPLY_FROM_FIRST_MONTH",
+   "alternative": "NOT_APPLIED",
+   "services": [
+    "HC-620",
+    "MW-310"
+   ],
+   "approved_total_cents": 462773834,
+   "alternative_total_cents": 429588192,
+   "delta_cents": -33185642,
+   "quantities_changed": 7821,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 8151,
+    "PRICED": 8151
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 8151,
+    "PRICED": 8151
+   },
+   "delta_by_service_cents": {
+    "HC-620": -33185642
+   },
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "dd120_rate_from_feb_2026",
+   "ambiguity": "AMB-07",
+   "approved": "LATER_ISSUED_GOVERNS",
+   "alternative": "LATER_EFFECTIVE_GOVERNS",
+   "services": [
+    "DD-101",
+    "DD-120",
+    "DD-121",
+    "HC-601",
+    "LW-401",
+    "MB-701",
+    "MW-301"
+   ],
+   "approved_total_cents": 6898879681,
+   "alternative_total_cents": 6898879681,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 21954
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 21954
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "dd120_rate_from_feb_2026",
+   "ambiguity": "AMB-07",
+   "approved": "LATER_ISSUED_GOVERNS",
+   "alternative": "MONTHLY_TABLE_SEPARATE",
+   "services": [
+    "DD-101",
+    "DD-120",
+    "DD-121",
+    "HC-601",
+    "LW-401",
+    "MB-701",
+    "MW-301"
+   ],
+   "approved_total_cents": 6898879681,
+   "alternative_total_cents": 6898879681,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 21954
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 21954
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "monthly_rate_basis",
+   "ambiguity": "AMB-08",
+   "approved": "BASE_RATE_THEN_BUILD_UP",
+   "alternative": "FINAL_RATE",
+   "services": [
+    "DD-120",
+    "HC-601"
+   ],
+   "approved_total_cents": 123948471,
+   "alternative_total_cents": 125883216,
+   "delta_cents": 1934745,
+   "quantities_changed": 53,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 1767
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4606,
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 1767
+   },
+   "delta_by_service_cents": {
+    "HC-601": 1934745
+   },
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "volume_tier_scope",
+   "ambiguity": "AMB-10",
+   "approved": "PER_WELL",
+   "alternative": "CONTRACT_WIDE",
+   "services": [
+    "PD-210"
+   ],
+   "approved_total_cents": 0,
+   "alternative_total_cents": 0,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4537,
+    "NOT_CHARGEABLE": 2890
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4537,
+    "NOT_CHARGEABLE": 2890
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "contract_year_2",
+   "ambiguity": "AMB-11",
+   "approved": "STARTS_2026_01_01",
+   "alternative": "YEAR_1_EXTENDED",
+   "services": [
+    "PD-210"
+   ],
+   "approved_total_cents": 0,
+   "alternative_total_cents": 0,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 4537,
+    "NOT_CHARGEABLE": 2890
+   },
+   "status_alternative": {
+    "EVIDENCE_NOT_PROVIDED": 4537,
+    "NOT_CHARGEABLE": 2890
+   },
+   "delta_by_service_cents": {},
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "lih_replacement_value",
+   "ambiguity": "AMB-21",
+   "approved": "SCHEDULE_2D_CONVERTED",
+   "alternative": "SCHEDULE_6_USD",
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "approved_total_cents": 3142795899,
+   "alternative_total_cents": 3148335000,
+   "delta_cents": 5539101,
+   "quantities_changed": 47,
+   "status_approved": {
+    "PRICED": 54
+   },
+   "status_alternative": {
+    "PRICED": 54
+   },
+   "delta_by_service_cents": {
+    "LH-711": 277597,
+    "LH-712": 3593473,
+    "LH-713": 918513,
+    "LH-714": 749518
+   },
+   "background": "canonical",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "calloff_evidence",
+   "ambiguity": "AMB-13",
+   "approved": "UNVERIFIABLE_QUERY",
+   "alternative": "INVOICE_STATEMENT_UNVERIFIED",
+   "services": [
+    "DD-120",
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "LW-413",
+    "MW-310",
+    "MW-320",
+    "PD-201",
+    "PD-210"
+   ],
+   "approved_total_cents": 0,
+   "alternative_total_cents": 12097841519,
+   "delta_cents": 12097841519,
+   "quantities_changed": 31316,
+   "status_approved": {
+    "EVIDENCE_NOT_PROVIDED": 31316,
+    "NOT_CHARGEABLE": 3074
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 3074,
+    "PRICED": 31316
+   },
+   "delta_by_service_cents": {
+    "DD-120": 3327849250,
+    "LW-410": 393531348,
+    "LW-411": 471416056,
+    "LW-412": 158294844,
+    "LW-413": 583981021,
+    "MW-310": 2173426483,
+    "MW-320": 404540251,
+    "PD-201": 531170166,
+    "PD-210": 4053632100
+   },
+   "background": "canonical",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "appendix_g_reading",
+   "ambiguity": "AMB-17",
+   "approved": "LITERAL",
+   "alternative": "LWD_ROWS_SHIFTED",
+   "services": [
+    "LH-714",
+    "LW-410",
+    "LW-411",
+    "LW-412"
+   ],
+   "approved_total_cents": 1418212730,
+   "alternative_total_cents": 518933145,
+   "delta_cents": -899279585,
+   "quantities_changed": 9382,
+   "status_approved": {
+    "PRICED": 6177
+   },
+   "status_alternative": {
+    "PRICED": 3205
+   },
+   "delta_by_service_cents": {
+    "LH-714": -394970482,
+    "LW-410": -75054215,
+    "LW-411": -270960044,
+    "LW-412": -158294844
+   },
+   "background": "claimed_class",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "dd102_basis",
+   "ambiguity": "AMB-18",
+   "approved": "PER_COORDINATOR_RECORDED",
+   "alternative": "PER_DAY_TOOL_IN_HOLE",
+   "services": [
+    "DD-102"
+   ],
+   "approved_total_cents": 773203860,
+   "alternative_total_cents": 773203860,
+   "delta_cents": 0,
+   "quantities_changed": 16302,
+   "status_approved": {
+    "PRICED": 8151
+   },
+   "status_alternative": {
+    "PRICED": 8151
+   },
+   "delta_by_service_cents": {},
+   "background": "claimed_class",
+   "confidence": "Phase 1 preferred reading A (LOW, OPEN)"
+  },
+  {
+   "switch": "hc630_basis",
+   "ambiguity": "AMB-19",
+   "approved": "DAILY_COUNT",
+   "alternative": "PER_BHA_RUN",
+   "services": [
+    "HC-630"
+   ],
+   "approved_total_cents": 183862380,
+   "alternative_total_cents": 183862380,
+   "delta_cents": 0,
+   "quantities_changed": 856,
+   "status_approved": {
+    "PRICED": 428
+   },
+   "status_alternative": {
+    "PRICED": 428
+   },
+   "delta_by_service_cents": {},
+   "background": "claimed_class",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "dd120_hours",
+   "ambiguity": "AMB-06",
+   "approved": "CIRCULATING_ONLY",
+   "alternative": "CIRCULATING_PLUS_BACK_REAMING",
+   "services": [
+    "DD-120"
+   ],
+   "approved_total_cents": 3327849250,
+   "alternative_total_cents": 3428970480,
+   "delta_cents": 101121230,
+   "quantities_changed": 9580,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 4606
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 4606
+   },
+   "delta_by_service_cents": {
+    "DD-120": 101121230
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "metre_source",
+   "ambiguity": "AMB-24",
+   "approved": "DAILY_DEPTH_ADVANCE",
+   "alternative": "PART_B_RUN_METRES",
+   "services": [
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "RM-510"
+   ],
+   "approved_total_cents": 1441908918,
+   "alternative_total_cents": 1441908918,
+   "delta_cents": 0,
+   "quantities_changed": 7994,
+   "status_approved": {
+    "PRICED": 6848
+   },
+   "status_alternative": {
+    "PRICED": 1146
+   },
+   "delta_by_service_cents": {},
+   "background": "claimed_class",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "lih_hours",
+   "ambiguity": "AMB-22",
+   "approved": "PART_E_STATED",
+   "alternative": "TOOL_ACCUMULATED",
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "approved_total_cents": 3142795899,
+   "alternative_total_cents": 3142795899,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "PRICED": 54
+   },
+   "status_alternative": {
+    "PRICED": 54
+   },
+   "delta_by_service_cents": {},
+   "background": "claimed_class",
+   "confidence": "Phase 1 preferred reading A (MEDIUM, OPEN)"
+  },
+  {
+   "switch": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "approved": "PER_BHA_RUN",
+   "alternative": "PER_DAY_THEN_MINIMUM",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "approved_total_cents": 3440441730,
+   "alternative_total_cents": 3276622375,
+   "delta_cents": -163819355,
+   "quantities_changed": 3903,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5549
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5549
+   },
+   "delta_by_service_cents": {
+    "DD-120": -163819355
+   },
+   "background": "claimed_class",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "approved": "PER_BHA_RUN",
+   "alternative": "NO_DEDUCTION",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "approved_total_cents": 3440441730,
+   "alternative_total_cents": 3494907795,
+   "delta_cents": 54466065,
+   "quantities_changed": 1646,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5549
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5549
+   },
+   "delta_by_service_cents": {
+    "DD-120": 29519000,
+    "RM-530": 24947065
+   },
+   "background": "claimed_class",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "approved": "PER_BHA_RUN",
+   "alternative": "MINIMUM_THEN_PER_DAY",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "approved_total_cents": 3440441730,
+   "alternative_total_cents": 3276622375,
+   "delta_cents": -163819355,
+   "quantities_changed": 3903,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5549
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 5549
+   },
+   "delta_by_service_cents": {
+    "DD-120": -163819355
+   },
+   "background": "claimed_class",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "pd210_class_factor",
+   "ambiguity": "AMB-02",
+   "approved": "DO_NOT_APPLY",
+   "alternative": "APPLY",
+   "services": [
+    "PD-210"
+   ],
+   "approved_total_cents": 4053632100,
+   "alternative_total_cents": 4451171958,
+   "delta_cents": 397539858,
+   "quantities_changed": 1936,
+   "status_approved": {
+    "NOT_CHARGEABLE": 2890,
+    "PRICED": 4537
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 2890,
+    "PRICED": 4537
+   },
+   "delta_by_service_cents": {
+    "PD-210": 397539858
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "standby_section_factor",
+   "ambiguity": "AMB-03",
+   "approved": "OMIT",
+   "alternative": "APPLY",
+   "services": [
+    "DD-110",
+    "DD-120",
+    "MW-310",
+    "PD-220",
+    "RM-510",
+    "RM-511"
+   ],
+   "approved_total_cents": 6670879497,
+   "alternative_total_cents": 6672511690,
+   "delta_cents": 1632193,
+   "quantities_changed": 406,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 18733
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 18733
+   },
+   "delta_by_service_cents": {
+    "DD-110": 912966,
+    "MW-310": 719227
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "rig_services_index",
+   "ambiguity": "AMB-04",
+   "approved": "APPLY_FROM_FIRST_MONTH",
+   "alternative": "NOT_APPLIED",
+   "services": [
+    "HC-620",
+    "MW-310"
+   ],
+   "approved_total_cents": 2636200317,
+   "alternative_total_cents": 2448280982,
+   "delta_cents": -187919335,
+   "quantities_changed": 15642,
+   "status_approved": {
+    "PRICED": 16302
+   },
+   "status_alternative": {
+    "PRICED": 16302
+   },
+   "delta_by_service_cents": {
+    "HC-620": -33185642,
+    "MW-310": -154733693
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "dd120_rate_from_feb_2026",
+   "ambiguity": "AMB-07",
+   "approved": "LATER_ISSUED_GOVERNS",
+   "alternative": "LATER_EFFECTIVE_GOVERNS",
+   "services": [
+    "DD-101",
+    "DD-120",
+    "DD-121",
+    "HC-601",
+    "LW-401",
+    "MB-701",
+    "MW-301"
+   ],
+   "approved_total_cents": 10226728931,
+   "alternative_total_cents": 10244425986,
+   "delta_cents": 17697055,
+   "quantities_changed": 1578,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 26560
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 26560
+   },
+   "delta_by_service_cents": {
+    "DD-120": 17697055
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "dd120_rate_from_feb_2026",
+   "ambiguity": "AMB-07",
+   "approved": "LATER_ISSUED_GOVERNS",
+   "alternative": "MONTHLY_TABLE_SEPARATE",
+   "services": [
+    "DD-101",
+    "DD-120",
+    "DD-121",
+    "HC-601",
+    "LW-401",
+    "MB-701",
+    "MW-301"
+   ],
+   "approved_total_cents": 10226728931,
+   "alternative_total_cents": 10244425986,
+   "delta_cents": 17697055,
+   "quantities_changed": 1578,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 26560
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 26560
+   },
+   "delta_by_service_cents": {
+    "DD-120": 17697055
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "monthly_rate_basis",
+   "ambiguity": "AMB-08",
+   "approved": "BASE_RATE_THEN_BUILD_UP",
+   "alternative": "FINAL_RATE",
+   "services": [
+    "DD-120",
+    "HC-601"
+   ],
+   "approved_total_cents": 3451797721,
+   "alternative_total_cents": 3453732466,
+   "delta_cents": 1934745,
+   "quantities_changed": 53,
+   "status_approved": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 6373
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 184,
+    "PRICED": 6373
+   },
+   "delta_by_service_cents": {
+    "HC-601": 1934745
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "volume_tier_scope",
+   "ambiguity": "AMB-10",
+   "approved": "PER_WELL",
+   "alternative": "CONTRACT_WIDE",
+   "services": [
+    "PD-210"
+   ],
+   "approved_total_cents": 4053632100,
+   "alternative_total_cents": 3775154211,
+   "delta_cents": -278477889,
+   "quantities_changed": 4271,
+   "status_approved": {
+    "NOT_CHARGEABLE": 2890,
+    "PRICED": 4537
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 2890,
+    "PRICED": 4537
+   },
+   "delta_by_service_cents": {
+    "PD-210": -278477889
+   },
+   "background": "claimed_class",
+   "confidence": "LOW"
+  },
+  {
+   "switch": "contract_year_2",
+   "ambiguity": "AMB-11",
+   "approved": "STARTS_2026_01_01",
+   "alternative": "YEAR_1_EXTENDED",
+   "services": [
+    "PD-210"
+   ],
+   "approved_total_cents": 4053632100,
+   "alternative_total_cents": 4053632100,
+   "delta_cents": 0,
+   "quantities_changed": 0,
+   "status_approved": {
+    "NOT_CHARGEABLE": 2890,
+    "PRICED": 4537
+   },
+   "status_alternative": {
+    "NOT_CHARGEABLE": 2890,
+    "PRICED": 4537
+   },
+   "delta_by_service_cents": {},
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  },
+  {
+   "switch": "lih_replacement_value",
+   "ambiguity": "AMB-21",
+   "approved": "SCHEDULE_2D_CONVERTED",
+   "alternative": "SCHEDULE_6_USD",
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "approved_total_cents": 3142795899,
+   "alternative_total_cents": 3148335000,
+   "delta_cents": 5539101,
+   "quantities_changed": 47,
+   "status_approved": {
+    "PRICED": 54
+   },
+   "status_alternative": {
+    "PRICED": 54
+   },
+   "delta_by_service_cents": {
+    "LH-711": 277597,
+    "LH-712": 3593473,
+    "LH-713": 918513,
+    "LH-714": 749518
+   },
+   "background": "claimed_class",
+   "confidence": "MEDIUM"
+  }
+ ],
+ "well_class": {
+  "class_rated_services": [
+   "DD-120",
+   "LW-410",
+   "LW-411",
+   "LW-412",
+   "LW-413",
+   "MW-310",
+   "MW-320"
+  ],
+  "scenarios": [
+   {
+    "scenario": "every well Standard",
+    "services": [
+     "DD-120",
+     "LW-410",
+     "LW-411",
+     "LW-412",
+     "LW-413",
+     "MW-310",
+     "MW-320"
+    ],
+    "priced_quantities": 24218,
+    "total_cents": 6842202309,
+    "by_service_cents": {
+     "DD-120": 3030013796,
+     "LW-410": 358496100,
+     "LW-411": 429493185,
+     "LW-412": 143630346,
+     "LW-413": 530849550,
+     "MW-310": 1981217880,
+     "MW-320": 368501452
+    }
+   },
+   {
+    "scenario": "every well Extended Reach",
+    "services": [
+     "DD-120",
+     "LW-410",
+     "LW-411",
+     "LW-412",
+     "LW-413",
+     "MW-310",
+     "MW-320"
+    ],
+    "priced_quantities": 24218,
+    "total_cents": 8039774852,
+    "by_service_cents": {
+     "DD-120": 3560277956,
+     "LW-410": 421240800,
+     "LW-411": 504775710,
+     "LW-412": 168811588,
+     "LW-413": 623748580,
+     "MW-310": 2327930400,
+     "MW-320": 432989818
+    }
+   },
+   {
+    "scenario": "every well HPHT",
+    "services": [
+     "DD-120",
+     "LW-410",
+     "LW-411",
+     "LW-412",
+     "LW-413",
+     "MW-310",
+     "MW-320"
+    ],
+    "priced_quantities": 24218,
+    "total_cents": 9066076398,
+    "by_service_cents": {
+     "DD-120": 4014759016,
+     "LW-410": 475157100,
+     "LW-411": 569084850,
+     "LW-412": 190318314,
+     "LW-413": 703376730,
+     "MW-310": 2625114032,
+     "MW-320": 488266356
+    }
+   },
+   {
+    "scenario": "contractor's claimed class (unverified)",
+    "services": [
+     "DD-120",
+     "LW-410",
+     "LW-411",
+     "LW-412",
+     "LW-413",
+     "MW-310",
+     "MW-320"
+    ],
+    "priced_quantities": 24218,
+    "total_cents": 7513039253,
+    "by_service_cents": {
+     "DD-120": 3327849250,
+     "LW-410": 393531348,
+     "LW-411": 471416056,
+     "LW-412": 158294844,
+     "LW-413": 583981021,
+     "MW-310": 2173426483,
+     "MW-320": 404540251
+    }
+   }
+  ],
+  "claimed_classes": {
+   "Extended Reach": 57,
+   "HPHT": 33,
+   "Standard": 124
+  },
+  "pd210_if_every_allowed_size_day_were_nominated": {
+   "priced_quantities": 4537,
+   "total_cents": 4053632100,
+   "note": "Upper bound: assumes every drilled 12-1/4\" / 8-1/2\" day is a nominated performance section, which no evidence supports."
+  },
+  "pd201_if_eligibility_were_established": {
+   "quantities": 2561,
+   "total_cents": 531170166,
+   "note": "Conditional: the calculated rate of the PD-201 days, payable only if the call-off (not provided) nominated those sections. Neither the reports nor the invoices establish that."
+  }
+ }
+}

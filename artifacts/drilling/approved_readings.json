@@ -1,0 +1,51 @@
+{
+ "schema": "contractor-audit/drilling-approved-readings",
+ "schema_version": "1.1",
+ "note": "Readings and assumptions approved by the user. Only these, plus readings the contract text itself resolves, may produce a canonical priced result. Hand-maintained; never generated.",
+ "history": [
+  {"approved_on": "2026-09-30", "source": "prompts/drilling/04-pricing-engine.md", "scope": "Phase 3 review: AMB-17, AMB-18, AMB-19, AMB-20, AMB-22, AMB-24; assumptions 1, 2, 4, 5, 6 approved; assumption 3 rejected"},
+  {"approved_on": "2026-09-30", "source": "prompts/drilling/05-approved-pricing-readings.md", "scope": "Phase 4 review: AMB-01, AMB-02, AMB-03, AMB-04, AMB-05, AMB-06, AMB-07, AMB-08, AMB-10, AMB-11, AMB-13 (as UNKNOWN / UNVERIFIED), AMB-21, AMB-26"},
+  {"approved_on": "2026-09-30", "source": "prompts/drilling/06-pd201-strict-amb13.md", "scope": "AMB-13 strict treatment extended to PD-201: eligibility not established, EVIDENCE_NOT_PROVIDED; calculated rate kept as a conditional amount only"}
+ ],
+ "approvals": [
+  {"switch": "appendix_g_reading", "ambiguity": "AMB-17", "value": "LITERAL", "ambiguity_reading": "A"},
+  {"switch": "dd121_condition", "ambiguity": "AMB-20", "value": "STANDBY_DAY_RSS_IN_HOLE", "ambiguity_reading": "A",
+   "note": "The rotary steerable must be recorded in the hole on the specific Standby day."},
+  {"switch": "metre_source", "ambiguity": "AMB-24", "value": "DAILY_DEPTH_ADVANCE", "ambiguity_reading": "A"},
+  {"switch": "dd102_basis", "ambiguity": "AMB-18", "value": "PER_COORDINATOR_RECORDED", "ambiguity_reading": "A"},
+  {"switch": "hc630_basis", "ambiguity": "AMB-19", "value": "DAILY_COUNT", "ambiguity_reading": "A"},
+  {"switch": "lih_hours", "ambiguity": "AMB-22", "value": "PART_E_STATED", "ambiguity_reading": "A"},
+  {"switch": "unranked_precedence", "ambiguity": "AMB-01", "value": "NO_RANK_CASE_BY_CASE", "ambiguity_reading": "A",
+   "note": "No global rank for documents omitted from Clause 2; each concrete conflict is resolved through its own switch."},
+  {"switch": "pd210_class_factor", "ambiguity": "AMB-02", "value": "DO_NOT_APPLY", "ambiguity_reading": "B"},
+  {"switch": "standby_section_factor", "ambiguity": "AMB-03", "value": "OMIT", "ambiguity_reading": "B"},
+  {"switch": "rig_services_index", "ambiguity": "AMB-04", "value": "APPLY_FROM_FIRST_MONTH", "ambiguity_reading": "A"},
+  {"switch": "rig_up_hour", "ambiguity": "AMB-05", "value": "PER_BHA_RUN", "ambiguity_reading": "B"},
+  {"switch": "dd120_hours", "ambiguity": "AMB-06", "value": "CIRCULATING_ONLY", "ambiguity_reading": "A"},
+  {"switch": "dd120_rate_from_feb_2026", "ambiguity": "AMB-07", "value": "LATER_ISSUED_GOVERNS", "ambiguity_reading": "A",
+   "note": "Amendment No. 3's 416.00 governs DD-120 from its stated effective date (2026-02-01)."},
+  {"switch": "monthly_rate_basis", "ambiguity": "AMB-08", "value": "BASE_RATE_THEN_BUILD_UP", "ambiguity_reading": "A"},
+  {"switch": "volume_tier_scope", "ambiguity": "AMB-10", "value": "PER_WELL", "ambiguity_reading": "A"},
+  {"switch": "contract_year_2", "ambiguity": "AMB-11", "value": "STARTS_2026_01_01", "ambiguity_reading": "A"},
+  {"switch": "lih_replacement_value", "ambiguity": "AMB-21", "value": "SCHEDULE_2D_CONVERTED", "ambiguity_reading": "A"},
+  {"switch": "ds900_threshold_basis", "ambiguity": "AMB-26", "value": "SERVICES_ONLY", "ambiguity_reading": "A"},
+  {"switch": "calloff_evidence", "ambiguity": "AMB-13", "value": "UNVERIFIABLE_QUERY", "ambiguity_reading": "B",
+   "decision": "UNKNOWN / UNVERIFIED",
+   "note": "The missing call-offs mean well class and performance-section eligibility cannot be proven from the supplied contract evidence. The invoice is not evidence of its own entitlement. Any price that needs the class or the call-off stays unresolved (EVIDENCE_NOT_PROVIDED); unaffected services are priced canonically. The invoice-stated class is kept later only as the contractor's claimed class, marked unverified. The class sensitivity is preserved. PD-201 follows the same strict treatment: its rate is determinable without the call-off, but whether it was chargeable at all is not, so it is EVIDENCE_NOT_PROVIDED and its calculated amount is conditional only (never payable). The invoice's presence of PD-201 is not evidence that it was authorised."}
+ ],
+ "approved_assumptions": [
+  {"id": 1, "text": "The shifted Appendix G reading moves only the LWD rows and LH-714; the other surprising pairings stay literal."},
+  {"id": 2, "text": "HC-630 once per run counts only runs whose reports record a clean-out."},
+  {"id": 4, "text": "RM-510 metres are gated by RM-511's report word ('hole opener') as the underreamer; DD-111 by DD-110's word ('mud motor')."},
+  {"id": 5, "text": "A well ran logging while drilling (LW-430) if any day had an LWD word in the hole."},
+  {"id": 6, "text": "A DD-120 hour quantity is kept on a Standby day only when hours were recorded."}
+ ],
+ "rejected_assumptions": [
+  {"id": 3, "text": "A well 'uses' the rotary steerable if any report on that well has it in the hole (dd121_condition reading B).",
+   "instruction": "Do not infer that the rotary steerable is in the hole on every report merely because the well used one somewhere else.",
+   "consequence": "dd121_condition reading B is no longer derived; DD-121 is evidenced only on Standby days whose own report records the rotary steerable in the hole."}
+ ],
+ "decided_in_phase4": ["AMB-06", "AMB-13", "AMB-01", "AMB-02", "AMB-03", "AMB-04", "AMB-05", "AMB-07", "AMB-08", "AMB-10", "AMB-11", "AMB-21", "AMB-26"],
+ "unresolved": [],
+ "left_for_audit_phase": ["AMB-12", "AMB-14", "AMB-15", "AMB-23", "AMB-25"]
+}

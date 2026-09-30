@@ -1,0 +1,1957 @@
+{
+ "schema": "contractor-audit/drilling-contract-ambiguities",
+ "schema_version": "1.0",
+ "contract_ref": "DDS-2025-118",
+ "status_definitions": {
+  "OPEN": "Two or more readings are supported; not decided. Later phases carry it as a switch or policy.",
+  "RESOLVED_BY_TEXT": "The contract's own words settle it; the preferred reading is recorded with HIGH confidence.",
+  "EVIDENCE_NOT_PROVIDED": "The contract depends on evidence the task data does not supply.",
+  "NOTED": "An inconsistency with no effect on any charge."
+ },
+ "confidence_definitions": {
+  "HIGH": "the text settles it",
+  "MEDIUM": "the text favours one reading but a stated provision points the other way",
+  "LOW": "a weak preference",
+  "none": "confidence is null where no reading is preferred"
+ },
+ "method": "Readings were formed from the contract package only. Invoice, line and report data were not used to prefer any reading.",
+ "ambiguities": [
+  {
+   "id": "AMB-01",
+   "topic": "precedence",
+   "title": "Rank of material not listed in Clause 2",
+   "source_locations": [
+    {
+     "page": 2,
+     "printed_page": 2,
+     "section": "Contents"
+    },
+    {
+     "page": 3,
+     "printed_page": 3,
+     "section": "Clause 2"
+    },
+    {
+     "page": 11,
+     "printed_page": 11,
+     "section": "P1"
+    },
+    {
+     "page": 14,
+     "printed_page": 14,
+     "section": "Part VIII"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Part IX"
+    },
+    {
+     "page": 18,
+     "printed_page": 18,
+     "section": "Schedule 2C"
+    },
+    {
+     "page": 19,
+     "printed_page": 19,
+     "section": "Schedule 2D"
+    },
+    {
+     "page": 26,
+     "printed_page": 26,
+     "section": "Schedule 7"
+    },
+    {
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8"
+    },
+    {
+     "page": 32,
+     "printed_page": 32,
+     "section": "Appendices D-F"
+    },
+    {
+     "page": 36,
+     "printed_page": 36,
+     "section": "Appendix G"
+    },
+    {
+     "page": 37,
+     "printed_page": 37,
+     "section": "Schedule of Variations"
+    }
+   ],
+   "issue": "Clause 2 lists the Agreement, Parts I-VII, Schedules 1-6 and Appendices A-C, and ranks only Schedules over Parts and Part VI over Parts I-V. Part VIII, Part IX, Schedules 2C, 2D, 7 and 8, Appendices D-G and the Schedule of Variations are bound into the package but are absent from both the Contents and Clause 2 (verified on p.2 and p.3). No clause ranks them, and Clause 2 gives no rank to Appendices A-C either. Conflicts that depend on this: AMB-02, AMB-03, AMB-04, AMB-05, AMB-06, AMB-14, AMB-15, AMB-21.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "The unlisted documents form part of the contract but have no stated rank; each conflict must be resolved on its own terms (specific over general, or kept as a sensitivity switch).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 37,
+       "printed_page": 37,
+       "section": "Schedule of Variations",
+       "source_text": "This Contract is to be read with the instruments below, in the order issued."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 31A",
+       "source_text": "Schedule 6 states the same values ... and Schedule 2D governs."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Rank by name: Schedules 2C, 2D, 7 and 8 are Schedules and prevail over any Part (Clause 2); Part IX, being 'Particular Conditions (Second Series)', ranks with Part VI and prevails over Parts I-V.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 3,
+       "printed_page": 3,
+       "section": "Clause 2",
+       "source_text": "A Schedule prevails over a Part, and Part VI prevails over Parts I to V."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Part IX heading",
+       "source_text": "PART IX — PARTICULAR CONDITIONS (SECOND SERIES)"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "reading": "Clause 2 is exhaustive: documents it does not list are not contract documents and carry no weight against listed ones.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 3,
+       "printed_page": 3,
+       "section": "Clause 2",
+       "source_text": "This Contract comprises this Agreement, Parts I to VII, Schedules 1 to 6 and Appendices A to C."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "The contract does not rank these documents. Reading C would discard the Schedule of Variations the instruments depend on, which the package plainly intends to operate; A and B both remain open.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [],
+   "resolve_in_phase": "Phase 4 (pricing) as a documented switch per dependent conflict",
+   "status": "OPEN",
+   "phase0_check": "confirmed; also found that Appendices A-C have no stated rank"
+  },
+  {
+   "id": "AMB-02",
+   "topic": "cost_build_up",
+   "title": "Well-class factor on PD-210",
+   "source_locations": [
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 17B"
+    },
+    {
+     "page": 17,
+     "printed_page": 17,
+     "section": "Schedule 2 note"
+    },
+    {
+     "page": 20,
+     "printed_page": 20,
+     "section": "Schedule 3 Part 2"
+    },
+    {
+     "page": 30,
+     "printed_page": 30,
+     "section": "Appendix B"
+    }
+   ],
+   "issue": "Clause 17B says the well-class factor is not applied to PD-210. The Schedule 2 note says PD-210 is class-rated, and the Schedule 3 Part 2 list includes PD-210. The Appendix B worked invoice (an HPHT well) prices PD-210 at the unfactored band rates 58.15 and 76.45 (with the 1.325 HPHT factor Band 2 would be 77.05).",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Apply the Schedule 3 Part 2 class factor to PD-210.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 17,
+       "printed_page": 17,
+       "section": "Schedule 2 note",
+       "source_text": "The rate is class-rated under Schedule 3 Part 2 and is not section-rated."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 20,
+       "printed_page": 20,
+       "section": "Schedule 3 Part 2",
+       "source_text": "Class-rated services: DD-120, PD-210, MW-310, MW-320, LW-410, LW-411, LW-412, LW-413."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 3,
+       "printed_page": 3,
+       "section": "Clause 2",
+       "source_text": "A Schedule prevails over a Part"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Do not apply the class factor to PD-210.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 17B",
+       "source_text": "The well-class factor in Schedule 3 Part 2 is not applied to item PD-210, Schedule 2 having already priced the metre by depth."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 30,
+       "printed_page": 30,
+       "section": "Appendix B",
+       "source_text": "04-Jun-2025 PD-210 12-1/4\" Operating 2,930-3,000 70 58.15 4,070.50 (on an HPHT well)"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "Two provisions on each side; Part IX's rank against Schedules is unstated (AMB-01). The contract's own worked example agrees with B.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "PD-210"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed; Phase 1 adds that Appendix B follows 17B"
+  },
+  {
+   "id": "AMB-03",
+   "topic": "cost_build_up",
+   "title": "Hole-section factor on a Standby day",
+   "source_locations": [
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 18"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 17B"
+    }
+   ],
+   "issue": "Clause 18 applies the section factor, then the class factor, then the standby percentage where the day is a Standby day. Clause 17B says the section factor is not applied on a day the rig is on Standby.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "On a Standby day apply section factor, class factor, then standby percentage (Clause 18 order, no exception).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 6,
+       "printed_page": 6,
+       "section": "Clause 18",
+       "source_text": "first the hole section factor ... then the well class factor ... then the standby percentage in Schedule 3 Part 3, where the day is a Standby day."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "On a Standby day omit the section factor; apply class factor and standby percentage.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 17B",
+       "source_text": "The hole-section factor in Schedule 3 Part 1 is not applied on a day the rig is on Standby, the section not being drilled."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "Direct conflict; Part IX vs Part III rank unstated (AMB-01).",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "DD-110",
+    "PD-220",
+    "MW-310",
+    "RM-511"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-04",
+   "topic": "price_index",
+   "title": "Rig Services Index vs the Appendix B worked invoice",
+   "source_locations": [
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 17A"
+    },
+    {
+     "page": 18,
+     "printed_page": 18,
+     "section": "Schedule 2C"
+    },
+    {
+     "page": 30,
+     "printed_page": 30,
+     "section": "Appendix B"
+    }
+   ],
+   "issue": "17A and Schedule 2C price MW-310 and HC-620 at base rate x index / 100. Appendix B prices MW-310 on 04-Jun-2025 (12-1/4\", HPHT) at 2,975.75, which is 2,245.85 x 1.00 x 1.325 with no index; with the June 2025 index (103.60) the build-up gives 2,326.70 x 1.325 = 3,082.88. This is an actual contradiction between the illustrative form and the operative clause, not a misread.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Apply the index from the first month (17A, Schedule 2C); Appendix B illustrates the build-up only.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 17A",
+       "source_text": "The rate for a service listed in Schedule 2C is the base rate stated in Schedule 1 multiplied by the Rig Services Index published for the calendar month in which the service was performed and divided by the base index"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 18,
+       "printed_page": 18,
+       "section": "Schedule 2C",
+       "source_text": "The rate stated in Schedule 1 for them is a base rate."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Appendix B, a Clause 2 contract document, shows MW-310 charged without the index; the index does not apply (or not in 2025).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 30,
+       "printed_page": 30,
+       "section": "Appendix B",
+       "source_text": "04-Jun-2025 MW-310 12-1/4\" Operating 1 2,975.75 2,975.75"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "17A is an operative pricing clause restated by Schedule 2C; Appendix B is a form of invoice. Held open because the rank of Part IX and Schedule 2C is unstated (AMB-01).",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "MW-310",
+    "HC-620"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed as a real contradiction (Phase 0 was not a misread)"
+  },
+  {
+   "id": "AMB-05",
+   "topic": "hours",
+   "title": "Rig-up hour (21A) and the 6-hour minimum",
+   "source_locations": [
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 21A"
+    },
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 21"
+    },
+    {
+     "page": 11,
+     "printed_page": 11,
+     "section": "P10"
+    },
+    {
+     "page": 21,
+     "printed_page": 21,
+     "section": "Schedule 3 Part 7"
+    },
+    {
+     "page": 30,
+     "printed_page": 30,
+     "section": "Appendix B"
+    },
+    {
+     "page": 32,
+     "printed_page": 32,
+     "section": "Appendix D"
+    }
+   ],
+   "issue": "21A: for a service charged by the hour the first hour of each period in the hole is not chargeable; 'the report states the hours run; the invoice charges one fewer'. Open points: (1) which services (DD-120 and RM-530 are the hourly items); (2) what a 'period in the hole' is (each day, each BHA run, each continuous spell); (3) whether the deduction comes before or after the 6-hour minimum; (4) Appendix B charges DD-120 at 18 hours, the circulating hours on the Appendix D report for the same day, with no deduction.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Deduct one hour per report day for each hourly service, then apply the 6-hour minimum.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 21A",
+       "source_text": "The report states the hours run; the invoice charges one fewer."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Deduct one hour per BHA run (first day of the run only).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 29,
+       "printed_page": 29,
+       "section": "Appendix A",
+       "source_text": "BHA run: the period from the running of a bottom hole assembly into the hole to its recovery."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "reading": "No deduction: charge the circulating hours recorded, as Appendix B does.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 30,
+       "printed_page": 30,
+       "section": "Appendix B",
+       "source_text": "04-Jun-2025 DD-120 12-1/4\" Operating 18 509.00 9,162.00"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 32,
+       "printed_page": 32,
+       "section": "Appendix D",
+       "source_text": "Circulating hours 18"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "reading": "Apply the 6-hour minimum first, then deduct the rig-up hour.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 6,
+       "printed_page": 6,
+       "section": "Clause 21",
+       "source_text": "subject to a minimum of 6 hours on any Operating day on which the tool is in the hole"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "21A is explicit but its unit is undefined and the contract's own example does not apply it.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities) and Phase 4 switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed; Appendix B/D quantity 18 = report hours"
+  },
+  {
+   "id": "AMB-06",
+   "topic": "hours",
+   "title": "What DD-120 hours are",
+   "source_locations": [
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 21"
+    },
+    {
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 DD-120"
+    },
+    {
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 RM-530"
+    },
+    {
+     "page": 7,
+     "printed_page": 7,
+     "section": "Clause 30"
+    }
+   ],
+   "issue": "Clause 21 charges DD-120 per circulating hour; Schedule 8 says 'each circulating or back-reaming hour'. RM-530 (back-reaming while tripping) is also charged per back-reaming hour (cl. 30, Schedule 8).",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Circulating hours only (Clause 21).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 6,
+       "printed_page": 6,
+       "section": "Clause 21",
+       "source_text": "Item DD-120 is charged per circulating hour recorded on the Daily Drilling Report for an Operating day"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Circulating plus back-reaming hours (Schedule 8).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 27,
+       "printed_page": 27,
+       "section": "Schedule 8",
+       "source_text": "DD-120 ... each circulating or back-reaming hour recorded on the report"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "Schedule 8 is unranked (AMB-01); reading B would charge back-reaming hours under both DD-120 and RM-530.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "DD-120",
+    "RM-530"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities)",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-07",
+   "topic": "rates",
+   "title": "DD-120 (and DD-101) rate from February 2026",
+   "source_locations": [
+    {
+     "page": 42,
+     "printed_page": 42,
+     "section": "Amendment No. 3"
+    },
+    {
+     "page": 40,
+     "printed_page": 40,
+     "section": "Supplement No. 2, 2.1"
+    },
+    {
+     "page": 38,
+     "printed_page": 38,
+     "section": "instrument closing rule"
+    },
+    {
+     "page": 37,
+     "printed_page": 37,
+     "section": "Schedule of Variations"
+    }
+   ],
+   "issue": "A3 (issued last, 2026-08-17) substitutes 416.00 for DD-120 from 2026-02-01. S2 (issued 2026-02-24) re-publishes DD-120 monthly from April 2026 (406.00 ... 447.50). The closing rule says 'the later governs services performed on or after its effective date', without saying whether 'later' means later issued or later effective. S2 and A2 discounts apply to DD-120 separately (AMB-09). DD-101 is simpler: A1 1,916.50 from 2026-01-01, A3 1,954.00 from 2026-02-01 (A3's 'rate previously chargeable' is A1's).",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Later issued governs: A3's 416.00 applies to all DD-120 services from 2026-02-01, displacing the S2 monthly table.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 37,
+       "printed_page": 37,
+       "section": "Schedule of Variations",
+       "source_text": "This Contract is to be read with the instruments below, in the order issued."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 42,
+       "printed_page": 42,
+       "section": "Amendment No. 3 closing",
+       "source_text": "the later governs services performed on or after its effective date"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Later effective governs: 416.00 for February and March 2026; the S2 monthly rates from April 2026.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 40,
+       "printed_page": 40,
+       "section": "Supplement No. 2, 2.1",
+       "source_text": "The rate chargeable is the rate published for the calendar month in which the service was performed."
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "reading": "A3 substitutes the Schedule 1 rate only; the monthly re-publication is a separate mechanism and governs from April 2026 regardless.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 42,
+       "printed_page": 42,
+       "section": "Amendment No. 3, 3.1",
+       "source_text": "The rates below are substituted for the rates in Schedule 1 for services performed on or after the effective date"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "The instruments' ordering language supports A; the monthly mechanism's own wording supports B/C.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "DD-120"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-08",
+   "topic": "rates",
+   "title": "Is a monthly re-published rate a base rate or the final rate?",
+   "source_locations": [
+    {
+     "page": 38,
+     "printed_page": 38,
+     "section": "Supplement No. 1, 1.2"
+    },
+    {
+     "page": 40,
+     "printed_page": 40,
+     "section": "Supplement No. 2, 2.1"
+    },
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 18"
+    }
+   ],
+   "issue": "S1/S2 publish 'the rate chargeable' per month. DD-120 is section- and class-rated (Schedule 3) and discounted (S2/A2); HC-601 has a standby percentage (50%). The instruments do not say whether the Clause 18 build-up is applied on top of the monthly rate.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "The monthly rate replaces the Schedule 1 base rate; the Clause 18 build-up and discounts still apply.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 38,
+       "printed_page": 38,
+       "section": "Supplement No. 1, 1.1",
+       "source_text": "The rates below are substituted for the rates in Schedule 1"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 6,
+       "printed_page": 6,
+       "section": "Clause 18",
+       "source_text": "The rate for a charge is the Schedule 1 rate ... to which is applied"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "The monthly 'rate chargeable' is the final rate; no factors are applied to it.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 40,
+       "printed_page": 40,
+       "section": "Supplement No. 2, 2.1",
+       "source_text": "The rate chargeable is the rate published for the calendar month in which the service was performed."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Schedule 1 rates are always the start of the Clause 18 build-up and the instruments describe their rates as substitutes for Schedule 1 rates.",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "DD-120",
+    "HC-601"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-09",
+   "topic": "rates",
+   "title": "4 per cent (S2) and 7 per cent (A2) principal-services discounts",
+   "source_locations": [
+    {
+     "page": 40,
+     "printed_page": 40,
+     "section": "Supplement No. 2, 2.2"
+    },
+    {
+     "page": 41,
+     "printed_page": 41,
+     "section": "Amendment No. 2, 2.3"
+    }
+   ],
+   "issue": "Both instruments list the same five services. From 2026-07-01 are they cumulative, or does 7% replace 4%? Also, both refer to 'the build-up required by Clause 17' although the build-up is Clause 18 (Clause 17 is rounding).",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "7% replaces 4% from 2026-07-01.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 41,
+       "printed_page": 41,
+       "section": "Amendment No. 2 closing",
+       "source_text": "Where this instrument and an earlier instrument both state a rate or a discount for the same service, the later governs services performed on or after its effective date"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 41,
+       "printed_page": 41,
+       "section": "Amendment No. 2 purpose",
+       "source_text": "the deepening of the Supplement No. 2 discount"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Both apply from 2026-07-01 (cumulative).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 40,
+       "printed_page": 40,
+       "section": "Supplement No. 2, 2.2",
+       "source_text": "A discount of 4 per cent is allowed on the services listed below for services performed on or after 1 April 2026."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "The closing rule covers 'a rate or a discount for the same service', and A2 describes itself as deepening the S2 discount.",
+   "confidence": "HIGH",
+   "affects_totals": "yes",
+   "services": [
+    "DD-101",
+    "MW-301",
+    "LW-401",
+    "DD-120",
+    "MB-701"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing)",
+   "status": "RESOLVED_BY_TEXT",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-10",
+   "topic": "volume_tiers",
+   "title": "Scope of the Contract-Year metre tiers",
+   "source_locations": [
+    {
+     "page": 17,
+     "printed_page": 17,
+     "section": "Schedule 2 Part 2"
+    }
+   ],
+   "issue": "Schedule 2 Part 2 sets PD-210 at 100/96/92 per cent by 'metres already drilled on the well in the Contract Year'. The heading and column say 'in the Contract Year' without 'well'. Also open: which metres count (PD-210 metres only, or every metre drilled on the well) and, for a per-well count, whether metres before the call-off's performance section count. That a single well could hardly reach 40,000 m is context only and is not treated as evidence.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Per well: cumulative metres already drilled on that well within the Contract Year.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 17,
+       "printed_page": 17,
+       "section": "Schedule 2 Part 2",
+       "source_text": "according to the metres already drilled on the well in the Contract Year (Clause 3A)"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Contract-wide: cumulative metres across all wells within the Contract Year.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 17,
+       "printed_page": 17,
+       "section": "Schedule 2 Part 2 heading",
+       "source_text": "Part 2 — Metres drilled in the Contract Year"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 17,
+       "printed_page": 17,
+       "section": "Schedule 2 Part 2 table",
+       "source_text": "Metres in the Contract Year"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "The only operative sentence says 'on the well'; the heading and column do not. Not decided in Phase 1.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "PD-210"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed; sentences extracted, no feasibility argument used"
+  },
+  {
+   "id": "AMB-11",
+   "topic": "contract_years",
+   "title": "Contract Years after the extensions",
+   "source_locations": [
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 3A"
+    },
+    {
+     "page": 37,
+     "printed_page": 37,
+     "section": "Schedule of Variations"
+    }
+   ],
+   "issue": "3A: first Contract Year to the day before the first anniversary; each following year from that anniversary; the final year ends on the extended Expiry Date; 'an extension does not begin a new Contract Year'. The Term as let was one year.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Contract Year 2 runs 2026-01-01 to 2026-12-31 (starts at the anniversary; ends on the extended Expiry Date).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 3A",
+       "source_text": "each following Contract Year from that anniversary. The final Contract Year ends on the Expiry Date as extended by any Amendment"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "The extensions do not begin a new Contract Year, so Contract Year 1 continues to 2026-12-31.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 3A",
+       "source_text": "an extension does not begin a new Contract Year."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "The anniversary rule starts a new year independently of any extension; the extension sentence is read as preventing an extension's effective date from starting a year.",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "PD-210"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-12",
+   "topic": "adjustment",
+   "title": "Placement and scope of the Amendment No. 3 back-dated adjustment",
+   "source_locations": [
+    {
+     "page": 42,
+     "printed_page": 42,
+     "section": "Amendment No. 3"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 36A"
+    },
+    {
+     "page": 37,
+     "printed_page": 37,
+     "section": "Schedule of Variations"
+    },
+    {
+     "page": 8,
+     "printed_page": 8,
+     "section": "Clause 32"
+    }
+   ],
+   "issue": "36A: the difference on services already invoiced is shown 'as a single adjustment on the first invoice submitted on or after the date of issue, and on no other'. A3: 'on the first invoice submitted after the date of issue'. Open points: (1) 'on or after' vs 'after' 2026-08-17; (2) invoices are per well (cl. 32), so is there one adjustment for the whole contract or one per well; (3) submission date vs invoice date (NP-06); (4) the Schedule of Variations says nothing in an instrument reopens a service already charged at the rate then chargeable.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "One adjustment for the whole contract, on the first invoice (any well) submitted on or after 2026-08-17 (36A wording).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 36A",
+       "source_text": "shown as a single adjustment on the first invoice submitted on or after the date of issue, and on no other"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "As A but strictly after 2026-08-17 (A3 wording).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 42,
+       "printed_page": 42,
+       "section": "Amendment No. 3",
+       "source_text": "the difference shown as a single adjustment on the first invoice submitted after the date of issue (Clause 36A)"
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "reading": "One adjustment per well, on that well's first invoice submitted on or after the date of issue.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 8,
+       "printed_page": 8,
+       "section": "Clause 32",
+       "source_text": "The Contractor shall invoice each well separately"
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "reading": "No re-pricing of services already charged (Schedule of Variations).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 37,
+       "printed_page": 37,
+       "section": "Schedule of Variations",
+       "source_text": "nothing in an instrument reopens a service already charged at the rate then chargeable."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "A3 and 36A are specific to back-dated amendments and both require an adjustment; D conflicts with them. A vs B vs C is not settled by the text.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "DD-120",
+    "DD-101"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) and Phase 5 (audit) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed; 'on or after' (36A) vs 'after' (A3) verified"
+  },
+  {
+   "id": "AMB-13",
+   "topic": "evidence",
+   "title": "Call-offs are not in the data",
+   "source_locations": [
+    {
+     "page": 3,
+     "printed_page": 3,
+     "section": "Clause 4"
+    },
+    {
+     "page": 11,
+     "printed_page": 11,
+     "section": "P2/P3"
+    },
+    {
+     "page": 29,
+     "printed_page": 29,
+     "section": "Appendix A"
+    },
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 23"
+    },
+    {
+     "page": 23,
+     "printed_page": 23,
+     "section": "Schedule 4"
+    }
+   ],
+   "issue": "The well class (factor for class-rated services, whole well) and the performance-drilled sections (the only sections on which PD-210 is chargeable; PD-201 staffing) are fixed by the call-off. No call-off is supplied.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Take the well class stated on the invoice header as the Contractor's statement of the call-off, unverified; treat PD-210 as eligible only in 12-1/4 or 8-1/2 inch sections (the only sizes Appendix A allows).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 29,
+       "printed_page": 29,
+       "section": "Appendix A",
+       "source_text": "Performance-drilled section: a 12-1/4 inch or 8-1/2 inch section of a well the call-off nominates for performance drilling."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Treat both as unverifiable: charges that depend on them are queries, not verified passes.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 3,
+       "printed_page": 3,
+       "section": "Clause 4",
+       "source_text": "Each well is called off by a written notice stating the well name, the rig, the field and the well class. The well class stated in the call-off governs the whole well"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "Evidence not provided; the choice is an audit policy, not a contract reading.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [
+    "PD-210",
+    "PD-201",
+    "DD-120",
+    "MW-310",
+    "MW-320",
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "LW-413"
+   ],
+   "resolve_in_phase": "Phase 5 (audit policy) and Phase 6 (confidence)",
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "phase0_check": "confirmed from cl. 4, P2, P3, cl. 23 and Appendix A"
+  },
+  {
+   "id": "AMB-14",
+   "topic": "records",
+   "title": "Separate field reports (cl. 16, Appendices E-F) vs parts of the one DDR (Schedule 5)",
+   "source_locations": [
+    {
+     "page": 5,
+     "printed_page": 5,
+     "section": "Clause 16"
+    },
+    {
+     "page": 24,
+     "printed_page": 24,
+     "section": "Schedule 5"
+    },
+    {
+     "page": 33,
+     "printed_page": 33,
+     "section": "Appendix E"
+    },
+    {
+     "page": 34,
+     "printed_page": 34,
+     "section": "Appendix F"
+    },
+    {
+     "page": 13,
+     "printed_page": 13,
+     "section": "H6"
+    }
+   ],
+   "issue": "Clause 16 (and H6) require separate BHA Run Reports, Gyro Survey Reports, Source Handling Certificates and Lost in Hole Reports; Appendices E and F show them as separate forms with different signatories (lead DD + MWD engineer; survey engineer + Company Representative; Company Representative + field manager). Schedule 5 says these records are Parts B-E of the DDR and there are no separate documents. Which signatures a Part B-E record needs is therefore open.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Schedule 5 governs: Parts B-E of the signed DDR are the records; the DDR's two signatures (cl. 15) cover them.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 24,
+       "printed_page": 24,
+       "section": "Schedule 5",
+       "source_text": "There are no separate run, survey, source or loss documents."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 3,
+       "printed_page": 3,
+       "section": "Clause 2",
+       "source_text": "A Schedule prevails over a Part"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Each record needs the signatories of its illustrative form (Appendices E-F).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 33,
+       "printed_page": 33,
+       "section": "Appendix E",
+       "source_text": "Signed Lead directional driller; MWD engineer"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 34,
+       "printed_page": 34,
+       "section": "Appendix F",
+       "source_text": "Signed Survey engineer; Company Representative"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Clause 2 ranks Schedule 5 above Part II; Appendices D-F are marked 'Illustrative only' and unranked.",
+   "confidence": "MEDIUM",
+   "affects_totals": "possibly",
+   "services": [
+    "DD-111",
+    "DD-130",
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "LW-413",
+    "LW-420",
+    "RM-510",
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "resolve_in_phase": "Phase 3 (records) and Phase 5 (audit)",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-15",
+   "topic": "records",
+   "title": "Service codes on the report (R5/R6, Appendix D) vs rig words (19A, Appendix G)",
+   "source_locations": [
+    {
+     "page": 14,
+     "printed_page": 14,
+     "section": "R5/R6"
+    },
+    {
+     "page": 32,
+     "printed_page": 32,
+     "section": "Appendix D"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 19A"
+    },
+    {
+     "page": 36,
+     "printed_page": 36,
+     "section": "Appendix G"
+    }
+   ],
+   "issue": "R5 and R6 require tools and personnel to be listed by service code, and the Appendix D form does so. 19A says the report is written in the ordinary words of the rig and does not carry service codes; Appendix G gives the vocabulary.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Rig words are the contractual form; Appendix G maps them to codes.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 19A",
+       "source_text": "does not repeat the descriptions in Schedule 1 or carry the service codes."
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 36,
+       "printed_page": 36,
+       "section": "Appendix G",
+       "source_text": "The terms below are the ones it uses for the items Schedule 1 prices."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "The report must list codes (R5/R6); a report in rig words is non-compliant.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 14,
+       "printed_page": 14,
+       "section": "R5",
+       "source_text": "The report lists by service code every rental tool in the hole at any time during the day."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Appendix G exists only to serve reading A, and 19A addresses the vocabulary specifically. Parts VIII and IX are both unranked (AMB-01).",
+   "confidence": "MEDIUM",
+   "affects_totals": "possibly",
+   "services": [],
+   "resolve_in_phase": "Phase 3 (report-to-service mapping)",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-16",
+   "topic": "appendix_g",
+   "title": "Report terms mapped to two codes",
+   "source_locations": [
+    {
+     "page": 36,
+     "printed_page": 36,
+     "section": "Appendix G and footnote"
+    }
+   ],
+   "issue": "'mud motor' -> DD-110 and LH-711; 'rotary steerable' -> DD-120 and LH-712; 'MWD collar' -> MW-310 and LH-713; 'gamma tool' -> LW-410 and LH-714.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "The rental/logging code applies while the tool is in the hole; the LH code applies to a tool recorded as lost (Part E).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 36,
+       "printed_page": 36,
+       "section": "Appendix G footnote",
+       "source_text": "A tool lost in the hole is recorded by the term above; the item charged is the replacement value Schedule 6 states against it."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "The term alone cannot identify the item; such charges are unresolved identification (guideline check 6).",
+     "evidence": []
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "The footnote states how the duplicate terms are used.",
+   "confidence": "HIGH",
+   "affects_totals": "possibly",
+   "services": [
+    "DD-110",
+    "DD-120",
+    "MW-310",
+    "LW-410",
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "resolve_in_phase": "Phase 3 (report-to-service mapping)",
+   "status": "RESOLVED_BY_TEXT",
+   "phase0_check": "confirmed all four duplicates"
+  },
+  {
+   "id": "AMB-17",
+   "topic": "appendix_g",
+   "title": "Pairings in Appendix G that look shifted or unexpected",
+   "source_locations": [
+    {
+     "page": 36,
+     "printed_page": 36,
+     "section": "Appendix G"
+    }
+   ],
+   "issue": "Printed pairings: 'gamma tool' -> LW-410 LWD resistivity (and LH-714 LWD resistivity tool); 'resistivity tool' -> LW-411 density and neutron; 'density-neutron' -> LW-412 sonic; MW-310 'MWD directional and gamma tool' -> 'MWD collar'; 'survey package' -> MW-320 pressure while drilling; 'float sub' -> HC-640 cuttings bed monitoring; 'bit and reamer' -> PD-220 vibration mitigation tool; 'hydraulics package' -> PD-230 memory sub; 'night man' -> DD-102 office-based coordinator. No term is given for a sonic tool, a pressure tester or a source.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Literal: the table is the contract's vocabulary and governs as printed.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 36,
+       "printed_page": 36,
+       "section": "Appendix G",
+       "source_text": "The terms below are the ones it uses for the items Schedule 1 prices."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "The LWD rows are shifted by one line and the words carry their ordinary meaning.",
+     "evidence": []
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "The contract governs; a surprising mapping is not treated as an error. Kept as a sensitivity question.",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "MW-310",
+    "MW-320",
+    "HC-640",
+    "PD-220",
+    "PD-230",
+    "DD-102"
+   ],
+   "resolve_in_phase": "Phase 3 (report-to-service mapping) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed; preserved literally"
+  },
+  {
+   "id": "AMB-18",
+   "topic": "scope",
+   "title": "DD-102 charging basis",
+   "source_locations": [
+    {
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 intro and DD-102 row"
+    },
+    {
+     "page": 23,
+     "printed_page": 23,
+     "section": "Schedule 4"
+    },
+    {
+     "page": 36,
+     "printed_page": 36,
+     "section": "Appendix G"
+    },
+    {
+     "page": 21,
+     "printed_page": 21,
+     "section": "Schedule 3 Part 5"
+    }
+   ],
+   "issue": "Schedule 8's intro: DD-102 is 'charged per day for each coordinator the Daily Drilling Report records'. Its row: 'each day the Daily Drilling Report records the tool in the hole'. Schedule 4: 1, office based, whole well. Appendix G maps DD-102 to 'night man' (a crew entry). Unit: day; daily limit 1.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Per coordinator the report records (the 'night man' crew count), limit 1 a day.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 27,
+       "printed_page": 27,
+       "section": "Schedule 8 intro",
+       "source_text": "Item DD-102 is office based and is charged per day for each coordinator the Daily Drilling Report records."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Each day the report records a tool in the hole.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 27,
+       "printed_page": 27,
+       "section": "Schedule 8 DD-102",
+       "source_text": "each day the Daily Drilling Report records the tool in the hole"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "The intro singles DD-102 out specifically; the row repeats the generic rental wording.",
+   "confidence": "LOW",
+   "affects_totals": "possibly",
+   "services": [
+    "DD-102"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities)",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-19",
+   "topic": "scope",
+   "title": "HC-630 charging basis",
+   "source_locations": [
+    {
+     "page": 28,
+     "printed_page": 28,
+     "section": "Schedule 8 HC-630"
+    },
+    {
+     "page": 7,
+     "printed_page": 7,
+     "section": "Clauses 26 and 30"
+    }
+   ],
+   "issue": "Schedule 8: HC-630 'each BHA run, as Clause 26 describes', but Clause 26 names only DD-111 and LW-420. Clause 30 charges clean-out runs in the numbers recorded on the DDR for an Operating day.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Count clean-out runs from the report for an Operating day (Clause 30).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 7,
+       "printed_page": 7,
+       "section": "Clause 30",
+       "source_text": "Gyro surveys, formation pressure points, wiper trips, back-reaming hours and clean-out runs are charged in the numbers recorded on the Daily Drilling Report for an Operating day."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Once per BHA run.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 28,
+       "printed_page": 28,
+       "section": "Schedule 8 HC-630",
+       "source_text": "each BHA run, as Clause 26 describes"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Clause 30 names clean-out runs expressly; the Schedule 8 cross-reference points to a clause that does not mention HC-630.",
+   "confidence": "MEDIUM",
+   "affects_totals": "possibly",
+   "services": [
+    "HC-630"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities)",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-20",
+   "topic": "scope",
+   "title": "DD-121 condition",
+   "source_locations": [
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clause 21"
+    },
+    {
+     "page": 21,
+     "printed_page": 21,
+     "section": "Schedule 3 Part 4"
+    },
+    {
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8 DD-121"
+    },
+    {
+     "page": 7,
+     "printed_page": 7,
+     "section": "Clause 28"
+    }
+   ],
+   "issue": "DD-121 is charged on a Standby day in place of DD-120. Schedule 8 and Clause 28 add 'each day the DDR records the tool in the hole'.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Only on a Standby day on which the report records the rotary steerable in the hole.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 27,
+       "printed_page": 27,
+       "section": "Schedule 8 DD-121",
+       "source_text": "each day the Daily Drilling Report records the tool in the hole"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 7,
+       "printed_page": 7,
+       "section": "Clause 28",
+       "source_text": "A rental charged by the day is charged for a day only where the Daily Drilling Report records the tool in the hole on that day."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "On every Standby day of a well using the rotary steerable, in place of DD-120.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 21,
+       "printed_page": 21,
+       "section": "Schedule 3 Part 4",
+       "source_text": "DD-121 is charged only on a Standby day, in place of item DD-120 (Clause 21)."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Clause 28 applies to every day rental; B is not excluded by the text.",
+   "confidence": "MEDIUM",
+   "affects_totals": "possibly",
+   "services": [
+    "DD-121"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities)",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-21",
+   "topic": "lost_in_hole",
+   "title": "Which replacement values: Schedule 6 (USD) or Schedule 2D (SAR converted)",
+   "source_locations": [
+    {
+     "page": 7,
+     "printed_page": 7,
+     "section": "Clause 31"
+    },
+    {
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement"
+    },
+    {
+     "page": 36,
+     "printed_page": 36,
+     "section": "Appendix G footnote"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 31A"
+    },
+    {
+     "page": 19,
+     "printed_page": 19,
+     "section": "Schedule 2D"
+    },
+    {
+     "page": 25,
+     "printed_page": 25,
+     "section": "Schedule 6"
+    }
+   ],
+   "issue": "Clause 31, the Form of Agreement and the Appendix G footnote point to Schedule 6 (USD). 31A says Schedule 2D (SAR, converted at the month of loss) governs. At the 2025-01 rate (375.00) the two agree exactly.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Schedule 2D converted at the month of loss (31A).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 35,
+       "printed_page": 35,
+       "section": "Clause 31A",
+       "source_text": "Schedule 6 states the same values in the currency of the Contract as they stood when it was let, and Schedule 2D governs."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Schedule 6 USD values (Clause 31).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 7,
+       "printed_page": 7,
+       "section": "Clause 31",
+       "source_text": "the charge is its replacement value in Schedule 6 less depreciation"
+      },
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 36,
+       "printed_page": 36,
+       "section": "Appendix G footnote",
+       "source_text": "the item charged is the replacement value Schedule 6 states against it."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "31A addresses the conflict expressly and names the governing schedule; Part IX's general rank is still unstated (AMB-01).",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing) switch",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-22",
+   "topic": "lost_in_hole",
+   "title": "Hours for depreciation",
+   "source_locations": [
+    {
+     "page": 7,
+     "printed_page": 7,
+     "section": "Clause 31"
+    },
+    {
+     "page": 11,
+     "printed_page": 11,
+     "section": "P12"
+    },
+    {
+     "page": 24,
+     "printed_page": 24,
+     "section": "Schedule 5 Part E"
+    }
+   ],
+   "issue": "Clause 31 and P12: circulating hours 'the tool accumulated on the well', including the day of loss. Part E records 'the circulating hours accumulated on the well at the time of the loss' (well, not tool).",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Use the Part E figure as stated.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 24,
+       "printed_page": 24,
+       "section": "Schedule 5 Part E",
+       "source_text": "the circulating hours accumulated on the well at the time of the loss"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Use the tool's own hours on the well (sum of report hours while that tool was in the hole, including the day of loss).",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 11,
+       "printed_page": 11,
+       "section": "P12",
+       "source_text": "Circulating hours for Clause 31 are those the tool accumulated on the well on which it was lost, including the day of the loss."
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Clause 31 says the hours are 'as stated on the Lost in Hole Report'.",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "LH-711",
+    "LH-712",
+    "LH-713",
+    "LH-714"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities)",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-23",
+   "topic": "records",
+   "title": "Consequence of an unsigned or missing record",
+   "source_locations": [
+    {
+     "page": 5,
+     "printed_page": 5,
+     "section": "Clause 15"
+    },
+    {
+     "page": 8,
+     "printed_page": 8,
+     "section": "Clause 37"
+    },
+    {
+     "page": 24,
+     "printed_page": 24,
+     "section": "Schedule 5"
+    },
+    {
+     "page": 14,
+     "printed_page": 14,
+     "section": "R8"
+    }
+   ],
+   "issue": "Clause 15 requires two signatures on the DDR. Clause 37 and Schedule 5 make listed services 'not payable until' the part is delivered; a part that applies and is absent is 'a record not delivered'. Nothing states the consequence of an unsigned report, or whether 'not payable until' means part-reject or query.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Not payable: part-reject the charge.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 8,
+       "printed_page": 8,
+       "section": "Clause 37",
+       "source_text": "is not payable until the document Schedule 5 names has been delivered"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Payable later once delivered: a query, not a rejection.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 8,
+       "printed_page": 8,
+       "section": "Clause 37",
+       "source_text": "not payable until"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "Audit-policy question the contract does not answer.",
+   "confidence": null,
+   "affects_totals": "yes",
+   "services": [],
+   "resolve_in_phase": "Phase 5 (audit policy)",
+   "status": "OPEN",
+   "phase0_check": "confirmed"
+  },
+  {
+   "id": "AMB-24",
+   "topic": "quantities",
+   "title": "Metres for LW-410/411/412 and RM-510",
+   "source_locations": [
+    {
+     "page": 6,
+     "printed_page": 6,
+     "section": "Clauses 24-25"
+    },
+    {
+     "page": 24,
+     "printed_page": 24,
+     "section": "Schedule 5 Part B"
+    },
+    {
+     "page": 27,
+     "printed_page": 27,
+     "section": "Schedule 8"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 25A"
+    }
+   ],
+   "issue": "Clauses 24/25 charge 'the metres drilled on an Operating day while the tool is in the hole' (day depths). Part B records metres logged and reamed for the run. Schedule 8 describes PD-210, LW-410/411/412 and RM-510 alike as 'each metre drilled, logged or reamed as Clauses 23 to 25 describe'. 25A allows 1% over the metres 'the report supports'.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Day metres: depth end minus depth start on an Operating day with the tool in the hole.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 6,
+       "printed_page": 6,
+       "section": "Clause 24",
+       "source_text": "charged for the metres drilled on an Operating day while the tool is in the hole, which are the metres logged."
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Part B metres logged/reamed.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 24,
+       "printed_page": 24,
+       "section": "Schedule 5 Part B",
+       "source_text": "metres logged and reamed"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "The clauses define the metres logged as the metres drilled that day; Part B is a run record.",
+   "confidence": "MEDIUM",
+   "affects_totals": "yes",
+   "services": [
+    "LW-410",
+    "LW-411",
+    "LW-412",
+    "RM-510"
+   ],
+   "resolve_in_phase": "Phase 3 (quantities)",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-25",
+   "topic": "timing",
+   "title": "Submission date vs invoice date",
+   "source_locations": [
+    {
+     "page": 8,
+     "printed_page": 8,
+     "section": "Clause 33"
+    },
+    {
+     "page": 1,
+     "printed_page": 1,
+     "section": "Form of Agreement"
+    }
+   ],
+   "issue": "Clause 33 and 36A turn on when an invoice is submitted; the Form of Agreement says 'within 30 days of period end'. The data supplies an invoice date only (NP-06).",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Treat the invoice date as the submission date.",
+     "evidence": []
+    },
+    {
+     "id": "B",
+     "reading": "Submission date unknown: window findings are queries.",
+     "evidence": []
+    }
+   ],
+   "preferred_reading": null,
+   "preference_basis": "Evidence not provided; a Phase 5 policy.",
+   "confidence": null,
+   "affects_totals": "possibly",
+   "services": [],
+   "resolve_in_phase": "Phase 5 (audit policy)",
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-26",
+   "topic": "invoice_discount",
+   "title": "What the Clause 38 threshold counts",
+   "source_locations": [
+    {
+     "page": 8,
+     "printed_page": 8,
+     "section": "Clause 38"
+    },
+    {
+     "page": 35,
+     "printed_page": 35,
+     "section": "Clause 36A"
+    }
+   ],
+   "issue": "'the sum of the amounts of the services charged on an invoice' - does it include a 36A adjustment line (not a service) and lost-in-hole charges? 'Exceeds' is read as strictly greater than.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Services only (Schedule 1 items including LH items); the 36A adjustment is excluded.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 8,
+       "printed_page": 8,
+       "section": "Clause 38",
+       "source_text": "Where the sum of the amounts of the services charged on an invoice exceeds 250,000.00 USD"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "Every charge on the invoice other than DS-900 itself.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 8,
+       "printed_page": 8,
+       "section": "Clause 36",
+       "source_text": "The net amount of an invoice is the sum of the amounts of its charges"
+      }
+     ]
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Clause 38 says 'services'.",
+   "confidence": "MEDIUM",
+   "affects_totals": "possibly",
+   "services": [
+    "DS-900"
+   ],
+   "resolve_in_phase": "Phase 4 (pricing)",
+   "status": "OPEN",
+   "phase0_check": "new in Phase 1"
+  },
+  {
+   "id": "AMB-27",
+   "topic": "cross_references",
+   "title": "Cross-references that do not resolve",
+   "source_locations": [
+    {
+     "page": 38,
+     "printed_page": 38,
+     "section": "Supplement No. 1"
+    },
+    {
+     "page": 39,
+     "printed_page": 39,
+     "section": "Amendment No. 1"
+    },
+    {
+     "page": 42,
+     "printed_page": 42,
+     "section": "Amendment No. 3"
+    },
+    {
+     "page": 40,
+     "printed_page": 40,
+     "section": "Supplement No. 2, 2.2"
+    },
+    {
+     "page": 41,
+     "printed_page": 41,
+     "section": "Amendment No. 2, 2.3"
+    },
+    {
+     "page": 24,
+     "printed_page": 24,
+     "section": "Schedule 5"
+    }
+   ],
+   "issue": "S1 cites Clause 19.3, A1 Clause 19.1 and A3 Clause 16.4 - none exists (Clauses 16 and 19 have no sub-clauses). S2/A2 refer to 'the build-up required by Clause 17' (the build-up is Clause 18). Schedule 5 cites Clause 19 for one DDR per well and day (issued under Clause 15). The Contents title of Schedule 5 differs from its page heading.",
+   "readings": [
+    {
+     "id": "A",
+     "reading": "Clerical: the references do not change the instruments' operative text.",
+     "evidence": [
+      {
+       "source_file": "drilling_services/contract/DDS-2025-118.pdf",
+       "page": 40,
+       "printed_page": 40,
+       "section": "Supplement No. 2, 2.2",
+       "source_text": "as the last factor in the build-up required by Clause 17 and before the rounding it requires"
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "reading": "The instruments rest on clauses not provided, so their basis cannot be verified.",
+     "evidence": []
+    }
+   ],
+   "preferred_reading": "A",
+   "preference_basis": "Each instrument states its changes in full; nothing turns on the cited clause.",
+   "confidence": "HIGH",
+   "affects_totals": "no",
+   "services": [],
+   "resolve_in_phase": "none (noted)",
+   "status": "NOTED",
+   "phase0_check": "new in Phase 1"
+  }
+ ]
+}

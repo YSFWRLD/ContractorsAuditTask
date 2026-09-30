@@ -1,0 +1,29 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+
+# secrets and local environment
+.env
+.env.*
+*.pem
+*.key
+
+# tool caches
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,749 @@
+{
+ "schema_version": "1.0",
+ "note": "Phase 3 mapping and coverage statistics from the Daily Drilling Reports. Not prices, not findings; no invoice data was read.",
+ "schema": "contractor-audit/drilling-phase3-ambiguities",
+ "switches": [
+  {
+   "name": "appendix_g_reading",
+   "ambiguity": "AMB-17",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "LITERAL",
+     "ambiguity_reading": "A",
+     "description": "Literal: the table is the contract's vocabulary and governs as printed.",
+     "phase3_quantities": 7202
+    },
+    {
+     "value": "LWD_ROWS_SHIFTED",
+     "ambiguity_reading": "B",
+     "description": "The LWD rows are shifted by one line and the words carry their ordinary meaning.",
+     "phase3_quantities": 3730
+    }
+   ],
+   "default": "LITERAL",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Which LWD service a logging-tool word evidences. The shifted reading moves the three LWD 'logged' rows (and LH-714, which follows LW-410) up one row; the other surprising pairings have no alternative in the contract and stay literal."
+  },
+  {
+   "name": "appendix_g_duplicates",
+   "ambiguity": "AMB-16",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "CONTEXT_SELECTS",
+     "ambiguity_reading": "A",
+     "description": "The rental/logging code applies while the tool is in the hole; the LH code applies to a tool recorded as lost (Part E).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "UNRESOLVED",
+     "ambiguity_reading": "B",
+     "description": "The term alone cannot identify the item; such charges are unresolved identification (guideline check 6).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "CONTEXT_SELECTS",
+   "default_basis": "Phase 1 preferred reading A (HIGH, RESOLVED_BY_TEXT)",
+   "requires_approval": false,
+   "explanation": "A term listed for a rental and a lost-in-hole code: the Appendix G footnote says Part E context selects the lost-in-hole row."
+  },
+  {
+   "name": "dd102_basis",
+   "ambiguity": "AMB-18",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "PER_COORDINATOR_RECORDED",
+     "ambiguity_reading": "A",
+     "description": "Per coordinator the report records (the 'night man' crew count), limit 1 a day.",
+     "phase3_quantities": 8151
+    },
+    {
+     "value": "PER_DAY_TOOL_IN_HOLE",
+     "ambiguity_reading": "B",
+     "description": "Each day the report records a tool in the hole.",
+     "phase3_quantities": 8151
+    }
+   ],
+   "default": "PER_COORDINATOR_RECORDED",
+   "default_basis": "Phase 1 preferred reading A (LOW, OPEN)",
+   "requires_approval": true,
+   "explanation": "What evidences DD-102: the coordinator the report records (Appendix G 'night man'), or any day a tool is in the hole."
+  },
+  {
+   "name": "hc630_basis",
+   "ambiguity": "AMB-19",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "DAILY_COUNT",
+     "ambiguity_reading": "A",
+     "description": "Count clean-out runs from the report for an Operating day (Clause 30).",
+     "phase3_quantities": 428
+    },
+    {
+     "value": "PER_BHA_RUN",
+     "ambiguity_reading": "B",
+     "description": "Once per BHA run.",
+     "phase3_quantities": 428
+    }
+   ],
+   "default": "DAILY_COUNT",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "HC-630 from the daily clean-out-run count (cl. 30) or once per BHA run (Schedule 8)."
+  },
+  {
+   "name": "dd121_condition",
+   "ambiguity": "AMB-20",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "STANDBY_DAY_RSS_IN_HOLE",
+     "ambiguity_reading": "A",
+     "description": "Only on a Standby day on which the report records the rotary steerable in the hole.",
+     "phase3_quantities": 241
+    },
+    {
+     "value": "EVERY_STANDBY_DAY_OF_RSS_WELL",
+     "ambiguity_reading": "B",
+     "description": "On every Standby day of a well using the rotary steerable, in place of DD-120.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "STANDBY_DAY_RSS_IN_HOLE",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Which Standby days evidence DD-121."
+  },
+  {
+   "name": "dd120_hours",
+   "ambiguity": "AMB-06",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "CIRCULATING_ONLY",
+     "ambiguity_reading": "A",
+     "description": "Circulating hours only (Clause 21).",
+     "phase3_quantities": 4790
+    },
+    {
+     "value": "CIRCULATING_PLUS_BACK_REAMING",
+     "ambiguity_reading": "B",
+     "description": "Circulating plus back-reaming hours (Schedule 8).",
+     "phase3_quantities": 4790
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Which recorded hours evidence DD-120."
+  },
+  {
+   "name": "metre_source",
+   "ambiguity": "AMB-24",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "DAILY_DEPTH_ADVANCE",
+     "ambiguity_reading": "A",
+     "description": "Day metres: depth end minus depth start on an Operating day with the tool in the hole.",
+     "phase3_quantities": 10053
+    },
+    {
+     "value": "PART_B_RUN_METRES",
+     "ambiguity_reading": "B",
+     "description": "Part B metres logged/reamed.",
+     "phase3_quantities": 1671
+    }
+   ],
+   "default": "DAILY_DEPTH_ADVANCE",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "LW-410/411/412 and RM-510 metres from the day's depth advance, or once per run from Part B metres logged/reamed."
+  },
+  {
+   "name": "lih_hours",
+   "ambiguity": "AMB-22",
+   "applies_in": "PHASE_3_QUANTITIES",
+   "readings": [
+    {
+     "value": "PART_E_STATED",
+     "ambiguity_reading": "A",
+     "description": "Use the Part E figure as stated.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "TOOL_ACCUMULATED",
+     "ambiguity_reading": "B",
+     "description": "Use the tool's own hours on the well (sum of report hours while that tool was in the hole, including the day of loss).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "PART_E_STATED",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Depreciation hours for a lost tool: the Part E figure or the tool's own daily hours on the well. Both values are carried; depreciation itself is Phase 4."
+  },
+  {
+   "name": "report_vocabulary",
+   "ambiguity": "AMB-15",
+   "applies_in": "PHASE_5_AUDIT",
+   "readings": [
+    {
+     "value": "RIG_WORDS_VALID",
+     "ambiguity_reading": "A",
+     "description": "Rig words are the contractual form; Appendix G maps them to codes.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "CODES_REQUIRED",
+     "ambiguity_reading": "B",
+     "description": "The report must list codes (R5/R6); a report in rig words is non-compliant.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "RIG_WORDS_VALID",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Whether a report written in rig words (not service codes) is compliant. Phase 3 reads the rig words either way."
+  },
+  {
+   "name": "rig_up_hour",
+   "ambiguity": "AMB-05",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "PER_DAY_THEN_MINIMUM",
+     "ambiguity_reading": "A",
+     "description": "Deduct one hour per report day for each hourly service, then apply the 6-hour minimum.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "PER_BHA_RUN",
+     "ambiguity_reading": "B",
+     "description": "Deduct one hour per BHA run (first day of the run only).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "NO_DEDUCTION",
+     "ambiguity_reading": "C",
+     "description": "No deduction: charge the circulating hours recorded, as Appendix B does.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "MINIMUM_THEN_PER_DAY",
+     "ambiguity_reading": "D",
+     "description": "Apply the 6-hour minimum first, then deduct the rig-up hour.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "21A rig-up hour and the 6-hour minimum on DD-120 and RM-530. Used later in the pricing phase; Phase 3 carries recorded hours."
+  },
+  {
+   "name": "pd210_class_factor",
+   "ambiguity": "AMB-02",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "APPLY",
+     "ambiguity_reading": "A",
+     "description": "Apply the Schedule 3 Part 2 class factor to PD-210.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "DO_NOT_APPLY",
+     "ambiguity_reading": "B",
+     "description": "Do not apply the class factor to PD-210.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "standby_section_factor",
+   "ambiguity": "AMB-03",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "APPLY",
+     "ambiguity_reading": "A",
+     "description": "On a Standby day apply section factor, class factor, then standby percentage (Clause 18 order, no exception).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "OMIT",
+     "ambiguity_reading": "B",
+     "description": "On a Standby day omit the section factor; apply class factor and standby percentage.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "rig_services_index",
+   "ambiguity": "AMB-04",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "APPLY_FROM_FIRST_MONTH",
+     "ambiguity_reading": "A",
+     "description": "Apply the index from the first month (17A, Schedule 2C); Appendix B illustrates the build-up only.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "NOT_APPLIED",
+     "ambiguity_reading": "B",
+     "description": "Appendix B, a Clause 2 contract document, shows MW-310 charged without the index; the index does not apply (or not in 2025).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "APPLY_FROM_FIRST_MONTH",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "dd120_rate_from_feb_2026",
+   "ambiguity": "AMB-07",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "LATER_ISSUED_GOVERNS",
+     "ambiguity_reading": "A",
+     "description": "Later issued governs: A3's 416.00 applies to all DD-120 services from 2026-02-01, displacing the S2 monthly table.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "LATER_EFFECTIVE_GOVERNS",
+     "ambiguity_reading": "B",
+     "description": "Later effective governs: 416.00 for February and March 2026; the S2 monthly rates from April 2026.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "MONTHLY_TABLE_SEPARATE",
+     "ambiguity_reading": "C",
+     "description": "A3 substitutes the Schedule 1 rate only; the monthly re-publication is a separate mechanism and governs from April 2026 regardless.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "monthly_rate_basis",
+   "ambiguity": "AMB-08",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "BASE_RATE_THEN_BUILD_UP",
+     "ambiguity_reading": "A",
+     "description": "The monthly rate replaces the Schedule 1 base rate; the Clause 18 build-up and discounts still apply.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "FINAL_RATE",
+     "ambiguity_reading": "B",
+     "description": "The monthly 'rate chargeable' is the final rate; no factors are applied to it.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "BASE_RATE_THEN_BUILD_UP",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "principal_discount_combination",
+   "ambiguity": "AMB-09",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "LATER_REPLACES",
+     "ambiguity_reading": "A",
+     "description": "7% replaces 4% from 2026-07-01.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "CUMULATIVE",
+     "ambiguity_reading": "B",
+     "description": "Both apply from 2026-07-01 (cumulative).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "LATER_REPLACES",
+   "default_basis": "Phase 1 preferred reading A (HIGH, RESOLVED_BY_TEXT)",
+   "requires_approval": false,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "volume_tier_scope",
+   "ambiguity": "AMB-10",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "PER_WELL",
+     "ambiguity_reading": "A",
+     "description": "Per well: cumulative metres already drilled on that well within the Contract Year.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "CONTRACT_WIDE",
+     "ambiguity_reading": "B",
+     "description": "Contract-wide: cumulative metres across all wells within the Contract Year.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "contract_year_2",
+   "ambiguity": "AMB-11",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "STARTS_2026_01_01",
+     "ambiguity_reading": "A",
+     "description": "Contract Year 2 runs 2026-01-01 to 2026-12-31 (starts at the anniversary; ends on the extended Expiry Date).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "YEAR_1_EXTENDED",
+     "ambiguity_reading": "B",
+     "description": "The extensions do not begin a new Contract Year, so Contract Year 1 continues to 2026-12-31.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "STARTS_2026_01_01",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "lih_replacement_value",
+   "ambiguity": "AMB-21",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "SCHEDULE_2D_CONVERTED",
+     "ambiguity_reading": "A",
+     "description": "Schedule 2D converted at the month of loss (31A).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "SCHEDULE_6_USD",
+     "ambiguity_reading": "B",
+     "description": "Schedule 6 USD values (Clause 31).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "SCHEDULE_2D_CONVERTED",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "ds900_threshold_basis",
+   "ambiguity": "AMB-26",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "SERVICES_ONLY",
+     "ambiguity_reading": "A",
+     "description": "Services only (Schedule 1 items including LH items); the 36A adjustment is excluded.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "ALL_CHARGES",
+     "ambiguity_reading": "B",
+     "description": "Every charge on the invoice other than DS-900 itself.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "SERVICES_ONLY",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Used later in the pricing phase."
+  },
+  {
+   "name": "unranked_precedence",
+   "ambiguity": "AMB-01",
+   "applies_in": "PHASE_4_PRICING",
+   "readings": [
+    {
+     "value": "NO_RANK_CASE_BY_CASE",
+     "ambiguity_reading": "A",
+     "description": "The unlisted documents form part of the contract but have no stated rank; each conflict must be resolved on its own terms (specific over general, or kept as a sensitivity switch).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "RANK_BY_NAME",
+     "ambiguity_reading": "B",
+     "description": "Rank by name: Schedules 2C, 2D, 7 and 8 are Schedules and prevail over any Part (Clause 2); Part IX, being 'Particular Conditions (Second Series)', ranks with Part VI and prevails over Parts I-V.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "CLAUSE_2_EXHAUSTIVE",
+     "ambiguity_reading": "C",
+     "description": "Clause 2 is exhaustive: documents it does not list are not contract documents and carry no weight against listed ones.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Meta-switch: how conflicts involving unlisted documents are settled. Used later in the pricing phase."
+  },
+  {
+   "name": "backdated_adjustment",
+   "ambiguity": "AMB-12",
+   "applies_in": "PHASE_5_AUDIT",
+   "readings": [
+    {
+     "value": "CONTRACT_WIDE_ON_OR_AFTER",
+     "ambiguity_reading": "A",
+     "description": "One adjustment for the whole contract, on the first invoice (any well) submitted on or after 2026-08-17 (36A wording).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "CONTRACT_WIDE_AFTER",
+     "ambiguity_reading": "B",
+     "description": "As A but strictly after 2026-08-17 (A3 wording).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "PER_WELL",
+     "ambiguity_reading": "C",
+     "description": "One adjustment per well, on that well's first invoice submitted on or after the date of issue.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "NO_REPRICING",
+     "ambiguity_reading": "D",
+     "description": "No re-pricing of services already charged (Schedule of Variations).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later when invoices are compared; no report evidence depends on it."
+  },
+  {
+   "name": "calloff_evidence",
+   "ambiguity": "AMB-13",
+   "applies_in": "PHASE_5_AUDIT",
+   "readings": [
+    {
+     "value": "INVOICE_STATEMENT_UNVERIFIED",
+     "ambiguity_reading": "A",
+     "description": "Take the well class stated on the invoice header as the Contractor's statement of the call-off, unverified; treat PD-210 as eligible only in 12-1/4 or 8-1/2 inch sections (the only sizes Appendix A allows).",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "UNVERIFIABLE_QUERY",
+     "ambiguity_reading": "B",
+     "description": "Treat both as unverifiable: charges that depend on them are queries, not verified passes.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Well class and performance-section eligibility without call-offs. Phase 3 marks the condition as unknown."
+  },
+  {
+   "name": "record_signatories",
+   "ambiguity": "AMB-14",
+   "applies_in": "PHASE_5_AUDIT",
+   "readings": [
+    {
+     "value": "DDR_SIGNATURES_COVER_PARTS",
+     "ambiguity_reading": "A",
+     "description": "Schedule 5 governs: Parts B-E of the signed DDR are the records; the DDR's two signatures (cl. 15) cover them.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "FORM_SIGNATORIES_REQUIRED",
+     "ambiguity_reading": "B",
+     "description": "Each record needs the signatories of its illustrative form (Appendices E-F).",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": "DDR_SIGNATURES_COVER_PARTS",
+   "default_basis": "Phase 1 preferred reading A (MEDIUM, OPEN)",
+   "requires_approval": true,
+   "explanation": "Used later when invoices are compared."
+  },
+  {
+   "name": "missing_record_consequence",
+   "ambiguity": "AMB-23",
+   "applies_in": "PHASE_5_AUDIT",
+   "readings": [
+    {
+     "value": "PART_REJECT",
+     "ambiguity_reading": "A",
+     "description": "Not payable: part-reject the charge.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "QUERY",
+     "ambiguity_reading": "B",
+     "description": "Payable later once delivered: a query, not a rejection.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later when invoices are compared."
+  },
+  {
+   "name": "submission_date",
+   "ambiguity": "AMB-25",
+   "applies_in": "PHASE_5_AUDIT",
+   "readings": [
+    {
+     "value": "INVOICE_DATE_IS_SUBMISSION",
+     "ambiguity_reading": "A",
+     "description": "Treat the invoice date as the submission date.",
+     "phase3_quantities": 0
+    },
+    {
+     "value": "UNKNOWN_QUERY",
+     "ambiguity_reading": "B",
+     "description": "Submission date unknown: window findings are queries.",
+     "phase3_quantities": 0
+    }
+   ],
+   "default": null,
+   "default_basis": "no reading preferred in Phase 1",
+   "requires_approval": true,
+   "explanation": "Used later when invoices are compared."
+  }
+ ],
+ "reports_by_ambiguity": {
+  "AMB-05": 5305,
+  "AMB-06": 5305,
+  "AMB-13": 6827,
+  "AMB-16": 8151,
+  "AMB-17": 8151,
+  "AMB-18": 8151,
+  "AMB-19": 428,
+  "AMB-20": 241,
+  "AMB-22": 54,
+  "AMB-24": 3657
+ },
+ "reports_by_switch": {
+  "appendix_g_reading": 2975,
+  "calloff_evidence": 6827,
+  "contract_year_2": 6827,
+  "dd102_basis": 8151,
+  "dd120_hours": 4790,
+  "dd120_rate_from_feb_2026": 8151,
+  "dd121_condition": 241,
+  "hc630_basis": 428,
+  "lih_hours": 54,
+  "lih_replacement_value": 54,
+  "metre_source": 3657,
+  "monthly_rate_basis": 6557,
+  "pd210_class_factor": 6827,
+  "principal_discount_combination": 8151,
+  "rig_services_index": 8151,
+  "rig_up_hour": 5305,
+  "standby_section_factor": 381,
+  "volume_tier_scope": 6827
+ },
+ "evidence_facts": [
+  {
+   "ambiguities": [
+    "AMB-17",
+    "AMB-24"
+   ],
+   "fact": "Runs whose tools include 'gamma tool' (literal LW-410) and runs with Part B metres logged > 0.",
+   "runs": 1369,
+   "runs_with_gamma_tool": 500,
+   "runs_with_metres_logged": 500,
+   "runs_where_both_hold": 500
+  },
+  {
+   "ambiguities": [
+    "AMB-17"
+   ],
+   "fact": "Runs whose tools include 'resistivity tool' (literal LW-411 density and neutron) and runs carrying a radioactive source (T9: density and neutron need one).",
+   "runs_with_resistivity_tool": 369,
+   "runs_carrying_source": 369,
+   "runs_where_both_hold": 369,
+   "runs_with_density_neutron": 156
+  },
+  {
+   "ambiguities": [
+    "AMB-24"
+   ],
+   "fact": "Runs whose tools include 'hole opener' (RM-511, the underreamer of cl. 25) and runs with metres reamed > 0.",
+   "runs_with_hole_opener": 121,
+   "runs_with_metres_reamed": 121,
+   "runs_where_both_hold": 121
+  },
+  {
+   "ambiguities": [
+    "AMB-17"
+   ],
+   "fact": "Days with 'logging engineers' on tour, and days with any literal LWD tool word in the hole.",
+   "days_with_logging_crew": 3430,
+   "days_with_lwd_word": 3430,
+   "days_where_both_hold": 3430
+  },
+  {
+   "ambiguities": [
+    "AMB-13"
+   ],
+   "fact": "Hole sections on days with 'performance engineer' on tour (performance-drilled sections are nominated in call-offs, which are not provided).",
+   "sections": {
+    "12-1/4\"": 1190,
+    "8-1/2\"": 1371
+   }
+  },
+  {
+   "ambiguities": [
+    "AMB-05",
+    "AMB-06",
+    "AMB-20"
+   ],
+   "fact": "Standby days: circulating hours are still recorded on some; the rotary steerable is in the hole on some.",
+   "standby_days": 381,
+   "standby_days_with_circulating_hours": 290,
+   "standby_days_with_rss_in_hole": 241
+  },
+  {
+   "ambiguities": [
+    "AMB-14",
+    "AMB-23"
+   ],
+   "fact": "Records named by Schedule 5 that are absent on a day they apply (structural; consequence undecided).",
+   "gyro_count_without_part_c": [
+    "DDR-009-20251211"
+   ],
+   "source_runs_without_part_d_on_first_day": [
+    "DDR-029-20260515",
+    "DDR-201-20251115"
+   ]
+  }
+ ]
+}

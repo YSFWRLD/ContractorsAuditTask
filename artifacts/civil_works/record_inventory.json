@@ -1,0 +1,455 @@
+{
+  "total_records": 2169,
+  "count_by_type": {
+    "CT": 381,
+    "CV": 120,
+    "DW": 114,
+    "DX": 266,
+    "JS": 368,
+    "MO": 142,
+    "PR": 365,
+    "PS": 143,
+    "PT": 270
+  },
+  "parse_issue_counts": {
+    "unsigned_engineer_rep": 1
+  },
+  "parse_issues": {
+    "unsigned_engineer_rep": [
+      "DX-00089.txt: engineer_rep signature line is blank"
+    ]
+  },
+  "malformed_records": [],
+  "duplicate_tickets": [],
+  "ticket_numbering_gaps": {
+    "CT": [
+      126
+    ],
+    "JS": [
+      189
+    ],
+    "MO": [
+      89
+    ],
+    "PS": [
+      39
+    ]
+  },
+  "records_without_date": [],
+  "missing_foreman_signature": [],
+  "missing_engineer_signature": [
+    "DX-00089.txt"
+  ],
+  "jobs": {
+    "Northern Access Road, Package 4": 2169
+  },
+  "foremen": {
+    "R. Vasquez": 370,
+    "T. Okonjo": 368,
+    "J. Pretorius": 364,
+    "M. Al-Harbi": 358,
+    "K. Doyle": 355,
+    "S. Raman": 354
+  },
+  "engineer_reps": {
+    "H. Suleiman": 544,
+    "N. Basri": 543,
+    "P. Lindqvist": 543,
+    "A. Whitfield": 538
+  },
+  "types": {
+    "CT": {
+      "title": "COMPACTION TEST CERTIFICATE",
+      "count": 381,
+      "date_range": [
+        "2025-01-09",
+        "2026-08-28"
+      ],
+      "areas": {
+        "S-05 Compound Extension": 91,
+        "S-01 Platform North": 79,
+        "S-03 Access Road": 75,
+        "S-02 Platform South": 70,
+        "S-04 Drainage Corridor": 66
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "capping layer, N mN placed and compacted",
+          "count": 126,
+          "example": "capping layer, 121 m2 placed and compacted"
+        },
+        {
+          "pattern": "N square metres of sub-base in and compacted",
+          "count": 81,
+          "example": "792 square metres of sub-base in and compacted"
+        },
+        {
+          "pattern": "brought in N cube of fill, compacted in layers",
+          "count": 66,
+          "example": "brought in 89 cube of fill, compacted in layers"
+        },
+        {
+          "pattern": "laid and rolled N mN of Type N",
+          "count": 57,
+          "example": "laid and rolled 520 m2 of Type 1"
+        },
+        {
+          "pattern": "placed and whacked N mN of imported stone",
+          "count": 51,
+          "example": "placed and whacked 309 m3 of imported stone"
+        }
+      ],
+      "weekday_of_date": {
+        "Thu": 55,
+        "Sun": 61,
+        "Mon": 46,
+        "Wed": 54,
+        "Sat": 51,
+        "Tue": 51,
+        "Fri": 63
+      }
+    },
+    "CV": {
+      "title": "CCTV SURVEY REPORT",
+      "count": 120,
+      "date_range": [
+        "2025-01-24",
+        "2026-08-23"
+      ],
+      "areas": {
+        "S-04 Drainage Corridor": 29,
+        "S-01 Platform North": 25,
+        "S-03 Access Road": 24,
+        "S-02 Platform South": 22,
+        "S-05 Compound Extension": 20
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "surveyed N m of the finished run with the camera",
+          "count": 120,
+          "example": "surveyed 154 m of the finished run with the camera"
+        }
+      ],
+      "weekday_of_date": {
+        "Fri": 27,
+        "Sun": 22,
+        "Wed": 15,
+        "Thu": 18,
+        "Sat": 9,
+        "Mon": 16,
+        "Tue": 13
+      }
+    },
+    "DW": {
+      "title": "DEWATERING LOG",
+      "count": 114,
+      "date_range": [
+        "2025-01-27",
+        "2026-08-16"
+      ],
+      "areas": {
+        "S-02 Platform South": 31,
+        "S-05 Compound Extension": 27,
+        "S-01 Platform North": 21,
+        "S-04 Drainage Corridor": 18,
+        "S-03 Access Road": 17
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "pumps kept going N week this period",
+          "count": 57,
+          "example": "pumps kept going 1 week this period"
+        },
+        {
+          "pattern": "wellpoints running, N week on the dewatering",
+          "count": 57,
+          "example": "wellpoints running, 1 week on the dewatering"
+        }
+      ],
+      "weekday_of_date": {
+        "Mon": 99,
+        "Tue": 108,
+        "Thu": 106,
+        "Fri": 91,
+        "Sat": 89,
+        "Sun": 98,
+        "Wed": 89
+      },
+      "days_on_count": {
+        "5": 40,
+        "6": 38,
+        "7": 36
+      },
+      "week_beginning_weekday": {
+        "Mon": 114
+      }
+    },
+    "DX": {
+      "title": "DAILY EXCAVATION RECORD",
+      "count": 266,
+      "date_range": [
+        "2025-01-18",
+        "2026-08-26"
+      ],
+      "areas": {
+        "S-05 Compound Extension": 58,
+        "S-02 Platform South": 56,
+        "S-04 Drainage Corridor": 55,
+        "S-03 Access Road": 51,
+        "S-01 Platform North": 46
+      },
+      "ground": {
+        "G4 Weathered Rock": 68,
+        "G1 Loose Sand": 57,
+        "G3 Cemented Fill": 55,
+        "G5 Sound Rock": 44,
+        "G2 Firm Sabkha": 42
+      },
+      "description_patterns": [
+        {
+          "pattern": "trench over four metres, N mN dug",
+          "count": 132,
+          "example": "trench over four metres, 39 m3 dug"
+        },
+        {
+          "pattern": "trench dig N cube, N m deep section",
+          "count": 73,
+          "example": "trench dig 210 cube, 3 m deep section"
+        },
+        {
+          "pattern": "deep trench N mN, between two and four metres",
+          "count": 61,
+          "example": "deep trench 267 m3, between two and four metres"
+        }
+      ],
+      "weekday_of_date": {
+        "Sat": 27,
+        "Sun": 40,
+        "Thu": 43,
+        "Fri": 54,
+        "Mon": 38,
+        "Tue": 28,
+        "Wed": 36
+      }
+    },
+    "JS": {
+      "title": "JOINT SURVEY SHEET",
+      "count": 368,
+      "date_range": [
+        "2025-01-09",
+        "2026-08-27"
+      ],
+      "areas": {
+        "S-02 Platform South": 90,
+        "S-05 Compound Extension": 79,
+        "S-01 Platform North": 68,
+        "S-03 Access Road": 67,
+        "S-04 Drainage Corridor": 64
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "laid N mN of AN mesh with laps",
+          "count": 128,
+          "example": "laid 45 m2 of A393 mesh with laps"
+        },
+        {
+          "pattern": "set out and agreed N chainage band with the Engineer",
+          "count": 111,
+          "example": "set out and agreed 3 chainage band with the Engineer"
+        },
+        {
+          "pattern": "fixed N tonne of bar, cut and bent to schedule",
+          "count": 78,
+          "example": "fixed 8 tonne of bar, cut and bent to schedule"
+        },
+        {
+          "pattern": "steel fixers placed N t of high yield bar",
+          "count": 51,
+          "example": "steel fixers placed 5 t of high yield bar"
+        }
+      ],
+      "weekday_of_date": {
+        "Thu": 60,
+        "Sat": 54,
+        "Mon": 65,
+        "Fri": 58,
+        "Tue": 51,
+        "Sun": 42,
+        "Wed": 38
+      }
+    },
+    "MO": {
+      "title": "METEOROLOGICAL RECORD",
+      "count": 142,
+      "date_range": [
+        "2025-01-15",
+        "2026-08-29"
+      ],
+      "areas": {
+        "S-05 Compound Extension": 34,
+        "S-02 Platform South": 29,
+        "S-04 Drainage Corridor": 28,
+        "S-01 Platform North": 27,
+        "S-03 Access Road": 24
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "no work possible, weather, N hours standing",
+          "count": 77,
+          "example": "no work possible, weather, 6 hours standing"
+        },
+        {
+          "pattern": "rained off -- crew and plant stood for N hours",
+          "count": 65,
+          "example": "rained off -- crew and plant stood for 5 hours"
+        }
+      ],
+      "weekday_of_date": {
+        "Wed": 25,
+        "Thu": 23,
+        "Sat": 24,
+        "Mon": 20,
+        "Sun": 14,
+        "Tue": 14,
+        "Fri": 22
+      }
+    },
+    "PR": {
+      "title": "CONCRETE POUR RECORD",
+      "count": 365,
+      "date_range": [
+        "2025-01-11",
+        "2026-08-21"
+      ],
+      "areas": {
+        "S-03 Access Road": 79,
+        "S-05 Compound Extension": 77,
+        "S-02 Platform South": 75,
+        "S-01 Platform North": 68,
+        "S-04 Drainage Corridor": 66
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "wall pour N mN, N/N mix",
+          "count": 138,
+          "example": "wall pour 335 m3, 32/40 mix"
+        },
+        {
+          "pattern": "slab pour N mN, N/N",
+          "count": 79,
+          "example": "slab pour 379 m3, 32/40"
+        },
+        {
+          "pattern": "poured N mN into the foundations, N/N mix",
+          "count": 72,
+          "example": "poured 140 m3 into the foundations, 32/40 mix"
+        },
+        {
+          "pattern": "poured the slab, N cube of CN/N",
+          "count": 42,
+          "example": "poured the slab, 176 cube of C32/40"
+        },
+        {
+          "pattern": "foundation pour N cube, CN/N off the truck",
+          "count": 34,
+          "example": "foundation pour 140 cube, C32/40 off the truck"
+        }
+      ],
+      "weekday_of_date": {
+        "Sat": 42,
+        "Tue": 58,
+        "Wed": 45,
+        "Sun": 62,
+        "Thu": 59,
+        "Mon": 52,
+        "Fri": 47
+      }
+    },
+    "PS": {
+      "title": "PLANT STANDING RECORD",
+      "count": 143,
+      "date_range": [
+        "2025-01-13",
+        "2026-08-29"
+      ],
+      "areas": {
+        "S-05 Compound Extension": 42,
+        "S-04 Drainage Corridor": 28,
+        "S-01 Platform North": 26,
+        "S-02 Platform South": 25,
+        "S-03 Access Road": 22
+      },
+      "ground": {},
+      "description_patterns": [
+        {
+          "pattern": "tracked machine stood idle N hours waiting on access",
+          "count": 90,
+          "example": "tracked machine stood idle 7 hours waiting on access"
+        },
+        {
+          "pattern": "excavator and driver held up N hours",
+          "count": 53,
+          "example": "excavator and driver held up 3 hours"
+        }
+      ],
+      "weekday_of_date": {
+        "Mon": 22,
+        "Sat": 22,
+        "Thu": 15,
+        "Sun": 21,
+        "Wed": 16,
+        "Fri": 23,
+        "Tue": 24
+      }
+    },
+    "PT": {
+      "title": "PRESSURE TEST CERTIFICATE",
+      "count": 270,
+      "date_range": [
+        "2025-01-17",
+        "2026-08-23"
+      ],
+      "areas": {
+        "S-05 Compound Extension": 65,
+        "S-01 Platform North": 63,
+        "S-04 Drainage Corridor": 49,
+        "S-02 Platform South": 48,
+        "S-03 Access Road": 45
+      },
+      "ground": {
+        "G3 Cemented Fill": 64,
+        "G2 Firm Sabkha": 63,
+        "G5 Sound Rock": 56,
+        "G4 Weathered Rock": 45,
+        "G1 Loose Sand": 42
+      },
+      "description_patterns": [
+        {
+          "pattern": "built N large chamber, N dia precast",
+          "count": 135,
+          "example": "built 3 large chamber, 1800 dia precast"
+        },
+        {
+          "pattern": "laid N m of N ductile main",
+          "count": 135,
+          "example": "laid 302 m of 400 ductile main"
+        }
+      ],
+      "weekday_of_date": {
+        "Fri": 41,
+        "Tue": 35,
+        "Wed": 43,
+        "Sat": 42,
+        "Mon": 41,
+        "Sun": 37,
+        "Thu": 31
+      }
+    }
+  }
+}

@@ -1,0 +1,687 @@
+{
+  "working_interpretation": {
+    "rebate_counting": "contract_year",
+    "indexed_rate_method": "clause_29a",
+    "usd_reading": "convert_from_usd",
+    "conversion_rounding": "round_before_build_up",
+    "post_completion_ground": "datum_g2_all_work",
+    "night_zone_cap": "no_night_uplift_above_1_1",
+    "concurrent_uplifts": "rest_day_only_unless_instructed",
+    "monthly_rate_treatment": "base_rate_in_build_up",
+    "discount_interaction": "later_replaces_earlier",
+    "chargeable_hour_scope": "per_record",
+    "survey_quantity_rule": "tolerance_33a",
+    "exclusion_window": "same_day_included",
+    "retro_adjustment_trigger": "on_or_after_issue"
+  },
+  "overall": {
+    "lines": 7746,
+    "measured_work_total": "162312590.95",
+    "outside_measured_adjustments": [
+      {
+        "kind": "clause_31a_retroactive_rate",
+        "application_no": "PA-00006",
+        "amount": "60508.18",
+        "basis_count": 89,
+        "note": "A3 issued 2026-05-12, effective 2025-11-01; 89 lines valued before issue at the superseded rate; first application on the post-issue side: PA-00006 (2026-05-12); 3 applications share that date (PA-00006, PA-00023, PA-00380), taken in application-number order"
+      },
+      {
+        "kind": "clause_45a_retention_release",
+        "application_no": "PA-00678",
+        "amount": "4036222.10",
+        "basis_count": 898,
+        "note": "first application submitted after 2026-09-30 (2026-10-28); 898 earlier applications held 807244420 halalas"
+      }
+    ],
+    "consistency with observed billing (descriptive only; not evidence for a reading)": {
+      "lines": 7746,
+      "amount_equals_billed": 7703,
+      "first_part_rate_equals_billed_rate": 7693,
+      "applications_where_measured_total_equals_billed_total": 862,
+      "applications": 900
+    }
+  },
+  "switches": {
+    "rebate_counting": {
+      "status": "text_resolved",
+      "ambiguity_id": "AMB-BANDS",
+      "question": "Do rebate bands count per Contract Year or cumulatively over the whole Works?",
+      "working": "contract_year",
+      "alternatives": {
+        "whole_works": {
+          "lines_affected": 270,
+          "applications_affected": 181,
+          "items_affected": {
+            "A.12.010": 58,
+            "A.12.020": 30,
+            "A.13.010": 45,
+            "A.14.010": 38,
+            "B.22.010": 11,
+            "B.23.010": 19,
+            "D.41.010": 37,
+            "D.41.040": 32
+          },
+          "sum_abs_line_delta": "180417.24",
+          "net_line_delta_alternative_minus_working": "-180417.24",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_31a_retroactive_rate",
+              "application_no": "PA-00006",
+              "working": "60508.18",
+              "alternative": "59252.02"
+            },
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4031742.80"
+            }
+          ],
+          "example_lines": [
+            "PA-00003-03",
+            "PA-00005-01",
+            "PA-00005-02",
+            "PA-00006-02",
+            "PA-00006-14"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 270,
+              "amount_equals_billed": 268,
+              "first_part_rate_equals_billed_rate": 262
+            },
+            "alternative_on_affected_lines": {
+              "lines": 270,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "indexed_rate_method": {
+      "status": "unresolved",
+      "ambiguity_id": "AMB-INDEX-APPENDIX-B",
+      "question": "Are C.31.010 and D.41.030 priced at the Schedule 2A index, or at the Schedule 1 rate as the Appendix B example does?",
+      "working": "clause_29a",
+      "alternatives": {
+        "appendix_b_unindexed": {
+          "lines_affected": 279,
+          "applications_affected": 237,
+          "items_affected": {
+            "C.31.010": 138,
+            "D.41.030": 141
+          },
+          "sum_abs_line_delta": "716967.32",
+          "net_line_delta_alternative_minus_working": "-716967.32",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4018297.90"
+            }
+          ],
+          "example_lines": [
+            "PA-00005-05",
+            "PA-00009-03",
+            "PA-00012-04",
+            "PA-00012-07",
+            "PA-00013-02"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 279,
+              "amount_equals_billed": 274,
+              "first_part_rate_equals_billed_rate": 274
+            },
+            "alternative_on_affected_lines": {
+              "lines": 279,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "usd_reading": {
+      "status": "text_resolved",
+      "ambiguity_id": "AMB-USD-CURRENCY",
+      "question": "Are the Schedule 1 figures for B.23.020, B.25.010 and C.32.040 USD or SAR?",
+      "working": "convert_from_usd",
+      "alternatives": {
+        "sar_as_printed": {
+          "lines_affected": 390,
+          "applications_affected": 314,
+          "items_affected": {
+            "B.23.020": 129,
+            "B.25.010": 126,
+            "C.32.040": 135
+          },
+          "sum_abs_line_delta": "8324270.32",
+          "net_line_delta_alternative_minus_working": "-8324270.32",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "3828366.50"
+            }
+          ],
+          "example_lines": [
+            "PA-00001-09",
+            "PA-00002-08",
+            "PA-00003-04",
+            "PA-00003-07",
+            "PA-00008-05"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 390,
+              "amount_equals_billed": 387,
+              "first_part_rate_equals_billed_rate": 387
+            },
+            "alternative_on_affected_lines": {
+              "lines": 390,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "conversion_rounding": {
+      "status": "text_resolved",
+      "ambiguity_id": null,
+      "question": "Is the USD-converted or indexed figure rounded before it enters the Clause 27 build-up?",
+      "working": "round_before_build_up",
+      "alternatives": {
+        "unrounded_into_build_up": {
+          "lines_affected": 165,
+          "applications_affected": 140,
+          "items_affected": {
+            "B.23.020": 23,
+            "B.25.010": 32,
+            "C.31.010": 32,
+            "C.32.040": 37,
+            "D.41.030": 41
+          },
+          "sum_abs_line_delta": "378.94",
+          "net_line_delta_alternative_minus_working": "-79.82",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4036220.10"
+            }
+          ],
+          "example_lines": [
+            "PA-00003-07",
+            "PA-00009-01",
+            "PA-00013-02",
+            "PA-00015-02",
+            "PA-00019-05"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 165,
+              "amount_equals_billed": 162,
+              "first_part_rate_equals_billed_rate": 162
+            },
+            "alternative_on_affected_lines": {
+              "lines": 165,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "post_completion_ground": {
+      "status": "text_resolved",
+      "ambiguity_id": "AMB-G2-EOT",
+      "question": "Which ground class prices work executed after 27 September 2025?",
+      "working": "datum_g2_all_work",
+      "alternatives": {
+        "datum_g2_eot_areas_only": {
+          "lines_affected": 461,
+          "applications_affected": 231,
+          "items_affected": {
+            "A.11.020": 36,
+            "A.12.010": 41,
+            "A.12.020": 20,
+            "A.12.030": 32,
+            "A.12.040": 28,
+            "A.12.050": 27,
+            "A.14.020": 35,
+            "A.15.010": 31,
+            "A.15.020": 23,
+            "C.31.010": 29,
+            "C.31.020": 33,
+            "C.31.030": 35,
+            "C.32.010": 31,
+            "C.32.030": 33,
+            "C.33.010": 27
+          },
+          "sum_abs_line_delta": "2142118.90",
+          "net_line_delta_alternative_minus_working": "1986900.40",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_31a_retroactive_rate",
+              "application_no": "PA-00006",
+              "working": "60508.18",
+              "alternative": "63556.60"
+            },
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4085706.16"
+            }
+          ],
+          "example_lines": [
+            "PA-00001-06",
+            "PA-00001-08",
+            "PA-00003-06",
+            "PA-00004-08",
+            "PA-00004-09"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 461,
+              "amount_equals_billed": 457,
+              "first_part_rate_equals_billed_rate": 457
+            },
+            "alternative_on_affected_lines": {
+              "lines": 461,
+              "amount_equals_billed": 2,
+              "first_part_rate_equals_billed_rate": 2
+            }
+          }
+        },
+        "recorded_class": {
+          "lines_affected": 842,
+          "applications_affected": 400,
+          "items_affected": {
+            "A.11.020": 61,
+            "A.12.010": 68,
+            "A.12.020": 38,
+            "A.12.030": 58,
+            "A.12.040": 62,
+            "A.12.050": 61,
+            "A.14.020": 60,
+            "A.15.010": 54,
+            "A.15.020": 38,
+            "C.31.010": 65,
+            "C.31.020": 54,
+            "C.31.030": 60,
+            "C.32.010": 56,
+            "C.32.030": 52,
+            "C.33.010": 55
+          },
+          "sum_abs_line_delta": "3656275.34",
+          "net_line_delta_alternative_minus_working": "3328761.82",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_31a_retroactive_rate",
+              "application_no": "PA-00006",
+              "working": "60508.18",
+              "alternative": "66057.90"
+            },
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4119158.54"
+            }
+          ],
+          "example_lines": [
+            "PA-00001-06",
+            "PA-00001-08",
+            "PA-00003-06",
+            "PA-00004-08",
+            "PA-00004-09"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 842,
+              "amount_equals_billed": 837,
+              "first_part_rate_equals_billed_rate": 835
+            },
+            "alternative_on_affected_lines": {
+              "lines": 842,
+              "amount_equals_billed": 2,
+              "first_part_rate_equals_billed_rate": 2
+            }
+          }
+        }
+      }
+    },
+    "night_zone_cap": {
+      "status": "text_resolved",
+      "ambiguity_id": "AMB-NIGHT-ZONE",
+      "question": "Is the night uplift withheld where the zone factor exceeds 1.1 (Z3, Z4)?",
+      "working": "no_night_uplift_above_1_1",
+      "alternatives": {
+        "not_applied": {
+          "lines_affected": 85,
+          "applications_affected": 78,
+          "items_affected": {
+            "A.12.020": 6,
+            "A.12.030": 11,
+            "A.12.040": 7,
+            "A.14.010": 2,
+            "B.21.020": 4,
+            "B.21.030": 8,
+            "B.21.040": 2,
+            "C.31.010": 5,
+            "C.31.030": 7,
+            "D.41.020": 13,
+            "D.41.030": 9,
+            "D.43.010": 5,
+            "D.43.020": 6
+          },
+          "sum_abs_line_delta": "955513.56",
+          "net_line_delta_alternative_minus_working": "955513.56",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4060109.93"
+            }
+          ],
+          "example_lines": [
+            "PA-00023-03",
+            "PA-00029-06",
+            "PA-00035-02",
+            "PA-00037-12",
+            "PA-00040-02"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 85,
+              "amount_equals_billed": 84,
+              "first_part_rate_equals_billed_rate": 84
+            },
+            "alternative_on_affected_lines": {
+              "lines": 85,
+              "amount_equals_billed": 1,
+              "first_part_rate_equals_billed_rate": 1
+            }
+          }
+        }
+      }
+    },
+    "concurrent_uplifts": {
+      "status": "evidence_not_provided",
+      "ambiguity_id": "AMB-UPLIFT-EVIDENCE",
+      "question": "Night work on a rest day for an item in both uplift lists: one uplift or both?",
+      "working": "rest_day_only_unless_instructed",
+      "alternatives": {
+        "both_assumed_instructed": {
+          "lines_affected": 0,
+          "applications_affected": 0,
+          "items_affected": {},
+          "sum_abs_line_delta": "0.00",
+          "net_line_delta_alternative_minus_working": "0.00",
+          "same_price_for_every_line": true,
+          "outside_measured_adjustment_changes": [],
+          "example_lines": [],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 0,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            },
+            "alternative_on_affected_lines": {
+              "lines": 0,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "monthly_rate_treatment": {
+      "status": "unresolved",
+      "ambiguity_id": "AMB-MONTHLY-RATE-BUILDUP",
+      "question": "Is a published monthly rate (D.41.020 under S1, E.54.010 under A2) a base rate for the Clause 27 build-up, or the final rate?",
+      "working": "base_rate_in_build_up",
+      "alternatives": {
+        "final_rate": {
+          "lines_affected": 40,
+          "applications_affected": 37,
+          "items_affected": {
+            "D.41.020": 40
+          },
+          "sum_abs_line_delta": "903202.93",
+          "net_line_delta_alternative_minus_working": "-903202.93",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4013642.03"
+            }
+          ],
+          "example_lines": [
+            "PA-00028-03",
+            "PA-00035-07",
+            "PA-00054-03",
+            "PA-00054-06",
+            "PA-00057-03"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 40,
+              "amount_equals_billed": 39,
+              "first_part_rate_equals_billed_rate": 39
+            },
+            "alternative_on_affected_lines": {
+              "lines": 40,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "discount_interaction": {
+      "status": "text_resolved",
+      "ambiguity_id": "AMB-DISCOUNT-STACK",
+      "question": "From 2026-04-01, does the 8% discount replace the 5% or compound with it?",
+      "working": "later_replaces_earlier",
+      "alternatives": {
+        "compound": {
+          "lines_affected": 119,
+          "applications_affected": 92,
+          "items_affected": {
+            "B.23.010": 32,
+            "C.32.010": 30,
+            "C.32.030": 28,
+            "D.41.020": 29
+          },
+          "sum_abs_line_delta": "258963.68",
+          "net_line_delta_alternative_minus_working": "-258963.68",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_31a_retroactive_rate",
+              "application_no": "PA-00006",
+              "working": "60508.18",
+              "alternative": "60359.86"
+            },
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4029748.01"
+            }
+          ],
+          "example_lines": [
+            "PA-00006-04",
+            "PA-00041-01",
+            "PA-00045-06",
+            "PA-00071-05",
+            "PA-00077-06"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 119,
+              "amount_equals_billed": 115,
+              "first_part_rate_equals_billed_rate": 114
+            },
+            "alternative_on_affected_lines": {
+              "lines": 119,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    },
+    "chargeable_hour_scope": {
+      "status": "unresolved",
+      "ambiguity_id": "AMB-CHARGEABLE-HOUR",
+      "question": "The first hour of 'that attendance' is not chargeable: per record, per billed line, or per work area and day?",
+      "working": "per_record",
+      "alternatives": {},
+      "quantity_effect": {
+        "hour_lines_with_record": 285,
+        "records_quoted_on_more_than_one_hour_line": 0,
+        "work_area_days_with_more_than_one_record": 7,
+        "total_chargeable_hours": {
+          "per_record": "1550",
+          "per_line": "1550",
+          "per_work_area_day": "1557"
+        },
+        "hours_billed": "1551",
+        "hours_recorded": "1835",
+        "consistency with observed billing (descriptive only; not evidence for a reading)": {
+          "lines_billed_at_recorded_hours": 1,
+          "lines_billed_at_recorded_hours_minus_one": 284
+        }
+      }
+    },
+    "survey_quantity_rule": {
+      "status": "unresolved",
+      "ambiguity_id": "AMB-SURVEY-TOLERANCE",
+      "question": "For surveyed items, is the payable quantity the survey figure exactly, or measured quantity within 2% of it?",
+      "working": "tolerance_33a",
+      "alternatives": {},
+      "quantity_effect": {
+        "lines_considered": 368,
+        "lines_where_readings_differ": 25,
+        "applications_affected": 25,
+        "approx_value_difference_33a_minus_33": "20334.51",
+        "example_lines": [
+          "PA-00022-04",
+          "PA-00177-11",
+          "PA-00189-12",
+          "PA-00210-08",
+          "PA-00232-07"
+        ],
+        "consistency with observed billing (descriptive only; not evidence for a reading)": {
+          "lines_billed_at_payable_quantity_tolerance_33a": 367,
+          "lines_billed_at_payable_quantity_exact_33": 342
+        }
+      }
+    },
+    "exclusion_window": {
+      "status": "unresolved",
+      "ambiguity_id": "AMB-EXCLUSION-WINDOW",
+      "question": "Does 'within two days of/following the measurement of A.14.010' include the same day?",
+      "working": "same_day_included",
+      "alternatives": {},
+      "quantity_effect": {
+        "excluded_lines": {
+          "same_day_included": 1,
+          "same_day_excluded": 0
+        },
+        "lines_where_readings_differ": 1,
+        "value_of_lines_that_differ": "5555.20",
+        "example_lines": [
+          "PA-00801-05"
+        ],
+        "note": "P21 (E.51.020 on a surfacing day) is a same-day rule and is not affected by this switch."
+      }
+    },
+    "retro_adjustment_trigger": {
+      "status": "unresolved",
+      "ambiguity_id": "AMB-A3-ADJUSTMENT",
+      "question": "Which application carries the single Amendment No. 3 adjustment, and is an application submitted on the issue date priced at the new rates?",
+      "working": "on_or_after_issue",
+      "alternatives": {
+        "after_issue": {
+          "lines_affected": 2,
+          "applications_affected": 2,
+          "items_affected": {
+            "A.14.010": 2
+          },
+          "sum_abs_line_delta": "2603.70",
+          "net_line_delta_alternative_minus_working": "-2603.70",
+          "same_price_for_every_line": false,
+          "outside_measured_adjustment_changes": [
+            {
+              "kind": "clause_31a_retroactive_rate",
+              "application_no": "PA-00006",
+              "working": "60508.18",
+              "alternative": null
+            },
+            {
+              "kind": "clause_31a_retroactive_rate",
+              "application_no": "PA-00443",
+              "working": null,
+              "alternative": "63111.88"
+            },
+            {
+              "kind": "clause_45a_retention_release",
+              "application_no": "PA-00678",
+              "working": "4036222.10",
+              "alternative": "4036157.00"
+            }
+          ],
+          "example_lines": [
+            "PA-00006-14",
+            "PA-00380-02"
+          ],
+          "consistency with observed billing (descriptive only; not evidence for a reading)": {
+            "working_on_affected_lines": {
+              "lines": 2,
+              "amount_equals_billed": 2,
+              "first_part_rate_equals_billed_rate": 2
+            },
+            "alternative_on_affected_lines": {
+              "lines": 2,
+              "amount_equals_billed": 0,
+              "first_part_rate_equals_billed_rate": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "boundary_notes": {
+    "lines_after_final_completion": [
+      "PA-00375-07",
+      "PA-00678-10"
+    ],
+    "applications_on_retroactive_issue_date": [
+      "PA-00006",
+      "PA-00023",
+      "PA-00380"
+    ],
+    "first_application_after_issue_date": "PA-00443",
+    "day_after_original_completion": "2025-09-28"
+  }
+}

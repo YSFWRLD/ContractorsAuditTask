@@ -1,0 +1,37 @@
+{
+ "domain": "drilling",
+ "root": "drilling_services",
+ "files": [
+  {
+   "path": "drilling_services/contract/DDS-2025-118.pdf",
+   "kind": "contract (scanned PDF)",
+   "bytes": 8146739,
+   "sha256": "0f14d8a7e222d4c5a13f2a1651098d089aaa783b1d6b6f1c75ebd313da611e5a"
+  },
+  {
+   "path": "drilling_services/guidelines/INVOICE_AUDIT_GUIDELINES.md",
+   "kind": "audit guidelines",
+   "bytes": 2099,
+   "sha256": "621c507ed3a3300321966dd36435c608bdff54dbeca7157c9d754815f84d51f5"
+  },
+  {
+   "path": "drilling_services/invoices/invoices.csv",
+   "kind": "invoices",
+   "bytes": 317378,
+   "sha256": "d9ba6d7678e4e20e78ba25ab0f20dc4e59d105b11651b5bc6e298decf87060ff"
+  },
+  {
+   "path": "drilling_services/invoices/invoice_lines.csv",
+   "kind": "invoice lines",
+   "bytes": 13607419,
+   "sha256": "c79fc943bee288ec6674a7ced409cb39a733ace00f952b9e25d85e0f0e5dc87f"
+  }
+ ],
+ "records": {
+  "path": "drilling_services/records",
+  "kind": "Daily Drilling Reports (.txt)",
+  "files": 8151,
+  "tree_sha256": "6b841deec9dc0ff6a110ba1306c47d9db80ddcfb68c73c46b16d935e40746f4d"
+ },
+ "unclassified_files": []
+}

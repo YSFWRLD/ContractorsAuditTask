@@ -1,0 +1,368 @@
+{
+ "schema_version": "1.0",
+ "note": "Phase 3 mapping and coverage statistics from the Daily Drilling Reports. Not prices, not findings; no invoice data was read.",
+ "schema": "contractor-audit/drilling-phase3-service-mapping",
+ "reports_interpreted": 8151,
+ "reports_in_dataset": 8151,
+ "reports_with_at_least_one_mapped_service": 8151,
+ "term_mappings": 84036,
+ "term_mappings_by_status": {
+  "IDENTIFIED": 60567,
+  "IDENTIFIED_BY_CONTEXT": 16348,
+  "UNRESOLVED_INTERPRETATION": 7121
+ },
+ "deterministic_term_mappings": 76915,
+ "ambiguous_term_mappings": 0,
+ "switch_dependent_term_mappings": 7121,
+ "terms": [
+  {
+   "field": "Crew on tour",
+   "term": "MWD engineers",
+   "statuses": {
+    "IDENTIFIED": 8151
+   },
+   "codes_literal": [
+    "MW-301"
+   ],
+   "codes_lwd_rows_shifted": [
+    "MW-301"
+   ]
+  },
+  {
+   "field": "Crew on tour",
+   "term": "directional hands",
+   "statuses": {
+    "IDENTIFIED": 8151
+   },
+   "codes_literal": [
+    "DD-101"
+   ],
+   "codes_lwd_rows_shifted": [
+    "DD-101"
+   ]
+  },
+  {
+   "field": "Crew on tour",
+   "term": "logging engineers",
+   "statuses": {
+    "IDENTIFIED": 3430
+   },
+   "codes_literal": [
+    "LW-401"
+   ],
+   "codes_lwd_rows_shifted": [
+    "LW-401"
+   ]
+  },
+  {
+   "field": "Crew on tour",
+   "term": "night man",
+   "statuses": {
+    "IDENTIFIED": 8151
+   },
+   "codes_literal": [
+    "DD-102"
+   ],
+   "codes_lwd_rows_shifted": [
+    "DD-102"
+   ]
+  },
+  {
+   "field": "Crew on tour",
+   "term": "performance engineer",
+   "statuses": {
+    "IDENTIFIED": 2561
+   },
+   "codes_literal": [
+    "PD-201"
+   ],
+   "codes_lwd_rows_shifted": [
+    "PD-201"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "MWD collar",
+   "statuses": {
+    "IDENTIFIED_BY_CONTEXT": 8151
+   },
+   "codes_literal": [
+    "LH-713",
+    "MW-310"
+   ],
+   "codes_lwd_rows_shifted": [
+    "LH-713",
+    "MW-310"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "bit and reamer",
+   "statuses": {
+    "IDENTIFIED": 1190
+   },
+   "codes_literal": [
+    "PD-220"
+   ],
+   "codes_lwd_rows_shifted": [
+    "PD-220"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "circulating sub",
+   "statuses": {
+    "IDENTIFIED": 1767
+   },
+   "codes_literal": [
+    "HC-601"
+   ],
+   "codes_lwd_rows_shifted": [
+    "HC-601"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "density-neutron",
+   "statuses": {
+    "UNRESOLVED_INTERPRETATION": 1093
+   },
+   "codes_literal": [
+    "LW-412"
+   ],
+   "codes_lwd_rows_shifted": [
+    "LW-411"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "drilling jars",
+   "statuses": {
+    "IDENTIFIED": 8151
+   },
+   "codes_literal": [
+    "HC-620"
+   ],
+   "codes_lwd_rows_shifted": [
+    "HC-620"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "float sub",
+   "statuses": {
+    "IDENTIFIED": 2257
+   },
+   "codes_literal": [
+    "HC-640"
+   ],
+   "codes_lwd_rows_shifted": [
+    "HC-640"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "gamma tool",
+   "statuses": {
+    "UNRESOLVED_INTERPRETATION": 3430
+   },
+   "codes_literal": [
+    "LH-714",
+    "LW-410"
+   ],
+   "codes_lwd_rows_shifted": []
+  },
+  {
+   "field": "In the hole",
+   "term": "hole opener",
+   "statuses": {
+    "IDENTIFIED": 803
+   },
+   "codes_literal": [
+    "RM-511"
+   ],
+   "codes_lwd_rows_shifted": [
+    "RM-511"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "hydraulics package",
+   "statuses": {
+    "IDENTIFIED": 1190
+   },
+   "codes_literal": [
+    "PD-230"
+   ],
+   "codes_lwd_rows_shifted": [
+    "PD-230"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "mud motor",
+   "statuses": {
+    "IDENTIFIED_BY_CONTEXT": 3304
+   },
+   "codes_literal": [
+    "DD-110",
+    "LH-711"
+   ],
+   "codes_lwd_rows_shifted": [
+    "DD-110",
+    "LH-711"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "real-time link",
+   "statuses": {
+    "IDENTIFIED": 8151
+   },
+   "codes_literal": [
+    "MW-330"
+   ],
+   "codes_lwd_rows_shifted": [
+    "MW-330"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "resistivity tool",
+   "statuses": {
+    "UNRESOLVED_INTERPRETATION": 2590
+   },
+   "codes_literal": [
+    "LW-411"
+   ],
+   "codes_lwd_rows_shifted": [
+    "LH-714",
+    "LW-410"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "rotary steerable",
+   "statuses": {
+    "IDENTIFIED_BY_CONTEXT": 4847
+   },
+   "codes_literal": [
+    "DD-120",
+    "LH-712"
+   ],
+   "codes_lwd_rows_shifted": [
+    "DD-120",
+    "LH-712"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "stabiliser string",
+   "statuses": {
+    "IDENTIFIED": 1767
+   },
+   "codes_literal": [
+    "RM-520"
+   ],
+   "codes_lwd_rows_shifted": [
+    "RM-520"
+   ]
+  },
+  {
+   "field": "In the hole",
+   "term": "survey package",
+   "statuses": {
+    "IDENTIFIED": 4847
+   },
+   "codes_literal": [
+    "MW-320"
+   ],
+   "codes_lwd_rows_shifted": [
+    "MW-320"
+   ]
+  },
+  {
+   "field": "Lost in hole tool",
+   "term": "MWD collar",
+   "statuses": {
+    "IDENTIFIED_BY_CONTEXT": 19
+   },
+   "codes_literal": [
+    "LH-713",
+    "MW-310"
+   ],
+   "codes_lwd_rows_shifted": [
+    "LH-713",
+    "MW-310"
+   ]
+  },
+  {
+   "field": "Lost in hole tool",
+   "term": "gamma tool",
+   "statuses": {
+    "UNRESOLVED_INTERPRETATION": 8
+   },
+   "codes_literal": [
+    "LH-714",
+    "LW-410"
+   ],
+   "codes_lwd_rows_shifted": []
+  },
+  {
+   "field": "Lost in hole tool",
+   "term": "mud motor",
+   "statuses": {
+    "IDENTIFIED_BY_CONTEXT": 10
+   },
+   "codes_literal": [
+    "DD-110",
+    "LH-711"
+   ],
+   "codes_lwd_rows_shifted": [
+    "DD-110",
+    "LH-711"
+   ]
+  },
+  {
+   "field": "Lost in hole tool",
+   "term": "rotary steerable",
+   "statuses": {
+    "IDENTIFIED_BY_CONTEXT": 17
+   },
+   "codes_literal": [
+    "DD-120",
+    "LH-712"
+   ],
+   "codes_lwd_rows_shifted": [
+    "DD-120",
+    "LH-712"
+   ]
+  }
+ ],
+ "terms_with_no_candidate_under_some_reading": [
+  "gamma tool"
+ ],
+ "report_terms_mapping_to_more_than_one_code": {
+  "LITERAL": [
+   "MWD collar",
+   "gamma tool",
+   "mud motor",
+   "rotary steerable"
+  ],
+  "LWD_ROWS_SHIFTED": [
+   "MWD collar",
+   "mud motor",
+   "resistivity tool",
+   "rotary steerable"
+  ]
+ },
+ "service_coverage": {
+  "services_in_schedule_1": 38,
+  "services_evidenced_under_some_reading": 38,
+  "services_never_evidenced": [],
+  "services_evidenced_only_under_some_readings": [
+   "LH-714",
+   "LW-412"
+  ]
+ }
+}

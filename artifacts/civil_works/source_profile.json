@@ -1,0 +1,1418 @@
+{
+  "applications": {
+    "count": 900,
+    "unique_ids": 900,
+    "duplicate_ids": [],
+    "applications_without_lines": [],
+    "contract_refs": {
+      "CW-2024-0417-CIV": {
+        "count": 2,
+        "applications": [
+          "PA-00560",
+          "PA-00711"
+        ]
+      },
+      "CW-2025-0417-CIV": {
+        "count": 898,
+        "applications": null
+      }
+    },
+    "subcontractors": {
+      "Ridgeway Civil Engineering LLC": 900
+    },
+    "sites": {
+      "S-05 Compound Extension": 203,
+      "S-02 Platform South": 182,
+      "S-03 Access Road": 176,
+      "S-04 Drainage Corridor": 171,
+      "S-01 Platform North": 168
+    },
+    "site_zones": {
+      "Z3 Wadi Crossing": 232,
+      "Z1 Compound": 229,
+      "Z2 North Spur": 220,
+      "Z4 Escarpment": 219
+    },
+    "application_date_range": [
+      "2025-01-23",
+      "2026-10-31"
+    ],
+    "period_range": [
+      "2025-01-07",
+      "2026-10-26"
+    ],
+    "period_length_days": {
+      "count": 900,
+      "min": 2,
+      "median": 11.0,
+      "max": 277
+    },
+    "days_from_period_end_to_application": {
+      "count": 900,
+      "min": -14,
+      "median": 11.0,
+      "max": 49,
+      "before_period_end": 1,
+      "on_period_end": 0,
+      "1_to_21": 896,
+      "over_21": 3
+    },
+    "lines_per_application": {
+      "count": 900,
+      "min": 3,
+      "median": 9.0,
+      "max": 14
+    },
+    "application_total": {
+      "count": 900,
+      "min": "6087.20",
+      "median": "155179.22",
+      "max": "670891.46",
+      "sum": "162246573.74"
+    },
+    "retention": {
+      "count": 900,
+      "min": "304.36",
+      "median": "7758.95",
+      "max": "33544.57",
+      "sum": "8112324.50"
+    },
+    "net_payable": {
+      "count": 900,
+      "min": "5782.84",
+      "median": "147420.26",
+      "max": "637346.89",
+      "sum": "154134249.24"
+    },
+    "adjustment_nonzero": [],
+    "retention_released_nonzero": []
+  },
+  "lines": {
+    "count": 7746,
+    "unique_line_refs": 7746,
+    "duplicate_line_refs": [],
+    "line_ref_matches_application_and_line_no": 7746,
+    "lines_without_application": [],
+    "work_date_range": [
+      "2025-01-07",
+      "2026-10-26"
+    ],
+    "work_date_weekday": {
+      "Thu": 1149,
+      "Sat": 1109,
+      "Mon": 1059,
+      "Tue": 1065,
+      "Wed": 1057,
+      "Sun": 1147,
+      "Fri": 1160
+    },
+    "work_date_inside_application_period": 7744,
+    "work_date_outside_application_period": 2,
+    "line_site_equals_application_site": 7746,
+    "line_zone_equals_application_zone": 7746,
+    "distinct_item_codes": 60,
+    "item_codes_not_in_schedule_1": [],
+    "unit_agrees_with_schedule_1": 7742,
+    "description_agrees_with_schedule_1": 7746,
+    "units": {
+      "m2": 2236,
+      "m3": 1794,
+      "lm": 1646,
+      "no.": 1162,
+      "hour": 287,
+      "week": 258,
+      "day": 234,
+      "tonne": 129
+    },
+    "sites": {
+      "S-05 Compound Extension": 1743,
+      "S-02 Platform South": 1586,
+      "S-03 Access Road": 1506,
+      "S-01 Platform North": 1466,
+      "S-04 Drainage Corridor": 1445
+    },
+    "zones": {
+      "Z3 Wadi Crossing": 2047,
+      "Z1 Compound": 2012,
+      "Z4 Escarpment": 1881,
+      "Z2 North Spur": 1806
+    },
+    "ground_classes": {
+      "(blank)": 5792,
+      "G1 Loose Sand": 411,
+      "G3 Cemented Fill": 388,
+      "G2 Firm Sabkha": 386,
+      "G4 Weathered Rock": 386,
+      "G5 Sound Rock": 383
+    },
+    "ground_class_by_schedule_3_membership": {
+      "other_item/ground_blank": 5792,
+      "schedule_3_item/ground_stated": 1954
+    },
+    "night_flag": {
+      "Y": 167,
+      "N": 7579
+    },
+    "night_flag_by_schedule_4_part_1_membership": {
+      "night_uplift_item/night_N": 1474,
+      "night_uplift_item/night_Y": 167,
+      "other_item/night_N": 6105
+    },
+    "rest_day_lines": 2269,
+    "quantity": {
+      "count": 7746,
+      "min": "1",
+      "median": "174",
+      "max": "3440",
+      "non_integer": 0,
+      "zero_or_negative": 0
+    },
+    "per_item": [
+      {
+        "code": "A.11.010",
+        "lines": 148,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 148
+        },
+        "quantity_sum": "71252",
+        "distinct_rates": 4,
+        "rate_min": "3.85",
+        "rate_max": "4.93",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.11.020",
+        "lines": 141,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 141
+        },
+        "quantity_sum": "61339",
+        "distinct_rates": 19,
+        "rate_min": "11.66",
+        "rate_max": "25.87",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.11.030",
+        "lines": 130,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 130
+        },
+        "quantity_sum": "630",
+        "distinct_rates": 4,
+        "rate_min": "148.00",
+        "rate_max": "189.44",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.12.010",
+        "lines": 144,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 144
+        },
+        "quantity_sum": "33636",
+        "distinct_rates": 38,
+        "rate_min": "19.40",
+        "rate_max": "44.86",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.12.020",
+        "lines": 100,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 100
+        },
+        "quantity_sum": "20742",
+        "distinct_rates": 43,
+        "rate_min": "32.59",
+        "rate_max": "70.43",
+        "with_record_ref": 0,
+        "night_Y": 11
+      },
+      {
+        "code": "A.12.030",
+        "lines": 135,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 135
+        },
+        "quantity_sum": "27454",
+        "distinct_rates": 24,
+        "rate_min": "44.74",
+        "rate_max": "99.31",
+        "with_record_ref": 134,
+        "night_Y": 17
+      },
+      {
+        "code": "A.12.040",
+        "lines": 132,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 132
+        },
+        "quantity_sum": "28659",
+        "distinct_rates": 24,
+        "rate_min": "65.05",
+        "rate_max": "144.38",
+        "with_record_ref": 132,
+        "night_Y": 18
+      },
+      {
+        "code": "A.12.050",
+        "lines": 148,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 148
+        },
+        "quantity_sum": "31584",
+        "distinct_rates": 19,
+        "rate_min": "49.26",
+        "rate_max": "109.33",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.12.060",
+        "lines": 139,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 139
+        },
+        "quantity_sum": "60491",
+        "distinct_rates": 4,
+        "rate_min": "6.90",
+        "rate_max": "8.83",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.13.010",
+        "lines": 126,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 126
+        },
+        "quantity_sum": "29456",
+        "distinct_rates": 8,
+        "rate_min": "17.77",
+        "rate_max": "24.19",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.13.020",
+        "lines": 128,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 128
+        },
+        "quantity_sum": "29026",
+        "distinct_rates": 4,
+        "rate_min": "6.40",
+        "rate_max": "8.19",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.13.030",
+        "lines": 141,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 141
+        },
+        "quantity_sum": "31178",
+        "distinct_rates": 4,
+        "rate_min": "9.80",
+        "rate_max": "12.54",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.14.010",
+        "lines": 117,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 117
+        },
+        "quantity_sum": "26300",
+        "distinct_rates": 26,
+        "rate_min": "48.41",
+        "rate_max": "69.07",
+        "with_record_ref": 117,
+        "night_Y": 8
+      },
+      {
+        "code": "A.14.020",
+        "lines": 125,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 124,
+          "no.": 1
+        },
+        "quantity_sum": "27680",
+        "distinct_rates": 21,
+        "rate_min": "21.06",
+        "rate_max": "46.74",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.14.030",
+        "lines": 131,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 130,
+          "lm": 1
+        },
+        "quantity_sum": "60960",
+        "distinct_rates": 4,
+        "rate_min": "14.60",
+        "rate_max": "18.69",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.15.010",
+        "lines": 122,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 122
+        },
+        "quantity_sum": "58379",
+        "distinct_rates": 19,
+        "rate_min": "29.89",
+        "rate_max": "66.35",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.15.020",
+        "lines": 120,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 120
+        },
+        "quantity_sum": "57882",
+        "distinct_rates": 18,
+        "rate_min": "46.53",
+        "rate_max": "103.28",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "A.16.010",
+        "lines": 135,
+        "boq_unit": "week",
+        "billed_units": {
+          "week": 135
+        },
+        "quantity_sum": "210",
+        "distinct_rates": 8,
+        "rate_min": "1480.00",
+        "rate_max": "1950.72",
+        "with_record_ref": 134,
+        "night_Y": 0
+      },
+      {
+        "code": "B.21.010",
+        "lines": 107,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 107
+        },
+        "quantity_sum": "50910",
+        "distinct_rates": 4,
+        "rate_min": "29.60",
+        "rate_max": "37.89",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.21.020",
+        "lines": 106,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 106
+        },
+        "quantity_sum": "12814",
+        "distinct_rates": 18,
+        "rate_min": "415.00",
+        "rate_max": "745.63",
+        "with_record_ref": 106,
+        "night_Y": 13
+      },
+      {
+        "code": "B.21.030",
+        "lines": 121,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 121
+        },
+        "quantity_sum": "25188",
+        "distinct_rates": 9,
+        "rate_min": "389.00",
+        "rate_max": "672.19",
+        "with_record_ref": 121,
+        "night_Y": 12
+      },
+      {
+        "code": "B.21.040",
+        "lines": 138,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 138
+        },
+        "quantity_sum": "33666",
+        "distinct_rates": 10,
+        "rate_min": "448.00",
+        "rate_max": "774.14",
+        "with_record_ref": 138,
+        "night_Y": 7
+      },
+      {
+        "code": "B.21.050",
+        "lines": 134,
+        "boq_unit": "m3",
+        "billed_units": {
+          "m3": 134
+        },
+        "quantity_sum": "29251",
+        "distinct_rates": 4,
+        "rate_min": "296.00",
+        "rate_max": "378.88",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.22.010",
+        "lines": 145,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 145
+        },
+        "quantity_sum": "61095",
+        "distinct_rates": 12,
+        "rate_min": "69.29",
+        "rate_max": "95.36",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.22.020",
+        "lines": 125,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 125
+        },
+        "quantity_sum": "53251",
+        "distinct_rates": 4,
+        "rate_min": "91.80",
+        "rate_max": "117.50",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.22.030",
+        "lines": 128,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 128
+        },
+        "quantity_sum": "24215",
+        "distinct_rates": 4,
+        "rate_min": "42.60",
+        "rate_max": "54.53",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.23.010",
+        "lines": 129,
+        "boq_unit": "tonne",
+        "billed_units": {
+          "tonne": 129
+        },
+        "quantity_sum": "1642",
+        "distinct_rates": 32,
+        "rate_min": "3848.36",
+        "rate_max": "5444.42",
+        "with_record_ref": 129,
+        "night_Y": 0
+      },
+      {
+        "code": "B.23.020",
+        "lines": 129,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 129
+        },
+        "quantity_sum": "61005",
+        "distinct_rates": 54,
+        "rate_min": "143.92",
+        "rate_max": "185.01",
+        "with_record_ref": 129,
+        "night_Y": 0
+      },
+      {
+        "code": "B.24.010",
+        "lines": 127,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 127
+        },
+        "quantity_sum": "24817",
+        "distinct_rates": 4,
+        "rate_min": "67.40",
+        "rate_max": "86.27",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.25.010",
+        "lines": 126,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 126
+        },
+        "quantity_sum": "550",
+        "distinct_rates": 55,
+        "rate_min": "821.03",
+        "rate_max": "1055.13",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.26.010",
+        "lines": 128,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 128
+        },
+        "quantity_sum": "58097",
+        "distinct_rates": 4,
+        "rate_min": "17.20",
+        "rate_max": "22.02",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "B.27.010",
+        "lines": 133,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 133
+        },
+        "quantity_sum": "27549",
+        "distinct_rates": 4,
+        "rate_min": "89.50",
+        "rate_max": "114.56",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.31.010",
+        "lines": 140,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 140
+        },
+        "quantity_sum": "29400",
+        "distinct_rates": 86,
+        "rate_min": "85.32",
+        "rate_max": "189.38",
+        "with_record_ref": 0,
+        "night_Y": 7
+      },
+      {
+        "code": "C.31.020",
+        "lines": 135,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 135
+        },
+        "quantity_sum": "26836",
+        "distinct_rates": 20,
+        "rate_min": "201.16",
+        "rate_max": "446.49",
+        "with_record_ref": 135,
+        "night_Y": 0
+      },
+      {
+        "code": "C.31.030",
+        "lines": 133,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 133
+        },
+        "quantity_sum": "27292",
+        "distinct_rates": 26,
+        "rate_min": "51.51",
+        "rate_max": "114.33",
+        "with_record_ref": 0,
+        "night_Y": 16
+      },
+      {
+        "code": "C.31.040",
+        "lines": 131,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 130,
+          "no.": 1
+        },
+        "quantity_sum": "26638",
+        "distinct_rates": 4,
+        "rate_min": "73.10",
+        "rate_max": "93.57",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.32.010",
+        "lines": 129,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 129
+        },
+        "quantity_sum": "537",
+        "distinct_rates": 31,
+        "rate_min": "1711.20",
+        "rate_max": "3880.70",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.32.020",
+        "lines": 137,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 137
+        },
+        "quantity_sum": "573",
+        "distinct_rates": 4,
+        "rate_min": "287.00",
+        "rate_max": "367.36",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.32.030",
+        "lines": 135,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 135
+        },
+        "quantity_sum": "366",
+        "distinct_rates": 27,
+        "rate_min": "2870.40",
+        "rate_max": "6509.57",
+        "with_record_ref": 135,
+        "night_Y": 0
+      },
+      {
+        "code": "C.32.040",
+        "lines": 135,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 135
+        },
+        "quantity_sum": "599",
+        "distinct_rates": 52,
+        "rate_min": "1585.83",
+        "rate_max": "2037.98",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.33.010",
+        "lines": 115,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 115
+        },
+        "quantity_sum": "22749",
+        "distinct_rates": 19,
+        "rate_min": "55.55",
+        "rate_max": "123.31",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.34.010",
+        "lines": 119,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 119
+        },
+        "quantity_sum": "551",
+        "distinct_rates": 4,
+        "rate_min": "965.00",
+        "rate_max": "1235.20",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "C.35.010",
+        "lines": 120,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 120
+        },
+        "quantity_sum": "24138",
+        "distinct_rates": 4,
+        "rate_min": "9.40",
+        "rate_max": "12.03",
+        "with_record_ref": 120,
+        "night_Y": 0
+      },
+      {
+        "code": "D.41.010",
+        "lines": 139,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 139
+        },
+        "quantity_sum": "66945",
+        "distinct_rates": 13,
+        "rate_min": "38.46",
+        "rate_max": "53.50",
+        "with_record_ref": 139,
+        "night_Y": 0
+      },
+      {
+        "code": "D.41.020",
+        "lines": 131,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 131
+        },
+        "quantity_sum": "63300",
+        "distinct_rates": 31,
+        "rate_min": "63.50",
+        "rate_max": "285.57",
+        "with_record_ref": 0,
+        "night_Y": 16
+      },
+      {
+        "code": "D.41.030",
+        "lines": 146,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 146
+        },
+        "quantity_sum": "73804",
+        "distinct_rates": 97,
+        "rate_min": "89.40",
+        "rate_max": "175.81",
+        "with_record_ref": 0,
+        "night_Y": 18
+      },
+      {
+        "code": "D.41.040",
+        "lines": 126,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 126
+        },
+        "quantity_sum": "59526",
+        "distinct_rates": 12,
+        "rate_min": "29.99",
+        "rate_max": "41.73",
+        "with_record_ref": 126,
+        "night_Y": 0
+      },
+      {
+        "code": "D.41.050",
+        "lines": 140,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 140
+        },
+        "quantity_sum": "58481",
+        "distinct_rates": 4,
+        "rate_min": "6.20",
+        "rate_max": "7.94",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "D.42.010",
+        "lines": 119,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 118,
+          "no.": 1
+        },
+        "quantity_sum": "23688",
+        "distinct_rates": 4,
+        "rate_min": "71.20",
+        "rate_max": "91.14",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "D.42.020",
+        "lines": 119,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 119
+        },
+        "quantity_sum": "24595",
+        "distinct_rates": 4,
+        "rate_min": "64.80",
+        "rate_max": "82.94",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "D.42.030",
+        "lines": 125,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 125
+        },
+        "quantity_sum": "24632",
+        "distinct_rates": 4,
+        "rate_min": "39.40",
+        "rate_max": "50.43",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "D.43.010",
+        "lines": 122,
+        "boq_unit": "lm",
+        "billed_units": {
+          "lm": 122
+        },
+        "quantity_sum": "24646",
+        "distinct_rates": 7,
+        "rate_min": "14.80",
+        "rate_max": "23.68",
+        "with_record_ref": 0,
+        "night_Y": 12
+      },
+      {
+        "code": "D.43.020",
+        "lines": 120,
+        "boq_unit": "m2",
+        "billed_units": {
+          "m2": 120
+        },
+        "quantity_sum": "61673",
+        "distinct_rates": 6,
+        "rate_min": "42.60",
+        "rate_max": "56.45",
+        "with_record_ref": 0,
+        "night_Y": 12
+      },
+      {
+        "code": "D.44.010",
+        "lines": 135,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 135
+        },
+        "quantity_sum": "572",
+        "distinct_rates": 4,
+        "rate_min": "31.80",
+        "rate_max": "40.70",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "E.51.010",
+        "lines": 143,
+        "boq_unit": "hour",
+        "billed_units": {
+          "hour": 143
+        },
+        "quantity_sum": "811",
+        "distinct_rates": 1,
+        "rate_min": "246.00",
+        "rate_max": "246.00",
+        "with_record_ref": 143,
+        "night_Y": 0
+      },
+      {
+        "code": "E.51.020",
+        "lines": 104,
+        "boq_unit": "day",
+        "billed_units": {
+          "day": 104
+        },
+        "quantity_sum": "106",
+        "distinct_rates": 1,
+        "rate_min": "684.00",
+        "rate_max": "684.00",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "E.51.030",
+        "lines": 144,
+        "boq_unit": "hour",
+        "billed_units": {
+          "hour": 144
+        },
+        "quantity_sum": "747",
+        "distinct_rates": 1,
+        "rate_min": "312.00",
+        "rate_max": "312.00",
+        "with_record_ref": 144,
+        "night_Y": 0
+      },
+      {
+        "code": "E.52.010",
+        "lines": 113,
+        "boq_unit": "no.",
+        "billed_units": {
+          "no.": 113
+        },
+        "quantity_sum": "547",
+        "distinct_rates": 1,
+        "rate_min": "478.00",
+        "rate_max": "478.00",
+        "with_record_ref": 111,
+        "night_Y": 0
+      },
+      {
+        "code": "E.53.010",
+        "lines": 130,
+        "boq_unit": "day",
+        "billed_units": {
+          "day": 130
+        },
+        "quantity_sum": "130",
+        "distinct_rates": 1,
+        "rate_min": "389.00",
+        "rate_max": "389.00",
+        "with_record_ref": 0,
+        "night_Y": 0
+      },
+      {
+        "code": "E.54.010",
+        "lines": 123,
+        "boq_unit": "week",
+        "billed_units": {
+          "week": 123
+        },
+        "quantity_sum": "123",
+        "distinct_rates": 6,
+        "rate_min": "876.00",
+        "rate_max": "1038.00",
+        "with_record_ref": 0,
+        "night_Y": 0
+      }
+    ]
+  },
+  "record_references": {
+    "lines_with_reference": 2193,
+    "lines_without_reference": 5553,
+    "distinct_references": 2172,
+    "references_resolving_to_a_record": 2169,
+    "references_without_record_file": [
+      "CT-00126",
+      "MO-00089",
+      "PS-00039"
+    ],
+    "lines_quoting_a_missing_record": [
+      "PA-00609-01",
+      "PA-00672-04",
+      "PA-00678-06"
+    ],
+    "references_used_on_more_than_one_line": {
+      "DW-00003": [
+        "PA-00175-01",
+        "PA-00468-04"
+      ],
+      "DW-00004": [
+        "PA-00059-01",
+        "PA-00309-05",
+        "PA-00431-07"
+      ],
+      "DW-00014": [
+        "PA-00019-02",
+        "PA-00388-01"
+      ],
+      "DW-00018": [
+        "PA-00286-09",
+        "PA-00813-01"
+      ],
+      "DW-00027": [
+        "PA-00067-09",
+        "PA-00877-07"
+      ],
+      "DW-00041": [
+        "PA-00833-05",
+        "PA-00896-04"
+      ],
+      "DW-00044": [
+        "PA-00368-03",
+        "PA-00529-10"
+      ],
+      "DW-00045": [
+        "PA-00116-02",
+        "PA-00116-07"
+      ],
+      "DW-00072": [
+        "PA-00253-01",
+        "PA-00880-04"
+      ],
+      "DW-00076": [
+        "PA-00044-07",
+        "PA-00874-03"
+      ],
+      "DW-00082": [
+        "PA-00557-06",
+        "PA-00825-02"
+      ],
+      "DW-00083": [
+        "PA-00479-04",
+        "PA-00741-02"
+      ],
+      "DW-00085": [
+        "PA-00006-11",
+        "PA-00348-11"
+      ],
+      "DW-00090": [
+        "PA-00026-02",
+        "PA-00411-11"
+      ],
+      "DW-00096": [
+        "PA-00508-04",
+        "PA-00580-10"
+      ],
+      "DW-00097": [
+        "PA-00395-02",
+        "PA-00395-05"
+      ],
+      "DW-00108": [
+        "PA-00262-07",
+        "PA-00352-03"
+      ],
+      "DW-00109": [
+        "PA-00101-03",
+        "PA-00219-12"
+      ],
+      "DW-00114": [
+        "PA-00263-01",
+        "PA-00547-04"
+      ],
+      "PT-00189": [
+        "PA-00170-04",
+        "PA-00238-09"
+      ]
+    },
+    "records_never_referenced": [],
+    "reference_series_vs_schedule_5": {
+      "series_agrees": 2192,
+      "series_differs": 1
+    },
+    "reference_series_differs_from_schedule_5": [
+      {
+        "line_ref": "PA-00170-04",
+        "item_code": "B.23.020",
+        "record_ref": "PT-00189",
+        "schedule_5_series": "JS"
+      }
+    ],
+    "schedule_5_items_without_reference": {
+      "count": 4,
+      "lines": [
+        "PA-00111-12",
+        "PA-00111-13",
+        "PA-00631-10",
+        "PA-00766-12"
+      ]
+    },
+    "referenced_record_vs_line": {
+      "area_equal": 2189,
+      "date_equal": 2055,
+      "weekly_work_date_in_week_not_days_on": 20,
+      "weekly_work_date_in_days_on": 114,
+      "area_differs": 1,
+      "date_differs": 1
+    }
+  },
+  "date_relationships": {
+    "line_work_dates_by_interval": [
+      {
+        "from": null,
+        "to_exclusive": "2025-01-05",
+        "label": "before Commencement Date",
+        "lines": 0
+      },
+      {
+        "from": "2025-01-05",
+        "to_exclusive": "2025-05-01",
+        "label": "from 2025-01-05 (Commencement Date)",
+        "lines": 1500
+      },
+      {
+        "from": "2025-05-01",
+        "to_exclusive": "2025-09-28",
+        "label": "from 2025-05-01 (S1 effective)",
+        "lines": 2009
+      },
+      {
+        "from": "2025-09-28",
+        "to_exclusive": "2025-10-01",
+        "label": "from 2025-09-28 (A1 effective; day after original completion)",
+        "lines": 37
+      },
+      {
+        "from": "2025-10-01",
+        "to_exclusive": "2025-11-01",
+        "label": "from 2025-10-01 (A1 substituted rates effective)",
+        "lines": 450
+      },
+      {
+        "from": "2025-11-01",
+        "to_exclusive": "2025-12-01",
+        "label": "from 2025-11-01 (A3 effective)",
+        "lines": 396
+      },
+      {
+        "from": "2025-12-01",
+        "to_exclusive": "2026-01-05",
+        "label": "from 2025-12-01 (S2 effective)",
+        "lines": 463
+      },
+      {
+        "from": "2026-01-05",
+        "to_exclusive": "2026-04-01",
+        "label": "from 2026-01-05 (Contract Year 2 starts)",
+        "lines": 1139
+      },
+      {
+        "from": "2026-04-01",
+        "to_exclusive": "2026-10-01",
+        "label": "from 2026-04-01 (A2 effective; day after A1 completion date)",
+        "lines": 1750
+      },
+      {
+        "from": "2026-10-01",
+        "to_exclusive": null,
+        "label": "from 2026-10-01 (day after A2 completion date)",
+        "lines": 2
+      }
+    ],
+    "line_work_dates_by_contract_year": {
+      "contract_year_1": 4855,
+      "contract_year_2": 2889,
+      "outside_contract_years": 2
+    },
+    "lines_before_commencement": 0,
+    "lines_after_original_completion": 4237,
+    "lines_after_extended_completion": 2,
+    "applications": {
+      "retroactive_instrument": "A3",
+      "retroactive_instrument_issued": "2026-05-12",
+      "applications_submitted_before_issue": 718,
+      "applications_submitted_on_issue_date": [
+        "PA-00006",
+        "PA-00023",
+        "PA-00380"
+      ],
+      "applications_submitted_after_issue": 179,
+      "earliest_applications_on_or_after_issue": [
+        {
+          "application_no": "PA-00006",
+          "application_date": "2026-05-12"
+        },
+        {
+          "application_no": "PA-00023",
+          "application_date": "2026-05-12"
+        },
+        {
+          "application_no": "PA-00380",
+          "application_date": "2026-05-12"
+        },
+        {
+          "application_no": "PA-00443",
+          "application_date": "2026-05-14"
+        },
+        {
+          "application_no": "PA-00360",
+          "application_date": "2026-05-15"
+        }
+      ],
+      "lines_of_retroactive_items_in_retro_window_submitted_before_issue": 89,
+      "extended_completion_date": "2026-09-30",
+      "applications_submitted_after_extended_completion": 2,
+      "earliest_applications_after_extended_completion": [
+        {
+          "application_no": "PA-00678",
+          "application_date": "2026-10-28"
+        },
+        {
+          "application_no": "PA-00375",
+          "application_date": "2026-10-31"
+        }
+      ]
+    }
+  },
+  "arithmetic": {
+    "line_amount_vs_quantity_times_rate": {
+      "lines": 7746,
+      "exact": 7714,
+      "mismatch": 32,
+      "mismatch_magnitude": {
+        "1.00-99.99 SAR": 4,
+        ">=100.00 SAR": 28
+      },
+      "mismatch_sign": {
+        "amount_below_product": 32
+      },
+      "mismatch_by_item_code": {
+        "D.41.040": 4,
+        "B.22.010": 4,
+        "B.23.010": 4,
+        "A.12.020": 4,
+        "D.41.010": 4,
+        "A.14.010": 4,
+        "A.12.010": 3,
+        "A.13.010": 2,
+        "C.35.010": 1,
+        "C.32.010": 1,
+        "C.31.020": 1
+      },
+      "largest_mismatches": [
+        {
+          "line_ref": "PA-00815-05",
+          "quantity": "900",
+          "rate_applied": "95.36",
+          "amount": "80782.06",
+          "difference": "-5041.94"
+        },
+        {
+          "line_ref": "PA-00734-06",
+          "quantity": "663",
+          "rate_applied": "78.97",
+          "amount": "49591.32",
+          "difference": "-2765.79"
+        },
+        {
+          "line_ref": "PA-00200-08",
+          "quantity": "889",
+          "rate_applied": "85.30",
+          "amount": "73165.08",
+          "difference": "-2666.62"
+        },
+        {
+          "line_ref": "PA-00506-06",
+          "quantity": "884",
+          "rate_applied": "37.33",
+          "amount": "30446.16",
+          "difference": "-2553.56"
+        },
+        {
+          "line_ref": "PA-00578-03",
+          "quantity": "754",
+          "rate_applied": "53.50",
+          "amount": "37952.30",
+          "difference": "-2386.70"
+        },
+        {
+          "line_ref": "PA-00791-10",
+          "quantity": "13",
+          "rate_applied": "4094.00",
+          "amount": "51011.24",
+          "difference": "-2210.76"
+        },
+        {
+          "line_ref": "PA-00742-03",
+          "quantity": "700",
+          "rate_applied": "44.31",
+          "amount": "29250.20",
+          "difference": "-1766.80"
+        },
+        {
+          "line_ref": "PA-00619-03",
+          "quantity": "714",
+          "rate_applied": "32.60",
+          "amount": "22001.84",
+          "difference": "-1274.56"
+        },
+        {
+          "line_ref": "PA-00674-04",
+          "quantity": "617",
+          "rate_applied": "95.36",
+          "amount": "57633.16",
+          "difference": "-1203.96"
+        },
+        {
+          "line_ref": "PA-00459-09",
+          "quantity": "886",
+          "rate_applied": "41.80",
+          "amount": "35872.76",
+          "difference": "-1162.04"
+        },
+        {
+          "line_ref": "PA-00807-04",
+          "quantity": "885",
+          "rate_applied": "44.31",
+          "amount": "38162.07",
+          "difference": "-1052.28"
+        },
+        {
+          "line_ref": "PA-00303-03",
+          "quantity": "4",
+          "rate_applied": "4717.40",
+          "amount": "18162.00",
+          "difference": "-707.60"
+        },
+        {
+          "line_ref": "PA-00599-02",
+          "quantity": "160",
+          "rate_applied": "64.95",
+          "amount": "9844.05",
+          "difference": "-547.95"
+        },
+        {
+          "line_ref": "PA-00576-09",
+          "quantity": "131",
+          "rate_applied": "53.20",
+          "amount": "6480.16",
+          "difference": "-489.04"
+        },
+        {
+          "line_ref": "PA-00236-10",
+          "quantity": "385",
+          "rate_applied": "21.50",
+          "amount": "7815.84",
+          "difference": "-461.66"
+        }
+      ]
+    },
+    "application_total_vs_sum_of_line_amounts": {
+      "agree": 899,
+      "differ": 1,
+      "differences": [
+        {
+          "application_no": "PA-00043",
+          "difference": "32.18"
+        }
+      ]
+    },
+    "retention_vs_floor_5_percent_of_total": {
+      "agree": 900,
+      "differ": 0,
+      "differences": []
+    },
+    "net_payable_vs_total_plus_adjustment_minus_retention_plus_released": {
+      "agree": 900,
+      "differ": 0,
+      "differences": []
+    }
+  }
+}

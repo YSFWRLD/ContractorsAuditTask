@@ -1,0 +1,4903 @@
+{
+ "schema": "contractor-audit/drilling-phase3-billed-coverage",
+ "schema_version": "1.0",
+ "note": "Descriptive coverage of billed service codes by report evidence, and the report/code pairs cited by several billed lines. Codes only; no quantity, price or amount is compared, and none of this is a finding.",
+ "by_billed_code": {
+  "DD-101": {
+   "billed_lines_citing_a_report": 8151,
+   "evidenced_reading_independent": 8151
+  },
+  "DD-102": {
+   "billed_lines_citing_a_report": 8151,
+   "evidenced_under_some_readings_only": 8151
+  },
+  "DD-110": {
+   "billed_lines_citing_a_report": 3304,
+   "evidenced_reading_independent": 3304
+  },
+  "DD-111": {
+   "billed_lines_citing_a_report": 654,
+   "evidenced_reading_independent": 654
+  },
+  "DD-120": {
+   "billed_lines_citing_a_report": 4606,
+   "evidenced_under_some_readings_only": 4606
+  },
+  "DD-121": {
+   "billed_lines_citing_a_report": 245,
+   "evidenced_under_some_readings_only": 241,
+   "no_report_evidence_for_the_code": 4
+  },
+  "DD-130": {
+   "billed_lines_citing_a_report": 480,
+   "evidenced_reading_independent": 480
+  },
+  "DD-140": {
+   "billed_lines_citing_a_report": 214,
+   "evidenced_reading_independent": 214
+  },
+  "HC-601": {
+   "billed_lines_citing_a_report": 1767,
+   "evidenced_reading_independent": 1767
+  },
+  "HC-610": {
+   "billed_lines_citing_a_report": 943,
+   "evidenced_reading_independent": 943
+  },
+  "HC-620": {
+   "billed_lines_citing_a_report": 8151,
+   "evidenced_reading_independent": 8151
+  },
+  "HC-630": {
+   "billed_lines_citing_a_report": 428,
+   "evidenced_under_some_readings_only": 428
+  },
+  "HC-640": {
+   "billed_lines_citing_a_report": 2146,
+   "evidenced_reading_independent": 2146
+  },
+  "LH-711": {
+   "billed_lines_citing_a_report": 10,
+   "evidenced_reading_independent": 10
+  },
+  "LH-712": {
+   "billed_lines_citing_a_report": 17,
+   "evidenced_reading_independent": 17
+  },
+  "LH-713": {
+   "billed_lines_citing_a_report": 19,
+   "evidenced_reading_independent": 19
+  },
+  "LH-714": {
+   "billed_lines_citing_a_report": 8,
+   "evidenced_under_some_readings_only": 8
+  },
+  "LW-401": {
+   "billed_lines_citing_a_report": 3432,
+   "evidenced_reading_independent": 3432
+  },
+  "LW-410": {
+   "billed_lines_citing_a_report": 2964,
+   "evidenced_under_some_readings_only": 2964
+  },
+  "LW-411": {
+   "billed_lines_citing_a_report": 2250,
+   "evidenced_under_some_readings_only": 2250
+  },
+  "LW-412": {
+   "billed_lines_citing_a_report": 955,
+   "evidenced_under_some_readings_only": 955
+  },
+  "LW-413": {
+   "billed_lines_citing_a_report": 445,
+   "evidenced_reading_independent": 445
+  },
+  "LW-420": {
+   "billed_lines_citing_a_report": 369,
+   "evidenced_reading_independent": 369
+  },
+  "LW-430": {
+   "billed_lines_citing_a_report": 214,
+   "evidenced_reading_independent": 214
+  },
+  "MB-701": {
+   "billed_lines_citing_a_report": 217,
+   "evidenced_reading_independent": 214,
+   "no_report_evidence_for_the_code": 3
+  },
+  "MB-702": {
+   "billed_lines_citing_a_report": 214,
+   "evidenced_reading_independent": 214
+  },
+  "MW-301": {
+   "billed_lines_citing_a_report": 8152,
+   "evidenced_reading_independent": 8152
+  },
+  "MW-310": {
+   "billed_lines_citing_a_report": 8151,
+   "evidenced_reading_independent": 8151
+  },
+  "MW-320": {
+   "billed_lines_citing_a_report": 4847,
+   "evidenced_reading_independent": 4847
+  },
+  "MW-330": {
+   "billed_lines_citing_a_report": 8151,
+   "evidenced_reading_independent": 8151
+  },
+  "PD-201": {
+   "billed_lines_citing_a_report": 2561,
+   "evidenced_reading_independent": 2561
+  },
+  "PD-210": {
+   "billed_lines_citing_a_report": 2390,
+   "evidenced_reading_independent": 2390
+  },
+  "PD-220": {
+   "billed_lines_citing_a_report": 1190,
+   "evidenced_reading_independent": 1190
+  },
+  "PD-230": {
+   "billed_lines_citing_a_report": 1190,
+   "evidenced_reading_independent": 1190
+  },
+  "RM-510": {
+   "billed_lines_citing_a_report": 679,
+   "evidenced_under_some_readings_only": 679
+  },
+  "RM-511": {
+   "billed_lines_citing_a_report": 806,
+   "evidenced_reading_independent": 803,
+   "no_report_evidence_for_the_code": 3
+  },
+  "RM-520": {
+   "billed_lines_citing_a_report": 1767,
+   "evidenced_reading_independent": 1767
+  },
+  "RM-530": {
+   "billed_lines_citing_a_report": 943,
+   "evidenced_reading_independent": 943
+  }
+ },
+ "billed_lines_without_report_reference": {
+  "DS-900": 63
+ },
+ "report_code_pairs_with_multiple_billed_lines": {
+  "count": 189,
+  "by_code": {
+   "LW-401": 2,
+   "LW-411": 1,
+   "MW-301": 2,
+   "PD-210": 184
+  },
+  "pairs": [
+   {
+    "report": "DDR-001-20250130",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00077-011",
+     "MDS-00077-012"
+    ],
+    "invoices": [
+     "MDS-00077"
+    ],
+    "depth_intervals": [
+     [
+      2988,
+      3000
+     ],
+     [
+      3000,
+      3137
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-002-20250302",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00153-068",
+     "MDS-00153-069"
+    ],
+    "invoices": [
+     "MDS-00153"
+    ],
+    "depth_intervals": [
+     [
+      2873,
+      3000
+     ],
+     [
+      3000,
+      3006
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-002-20250316",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00201-029",
+     "MDS-00201-030"
+    ],
+    "invoices": [
+     "MDS-00201"
+    ],
+    "depth_intervals": [
+     [
+      4454,
+      4500
+     ],
+     [
+      4500,
+      4596
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-004-20250517",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00376-056",
+     "MDS-00376-057"
+    ],
+    "invoices": [
+     "MDS-00376"
+    ],
+    "depth_intervals": [
+     [
+      2863,
+      3000
+     ],
+     [
+      3000,
+      3046
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-004-20250602",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00424-037",
+     "MDS-00424-038"
+    ],
+    "invoices": [
+     "MDS-00424"
+    ],
+    "depth_intervals": [
+     [
+      4471,
+      4500
+     ],
+     [
+      4500,
+      4585
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-010-20260129",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01089-051",
+     "MDS-01089-052"
+    ],
+    "invoices": [
+     "MDS-01089"
+    ],
+    "depth_intervals": [
+     [
+      2993,
+      3000
+     ],
+     [
+      3000,
+      3169
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-014-20260726",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01600-026",
+     "MDS-01600-027"
+    ],
+    "invoices": [
+     "MDS-01600"
+    ],
+    "depth_intervals": [
+     [
+      2933,
+      3000
+     ],
+     [
+      3000,
+      3126
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-014-20260810",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01639-026",
+     "MDS-01639-027"
+    ],
+    "invoices": [
+     "MDS-01639"
+    ],
+    "depth_intervals": [
+     [
+      4450,
+      4500
+     ],
+     [
+      4500,
+      4556
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-016-20261008",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01799-086",
+     "MDS-01799-087"
+    ],
+    "invoices": [
+     "MDS-01799"
+    ],
+    "depth_intervals": [
+     [
+      2873,
+      3000
+     ],
+     [
+      3000,
+      3082
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-016-20261024",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01853-023",
+     "MDS-01853-024"
+    ],
+    "invoices": [
+     "MDS-01853"
+    ],
+    "depth_intervals": [
+     [
+      4410,
+      4500
+     ],
+     [
+      4500,
+      4524
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-019-20250307",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00172-056",
+     "MDS-00172-057"
+    ],
+    "invoices": [
+     "MDS-00172"
+    ],
+    "depth_intervals": [
+     [
+      2901,
+      3000
+     ],
+     [
+      3000,
+      3112
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-019-20250319",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00208-040",
+     "MDS-00208-041"
+    ],
+    "invoices": [
+     "MDS-00208"
+    ],
+    "depth_intervals": [
+     [
+      4468,
+      4500
+     ],
+     [
+      4500,
+      4624
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-020-20250424",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00307-051",
+     "MDS-00307-052"
+    ],
+    "invoices": [
+     "MDS-00307"
+    ],
+    "depth_intervals": [
+     [
+      2913,
+      3000
+     ],
+     [
+      3000,
+      3060
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-020-20250507",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00348-039",
+     "MDS-00348-040"
+    ],
+    "invoices": [
+     "MDS-00348"
+    ],
+    "depth_intervals": [
+     [
+      4349,
+      4500
+     ],
+     [
+      4500,
+      4503
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-022-20250720",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00551-080",
+     "MDS-00551-081"
+    ],
+    "invoices": [
+     "MDS-00551"
+    ],
+    "depth_intervals": [
+     [
+      2962,
+      3000
+     ],
+     [
+      3000,
+      3103
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-022-20250803",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00599-027",
+     "MDS-00599-028"
+    ],
+    "invoices": [
+     "MDS-00599"
+    ],
+    "depth_intervals": [
+     [
+      4482,
+      4500
+     ],
+     [
+      4500,
+      4565
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-023-20250826",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00654-041",
+     "MDS-00654-042"
+    ],
+    "invoices": [
+     "MDS-00654"
+    ],
+    "depth_intervals": [
+     [
+      2992,
+      3000
+     ],
+     [
+      3000,
+      3125
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-023-20250914",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00708-043",
+     "MDS-00708-044"
+    ],
+    "invoices": [
+     "MDS-00708"
+    ],
+    "depth_intervals": [
+     [
+      4475,
+      4500
+     ],
+     [
+      4500,
+      4571
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-024-20251017",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00800-050",
+     "MDS-00800-051"
+    ],
+    "invoices": [
+     "MDS-00800"
+    ],
+    "depth_intervals": [
+     [
+      2923,
+      3000
+     ],
+     [
+      3000,
+      3108
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-025-20251122",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00895-071",
+     "MDS-00895-072"
+    ],
+    "invoices": [
+     "MDS-00895"
+    ],
+    "depth_intervals": [
+     [
+      2993,
+      3000
+     ],
+     [
+      3000,
+      3180
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-025-20251206",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00942-026",
+     "MDS-00942-027"
+    ],
+    "invoices": [
+     "MDS-00942"
+    ],
+    "depth_intervals": [
+     [
+      4481,
+      4500
+     ],
+     [
+      4500,
+      4619
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-026-20260102",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01019-011",
+     "MDS-01019-012"
+    ],
+    "invoices": [
+     "MDS-01019"
+    ],
+    "depth_intervals": [
+     [
+      2936,
+      3000
+     ],
+     [
+      3000,
+      3093
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-029-20260509",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01374-048",
+     "MDS-01374-049"
+    ],
+    "invoices": [
+     "MDS-01374"
+    ],
+    "depth_intervals": [
+     [
+      2862,
+      3000
+     ],
+     [
+      3000,
+      3074
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-030-20260626",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01518-011",
+     "MDS-01518-012"
+    ],
+    "invoices": [
+     "MDS-01518"
+    ],
+    "depth_intervals": [
+     [
+      2940,
+      3000
+     ],
+     [
+      3000,
+      3157
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-030-20260710",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01555-026",
+     "MDS-01555-027"
+    ],
+    "invoices": [
+     "MDS-01555"
+    ],
+    "depth_intervals": [
+     [
+      4355,
+      4500
+     ],
+     [
+      4500,
+      4512
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-031-20260809",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01634-024",
+     "MDS-01634-025"
+    ],
+    "invoices": [
+     "MDS-01634"
+    ],
+    "depth_intervals": [
+     [
+      2947,
+      3000
+     ],
+     [
+      3000,
+      3082
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-031-20260820",
+    "service_code": "LW-401",
+    "lines": [
+     "MDS-01654-069",
+     "MDS-01654-078"
+    ],
+    "invoices": [
+     "MDS-01654"
+    ],
+    "depth_intervals": [
+     [
+      null,
+      null
+     ],
+     [
+      null,
+      null
+     ]
+    ],
+    "distinct_depth_intervals": false,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-032-20260917",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01753-011",
+     "MDS-01753-012"
+    ],
+    "invoices": [
+     "MDS-01753"
+    ],
+    "depth_intervals": [
+     [
+      2919,
+      3000
+     ],
+     [
+      3000,
+      3059
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-032-20261001",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01782-053",
+     "MDS-01782-054"
+    ],
+    "invoices": [
+     "MDS-01782"
+    ],
+    "depth_intervals": [
+     [
+      4404,
+      4500
+     ],
+     [
+      4500,
+      4544
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-033-20261028",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01856-063",
+     "MDS-01856-064"
+    ],
+    "invoices": [
+     "MDS-01856"
+    ],
+    "depth_intervals": [
+     [
+      2858,
+      3000
+     ],
+     [
+      3000,
+      3015
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-033-20261111",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01894-049",
+     "MDS-01894-050"
+    ],
+    "invoices": [
+     "MDS-01894"
+    ],
+    "depth_intervals": [
+     [
+      4497,
+      4500
+     ],
+     [
+      4500,
+      4623
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-037-20250417",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00291-037",
+     "MDS-00291-038"
+    ],
+    "invoices": [
+     "MDS-00291"
+    ],
+    "depth_intervals": [
+     [
+      2942,
+      3000
+     ],
+     [
+      3000,
+      3064
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-037-20250502",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00325-081",
+     "MDS-00325-082"
+    ],
+    "invoices": [
+     "MDS-00325"
+    ],
+    "depth_intervals": [
+     [
+      4494,
+      4500
+     ],
+     [
+      4500,
+      4598
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-038-20250610",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00445-037",
+     "MDS-00445-038"
+    ],
+    "invoices": [
+     "MDS-00445"
+    ],
+    "depth_intervals": [
+     [
+      2892,
+      3000
+     ],
+     [
+      3000,
+      3063
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-038-20250622",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00481-040",
+     "MDS-00481-041"
+    ],
+    "invoices": [
+     "MDS-00481"
+    ],
+    "depth_intervals": [
+     [
+      4485,
+      4500
+     ],
+     [
+      4500,
+      4572
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-040-20250910",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00692-037",
+     "MDS-00692-038"
+    ],
+    "invoices": [
+     "MDS-00692"
+    ],
+    "depth_intervals": [
+     [
+      2915,
+      3000
+     ],
+     [
+      3000,
+      3120
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-043-20260106",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01031-011",
+     "MDS-01031-012"
+    ],
+    "invoices": [
+     "MDS-01031"
+    ],
+    "depth_intervals": [
+     [
+      2995,
+      3000
+     ],
+     [
+      3000,
+      3151
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-043-20260117",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01061-014",
+     "MDS-01061-015"
+    ],
+    "invoices": [
+     "MDS-01061"
+    ],
+    "depth_intervals": [
+     [
+      4411,
+      4500
+     ],
+     [
+      4500,
+      4529
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-046-20260518",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01394-063",
+     "MDS-01394-064"
+    ],
+    "invoices": [
+     "MDS-01394"
+    ],
+    "depth_intervals": [
+     [
+      2949,
+      3000
+     ],
+     [
+      3000,
+      3168
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-046-20260529",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01435-028",
+     "MDS-01435-029"
+    ],
+    "invoices": [
+     "MDS-01435"
+    ],
+    "depth_intervals": [
+     [
+      4389,
+      4500
+     ],
+     [
+      4500,
+      4524
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-047-20260619",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01490-037",
+     "MDS-01490-038"
+    ],
+    "invoices": [
+     "MDS-01490"
+    ],
+    "depth_intervals": [
+     [
+      2990,
+      3000
+     ],
+     [
+      3000,
+      3170
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-050-20261026",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01861-024",
+     "MDS-01861-025"
+    ],
+    "invoices": [
+     "MDS-01861"
+    ],
+    "depth_intervals": [
+     [
+      2997,
+      3000
+     ],
+     [
+      3000,
+      3139
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-052-20250125",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00047-074",
+     "MDS-00047-075"
+    ],
+    "invoices": [
+     "MDS-00047"
+    ],
+    "depth_intervals": [
+     [
+      2901,
+      3000
+     ],
+     [
+      3000,
+      3079
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-052-20250208",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00087-085",
+     "MDS-00087-086"
+    ],
+    "invoices": [
+     "MDS-00087"
+    ],
+    "depth_intervals": [
+     [
+      4382,
+      4500
+     ],
+     [
+      4500,
+      4533
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-054-20250409",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00272-024",
+     "MDS-00272-025"
+    ],
+    "invoices": [
+     "MDS-00272"
+    ],
+    "depth_intervals": [
+     [
+      2903,
+      3000
+     ],
+     [
+      3000,
+      3025
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-054-20250421",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00301-027",
+     "MDS-00301-028"
+    ],
+    "invoices": [
+     "MDS-00301"
+    ],
+    "depth_intervals": [
+     [
+      4455,
+      4500
+     ],
+     [
+      4500,
+      4564
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-057-20250804",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00596-056",
+     "MDS-00596-057"
+    ],
+    "invoices": [
+     "MDS-00596"
+    ],
+    "depth_intervals": [
+     [
+      2898,
+      3000
+     ],
+     [
+      3000,
+      3075
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-057-20250818",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00633-053",
+     "MDS-00633-054"
+    ],
+    "invoices": [
+     "MDS-00633"
+    ],
+    "depth_intervals": [
+     [
+      4497,
+      4500
+     ],
+     [
+      4500,
+      4653
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-058-20250919",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00712-076",
+     "MDS-00712-077"
+    ],
+    "invoices": [
+     "MDS-00712"
+    ],
+    "depth_intervals": [
+     [
+      2866,
+      3000
+     ],
+     [
+      3000,
+      3055
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-058-20251003",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00767-044",
+     "MDS-00767-045"
+    ],
+    "invoices": [
+     "MDS-00767"
+    ],
+    "depth_intervals": [
+     [
+      4357,
+      4500
+     ],
+     [
+      4500,
+      4507
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-062-20260310",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01208-024",
+     "MDS-01208-025"
+    ],
+    "invoices": [
+     "MDS-01208"
+    ],
+    "depth_intervals": [
+     [
+      2872,
+      3000
+     ],
+     [
+      3000,
+      3016
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-062-20260323",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01244-015",
+     "MDS-01244-016"
+    ],
+    "invoices": [
+     "MDS-01244"
+    ],
+    "depth_intervals": [
+     [
+      4432,
+      4500
+     ],
+     [
+      4500,
+      4519
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-063-20260414",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01306-037",
+     "MDS-01306-038"
+    ],
+    "invoices": [
+     "MDS-01306"
+    ],
+    "depth_intervals": [
+     [
+      2891,
+      3000
+     ],
+     [
+      3000,
+      3061
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-063-20260425",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01340-014",
+     "MDS-01340-015"
+    ],
+    "invoices": [
+     "MDS-01340"
+    ],
+    "depth_intervals": [
+     [
+      4483,
+      4500
+     ],
+     [
+      4500,
+      4582
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-063-20260427",
+    "service_code": "LW-411",
+    "lines": [
+     "MDS-01340-036",
+     "MDS-01352-007"
+    ],
+    "invoices": [
+     "MDS-01340",
+     "MDS-01352"
+    ],
+    "depth_intervals": [
+     [
+      null,
+      null
+     ],
+     [
+      null,
+      null
+     ]
+    ],
+    "distinct_depth_intervals": false,
+    "report_evidence_for_code": [
+     "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LITERAL",
+     "metre_source=DAILY_DEPTH_ADVANCE;appendix_g_reading=LWD_ROWS_SHIFTED"
+    ]
+   },
+   {
+    "report": "DDR-065-20260705",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01536-048",
+     "MDS-01536-049"
+    ],
+    "invoices": [
+     "MDS-01536"
+    ],
+    "depth_intervals": [
+     [
+      2990,
+      3000
+     ],
+     [
+      3000,
+      3173
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-065-20260715",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01570-028",
+     "MDS-01570-029"
+    ],
+    "invoices": [
+     "MDS-01570"
+    ],
+    "depth_intervals": [
+     [
+      4399,
+      4500
+     ],
+     [
+      4500,
+      4529
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-068-20261012",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01822-011",
+     "MDS-01822-012"
+    ],
+    "invoices": [
+     "MDS-01822"
+    ],
+    "depth_intervals": [
+     [
+      2921,
+      3000
+     ],
+     [
+      3000,
+      3084
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-068-20261025",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01857-027",
+     "MDS-01857-028"
+    ],
+    "invoices": [
+     "MDS-01857"
+    ],
+    "depth_intervals": [
+     [
+      4471,
+      4500
+     ],
+     [
+      4500,
+      4578
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-070-20250121",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00049-011",
+     "MDS-00049-012"
+    ],
+    "invoices": [
+     "MDS-00049"
+    ],
+    "depth_intervals": [
+     [
+      2968,
+      3000
+     ],
+     [
+      3000,
+      3158
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-070-20250201",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00075-057",
+     "MDS-00075-058"
+    ],
+    "invoices": [
+     "MDS-00075"
+    ],
+    "depth_intervals": [
+     [
+      4434,
+      4500
+     ],
+     [
+      4500,
+      4538
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-071-20250225",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00145-024",
+     "MDS-00145-025"
+    ],
+    "invoices": [
+     "MDS-00145"
+    ],
+    "depth_intervals": [
+     [
+      2944,
+      3000
+     ],
+     [
+      3000,
+      3098
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-073-20250509",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00356-022",
+     "MDS-00356-023"
+    ],
+    "invoices": [
+     "MDS-00356"
+    ],
+    "depth_intervals": [
+     [
+      2893,
+      3000
+     ],
+     [
+      3000,
+      3092
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-074-20250617",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00462-056",
+     "MDS-00462-057"
+    ],
+    "invoices": [
+     "MDS-00462"
+    ],
+    "depth_intervals": [
+     [
+      2981,
+      3000
+     ],
+     [
+      3000,
+      3103
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-074-20250622",
+    "service_code": "MW-301",
+    "lines": [
+     "MDS-00476-045",
+     "MDS-00476-051"
+    ],
+    "invoices": [
+     "MDS-00476"
+    ],
+    "depth_intervals": [
+     [
+      null,
+      null
+     ],
+     [
+      null,
+      null
+     ]
+    ],
+    "distinct_depth_intervals": false,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-075-20250729",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00583-024",
+     "MDS-00583-025"
+    ],
+    "invoices": [
+     "MDS-00583"
+    ],
+    "depth_intervals": [
+     [
+      2960,
+      3000
+     ],
+     [
+      3000,
+      3158
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-075-20250811",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00616-039",
+     "MDS-00616-040"
+    ],
+    "invoices": [
+     "MDS-00616"
+    ],
+    "depth_intervals": [
+     [
+      4374,
+      4500
+     ],
+     [
+      4500,
+      4526
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-076-20250903",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00681-011",
+     "MDS-00681-012"
+    ],
+    "invoices": [
+     "MDS-00681"
+    ],
+    "depth_intervals": [
+     [
+      2889,
+      3000
+     ],
+     [
+      3000,
+      3103
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-077-20251016",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00801-037",
+     "MDS-00801-038"
+    ],
+    "invoices": [
+     "MDS-00801"
+    ],
+    "depth_intervals": [
+     [
+      2819,
+      3000
+     ],
+     [
+      3000,
+      3006
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-077-20251031",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00836-080",
+     "MDS-00836-081"
+    ],
+    "invoices": [
+     "MDS-00836"
+    ],
+    "depth_intervals": [
+     [
+      4458,
+      4500
+     ],
+     [
+      4500,
+      4572
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-081-20260412",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01308-011",
+     "MDS-01308-012"
+    ],
+    "invoices": [
+     "MDS-01308"
+    ],
+    "depth_intervals": [
+     [
+      2924,
+      3000
+     ],
+     [
+      3000,
+      3124
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-083-20260621",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01498-037",
+     "MDS-01498-038"
+    ],
+    "invoices": [
+     "MDS-01498"
+    ],
+    "depth_intervals": [
+     [
+      2894,
+      3000
+     ],
+     [
+      3000,
+      3024
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-085-20260914",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01736-035",
+     "MDS-01736-036"
+    ],
+    "invoices": [
+     "MDS-01736"
+    ],
+    "depth_intervals": [
+     [
+      2962,
+      3000
+     ],
+     [
+      3000,
+      3113
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-094-20250906",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00689-024",
+     "MDS-00689-025"
+    ],
+    "invoices": [
+     "MDS-00689"
+    ],
+    "depth_intervals": [
+     [
+      2922,
+      3000
+     ],
+     [
+      3000,
+      3108
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-094-20250919",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00719-072",
+     "MDS-00719-073"
+    ],
+    "invoices": [
+     "MDS-00719"
+    ],
+    "depth_intervals": [
+     [
+      4467,
+      4500
+     ],
+     [
+      4500,
+      4578
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-097-20260108",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01029-037",
+     "MDS-01029-038"
+    ],
+    "invoices": [
+     "MDS-01029"
+    ],
+    "depth_intervals": [
+     [
+      2995,
+      3000
+     ],
+     [
+      3000,
+      3174
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-100-20260507",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01372-024",
+     "MDS-01372-025"
+    ],
+    "invoices": [
+     "MDS-01372"
+    ],
+    "depth_intervals": [
+     [
+      2948,
+      3000
+     ],
+     [
+      3000,
+      3116
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-100-20260520",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01412-014",
+     "MDS-01412-015"
+    ],
+    "invoices": [
+     "MDS-01412"
+    ],
+    "depth_intervals": [
+     [
+      4449,
+      4500
+     ],
+     [
+      4500,
+      4581
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-101-20260624",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01511-011",
+     "MDS-01511-012"
+    ],
+    "invoices": [
+     "MDS-01511"
+    ],
+    "depth_intervals": [
+     [
+      2890,
+      3000
+     ],
+     [
+      3000,
+      3074
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-102-20260727",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01607-011",
+     "MDS-01607-012"
+    ],
+    "invoices": [
+     "MDS-01607"
+    ],
+    "depth_intervals": [
+     [
+      2830,
+      3000
+     ],
+     [
+      3000,
+      3029
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-102-20260808",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01630-040",
+     "MDS-01630-041"
+    ],
+    "invoices": [
+     "MDS-01630"
+    ],
+    "depth_intervals": [
+     [
+      4476,
+      4500
+     ],
+     [
+      4500,
+      4600
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-103-20260901",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01691-086",
+     "MDS-01691-087"
+    ],
+    "invoices": [
+     "MDS-01691"
+    ],
+    "depth_intervals": [
+     [
+      2915,
+      3000
+     ],
+     [
+      3000,
+      3051
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-106-20250120",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00037-063",
+     "MDS-00037-064"
+    ],
+    "invoices": [
+     "MDS-00037"
+    ],
+    "depth_intervals": [
+     [
+      2839,
+      3000
+     ],
+     [
+      3000,
+      3017
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-106-20250205",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00094-014",
+     "MDS-00094-015"
+    ],
+    "invoices": [
+     "MDS-00094"
+    ],
+    "depth_intervals": [
+     [
+      4494,
+      4500
+     ],
+     [
+      4500,
+      4606
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-107-20250304",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00164-037",
+     "MDS-00164-038"
+    ],
+    "invoices": [
+     "MDS-00164"
+    ],
+    "depth_intervals": [
+     [
+      2940,
+      3000
+     ],
+     [
+      3000,
+      3135
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-110-20250703",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00513-024",
+     "MDS-00513-025"
+    ],
+    "invoices": [
+     "MDS-00513"
+    ],
+    "depth_intervals": [
+     [
+      2988,
+      3000
+     ],
+     [
+      3000,
+      3155
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-112-20250906",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00682-050",
+     "MDS-00682-051"
+    ],
+    "invoices": [
+     "MDS-00682"
+    ],
+    "depth_intervals": [
+     [
+      2960,
+      3000
+     ],
+     [
+      3000,
+      3087
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-112-20250921",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00721-079",
+     "MDS-00721-080"
+    ],
+    "invoices": [
+     "MDS-00721"
+    ],
+    "depth_intervals": [
+     [
+      4477,
+      4500
+     ],
+     [
+      4500,
+      4590
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-113-20251026",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00829-024",
+     "MDS-00829-025"
+    ],
+    "invoices": [
+     "MDS-00829"
+    ],
+    "depth_intervals": [
+     [
+      2971,
+      3000
+     ],
+     [
+      3000,
+      3146
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-113-20251107",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00853-072",
+     "MDS-00853-073"
+    ],
+    "invoices": [
+     "MDS-00853"
+    ],
+    "depth_intervals": [
+     [
+      4497,
+      4500
+     ],
+     [
+      4500,
+      4593
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-115-20260110",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01036-037",
+     "MDS-01036-038"
+    ],
+    "invoices": [
+     "MDS-01036"
+    ],
+    "depth_intervals": [
+     [
+      2930,
+      3000
+     ],
+     [
+      3000,
+      3103
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-115-20260124",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01074-058",
+     "MDS-01074-059"
+    ],
+    "invoices": [
+     "MDS-01074"
+    ],
+    "depth_intervals": [
+     [
+      4483,
+      4500
+     ],
+     [
+      4500,
+      4630
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-116-20260217",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01143-050",
+     "MDS-01143-051"
+    ],
+    "invoices": [
+     "MDS-01143"
+    ],
+    "depth_intervals": [
+     [
+      2832,
+      3000
+     ],
+     [
+      3000,
+      3034
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-116-20260302",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01182-039",
+     "MDS-01182-040"
+    ],
+    "invoices": [
+     "MDS-01182"
+    ],
+    "depth_intervals": [
+     [
+      4347,
+      4500
+     ],
+     [
+      4500,
+      4504
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-118-20260504",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01360-050",
+     "MDS-01360-051"
+    ],
+    "invoices": [
+     "MDS-01360"
+    ],
+    "depth_intervals": [
+     [
+      2938,
+      3000
+     ],
+     [
+      3000,
+      3154
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-118-20260517",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01399-028",
+     "MDS-01399-029"
+    ],
+    "invoices": [
+     "MDS-01399"
+    ],
+    "depth_intervals": [
+     [
+      4386,
+      4500
+     ],
+     [
+      4500,
+      4520
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-119-20260628",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01514-050",
+     "MDS-01514-051"
+    ],
+    "invoices": [
+     "MDS-01514"
+    ],
+    "depth_intervals": [
+     [
+      2886,
+      3000
+     ],
+     [
+      3000,
+      3022
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-121-20260915",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01740-037",
+     "MDS-01740-038"
+    ],
+    "invoices": [
+     "MDS-01740"
+    ],
+    "depth_intervals": [
+     [
+      2905,
+      3000
+     ],
+     [
+      3000,
+      3043
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-121-20260928",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01773-065",
+     "MDS-01773-066"
+    ],
+    "invoices": [
+     "MDS-01773"
+    ],
+    "depth_intervals": [
+     [
+      4421,
+      4500
+     ],
+     [
+      4500,
+      4541
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-122-20261027",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01858-050",
+     "MDS-01858-051"
+    ],
+    "invoices": [
+     "MDS-01858"
+    ],
+    "depth_intervals": [
+     [
+      2974,
+      3000
+     ],
+     [
+      3000,
+      3103
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-122-20261109",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01896-013",
+     "MDS-01896-014"
+    ],
+    "invoices": [
+     "MDS-01896"
+    ],
+    "depth_intervals": [
+     [
+      4498,
+      4500
+     ],
+     [
+      4500,
+      4624
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-126-20250424",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00316-011",
+     "MDS-00316-012"
+    ],
+    "invoices": [
+     "MDS-00316"
+    ],
+    "depth_intervals": [
+     [
+      2887,
+      3000
+     ],
+     [
+      3000,
+      3052
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-127-20250527",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00406-056",
+     "MDS-00406-057"
+    ],
+    "invoices": [
+     "MDS-00406"
+    ],
+    "depth_intervals": [
+     [
+      2876,
+      3000
+     ],
+     [
+      3000,
+      3005
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-128-20250729",
+    "service_code": "LW-401",
+    "lines": [
+     "MDS-00580-039",
+     "MDS-00580-046"
+    ],
+    "invoices": [
+     "MDS-00580"
+    ],
+    "depth_intervals": [
+     [
+      null,
+      null
+     ],
+     [
+      null,
+      null
+     ]
+    ],
+    "distinct_depth_intervals": false,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-130-20251010",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00792-011",
+     "MDS-00792-012"
+    ],
+    "invoices": [
+     "MDS-00792"
+    ],
+    "depth_intervals": [
+     [
+      2931,
+      3000
+     ],
+     [
+      3000,
+      3067
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-131-20251116",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00879-063",
+     "MDS-00879-064"
+    ],
+    "invoices": [
+     "MDS-00879"
+    ],
+    "depth_intervals": [
+     [
+      2921,
+      3000
+     ],
+     [
+      3000,
+      3107
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-134-20260314",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01213-068",
+     "MDS-01213-069"
+    ],
+    "invoices": [
+     "MDS-01213"
+    ],
+    "depth_intervals": [
+     [
+      2908,
+      3000
+     ],
+     [
+      3000,
+      3128
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-134-20260325",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01251-030",
+     "MDS-01251-031"
+    ],
+    "invoices": [
+     "MDS-01251"
+    ],
+    "depth_intervals": [
+     [
+      4411,
+      4500
+     ],
+     [
+      4500,
+      4534
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-135-20260417",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01310-050",
+     "MDS-01310-051"
+    ],
+    "invoices": [
+     "MDS-01310"
+    ],
+    "depth_intervals": [
+     [
+      2979,
+      3000
+     ],
+     [
+      3000,
+      3153
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-136-20260527",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01426-051",
+     "MDS-01426-052"
+    ],
+    "invoices": [
+     "MDS-01426"
+    ],
+    "depth_intervals": [
+     [
+      2876,
+      3000
+     ],
+     [
+      3000,
+      3050
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-136-20260612",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01475-027",
+     "MDS-01475-028"
+    ],
+    "invoices": [
+     "MDS-01475"
+    ],
+    "depth_intervals": [
+     [
+      4417,
+      4500
+     ],
+     [
+      4500,
+      4563
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-137-20260717",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01569-056",
+     "MDS-01569-057"
+    ],
+    "invoices": [
+     "MDS-01569"
+    ],
+    "depth_intervals": [
+     [
+      2956,
+      3000
+     ],
+     [
+      3000,
+      3155
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-137-20260729",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01597-080",
+     "MDS-01597-081"
+    ],
+    "invoices": [
+     "MDS-01597"
+    ],
+    "depth_intervals": [
+     [
+      4382,
+      4500
+     ],
+     [
+      4500,
+      4506
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-138-20260823",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01666-063",
+     "MDS-01666-064"
+    ],
+    "invoices": [
+     "MDS-01666"
+    ],
+    "depth_intervals": [
+     [
+      2894,
+      3000
+     ],
+     [
+      3000,
+      3074
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-141-20250118",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00043-011",
+     "MDS-00043-012"
+    ],
+    "invoices": [
+     "MDS-00043"
+    ],
+    "depth_intervals": [
+     [
+      2976,
+      3000
+     ],
+     [
+      3000,
+      3164
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-141-20250131",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00066-086",
+     "MDS-00066-087"
+    ],
+    "invoices": [
+     "MDS-00066"
+    ],
+    "depth_intervals": [
+     [
+      4496,
+      4500
+     ],
+     [
+      4500,
+      4647
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-142-20250218",
+    "service_code": "MW-301",
+    "lines": [
+     "MDS-00128-017",
+     "MDS-00128-026"
+    ],
+    "invoices": [
+     "MDS-00128"
+    ],
+    "depth_intervals": [
+     [
+      null,
+      null
+     ],
+     [
+      null,
+      null
+     ]
+    ],
+    "distinct_depth_intervals": false,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-142-20250224",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00133-068",
+     "MDS-00133-069"
+    ],
+    "invoices": [
+     "MDS-00133"
+    ],
+    "depth_intervals": [
+     [
+      2904,
+      3000
+     ],
+     [
+      3000,
+      3115
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-143-20250329",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00238-041",
+     "MDS-00238-042"
+    ],
+    "invoices": [
+     "MDS-00238"
+    ],
+    "depth_intervals": [
+     [
+      2827,
+      3000
+     ],
+     [
+      3000,
+      3034
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-143-20250411",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00273-053",
+     "MDS-00273-054"
+    ],
+    "invoices": [
+     "MDS-00273"
+    ],
+    "depth_intervals": [
+     [
+      4499,
+      4500
+     ],
+     [
+      4500,
+      4647
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-144-20250509",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00352-063",
+     "MDS-00352-064"
+    ],
+    "invoices": [
+     "MDS-00352"
+    ],
+    "depth_intervals": [
+     [
+      2925,
+      3000
+     ],
+     [
+      3000,
+      3065
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-144-20250523",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00395-043",
+     "MDS-00395-044"
+    ],
+    "invoices": [
+     "MDS-00395"
+    ],
+    "depth_intervals": [
+     [
+      4361,
+      4500
+     ],
+     [
+      4500,
+      4512
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-145-20250618",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00467-050",
+     "MDS-00467-051"
+    ],
+    "invoices": [
+     "MDS-00467"
+    ],
+    "depth_intervals": [
+     [
+      2911,
+      3000
+     ],
+     [
+      3000,
+      3043
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-145-20250701",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00509-014",
+     "MDS-00509-015"
+    ],
+    "invoices": [
+     "MDS-00509"
+    ],
+    "depth_intervals": [
+     [
+      4481,
+      4500
+     ],
+     [
+      4500,
+      4614
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-146-20250730",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00590-011",
+     "MDS-00590-012"
+    ],
+    "invoices": [
+     "MDS-00590"
+    ],
+    "depth_intervals": [
+     [
+      2927,
+      3000
+     ],
+     [
+      3000,
+      3096
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-146-20250813",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00624-026",
+     "MDS-00624-027"
+    ],
+    "invoices": [
+     "MDS-00624"
+    ],
+    "depth_intervals": [
+     [
+      4412,
+      4500
+     ],
+     [
+      4500,
+      4506
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-149-20251128",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00923-011",
+     "MDS-00923-012"
+    ],
+    "invoices": [
+     "MDS-00923"
+    ],
+    "depth_intervals": [
+     [
+      2992,
+      3000
+     ],
+     [
+      3000,
+      3208
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-149-20251212",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00960-015",
+     "MDS-00960-016"
+    ],
+    "invoices": [
+     "MDS-00960"
+    ],
+    "depth_intervals": [
+     [
+      4441,
+      4500
+     ],
+     [
+      4500,
+      4600
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-151-20260301",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01183-022",
+     "MDS-01183-023"
+    ],
+    "invoices": [
+     "MDS-01183"
+    ],
+    "depth_intervals": [
+     [
+      2989,
+      3000
+     ],
+     [
+      3000,
+      3114
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-151-20260314",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01222-026",
+     "MDS-01222-027"
+    ],
+    "invoices": [
+     "MDS-01222"
+    ],
+    "depth_intervals": [
+     [
+      4438,
+      4500
+     ],
+     [
+      4500,
+      4565
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-153-20260514",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01387-050",
+     "MDS-01387-051"
+    ],
+    "invoices": [
+     "MDS-01387"
+    ],
+    "depth_intervals": [
+     [
+      2995,
+      3000
+     ],
+     [
+      3000,
+      3173
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-153-20260526",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01430-013",
+     "MDS-01430-014"
+    ],
+    "invoices": [
+     "MDS-01430"
+    ],
+    "depth_intervals": [
+     [
+      4463,
+      4500
+     ],
+     [
+      4500,
+      4612
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-155-20260804",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01622-037",
+     "MDS-01622-038"
+    ],
+    "invoices": [
+     "MDS-01622"
+    ],
+    "depth_intervals": [
+     [
+      2926,
+      3000
+     ],
+     [
+      3000,
+      3086
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-155-20260817",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01657-039",
+     "MDS-01657-040"
+    ],
+    "invoices": [
+     "MDS-01657"
+    ],
+    "depth_intervals": [
+     [
+      4468,
+      4500
+     ],
+     [
+      4500,
+      4589
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-156-20260908",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01725-011",
+     "MDS-01725-012"
+    ],
+    "invoices": [
+     "MDS-01725"
+    ],
+    "depth_intervals": [
+     [
+      2939,
+      3000
+     ],
+     [
+      3000,
+      3117
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-156-20260921",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01760-026",
+     "MDS-01760-027"
+    ],
+    "invoices": [
+     "MDS-01760"
+    ],
+    "depth_intervals": [
+     [
+      4474,
+      4500
+     ],
+     [
+      4500,
+      4601
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-157-20261022",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01852-011",
+     "MDS-01852-012"
+    ],
+    "invoices": [
+     "MDS-01852"
+    ],
+    "depth_intervals": [
+     [
+      2881,
+      3000
+     ],
+     [
+      3000,
+      3017
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-161-20250421",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00297-063",
+     "MDS-00297-064"
+    ],
+    "invoices": [
+     "MDS-00297"
+    ],
+    "depth_intervals": [
+     [
+      2900,
+      3000
+     ],
+     [
+      3000,
+      3113
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-161-20250503",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00346-014",
+     "MDS-00346-015"
+    ],
+    "invoices": [
+     "MDS-00346"
+    ],
+    "depth_intervals": [
+     [
+      4370,
+      4500
+     ],
+     [
+      4500,
+      4507
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-163-20250708",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00524-024",
+     "MDS-00524-025"
+    ],
+    "invoices": [
+     "MDS-00524"
+    ],
+    "depth_intervals": [
+     [
+      2952,
+      3000
+     ],
+     [
+      3000,
+      3135
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-163-20250723",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00570-013",
+     "MDS-00570-014"
+    ],
+    "invoices": [
+     "MDS-00570"
+    ],
+    "depth_intervals": [
+     [
+      4462,
+      4500
+     ],
+     [
+      4500,
+      4582
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-165-20250923",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00736-024",
+     "MDS-00736-025"
+    ],
+    "invoices": [
+     "MDS-00736"
+    ],
+    "depth_intervals": [
+     [
+      2824,
+      3000
+     ],
+     [
+      3000,
+      3040
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-166-20251104",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00852-037",
+     "MDS-00852-038"
+    ],
+    "invoices": [
+     "MDS-00852"
+    ],
+    "depth_intervals": [
+     [
+      2923,
+      3000
+     ],
+     [
+      3000,
+      3081
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-167-20251211",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00951-063",
+     "MDS-00951-064"
+    ],
+    "invoices": [
+     "MDS-00951"
+    ],
+    "depth_intervals": [
+     [
+      2972,
+      3000
+     ],
+     [
+      3000,
+      3192
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-173-20260806",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01629-011",
+     "MDS-01629-012"
+    ],
+    "invoices": [
+     "MDS-01629"
+    ],
+    "depth_intervals": [
+     [
+      2935,
+      3000
+     ],
+     [
+      3000,
+      3107
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-178-20250304",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00160-061",
+     "MDS-00160-062"
+    ],
+    "invoices": [
+     "MDS-00160"
+    ],
+    "depth_intervals": [
+     [
+      2974,
+      3000
+     ],
+     [
+      3000,
+      3188
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-178-20250317",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00196-073",
+     "MDS-00196-074"
+    ],
+    "invoices": [
+     "MDS-00196"
+    ],
+    "depth_intervals": [
+     [
+      4403,
+      4500
+     ],
+     [
+      4500,
+      4531
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-179-20250410",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00276-011",
+     "MDS-00276-012"
+    ],
+    "invoices": [
+     "MDS-00276"
+    ],
+    "depth_intervals": [
+     [
+      2978,
+      3000
+     ],
+     [
+      3000,
+      3164
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-179-20250422",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00311-014",
+     "MDS-00311-015"
+    ],
+    "invoices": [
+     "MDS-00311"
+    ],
+    "depth_intervals": [
+     [
+      4473,
+      4500
+     ],
+     [
+      4500,
+      4584
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-182-20250824",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00644-076",
+     "MDS-00644-077"
+    ],
+    "invoices": [
+     "MDS-00644"
+    ],
+    "depth_intervals": [
+     [
+      2820,
+      3000
+     ],
+     [
+      3000,
+      3028
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-182-20250908",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00684-082",
+     "MDS-00684-083"
+    ],
+    "invoices": [
+     "MDS-00684"
+    ],
+    "depth_intervals": [
+     [
+      4464,
+      4500
+     ],
+     [
+      4500,
+      4589
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-183-20251004",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00770-037",
+     "MDS-00770-038"
+    ],
+    "invoices": [
+     "MDS-00770"
+    ],
+    "depth_intervals": [
+     [
+      2992,
+      3000
+     ],
+     [
+      3000,
+      3123
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-183-20251016",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00809-013",
+     "MDS-00809-014"
+    ],
+    "invoices": [
+     "MDS-00809"
+    ],
+    "depth_intervals": [
+     [
+      4372,
+      4500
+     ],
+     [
+      4500,
+      4509
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-187-20260411",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01303-011",
+     "MDS-01303-012"
+    ],
+    "invoices": [
+     "MDS-01303"
+    ],
+    "depth_intervals": [
+     [
+      2900,
+      3000
+     ],
+     [
+      3000,
+      3059
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-188-20260527",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01429-024",
+     "MDS-01429-025"
+    ],
+    "invoices": [
+     "MDS-01429"
+    ],
+    "depth_intervals": [
+     [
+      2935,
+      3000
+     ],
+     [
+      3000,
+      3095
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-188-20260609",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01457-071",
+     "MDS-01457-072"
+    ],
+    "invoices": [
+     "MDS-01457"
+    ],
+    "depth_intervals": [
+     [
+      4442,
+      4500
+     ],
+     [
+      4500,
+      4558
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-190-20260826",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01688-011",
+     "MDS-01688-012"
+    ],
+    "invoices": [
+     "MDS-01688"
+    ],
+    "depth_intervals": [
+     [
+      2906,
+      3000
+     ],
+     [
+      3000,
+      3069
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-192-20261103",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01874-074",
+     "MDS-01874-075"
+    ],
+    "invoices": [
+     "MDS-01874"
+    ],
+    "depth_intervals": [
+     [
+      2878,
+      3000
+     ],
+     [
+      3000,
+      3023
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-194-20250118",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00042-011",
+     "MDS-00042-012"
+    ],
+    "invoices": [
+     "MDS-00042"
+    ],
+    "depth_intervals": [
+     [
+      2898,
+      3000
+     ],
+     [
+      3000,
+      3022
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-197-20250514",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00364-071",
+     "MDS-00364-072"
+    ],
+    "invoices": [
+     "MDS-00364"
+    ],
+    "depth_intervals": [
+     [
+      2962,
+      3000
+     ],
+     [
+      3000,
+      3178
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-197-20250527",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00411-013",
+     "MDS-00411-014"
+    ],
+    "invoices": [
+     "MDS-00411"
+    ],
+    "depth_intervals": [
+     [
+      4469,
+      4500
+     ],
+     [
+      4500,
+      4561
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-199-20250818",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00638-026",
+     "MDS-00638-027"
+    ],
+    "invoices": [
+     "MDS-00638"
+    ],
+    "depth_intervals": [
+     [
+      2909,
+      3000
+     ],
+     [
+      3000,
+      3094
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-199-20250830",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00664-054",
+     "MDS-00664-055"
+    ],
+    "invoices": [
+     "MDS-00664"
+    ],
+    "depth_intervals": [
+     [
+      4484,
+      4500
+     ],
+     [
+      4500,
+      4599
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-201-20251104",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00857-026",
+     "MDS-00857-027"
+    ],
+    "invoices": [
+     "MDS-00857"
+    ],
+    "depth_intervals": [
+     [
+      2957,
+      3000
+     ],
+     [
+      3000,
+      3081
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-201-20251117",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00891-026",
+     "MDS-00891-027"
+    ],
+    "invoices": [
+     "MDS-00891"
+    ],
+    "depth_intervals": [
+     [
+      4474,
+      4500
+     ],
+     [
+      4500,
+      4618
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-203-20260129",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01097-011",
+     "MDS-01097-012"
+    ],
+    "invoices": [
+     "MDS-01097"
+    ],
+    "depth_intervals": [
+     [
+      2967,
+      3000
+     ],
+     [
+      3000,
+      3117
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-204-20260227",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01178-024",
+     "MDS-01178-025"
+    ],
+    "invoices": [
+     "MDS-01178"
+    ],
+    "depth_intervals": [
+     [
+      2861,
+      3000
+     ],
+     [
+      3000,
+      3036
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-204-20260312",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01219-014",
+     "MDS-01219-015"
+    ],
+    "invoices": [
+     "MDS-01219"
+    ],
+    "depth_intervals": [
+     [
+      4395,
+      4500
+     ],
+     [
+      4500,
+      4505
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-205-20260416",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01312-035",
+     "MDS-01312-036"
+    ],
+    "invoices": [
+     "MDS-01312"
+    ],
+    "depth_intervals": [
+     [
+      2845,
+      3000
+     ],
+     [
+      3000,
+      3062
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-205-20260502",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01358-039",
+     "MDS-01358-040"
+    ],
+    "invoices": [
+     "MDS-01358"
+    ],
+    "depth_intervals": [
+     [
+      4436,
+      4500
+     ],
+     [
+      4500,
+      4534
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-207-20260715",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01572-011",
+     "MDS-01572-012"
+    ],
+    "invoices": [
+     "MDS-01572"
+    ],
+    "depth_intervals": [
+     [
+      2922,
+      3000
+     ],
+     [
+      3000,
+      3136
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-208-20260828",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01686-053",
+     "MDS-01686-054"
+    ],
+    "invoices": [
+     "MDS-01686"
+    ],
+    "depth_intervals": [
+     [
+      2976,
+      3000
+     ],
+     [
+      3000,
+      3126
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-208-20260910",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01727-040",
+     "MDS-01727-041"
+    ],
+    "invoices": [
+     "MDS-01727"
+    ],
+    "depth_intervals": [
+     [
+      4474,
+      4500
+     ],
+     [
+      4500,
+      4591
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-215-20250715",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00535-076",
+     "MDS-00535-077"
+    ],
+    "invoices": [
+     "MDS-00535"
+    ],
+    "depth_intervals": [
+     [
+      2910,
+      3000
+     ],
+     [
+      3000,
+      3081
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-216-20250820",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00637-063",
+     "MDS-00637-064"
+    ],
+    "invoices": [
+     "MDS-00637"
+    ],
+    "depth_intervals": [
+     [
+      2900,
+      3000
+     ],
+     [
+      3000,
+      3095
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-216-20250901",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00676-014",
+     "MDS-00676-015"
+    ],
+    "invoices": [
+     "MDS-00676"
+    ],
+    "depth_intervals": [
+     [
+      4446,
+      4500
+     ],
+     [
+      4500,
+      4601
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-217-20250929",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00746-068",
+     "MDS-00746-069"
+    ],
+    "invoices": [
+     "MDS-00746"
+    ],
+    "depth_intervals": [
+     [
+      2961,
+      3000
+     ],
+     [
+      3000,
+      3133
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-217-20251015",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00804-014",
+     "MDS-00804-015"
+    ],
+    "invoices": [
+     "MDS-00804"
+    ],
+    "depth_intervals": [
+     [
+      4473,
+      4500
+     ],
+     [
+      4500,
+      4553
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-218-20251111",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00864-071",
+     "MDS-00864-072"
+    ],
+    "invoices": [
+     "MDS-00864"
+    ],
+    "depth_intervals": [
+     [
+      2929,
+      3000
+     ],
+     [
+      3000,
+      3122
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-218-20251125",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-00916-014",
+     "MDS-00916-015"
+    ],
+    "invoices": [
+     "MDS-00916"
+    ],
+    "depth_intervals": [
+     [
+      4409,
+      4500
+     ],
+     [
+      4500,
+      4512
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-220-20260122",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01075-011",
+     "MDS-01075-012"
+    ],
+    "invoices": [
+     "MDS-01075"
+    ],
+    "depth_intervals": [
+     [
+      2828,
+      3000
+     ],
+     [
+      3000,
+      3026
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-220-20260205",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01106-057",
+     "MDS-01106-058"
+    ],
+    "invoices": [
+     "MDS-01106"
+    ],
+    "depth_intervals": [
+     [
+      4478,
+      4500
+     ],
+     [
+      4500,
+      4578
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-221-20260309",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01198-061",
+     "MDS-01198-062"
+    ],
+    "invoices": [
+     "MDS-01198"
+    ],
+    "depth_intervals": [
+     [
+      2926,
+      3000
+     ],
+     [
+      3000,
+      3127
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-223-20260603",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01446-037",
+     "MDS-01446-038"
+    ],
+    "invoices": [
+     "MDS-01446"
+    ],
+    "depth_intervals": [
+     [
+      2888,
+      3000
+     ],
+     [
+      3000,
+      3025
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-223-20260616",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01489-013",
+     "MDS-01489-014"
+    ],
+    "invoices": [
+     "MDS-01489"
+    ],
+    "depth_intervals": [
+     [
+      4499,
+      4500
+     ],
+     [
+      4500,
+      4650
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-224-20260725",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01594-035",
+     "MDS-01594-036"
+    ],
+    "invoices": [
+     "MDS-01594"
+    ],
+    "depth_intervals": [
+     [
+      2934,
+      3000
+     ],
+     [
+      3000,
+      3124
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-224-20260806",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01626-045",
+     "MDS-01626-046"
+    ],
+    "invoices": [
+     "MDS-01626"
+    ],
+    "depth_intervals": [
+     [
+      4411,
+      4500
+     ],
+     [
+      4500,
+      4541
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-226-20261010",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01818-011",
+     "MDS-01818-012"
+    ],
+    "invoices": [
+     "MDS-01818"
+    ],
+    "depth_intervals": [
+     [
+      2938,
+      3000
+     ],
+     [
+      3000,
+      3081
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   },
+   {
+    "report": "DDR-226-20261025",
+    "service_code": "PD-210",
+    "lines": [
+     "MDS-01860-028",
+     "MDS-01860-029"
+    ],
+    "invoices": [
+     "MDS-01860"
+    ],
+    "depth_intervals": [
+     [
+      4479,
+      4500
+     ],
+     [
+      4500,
+      4607
+     ]
+    ],
+    "distinct_depth_intervals": true,
+    "report_evidence_for_code": [
+     "*"
+    ]
+   }
+  ]
+ }
+}

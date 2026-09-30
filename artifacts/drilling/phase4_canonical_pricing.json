@@ -1,0 +1,385 @@
+{
+ "schema": "contractor-audit/drilling-phase4-canonical-pricing",
+ "schema_version": "1.1",
+ "note": "Canonical pricing of report evidence under approved and contract-text readings only. Not an invoice figure: no invoice is compared, flagged or totalled. Invoice-level items (DS-900, VAT, the 36A adjustment, the 25A tolerance) are not included.",
+ "canonical": true,
+ "selection": [
+  {
+   "switch": "appendix_g_duplicates",
+   "value": "CONTEXT_SELECTS",
+   "source": "CONTRACT_TEXT"
+  },
+  {
+   "switch": "appendix_g_reading",
+   "value": "LITERAL",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "calloff_evidence",
+   "value": "UNVERIFIABLE_QUERY",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "contract_year_2",
+   "value": "STARTS_2026_01_01",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "dd102_basis",
+   "value": "PER_COORDINATOR_RECORDED",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "dd120_hours",
+   "value": "CIRCULATING_ONLY",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "dd120_rate_from_feb_2026",
+   "value": "LATER_ISSUED_GOVERNS",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "dd121_condition",
+   "value": "STANDBY_DAY_RSS_IN_HOLE",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "ds900_threshold_basis",
+   "value": "SERVICES_ONLY",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "hc630_basis",
+   "value": "DAILY_COUNT",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "lih_hours",
+   "value": "PART_E_STATED",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "lih_replacement_value",
+   "value": "SCHEDULE_2D_CONVERTED",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "metre_source",
+   "value": "DAILY_DEPTH_ADVANCE",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "monthly_rate_basis",
+   "value": "BASE_RATE_THEN_BUILD_UP",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "pd210_class_factor",
+   "value": "DO_NOT_APPLY",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "principal_discount_combination",
+   "value": "LATER_REPLACES",
+   "source": "CONTRACT_TEXT"
+  },
+  {
+   "switch": "rig_services_index",
+   "value": "APPLY_FROM_FIRST_MONTH",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "rig_up_hour",
+   "value": "PER_BHA_RUN",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "standby_section_factor",
+   "value": "OMIT",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "unranked_precedence",
+   "value": "NO_RANK_CASE_BY_CASE",
+   "source": "APPROVED"
+  },
+  {
+   "switch": "volume_tier_scope",
+   "value": "PER_WELL",
+   "source": "APPROVED"
+  }
+ ],
+ "quantities": 96500,
+ "by_status": {
+  "EVIDENCE_NOT_PROVIDED": 31316,
+  "NOT_CHARGEABLE": 3189,
+  "PRICED": 61995
+ },
+ "priced_total_cents": 14742686878,
+ "by_service": {
+  "DD-101": {
+   "PRICED": 8151,
+   "amount_cents": 3000144748
+  },
+  "DD-102": {
+   "PRICED": 8151,
+   "amount_cents": 773203860
+  },
+  "DD-110": {
+   "PRICED": 3304,
+   "amount_cents": 510430569
+  },
+  "DD-111": {
+   "PRICED": 654,
+   "amount_cents": 234750030
+  },
+  "DD-120": {
+   "EVIDENCE_NOT_PROVIDED": 4606,
+   "NOT_CHARGEABLE": 184,
+   "amount_cents": 0
+  },
+  "DD-121": {
+   "PRICED": 241,
+   "amount_cents": 71381335
+  },
+  "DD-130": {
+   "PRICED": 480,
+   "amount_cents": 175388955
+  },
+  "DD-140": {
+   "PRICED": 214,
+   "amount_cents": 267275300
+  },
+  "HC-601": {
+   "PRICED": 1767,
+   "amount_cents": 123948471
+  },
+  "HC-610": {
+   "PRICED": 943,
+   "amount_cents": 183616245
+  },
+  "HC-620": {
+   "PRICED": 8151,
+   "amount_cents": 462773834
+  },
+  "HC-630": {
+   "PRICED": 428,
+   "amount_cents": 183862380
+  },
+  "HC-640": {
+   "NOT_CHARGEABLE": 115,
+   "PRICED": 2142,
+   "amount_cents": 154127610
+  },
+  "LH-711": {
+   "PRICED": 10,
+   "amount_cents": 136022403
+  },
+  "LH-712": {
+   "PRICED": 17,
+   "amount_cents": 1970156527
+  },
+  "LH-713": {
+   "PRICED": 19,
+   "amount_cents": 641646487
+  },
+  "LH-714": {
+   "PRICED": 8,
+   "amount_cents": 394970482
+  },
+  "LW-401": {
+   "PRICED": 3430,
+   "amount_cents": 643174978
+  },
+  "LW-410": {
+   "EVIDENCE_NOT_PROVIDED": 2964,
+   "amount_cents": 0
+  },
+  "LW-411": {
+   "EVIDENCE_NOT_PROVIDED": 2250,
+   "amount_cents": 0
+  },
+  "LW-412": {
+   "EVIDENCE_NOT_PROVIDED": 955,
+   "amount_cents": 0
+  },
+  "LW-413": {
+   "EVIDENCE_NOT_PROVIDED": 445,
+   "amount_cents": 0
+  },
+  "LW-420": {
+   "PRICED": 369,
+   "amount_cents": 101347695
+  },
+  "LW-430": {
+   "PRICED": 214,
+   "amount_cents": 179647650
+  },
+  "MB-701": {
+   "PRICED": 214,
+   "amount_cents": 391602537
+  },
+  "MB-702": {
+   "PRICED": 214,
+   "amount_cents": 303799750
+  },
+  "MW-301": {
+   "PRICED": 8151,
+   "amount_cents": 2668627612
+  },
+  "MW-310": {
+   "EVIDENCE_NOT_PROVIDED": 8151,
+   "amount_cents": 0
+  },
+  "MW-320": {
+   "EVIDENCE_NOT_PROVIDED": 4847,
+   "amount_cents": 0
+  },
+  "MW-330": {
+   "PRICED": 8151,
+   "amount_cents": 252477225
+  },
+  "PD-201": {
+   "EVIDENCE_NOT_PROVIDED": 2561,
+   "amount_cents": 0
+  },
+  "PD-210": {
+   "EVIDENCE_NOT_PROVIDED": 4537,
+   "NOT_CHARGEABLE": 2890,
+   "amount_cents": 0
+  },
+  "PD-220": {
+   "PRICED": 1190,
+   "amount_cents": 133208630
+  },
+  "PD-230": {
+   "PRICED": 1190,
+   "amount_cents": 74141430
+  },
+  "RM-510": {
+   "PRICED": 679,
+   "amount_cents": 418666670
+  },
+  "RM-511": {
+   "PRICED": 803,
+   "amount_cents": 107297895
+  },
+  "RM-520": {
+   "PRICED": 1767,
+   "amount_cents": 72403090
+  },
+  "RM-530": {
+   "PRICED": 943,
+   "amount_cents": 112592480
+  }
+ },
+ "not_priced": [
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "DD-120",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 4606
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "LW-410",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 2964
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "LW-411",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 2250
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "LW-412",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 955
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "LW-413",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 445
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "MW-310",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 8151
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "MW-320",
+   "reason": "well class not established: the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 4847
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "PD-201",
+   "reason": "PD-201 eligibility not established: the call-off is not provided, and PD-201 is chargeable only for a performance-drilled section the call-off nominates (cl. 23) (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 2561
+  },
+  {
+   "status": "EVIDENCE_NOT_PROVIDED",
+   "service": "PD-210",
+   "reason": "performance-drilled section not established: PD-210 is charged only on sections the call-off nominates (cl. 23), and the call-off is not provided (AMB-13: UNKNOWN / UNVERIFIED)",
+   "count": 4537
+  },
+  {
+   "status": "NOT_CHARGEABLE",
+   "service": "DD-120",
+   "reason": "charged only for an Operating day (cl. 21)",
+   "count": 184
+  },
+  {
+   "status": "NOT_CHARGEABLE",
+   "service": "HC-640",
+   "reason": "not chargeable on a Standby day in any quantity (cl. 20 / Schedule 3 Part 3)",
+   "count": 115
+  },
+  {
+   "status": "NOT_CHARGEABLE",
+   "service": "PD-210",
+   "reason": "17-1/2\" is not a size Appendix A allows for a performance-drilled section (cl. 23 / Appendix A)",
+   "count": 1681
+  },
+  {
+   "status": "NOT_CHARGEABLE",
+   "service": "PD-210",
+   "reason": "26\" is not a size Appendix A allows for a performance-drilled section (cl. 23 / Appendix A)",
+   "count": 467
+  },
+  {
+   "status": "NOT_CHARGEABLE",
+   "service": "PD-210",
+   "reason": "6\" is not a size Appendix A allows for a performance-drilled section (cl. 23 / Appendix A)",
+   "count": 742
+  }
+ ],
+ "flags_on_priced_quantities": {
+  "RECORD_PART_C_ABSENT": 1,
+  "RECORD_PART_D_ABSENT": 2,
+  "REPORT_NOT_SIGNED": 26
+ },
+ "retroactive_amendment": {
+  "priced_quantities_at_a_backdated_rate": 3411,
+  "amount_cents": 1260330040,
+  "amount_at_rates_known_before_it_cents": 1236141008
+ },
+ "conditional_not_payable": {
+  "note": "Rate calculated but not payable: what these quantities would be worth only if the evidence they lack (eligibility under the call-off, AMB-13) were established. Excluded from the priced total and from every canonical figure.",
+  "rows": [
+   {
+    "service": "PD-201",
+    "reason": "PD-201 eligibility not established: the call-off is not provided, and PD-201 is chargeable only for a performance-drilled section the call-off nominates (cl. 23) (AMB-13: UNKNOWN / UNVERIFIED); the rate is calculated and kept as a conditional amount only",
+    "count": 2561,
+    "conditional_amount_cents": 531170166
+   }
+  ]
+ },
+ "priced_quantities_sha256": "0167e8e7a705723481661c643e19b93b1a8a6e7094aed8d2c4982e1d69aacc9e"
+}

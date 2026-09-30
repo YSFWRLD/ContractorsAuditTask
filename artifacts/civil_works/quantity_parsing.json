@@ -1,0 +1,339 @@
+{
+  "records": 2169,
+  "resolved": 2169,
+  "unresolved": [],
+  "by_type": {
+    "CT": {
+      "records": 381,
+      "resolved": 381
+    },
+    "CV": {
+      "records": 120,
+      "resolved": 120
+    },
+    "DW": {
+      "records": 114,
+      "resolved": 114
+    },
+    "DX": {
+      "records": 266,
+      "resolved": 266
+    },
+    "JS": {
+      "records": 368,
+      "resolved": 368
+    },
+    "MO": {
+      "records": 142,
+      "resolved": 142
+    },
+    "PR": {
+      "records": 365,
+      "resolved": 365
+    },
+    "PS": {
+      "records": 143,
+      "resolved": 143
+    },
+    "PT": {
+      "records": 270,
+      "resolved": 270
+    }
+  },
+  "rules": [
+    {
+      "rule_id": "CT.subbase_square_metres",
+      "record_type": "CT",
+      "pattern": "^(?P<qty>\\d+(?:\\.\\d+)?) square metres of sub-base in and compacted$",
+      "unit": "m2",
+      "indicated_items": [
+        "D.41.010"
+      ],
+      "records": 81,
+      "note": ""
+    },
+    {
+      "rule_id": "CT.laid_rolled_type1",
+      "record_type": "CT",
+      "pattern": "^laid and rolled (?P<qty>\\d+(?:\\.\\d+)?) m2 of Type 1$",
+      "unit": "m2",
+      "indicated_items": [
+        "D.41.010"
+      ],
+      "records": 57,
+      "note": "Type 1 is the Series D sub-base material"
+    },
+    {
+      "rule_id": "CT.capping_layer",
+      "record_type": "CT",
+      "pattern": "^capping layer, (?P<qty>\\d+(?:\\.\\d+)?) m2 placed and compacted$",
+      "unit": "m2",
+      "indicated_items": [
+        "D.41.040"
+      ],
+      "records": 126,
+      "note": ""
+    },
+    {
+      "rule_id": "CT.whacked_imported_stone",
+      "record_type": "CT",
+      "pattern": "^placed and whacked (?P<qty>\\d+(?:\\.\\d+)?) m3 of imported stone$",
+      "unit": "m3",
+      "indicated_items": [
+        "A.14.010"
+      ],
+      "records": 51,
+      "note": ""
+    },
+    {
+      "rule_id": "CT.brought_in_fill",
+      "record_type": "CT",
+      "pattern": "^brought in (?P<qty>\\d+(?:\\.\\d+)?) cube of fill, compacted in layers$",
+      "unit": "m3",
+      "indicated_items": [
+        "A.14.010"
+      ],
+      "records": 66,
+      "note": "'cube' = cubic metres"
+    },
+    {
+      "rule_id": "CV.surveyed_run",
+      "record_type": "CV",
+      "pattern": "^surveyed (?P<qty>\\d+(?:\\.\\d+)?) m of the finished run with the camera$",
+      "unit": "lm",
+      "indicated_items": [
+        "C.35.010"
+      ],
+      "records": 120,
+      "note": ""
+    },
+    {
+      "rule_id": "DW.pumps_kept_going",
+      "record_type": "DW",
+      "pattern": "^pumps kept going (?P<qty>\\d+(?:\\.\\d+)?) week this period$",
+      "unit": "week",
+      "indicated_items": [
+        "A.16.010"
+      ],
+      "records": 57,
+      "note": ""
+    },
+    {
+      "rule_id": "DW.wellpoints_running",
+      "record_type": "DW",
+      "pattern": "^wellpoints running, (?P<qty>\\d+(?:\\.\\d+)?) week on the dewatering$",
+      "unit": "week",
+      "indicated_items": [
+        "A.16.010"
+      ],
+      "records": 57,
+      "note": ""
+    },
+    {
+      "rule_id": "DX.trench_dig_depth",
+      "record_type": "DX",
+      "pattern": "^trench dig (?P<qty>\\d+(?:\\.\\d+)?) cube, (?P<depth>\\d+(?:\\.\\d+)?) m deep section$",
+      "unit": "m3",
+      "indicated_items": [],
+      "records": 73,
+      "note": "depth stated; item follows P13 depth bands (see depth_item)"
+    },
+    {
+      "rule_id": "DX.over_four_metres",
+      "record_type": "DX",
+      "pattern": "^trench over four metres, (?P<qty>\\d+(?:\\.\\d+)?) m3 dug$",
+      "unit": "m3",
+      "indicated_items": [
+        "A.12.040"
+      ],
+      "records": 132,
+      "note": ""
+    },
+    {
+      "rule_id": "DX.between_two_and_four",
+      "record_type": "DX",
+      "pattern": "^deep trench (?P<qty>\\d+(?:\\.\\d+)?) m3, between two and four metres$",
+      "unit": "m3",
+      "indicated_items": [
+        "A.12.030"
+      ],
+      "records": 61,
+      "note": ""
+    },
+    {
+      "rule_id": "JS.chainage_band",
+      "record_type": "JS",
+      "pattern": "^set out and agreed (?P<qty>\\d+(?:\\.\\d+)?) chainage band with the Engineer$",
+      "unit": "no.",
+      "indicated_items": [
+        "E.52.010"
+      ],
+      "records": 111,
+      "note": ""
+    },
+    {
+      "rule_id": "JS.fixers_placed_bar",
+      "record_type": "JS",
+      "pattern": "^steel fixers placed (?P<qty>\\d+(?:\\.\\d+)?) t of high yield bar$",
+      "unit": "tonne",
+      "indicated_items": [
+        "B.23.010"
+      ],
+      "records": 51,
+      "note": ""
+    },
+    {
+      "rule_id": "JS.mesh_with_laps",
+      "record_type": "JS",
+      "pattern": "^laid (?P<qty>\\d+(?:\\.\\d+)?) m2 of A393 mesh with laps$",
+      "unit": "m2",
+      "indicated_items": [
+        "B.23.020"
+      ],
+      "records": 128,
+      "note": ""
+    },
+    {
+      "rule_id": "JS.fixed_bar",
+      "record_type": "JS",
+      "pattern": "^fixed (?P<qty>\\d+(?:\\.\\d+)?) tonne of bar, cut and bent to schedule$",
+      "unit": "tonne",
+      "indicated_items": [
+        "B.23.010"
+      ],
+      "records": 78,
+      "note": ""
+    },
+    {
+      "rule_id": "MO.no_work_weather",
+      "record_type": "MO",
+      "pattern": "^no work possible, weather, (?P<qty>\\d+(?:\\.\\d+)?) hours standing$",
+      "unit": "hour",
+      "indicated_items": [
+        "E.51.010"
+      ],
+      "records": 77,
+      "note": "hours attended (Clause 6A)"
+    },
+    {
+      "rule_id": "MO.rained_off",
+      "record_type": "MO",
+      "pattern": "^rained off -- crew and plant stood for (?P<qty>\\d+(?:\\.\\d+)?) hours$",
+      "unit": "hour",
+      "indicated_items": [
+        "E.51.010"
+      ],
+      "records": 65,
+      "note": "hours attended (Clause 6A)"
+    },
+    {
+      "rule_id": "PR.foundation_pour_cube",
+      "record_type": "PR",
+      "pattern": "^foundation pour (?P<qty>\\d+(?:\\.\\d+)?) cube, C32/40 off the truck$",
+      "unit": "m3",
+      "indicated_items": [
+        "B.21.020"
+      ],
+      "records": 34,
+      "note": ""
+    },
+    {
+      "rule_id": "PR.wall_pour",
+      "record_type": "PR",
+      "pattern": "^wall pour (?P<qty>\\d+(?:\\.\\d+)?) m3, 32/40 mix$",
+      "unit": "m3",
+      "indicated_items": [
+        "B.21.040"
+      ],
+      "records": 138,
+      "note": ""
+    },
+    {
+      "rule_id": "PR.poured_foundations",
+      "record_type": "PR",
+      "pattern": "^poured (?P<qty>\\d+(?:\\.\\d+)?) m3 into the foundations, 32/40 mix$",
+      "unit": "m3",
+      "indicated_items": [
+        "B.21.020"
+      ],
+      "records": 72,
+      "note": ""
+    },
+    {
+      "rule_id": "PR.slab_pour",
+      "record_type": "PR",
+      "pattern": "^slab pour (?P<qty>\\d+(?:\\.\\d+)?) m3, 32/40$",
+      "unit": "m3",
+      "indicated_items": [
+        "B.21.030"
+      ],
+      "records": 79,
+      "note": ""
+    },
+    {
+      "rule_id": "PR.poured_slab_cube",
+      "record_type": "PR",
+      "pattern": "^poured the slab, (?P<qty>\\d+(?:\\.\\d+)?) cube of C32/40$",
+      "unit": "m3",
+      "indicated_items": [
+        "B.21.030"
+      ],
+      "records": 42,
+      "note": ""
+    },
+    {
+      "rule_id": "PS.machine_stood_idle",
+      "record_type": "PS",
+      "pattern": "^tracked machine stood idle (?P<qty>\\d+(?:\\.\\d+)?) hours waiting on access$",
+      "unit": "hour",
+      "indicated_items": [
+        "E.51.030"
+      ],
+      "records": 90,
+      "note": "hours attended (Clause 6A)"
+    },
+    {
+      "rule_id": "PS.excavator_held_up",
+      "record_type": "PS",
+      "pattern": "^excavator and driver held up (?P<qty>\\d+(?:\\.\\d+)?) hours$",
+      "unit": "hour",
+      "indicated_items": [
+        "E.51.030"
+      ],
+      "records": 53,
+      "note": "hours attended (Clause 6A)"
+    },
+    {
+      "rule_id": "PT.large_chamber_1800",
+      "record_type": "PT",
+      "pattern": "^built (?P<qty>\\d+(?:\\.\\d+)?) large chamber, 1800 dia precast$",
+      "unit": "no.",
+      "indicated_items": [
+        "C.32.030"
+      ],
+      "records": 135,
+      "note": ""
+    },
+    {
+      "rule_id": "PT.ductile_main_400",
+      "record_type": "PT",
+      "pattern": "^laid (?P<qty>\\d+(?:\\.\\d+)?) m of 400 ductile main$",
+      "unit": "lm",
+      "indicated_items": [
+        "C.31.020"
+      ],
+      "records": 135,
+      "note": ""
+    }
+  ],
+  "reference_lookup_descriptive": {
+    "billed_above_record": 26,
+    "billed_below_record": 424,
+    "billed_equals_record": 1739,
+    "item_indicated_by_phrase": 2189,
+    "item_not_indicated_by_phrase": 1,
+    "reference_without_record": 3,
+    "unit_differs": 1,
+    "unit_equal": 2189
+  }
+}
