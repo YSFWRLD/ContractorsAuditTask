@@ -2,29 +2,52 @@
 
 Solution to `invoice-auditing-level-2`: audit every civil works payment application
 (`PA-*`) and drilling invoice (`MDS-*`) against its contract and produce one
-`submission.csv`. Status: **civil works frozen (Phase 4); drilling contract extracted (Phase 1), data ingested (Phase 2), reports interpreted into quantities (Phase 3), canonical pricing under approved readings (Phase 4b), invoices audited with draft outputs (Phase 5; audit-phase readings decided in review); combined submission not started**.
+`submission.csv`. Status: **complete: both domains audited and frozen; the combined `submission.csv` is at the repository root.**
+
+Deliverables:
+- `submission.csv`: 2,806 rows in the template's order;
+- `REPORT.md`: approach, results and error analysis;
+- `DECISION_LOG.md`: the decisions that shape the submission;
+- `prompts/`: every prompt used, versioned.
+
 The civil works contract is extracted and reviewed, priced through explicit interpretation switches,
 audited, and its draft outputs are in `outputs/civil_works/`. The drilling contract is transcribed
 into a reviewed, typed model with an ambiguity register. Its invoices, lines and daily reports are
 parsed into typed, traceable objects with a structural validation report. Report words are mapped to
 contract service candidates and evidence-backed quantities under every open reading. A switch-driven
 pricing engine prices them canonically under the approved readings, and the drilling audit compares every
-invoice with that evidence and writes its draft outputs to `outputs/drilling/`. The combined
-`submission.csv` is not started.
+invoice with that evidence and writes its draft outputs to `outputs/drilling/`. `submission` joins both
+domains' frozen results onto the upstream template.
 
 ## Running
 
-Requires Python 3.11+ (developed on 3.13). The only pinned dependency so far is `pytest` (dev).
+Requires Python 3.11+ (developed and tested on 3.13).
+- The package has no runtime dependencies; it uses the standard library only.
+- `requirements.txt` pins the exact versions of pytest and its dependencies, used for the tests.
+- `pyproject.toml` pins the build backend (`setuptools==84.0.0`).
+
+End-to-end reproduction, from a fresh virtual environment:
 
 ```bash
-python -m pip install -e ".[dev]"
-python -m contractor_audit check-sources
-python -m contractor_audit build-artifacts --domain civil_works
-python -m contractor_audit run --domain civil_works      # audit; writes outputs/civil_works/ (~35 s)
-python -m contractor_audit build-artifacts --domain drilling  # drilling: contract, structural, interpretation, pricing artifacts (~40 s)
-python -m contractor_audit run --domain drilling         # audit; writes outputs/drilling/ (~2.5 min, most of it the dependency re-runs)
-python -m pytest
+python -m venv .venv
+.venv/Scripts/python -m pip install -r requirements.txt   # on Linux/macOS: .venv/bin/python
+.venv/Scripts/python -m contractor_audit check-sources
+.venv/Scripts/python -m contractor_audit build-artifacts --domain civil_works
+.venv/Scripts/python -m contractor_audit build-artifacts --domain drilling
+.venv/Scripts/python -m contractor_audit run --domain civil_works
+.venv/Scripts/python -m contractor_audit run --domain drilling
+.venv/Scripts/python -m contractor_audit submission
+.venv/Scripts/python -m pytest -W error
 ```
+
+What each step does:
+- **`build-artifacts --domain civil_works`** and **`build-artifacts --domain drilling`** regenerate each domain's derived artifacts: contract, structural, interpretation and pricing (~10 s and ~40 s).
+- **`run --domain civil_works`** audits the civil works applications and writes `outputs/civil_works/` (~35 s).
+- **`run --domain drilling`** audits the drilling invoices and writes `outputs/drilling/` (~2.5 min, mostly the dependency re-runs).
+- **`submission`** writes the root `submission.csv`. It reads each domain's frozen `outputs/<domain>/draft_predictions.csv` and fills the upstream `submission_template.csv` in its order. It stops with an error, and writes nothing, on any missing, duplicated or extra invoice id, bad column, non-integer amount, confidence outside [0, 1], or missing domain result.
+- **`pytest -W error`** runs the whole suite (~5.5 min).
+
+Every step is deterministic: running it again reproduces the committed artifacts, outputs and `submission.csv` byte for byte.
 
 Without installing, prefix commands with `PYTHONPATH=src`. The task data is expected at
 `./invoice-auditing-level-2/`; point elsewhere with `CONTRACTOR_AUDIT_DATA=/path/to/it`.
@@ -49,7 +72,8 @@ raw task files (read-only)
 - money to integer minor units;
 - file fingerprints (`provenance.py`);
 - path conventions;
-- the `AuditDomain` protocol the CLI talks to (`required_sources`, `build_artifacts`, `run`).
+- the `AuditDomain` protocol the CLI talks to (`required_sources`, `build_artifacts`, `run`);
+- the combined submission (`submission.py`): the template joined with every domain's draft predictions, validated, never repaired.
 
 It must not import any domain; `tests/test_architecture.py` enforces this.
 
@@ -81,7 +105,8 @@ It must not import any domain; `tests/test_architecture.py` enforces this.
 | reviewed contract transcription | `artifacts/civil_works/contract_extraction.json` | only by deliberate re-review |
 | reviewed drilling contract terms and ambiguity register | `artifacts/drilling/contract_terms.json`, `contract_ambiguities.json`, `review/` | only by deliberate re-review |
 | generated derived artifacts | `artifacts/<domain>/*` (everything else) | regenerated by `build-artifacts` |
-| final per-domain results and `submission.csv` | `outputs/<domain>/`, `outputs/` | regenerated |
+| final per-domain results | `outputs/<domain>/` | regenerated by `run` |
+| combined submission | `submission.csv` (repository root) | regenerated by `submission` |
 | prompts used with AI assistance | `prompts/` (civil works at top level, drilling in `prompts/drilling/`) | versioned |
 
 **Adding Drilling:**

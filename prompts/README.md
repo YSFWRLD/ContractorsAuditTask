@@ -13,6 +13,7 @@ The task requires AI assistance to be disclosed and prompts kept as versioned fi
 | `02-phase2-pricing-engine.md` | civil works pricing engine, interpretation switches, quantity rules, sensitivity |
 | `03-phase3-audit-engine.md` | civil works audit layer, findings, confidence, draft outputs |
 | `04-civil-works-freeze.md` | civil works review and freeze: checklist, adversarial review, policies |
+| `05-final-packaging.md` | final packaging: combined `submission.csv`, `REPORT.md`, `DECISION_LOG.md`, dependency pins, reproduction (both domains) |
 | `drilling/00-drilling-architecture.md` | drilling inspection, domain layout and scaffold (no contract logic) |
 | `drilling/01-contract-extraction.md` | drilling contract extraction: reviewed terms, ambiguity register, typed contract model (no pricing) |
 | `drilling/02-data-ingestion.md` | drilling ingestion: typed invoices, lines and reports, indexes, timelines, structural validation (no mapping, pricing or findings) |
@@ -108,3 +109,10 @@ The AI assistant recorded the user's decisions verbatim in `approved_readings.js
 and the reason for the change. It applied them, re-ran pricing and the audit, and reported what changed. It also checked the
 contract before touching the well-class findings: Clause 34 and the Appendix B form do not include a well class, so it
 reported this and kept the findings as they were. No other approved reading was changed.
+
+## How AI was used in final packaging
+
+The AI assistant wrote the domain-neutral submission combiner (`shared/submission.py`), the `submission` command and their
+tests, the final report and the one-page decision log, and pinned the dependencies. It verified the whole README
+reproduction in a fresh virtual environment. The frozen audit results were not changed: the submission rows are the two
+domains' draft predictions, copied verbatim after validation.

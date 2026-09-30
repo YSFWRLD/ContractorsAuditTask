@@ -116,8 +116,11 @@ def audit_summary(report: AuditReport, outcomes) -> str:
              f"{len(outcomes)} invoices and {sum(len(o.audit.lines) for o in outcomes)} lines audited against DDS-2025-118. "
              f"**{len(flagged)} flagged** ({len(flagged) / len(outcomes):.1%}); {len(findings)} flagging findings; "
              f"{sum(o.result.expected_total_cents is not None for o in flagged)} flagged invoices with a published corrected total.", "",
-             "Readings: the approved readings (`artifacts/drilling/approved_readings.json`) and the contract text for pricing; "
-             "for the five audit-phase switches, the WORKING readings below (not approved; see `uncertainty_report.md`).", ""]
+             "Readings: the approved readings (`artifacts/drilling/approved_readings.json`) and the contract text for pricing. "
+             "The audit-phase readings were selected from the contract text and subsequently approved in the Phase 5 review "
+             "(AMB-25 decided as evidence not provided); their original confidence grades and alternative sensitivities are retained "
+             "(`uncertainty_report.md`, `sensitivity.md`)."
+             + (f" Not yet approved: {', '.join(report.policy.awaiting_approval)} (working readings)." if report.policy.awaiting_approval else ""), ""]
     lines += _table(["switch", "reading", "source"], [[s, v, src] for s, v, src in report.policy.readings() if s in AUDIT_SWITCHES or src != "CONTRACT_TEXT"])
     lines += ["", "## Flagged invoices", ""]
     lines += _table(["Invoice", "Categories", "Billed (USD)", "Corrected (USD)", "Conditional (USD, not payable)", "Confidence", "Blank because"],

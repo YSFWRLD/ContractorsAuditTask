@@ -1,7 +1,7 @@
 """Where raw task data, derived artifacts and final outputs live.
 
 Raw task data is read-only. Everything the pipeline produces goes under
-artifacts/<domain>/ (intermediate) or outputs/<domain>/ (final).
+artifacts/<domain>/ (intermediate) or outputs/<domain>/ (final); the combined submission is the root submission.csv.
 """
 
 import os
@@ -24,3 +24,13 @@ def artifacts_dir(domain: str) -> Path:
 
 def outputs_dir(domain: str) -> Path:
     return REPO_ROOT / "outputs" / domain
+
+
+def submission_path() -> Path:
+    """The combined submission, at the repository root (the challenge's deliverable)."""
+    return REPO_ROOT / "submission.csv"
+
+
+def template_path() -> Path:
+    """The upstream submission template: its ids and order define the submission."""
+    return task_data_root() / "submission_template.csv"

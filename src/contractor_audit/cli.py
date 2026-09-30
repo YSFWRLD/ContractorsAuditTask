@@ -4,7 +4,7 @@ import argparse
 import sys
 
 from contractor_audit.domains import REGISTRY, get_domain
-from contractor_audit.shared import paths
+from contractor_audit.shared import paths, submission
 from contractor_audit.shared.domain import RunContext
 
 
@@ -43,6 +43,20 @@ def _run(name: str) -> int:
     return 0
 
 
+def _submission() -> int:
+    """Join every domain's frozen draft predictions onto the upstream template; write the root submission.csv."""
+    sources = [submission.Source(name, paths.outputs_dir(name) / "draft_predictions.csv") for name in sorted(REGISTRY)]
+    try:
+        rows = submission.write(paths.template_path(), sources, paths.submission_path())
+    except submission.SubmissionError as exc:
+        print(f"submission not written: {exc}", file=sys.stderr)
+        return 1
+    flagged = sum(r["flagged"] == "1" for r in rows)
+    print(f"wrote {paths.submission_path()}: {len(rows)} rows, {flagged} flagged, "
+          f"{sum(not r['expected_total_cents'] for r in rows)} blank expected totals")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="contractor-audit")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -53,6 +67,7 @@ def main(argv: list[str] | None = None) -> int:
     build.add_argument("--domain", choices=sorted(REGISTRY), required=True)
     run = sub.add_parser("run", help="audit one domain")
     run.add_argument("--domain", choices=sorted(REGISTRY), required=True)
+    sub.add_parser("submission", help="combine every domain's frozen draft predictions into the root submission.csv")
     args = parser.parse_args(argv)
 
     if args.command == "domains":
@@ -62,6 +77,8 @@ def main(argv: list[str] | None = None) -> int:
         return _check_sources([args.domain] if args.domain else sorted(REGISTRY))
     if args.command == "build-artifacts":
         return _build_artifacts(args.domain)
+    if args.command == "submission":
+        return _submission()
     return _run(args.domain)
 
 

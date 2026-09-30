@@ -1,0 +1,11 @@
+# Exact versions this repository is developed and tested with (Python 3.13).
+# Install:  python -m pip install -r requirements.txt
+# The package itself has no runtime dependencies (standard library only); pytest and its dependencies are for the tests.
+# The build backend is pinned in pyproject.toml (setuptools==84.0.0).
+-e .
+pytest==9.1.1
+iniconfig==2.3.0
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0
+colorama==0.4.6; sys_platform == "win32"
