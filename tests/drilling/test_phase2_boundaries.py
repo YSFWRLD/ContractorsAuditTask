@@ -52,8 +52,7 @@ def test_reports_keep_rig_words_and_carry_no_codes(dataset):
     assert "mud motor" in words and "directional hands" in words
 
 
-def test_no_drilling_audit_output_or_submission_exists():
-    assert not paths.outputs_dir("drilling").exists()
+def test_no_submission_and_no_audit_artifacts():
     assert not (paths.REPO_ROOT / "outputs" / "submission.csv").exists()
     artifacts = {p.name for p in paths.artifacts_dir("drilling").iterdir()}
     assert not {n for n in artifacts if "finding" in n or "prediction" in n or "submission" in n}

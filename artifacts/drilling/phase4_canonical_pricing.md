@@ -6,7 +6,7 @@ Canonical pricing of report evidence under approved and contract-text readings o
 - priced total: $147,426,868.78
 - flags on priced quantities (for the audit phase): {'RECORD_PART_C_ABSENT': 1, 'RECORD_PART_D_ABSENT': 2, 'REPORT_NOT_SIGNED': 26}
 - back-dated rate (Amendment No. 3): 3,411 quantities, $12,603,300.40 at the amended rate, $12,361,410.08 at rates known before it
-- digest of every priced quantity: `0167e8e7a705723481661c643e19b93b1a8a6e7094aed8d2c4982e1d69aacc9e`
+- digest of every priced quantity: `9fb8e181d15f2f7492ef8687cd902712ed57d48fece39c75d55e52f6e9a56fe5`
 
 ## Not priced
 

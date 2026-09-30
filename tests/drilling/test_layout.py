@@ -1,4 +1,4 @@
-"""Drilling domain boundary: layer order inside the domain; build-artifacts writes derived artifacts only; the audit is not runnable."""
+"""Drilling domain boundary: layer order inside the domain; build-artifacts writes derived artifacts only; run writes the draft outputs only."""
 
 import ast
 import shutil
@@ -7,7 +7,6 @@ from pathlib import Path
 import pytest
 
 import contractor_audit.domains.drilling as drilling
-from contractor_audit import cli
 from contractor_audit.domains import REGISTRY
 from contractor_audit.domains.drilling import DOMAIN
 from contractor_audit.domains.drilling.reporting import (
@@ -56,13 +55,6 @@ def test_registered_under_its_own_name():
     assert REGISTRY["drilling"] is DOMAIN and isinstance(DOMAIN, AuditDomain)
 
 
-def test_run_is_not_implemented_and_writes_nothing(tmp_path):
-    ctx = RunContext(tmp_path / "data", tmp_path / "artifacts", tmp_path / "outputs")
-    with pytest.raises(NotImplementedError):
-        DOMAIN.run(ctx)
-    assert list(tmp_path.iterdir()) == []
-
-
 GENERATED = contract_artifacts.GENERATED + structural_report.GENERATED + phase3_mapping_report.GENERATED + phase3_billed_coverage.GENERATED + phase4_sensitivity.GENERATED + phase4_canonical_pricing.GENERATED
 
 
@@ -90,17 +82,7 @@ def test_committed_derived_artifacts_match_a_fresh_build(fresh_build):
         assert (artifacts / name).read_bytes() == (paths.artifacts_dir("drilling") / name).read_bytes(), name
 
 
-def test_cli_run_reports_not_implemented_without_writing(tmp_path, monkeypatch, capsys):
-    class _Ctx:
-        @staticmethod
-        def for_domain(name):
-            return RunContext(tmp_path / "data", tmp_path / name / "artifacts", tmp_path / name / "outputs")
-
-    monkeypatch.setattr(cli, "RunContext", _Ctx)
-    assert cli.main(["run", "--domain", "drilling"]) == 2
-    assert "not implemented" in capsys.readouterr().err
-    assert list(tmp_path.iterdir()) == []
-
-
-def test_no_drilling_outputs_exist():
-    assert not paths.outputs_dir("drilling").exists()
+def test_drilling_outputs_are_the_draft_files_only():
+    from contractor_audit.domains.drilling.reporting.audit_outputs import FILES
+    assert sorted(p.name for p in paths.outputs_dir("drilling").iterdir()) == sorted(FILES)
+    assert not (paths.REPO_ROOT / "outputs" / "submission.csv").exists()

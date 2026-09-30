@@ -5,7 +5,8 @@
  "history": [
   {"approved_on": "2026-09-30", "source": "prompts/drilling/04-pricing-engine.md", "scope": "Phase 3 review: AMB-17, AMB-18, AMB-19, AMB-20, AMB-22, AMB-24; assumptions 1, 2, 4, 5, 6 approved; assumption 3 rejected"},
   {"approved_on": "2026-09-30", "source": "prompts/drilling/05-approved-pricing-readings.md", "scope": "Phase 4 review: AMB-01, AMB-02, AMB-03, AMB-04, AMB-05, AMB-06, AMB-07, AMB-08, AMB-10, AMB-11, AMB-13 (as UNKNOWN / UNVERIFIED), AMB-21, AMB-26"},
-  {"approved_on": "2026-09-30", "source": "prompts/drilling/06-pd201-strict-amb13.md", "scope": "AMB-13 strict treatment extended to PD-201: eligibility not established, EVIDENCE_NOT_PROVIDED; calculated rate kept as a conditional amount only"}
+  {"approved_on": "2026-09-30", "source": "prompts/drilling/06-pd201-strict-amb13.md", "scope": "AMB-13 strict treatment extended to PD-201: eligibility not established, EVIDENCE_NOT_PROVIDED; calculated rate kept as a conditional amount only"},
+  {"approved_on": "2026-09-30", "source": "prompts/drilling/08-audit-review-decisions.md", "scope": "Audit review: AMB-12, AMB-14, AMB-15, AMB-23 approved at their working readings; AMB-25 decided as EVIDENCE_NOT_PROVIDED (submission date unavailable; the invoice date is not proof of submission); AMB-05 changed from PER_BHA_RUN to PER_DAY_THEN_MINIMUM"}
  ],
  "approvals": [
   {"switch": "appendix_g_reading", "ambiguity": "AMB-17", "value": "LITERAL", "ambiguity_reading": "A"},
@@ -20,7 +21,18 @@
   {"switch": "pd210_class_factor", "ambiguity": "AMB-02", "value": "DO_NOT_APPLY", "ambiguity_reading": "B"},
   {"switch": "standby_section_factor", "ambiguity": "AMB-03", "value": "OMIT", "ambiguity_reading": "B"},
   {"switch": "rig_services_index", "ambiguity": "AMB-04", "value": "APPLY_FROM_FIRST_MONTH", "ambiguity_reading": "A"},
-  {"switch": "rig_up_hour", "ambiguity": "AMB-05", "value": "PER_BHA_RUN", "ambiguity_reading": "B"},
+  {"switch": "rig_up_hour", "ambiguity": "AMB-05", "value": "PER_DAY_THEN_MINIMUM", "ambiguity_reading": "A",
+   "note": "For each hourly service and report day: the hours the report supports, less the one rig-up hour of Clause 21A, then the 6-hour minimum where it applies. Supersedes PER_BHA_RUN (see superseded)."},
+  {"switch": "backdated_adjustment", "ambiguity": "AMB-12", "value": "CONTRACT_WIDE_ON_OR_AFTER", "ambiguity_reading": "A",
+   "note": "Clause 36A's own words: a single adjustment on the first invoice submitted on or after the date of issue, and on no other. Chosen in the audit phase from the contract text; the alternatives ('after', per well, no repricing) stay in sensitivity and keep their LOW grade."},
+  {"switch": "record_signatories", "ambiguity": "AMB-14", "value": "DDR_SIGNATURES_COVER_PARTS", "ambiguity_reading": "A",
+   "note": "Phase 1 preferred reading A: Schedule 5 makes Parts B-E parts of the one signed Daily Drilling Report."},
+  {"switch": "report_vocabulary", "ambiguity": "AMB-15", "value": "RIG_WORDS_VALID", "ambiguity_reading": "A",
+   "note": "Phase 1 preferred reading A: 19A and Appendix G."},
+  {"switch": "missing_record_consequence", "ambiguity": "AMB-23", "value": "PART_REJECT", "ambiguity_reading": "A",
+   "note": "Consistent with the frozen civil works evidence policy: where the contract makes a record or signature a condition of payment and it is missing, the charge is not presently evidenced or payable; no other financial consequence is attached."},
+  {"switch": "submission_date", "ambiguity": "AMB-25", "value": "UNKNOWN_QUERY", "ambiguity_reading": "B", "decision": "EVIDENCE_NOT_PROVIDED / submission date unavailable",
+   "note": "The invoice date is not proof of the submission date. Timing findings whose only basis is the invoice date are not raised; the invoice-date facts are kept as observations. No submission date is invented or inferred from billing."},
   {"switch": "dd120_hours", "ambiguity": "AMB-06", "value": "CIRCULATING_ONLY", "ambiguity_reading": "A"},
   {"switch": "dd120_rate_from_feb_2026", "ambiguity": "AMB-07", "value": "LATER_ISSUED_GOVERNS", "ambiguity_reading": "A",
    "note": "Amendment No. 3's 416.00 governs DD-120 from its stated effective date (2026-02-01)."},
@@ -47,5 +59,11 @@
  ],
  "decided_in_phase4": ["AMB-06", "AMB-13", "AMB-01", "AMB-02", "AMB-03", "AMB-04", "AMB-05", "AMB-07", "AMB-08", "AMB-10", "AMB-11", "AMB-21", "AMB-26"],
  "unresolved": [],
- "left_for_audit_phase": ["AMB-12", "AMB-14", "AMB-15", "AMB-23", "AMB-25"]
+ "left_for_audit_phase": [],
+ "decided_in_audit_phase": ["AMB-12", "AMB-14", "AMB-15", "AMB-23", "AMB-25"],
+ "superseded": [
+  {"switch": "rig_up_hour", "ambiguity": "AMB-05", "value": "PER_BHA_RUN", "ambiguity_reading": "B", "approved_by": "prompts/drilling/05-approved-pricing-readings.md",
+   "superseded_by": "prompts/drilling/08-audit-review-decisions.md", "superseded_value": "PER_DAY_THEN_MINIMUM",
+   "reason": "Clause 21A states that the report states the hours run and the invoice charges one fewer. Under PER_BHA_RUN, 3,897 DD-120 lines were billed exactly one hour below the report-supported quantity; under PER_DAY_THEN_MINIMUM no hourly line has that systematic difference. The task README says a reading that reprices invoices which otherwise reconcile exactly is probably wrong, and the PER_BHA_RUN approval was LOW confidence. A calibration correction supported by the contract text and a systematic reconciliation signal; no other reading was changed for its fit to billing."}
+ ]
 }

@@ -117,4 +117,4 @@ def test_committed_outputs_are_current_and_deterministic(audit_result, tmp_path)
 
 def test_no_combined_submission(audit_result):
     assert not (paths.REPO_ROOT / "outputs" / "submission.csv").exists()
-    assert not any(Path(paths.REPO_ROOT / "outputs").glob("drilling*"))
+    assert not [p for p in Path(paths.REPO_ROOT / "outputs").glob("drilling*") if "submission" in p.name or (p / "submission.csv").exists()]

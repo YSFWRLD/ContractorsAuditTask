@@ -297,6 +297,8 @@ class ContractTerms:
     contract_years: tuple[ContractYear, ...]
     evidence_not_provided: tuple[str, ...]
     ambiguity_refs: frozenset[str] = field(default_factory=frozenset)
+    contractor: str = ""                                   # the Contractor named in the Form of Agreement
+    clauses: dict[str, tuple[int, str]] = field(default_factory=dict)   # billing and chargeability rules: id -> (page, text)
 
     # ------------------------------------------------------------------ term
     @property

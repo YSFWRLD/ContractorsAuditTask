@@ -50,5 +50,4 @@ def test_quantities_artifact_digest_matches_a_fresh_interpretation(interpretatio
 def test_no_findings_prices_or_submission(interpretation):
     names = {f.name for f in dataclasses.fields(interpretation.quantities[0])}
     assert not {"price", "rate", "amount", "expected", "finding", "flag"} & names
-    assert not paths.outputs_dir("drilling").exists()
     assert not (paths.REPO_ROOT / "outputs" / "submission.csv").exists()

@@ -91,7 +91,7 @@
   },
   {
    "switch": "rig_up_hour",
-   "value": "PER_BHA_RUN",
+   "value": "PER_DAY_THEN_MINIMUM",
    "source": "APPROVED"
   },
   {
@@ -381,5 +381,5 @@
    }
   ]
  },
- "priced_quantities_sha256": "0167e8e7a705723481661c643e19b93b1a8a6e7094aed8d2c4982e1d69aacc9e"
+ "priced_quantities_sha256": "9fb8e181d15f2f7492ef8687cd902712ed57d48fece39c75d55e52f6e9a56fe5"
 }

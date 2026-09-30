@@ -8,7 +8,7 @@
  },
  "background_totals_cents": {
   "canonical": 14742686878,
-  "claimed_class": 26840528397
+  "claimed_class": 26676709042
  },
  "reference_canonical": true,
  "reference_total_cents": 14742686878,
@@ -164,8 +164,8 @@
   {
    "switch": "rig_up_hour",
    "ambiguity": "AMB-05",
-   "approved": "PER_BHA_RUN",
-   "alternative": "PER_DAY_THEN_MINIMUM",
+   "approved": "PER_DAY_THEN_MINIMUM",
+   "alternative": "PER_BHA_RUN",
    "services": [
     "DD-120",
     "RM-530"
@@ -191,7 +191,7 @@
   {
    "switch": "rig_up_hour",
    "ambiguity": "AMB-05",
-   "approved": "PER_BHA_RUN",
+   "approved": "PER_DAY_THEN_MINIMUM",
    "alternative": "NO_DEDUCTION",
    "services": [
     "DD-120",
@@ -220,7 +220,7 @@
   {
    "switch": "rig_up_hour",
    "ambiguity": "AMB-05",
-   "approved": "PER_BHA_RUN",
+   "approved": "PER_DAY_THEN_MINIMUM",
    "alternative": "MINIMUM_THEN_PER_DAY",
    "services": [
     "DD-120",
@@ -516,8 +516,8 @@
     "PD-210"
    ],
    "approved_total_cents": 0,
-   "alternative_total_cents": 12097841519,
-   "delta_cents": 12097841519,
+   "alternative_total_cents": 11934022164,
+   "delta_cents": 11934022164,
    "quantities_changed": 31316,
    "status_approved": {
     "EVIDENCE_NOT_PROVIDED": 31316,
@@ -528,7 +528,7 @@
     "PRICED": 31316
    },
    "delta_by_service_cents": {
-    "DD-120": 3327849250,
+    "DD-120": 3164029895,
     "LW-410": 393531348,
     "LW-411": 471416056,
     "LW-412": 158294844,
@@ -623,8 +623,8 @@
    "services": [
     "DD-120"
    ],
-   "approved_total_cents": 3327849250,
-   "alternative_total_cents": 3428970480,
+   "approved_total_cents": 3164029895,
+   "alternative_total_cents": 3265151125,
    "delta_cents": 101121230,
    "quantities_changed": 9580,
    "status_approved": {
@@ -694,15 +694,15 @@
   {
    "switch": "rig_up_hour",
    "ambiguity": "AMB-05",
-   "approved": "PER_BHA_RUN",
-   "alternative": "PER_DAY_THEN_MINIMUM",
+   "approved": "PER_DAY_THEN_MINIMUM",
+   "alternative": "PER_BHA_RUN",
    "services": [
     "DD-120",
     "RM-530"
    ],
-   "approved_total_cents": 3440441730,
-   "alternative_total_cents": 3276622375,
-   "delta_cents": -163819355,
+   "approved_total_cents": 3276622375,
+   "alternative_total_cents": 3440441730,
+   "delta_cents": 163819355,
    "quantities_changed": 3903,
    "status_approved": {
     "NOT_CHARGEABLE": 184,
@@ -713,7 +713,7 @@
     "PRICED": 5549
    },
    "delta_by_service_cents": {
-    "DD-120": -163819355
+    "DD-120": 163819355
    },
    "background": "claimed_class",
    "confidence": "LOW"
@@ -721,16 +721,16 @@
   {
    "switch": "rig_up_hour",
    "ambiguity": "AMB-05",
-   "approved": "PER_BHA_RUN",
+   "approved": "PER_DAY_THEN_MINIMUM",
    "alternative": "NO_DEDUCTION",
    "services": [
     "DD-120",
     "RM-530"
    ],
-   "approved_total_cents": 3440441730,
+   "approved_total_cents": 3276622375,
    "alternative_total_cents": 3494907795,
-   "delta_cents": 54466065,
-   "quantities_changed": 1646,
+   "delta_cents": 218285420,
+   "quantities_changed": 5549,
    "status_approved": {
     "NOT_CHARGEABLE": 184,
     "PRICED": 5549
@@ -740,7 +740,7 @@
     "PRICED": 5549
    },
    "delta_by_service_cents": {
-    "DD-120": 29519000,
+    "DD-120": 193338355,
     "RM-530": 24947065
    },
    "background": "claimed_class",
@@ -749,16 +749,16 @@
   {
    "switch": "rig_up_hour",
    "ambiguity": "AMB-05",
-   "approved": "PER_BHA_RUN",
+   "approved": "PER_DAY_THEN_MINIMUM",
    "alternative": "MINIMUM_THEN_PER_DAY",
    "services": [
     "DD-120",
     "RM-530"
    ],
-   "approved_total_cents": 3440441730,
+   "approved_total_cents": 3276622375,
    "alternative_total_cents": 3276622375,
-   "delta_cents": -163819355,
-   "quantities_changed": 3903,
+   "delta_cents": 0,
+   "quantities_changed": 0,
    "status_approved": {
     "NOT_CHARGEABLE": 184,
     "PRICED": 5549
@@ -767,9 +767,7 @@
     "NOT_CHARGEABLE": 184,
     "PRICED": 5549
    },
-   "delta_by_service_cents": {
-    "DD-120": -163819355
-   },
+   "delta_by_service_cents": {},
    "background": "claimed_class",
    "confidence": "LOW"
   },
@@ -812,8 +810,8 @@
     "RM-510",
     "RM-511"
    ],
-   "approved_total_cents": 6670879497,
-   "alternative_total_cents": 6672511690,
+   "approved_total_cents": 6507060142,
+   "alternative_total_cents": 6508692335,
    "delta_cents": 1632193,
    "quantities_changed": 406,
    "status_approved": {
@@ -871,9 +869,9 @@
     "MB-701",
     "MW-301"
    ],
-   "approved_total_cents": 10226728931,
-   "alternative_total_cents": 10244425986,
-   "delta_cents": 17697055,
+   "approved_total_cents": 10062909576,
+   "alternative_total_cents": 10079708753,
+   "delta_cents": 16799177,
    "quantities_changed": 1578,
    "status_approved": {
     "NOT_CHARGEABLE": 184,
@@ -884,7 +882,7 @@
     "PRICED": 26560
    },
    "delta_by_service_cents": {
-    "DD-120": 17697055
+    "DD-120": 16799177
    },
    "background": "claimed_class",
    "confidence": "MEDIUM"
@@ -903,9 +901,9 @@
     "MB-701",
     "MW-301"
    ],
-   "approved_total_cents": 10226728931,
-   "alternative_total_cents": 10244425986,
-   "delta_cents": 17697055,
+   "approved_total_cents": 10062909576,
+   "alternative_total_cents": 10079708753,
+   "delta_cents": 16799177,
    "quantities_changed": 1578,
    "status_approved": {
     "NOT_CHARGEABLE": 184,
@@ -916,7 +914,7 @@
     "PRICED": 26560
    },
    "delta_by_service_cents": {
-    "DD-120": 17697055
+    "DD-120": 16799177
    },
    "background": "claimed_class",
    "confidence": "MEDIUM"
@@ -930,8 +928,8 @@
     "DD-120",
     "HC-601"
    ],
-   "approved_total_cents": 3451797721,
-   "alternative_total_cents": 3453732466,
+   "approved_total_cents": 3287978366,
+   "alternative_total_cents": 3289913111,
    "delta_cents": 1934745,
    "quantities_changed": 53,
    "status_approved": {
@@ -1052,9 +1050,9 @@
      "MW-320"
     ],
     "priced_quantities": 24218,
-    "total_cents": 6842202309,
+    "total_cents": 6693015297,
     "by_service_cents": {
-     "DD-120": 3030013796,
+     "DD-120": 2880826784,
      "LW-410": 358496100,
      "LW-411": 429493185,
      "LW-412": 143630346,
@@ -1075,9 +1073,9 @@
      "MW-320"
     ],
     "priced_quantities": 24218,
-    "total_cents": 8039774852,
+    "total_cents": 7864479532,
     "by_service_cents": {
-     "DD-120": 3560277956,
+     "DD-120": 3384982636,
      "LW-410": 421240800,
      "LW-411": 504775710,
      "LW-412": 168811588,
@@ -1098,9 +1096,9 @@
      "MW-320"
     ],
     "priced_quantities": 24218,
-    "total_cents": 9066076398,
+    "total_cents": 8868404051,
     "by_service_cents": {
-     "DD-120": 4014759016,
+     "DD-120": 3817086669,
      "LW-410": 475157100,
      "LW-411": 569084850,
      "LW-412": 190318314,
@@ -1121,9 +1119,9 @@
      "MW-320"
     ],
     "priced_quantities": 24218,
-    "total_cents": 7513039253,
+    "total_cents": 7349219898,
     "by_service_cents": {
-     "DD-120": 3327849250,
+     "DD-120": 3164029895,
      "LW-410": 393531348,
      "LW-411": 471416056,
      "LW-412": 158294844,

@@ -79,7 +79,7 @@ def _price_one(terms, q: Quantity, selection: Selection, classes, rate_for, rate
     common = dict(qid=q.qid, service_code=q.service_code, well=q.well, date=q.date, report_ids=q.report_ids, unit=q.unit,
                   recorded_quantity=q.quantity, evidence=q.evidence)
 
-    def finish(status, why, chargeable, qsteps, parts, amount, amount_without, flag_list):
+    def finish(status, why, chargeable, qsteps, parts, amount, amount_without, flag_list, rate_without=None):
         sources = {n: c.source.value for n, c in selection.choices.items()}
         readings = tuple(dict.fromkeys((s, v, sources.get(s, "?")) for s, v in used))
         conditional = None
@@ -93,7 +93,8 @@ def _price_one(terms, q: Quantity, selection: Selection, classes, rate_for, rate
                 "and kept as a conditional amount only", amount, 0, None)
         return PricedQuantity(**common, chargeable_quantity=chargeable, quantity_steps=qsteps, status=status, reason=why,
                               parts=tuple(parts), amount_cents=amount, amount_without_retroactive_cents=amount_without,
-                              flags=tuple(flag_list), readings_used=readings, conditional_amount_cents=conditional)
+                              flags=tuple(flag_list), readings_used=readings, conditional_amount_cents=conditional,
+                              rate_without_retroactive_cents=rate_without)
 
     eligibility_not_established = False
     if reason:
@@ -137,12 +138,12 @@ def _price_one(terms, q: Quantity, selection: Selection, classes, rate_for, rate
         used += bused
         parts = [PricedPart(chargeable, rate, steps, rate_cents, half_even_cents(chargeable * rate_cents))]
         amount = parts[0].amount_cents
-        without = None
+        without = earlier_cents = None
         if rate.source in retro:
             earlier = rate_for(q.service_code, q.date, rate_reading, retro)
             _, earlier_cents, _ = build_up(terms, service, earlier, day, selection)
             without = half_even_cents(chargeable * earlier_cents)
-        return finish(PricingStatus.PRICED, "", chargeable, qsteps, parts, amount, without, flags)
+        return finish(PricingStatus.PRICED, "", chargeable, qsteps, parts, amount, without, flags, earlier_cents)
     except EvidenceNotProvided as exc:
         return finish(PricingStatus.EVIDENCE_NOT_PROVIDED, str(exc), chargeable, qsteps, (), 0, None, flags)
     except Unpriceable as exc:

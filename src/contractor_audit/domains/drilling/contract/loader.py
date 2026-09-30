@@ -278,4 +278,6 @@ def _build(raw: dict, refs: frozenset[str]) -> ContractTerms:
                              for y in raw["contract_years"]["years"]),
         evidence_not_provided=tuple(e["id"] for e in raw["evidence_not_provided"]),
         ambiguity_refs=refs,
+        contractor=ident["contractor"]["value"],
+        clauses={r["id"]: (r["page"], r["text"]) for r in raw["billing_rules"] + raw["chargeability"]},
     )

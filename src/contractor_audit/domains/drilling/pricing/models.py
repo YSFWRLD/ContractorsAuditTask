@@ -72,6 +72,9 @@ class PricedQuantity:
     # EVIDENCE_NOT_PROVIDED only: what the calculated rate would come to if the missing evidence (eligibility) were
     # established. Conditional, never payable and never in a total; amount_cents stays 0.
     conditional_amount_cents: int | None = None
+    # the per-unit rate at the rates known before a back-dated instrument was issued (Clause 36A); None when no
+    # back-dated instrument changes this quantity's rate
+    rate_without_retroactive_cents: int | None = None
 
 
 @dataclass(frozen=True)

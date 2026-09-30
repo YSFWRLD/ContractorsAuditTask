@@ -105,7 +105,7 @@ def test_approved_readings_shape_the_price(canonical):
     for p in canonical.priced:
         used = {s: v for s, v, _ in p.readings_used}
         if p.service_code == "RM-530" and p.status is PricingStatus.PRICED:
-            assert used["rig_up_hour"] == "PER_BHA_RUN"
+            assert used["rig_up_hour"] == "PER_DAY_THEN_MINIMUM"
         if p.service_code in ("MW-310", "HC-620") and p.status is PricingStatus.PRICED:
             assert used["rig_services_index"] == "APPLY_FROM_FIRST_MONTH"
     hc620 = next(p for p in canonical.priced if p.service_code == "HC-620" and p.status is PricingStatus.PRICED)

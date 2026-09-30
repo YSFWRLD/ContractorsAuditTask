@@ -31,7 +31,7 @@ Nothing is compared with invoices, no invoice is flagged, and the audit phase ha
     - AMB-02 no class factor on PD-210;
     - AMB-03 no section factor on Standby;
     - AMB-04 index from the first month;
-    - AMB-05 rig-up hour once per BHA run;
+    - AMB-05 rig-up hour once per BHA run (superseded in the audit review by PER_DAY_THEN_MINIMUM; see `approved_readings.json` `superseded` and `docs/drilling/phase5_audit.md`);
     - AMB-06 circulating hours only;
     - AMB-07 416.00 from its effective date;
     - AMB-08 base rate, then the build-up;

@@ -2,14 +2,15 @@
 
 Solution to `invoice-auditing-level-2`: audit every civil works payment application
 (`PA-*`) and drilling invoice (`MDS-*`) against its contract and produce one
-`submission.csv`. Status: **civil works frozen (Phase 4); drilling contract extracted (Phase 1), data ingested (Phase 2), reports interpreted into quantities (Phase 3), canonical pricing under approved readings (Phase 4b; audit not started)**.
+`submission.csv`. Status: **civil works frozen (Phase 4); drilling contract extracted (Phase 1), data ingested (Phase 2), reports interpreted into quantities (Phase 3), canonical pricing under approved readings (Phase 4b), invoices audited with draft outputs (Phase 5; audit-phase readings decided in review); combined submission not started**.
 The civil works contract is extracted and reviewed, priced through explicit interpretation switches,
 audited, and its draft outputs are in `outputs/civil_works/`. The drilling contract is transcribed
 into a reviewed, typed model with an ambiguity register. Its invoices, lines and daily reports are
 parsed into typed, traceable objects with a structural validation report. Report words are mapped to
 contract service candidates and evidence-backed quantities under every open reading. A switch-driven
-pricing engine prices them. No canonical drilling price exists until the open readings are approved,
-there is no drilling audit yet, and the combined `submission.csv` is not started.
+pricing engine prices them canonically under the approved readings, and the drilling audit compares every
+invoice with that evidence and writes its draft outputs to `outputs/drilling/`. The combined
+`submission.csv` is not started.
 
 ## Running
 
@@ -20,7 +21,8 @@ python -m pip install -e ".[dev]"
 python -m contractor_audit check-sources
 python -m contractor_audit build-artifacts --domain civil_works
 python -m contractor_audit run --domain civil_works      # audit; writes outputs/civil_works/ (~35 s)
-python -m contractor_audit build-artifacts --domain drilling  # drilling: contract, structural, interpretation, pricing-sensitivity artifacts (~40 s); no audit
+python -m contractor_audit build-artifacts --domain drilling  # drilling: contract, structural, interpretation, pricing artifacts (~40 s)
+python -m contractor_audit run --domain drilling         # audit; writes outputs/drilling/ (~2.5 min, most of it the dependency re-runs)
 python -m pytest
 ```
 
@@ -69,7 +71,7 @@ It must not import any domain; `tests/test_architecture.py` enforces this.
 | `valuation.py` | whole-dataset valuation; retention, 31A adjustment and 45A release kept outside the measured total |
 | `record_quantities.py`, `quantity_rules.py` | rule-based record quantities; 6A, 33/33A, 47A, 31 and 32/P19/P21 evaluators |
 | `sensitivity.py`, `pricing_reports.py` | effect of every alternative reading; Phase 2 artifacts |
-| `pipeline.py` | domain entry point; `run()` deliberately not implemented yet |
+| `pipeline.py` | domain entry point; `run()` audits every application and writes `outputs/civil_works/` |
 
 **Data locations**
 
@@ -110,11 +112,11 @@ For drilling, `build-artifacts` is contract-only:
 
 It also ingests the operational data (`ingestion/`: typed invoices, lines and Daily Drilling Reports, indexes, well timelines, BHA runs) and writes `phase2_structural_validation.{json,md}`, which holds neutral observations, not findings. Then it interprets the reports (`interpretation.engine.interpret`, which accepts reports and the contract only) and writes `phase3_*` mapping, quantity, switch and descriptive billed-code coverage artifacts. Finally it prices the quantities under the approved readings and writes `phase4_canonical_pricing.{json,md}`. Prices that need the missing call-off are `EVIDENCE_NOT_PROVIDED` (AMB-13: UNKNOWN / UNVERIFIED). It also writes the hypothetical `phase4_pricing_sensitivity.*` and the `phase4_decision_table.md` decision record. Approved readings live in `artifacts/drilling/approved_readings.json`.
 
-`run` exits with code 2 ("not implemented") and writes nothing.
+`run` audits every drilling invoice against that evidence (the twelve checks) and writes the draft outputs to `outputs/drilling/`; see "Drilling audit (Phase 5)" below.
 
 `contract/models.py` keeps every rate statement with its issue and effective dates. `rate_statements_on(code, date)` lists the candidates for a service date and never chooses between them.
 
-See `docs/drilling/phase4_pricing_engine.md` (Phase 4), `docs/drilling/phase3_service_mapping.md` (Phase 3), `docs/drilling/phase2_ingestion.md` and `phase2_data_inventory.md` (Phase 2), `phase1_contract_extraction.md` (Phase 1) and `phase0_inventory.md` (Phase 0).
+See `docs/drilling/phase5_audit.md` (Phase 5), `docs/drilling/phase4_pricing_engine.md` (Phase 4), `docs/drilling/phase3_service_mapping.md` (Phase 3), `docs/drilling/phase2_ingestion.md` and `phase2_data_inventory.md` (Phase 2), `phase1_contract_extraction.md` (Phase 1) and `phase0_inventory.md` (Phase 0).
 
 **Dependency direction:** `cli` → `domains` registry → `domains/<domain>` → `shared`.
 
@@ -177,3 +179,20 @@ Outputs (`outputs/civil_works/`, civil works draft only, not the combined submis
 | `review.md` | the Phase 4 freeze review: guideline checklist, category matrix, adversarial checks, duplicate / exclusion / split-line / total verification |
 
 Confidence bands (evidence quality, not probability): HIGH 0.95, MEDIUM 0.75, LOW 0.55. A corrected total is published only when no unresolved reading changes it (STRICT policy); otherwise it is blank and `primary_blank_reason` says why. Civil works is frozen as of Phase 4; the current policy is at the top of `docs/civil_works/decision_log.md`.
+
+## Drilling audit (Phase 5)
+
+`domains/drilling/audit/`: the contract-side prices are established from the reports first (`bundle.py`); only then are the invoices compared with them.
+
+| module | role |
+|---|---|
+| `categories.py` | the drilling error-category vocabulary, each tied to a guideline check and clause; `entitlement_unverified` is the one query that never flags |
+| `policy.py` | the readings the audit uses: the approved ones, including the audit-phase decisions (AMB-12, 14, 15, 23 approved; AMB-25 evidence not provided), each with its grade |
+| `bundle.py` | canonical prices, plus the conditional price of each call-off-dependent charge under each possible well class (AMB-13) |
+| `lines.py`, `diagnosis.py` | checks 2-11 per line; a shared ledger of report evidence already charged (duplicates within and across invoices); rate differences diagnosed to one build-up component |
+| `invoices.py`, `engine.py` | invoice-level checks (reference, timing, arithmetic, VAT, DS-900, the Clause 36A adjustment) and the valuation |
+| `dependencies.py`, `results.py`, `runner.py` | re-runs the audit under every alternative reading; confidence and the STRICT corrected-total policy |
+
+Outputs (`outputs/drilling/`, drilling draft only, not the combined submission): `draft_predictions.csv` (the 1,906 `MDS-*` rows in the template columns), `invoice_audit.csv`, `findings.jsonl`, `audit_summary.md`, `coverage.md`, `uncertainty_report.md`, `sensitivity.md`, `review.md`.
+
+The call-offs are not in the data (AMB-13, approved as UNKNOWN / UNVERIFIED) and every invoice charges a class-rated service, so no drilling corrected total is published; the conditional total (claimed entitlement confirmed) is kept in `invoice_audit.csv` for analysis only. See `docs/drilling/phase5_audit.md`.

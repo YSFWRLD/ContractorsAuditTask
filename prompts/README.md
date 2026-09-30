@@ -20,6 +20,9 @@ The task requires AI assistance to be disclosed and prompts kept as versioned fi
 | `drilling/04-pricing-engine.md` | approvals after the Phase 3 review, decision table, switch-driven pricing engine (no canonical price, no invoice comparison) |
 | `drilling/05-approved-pricing-readings.md` | Phase 4 approvals; AMB-13 approved as UNKNOWN / UNVERIFIED; canonical pricing coverage and sensitivity (no invoice comparison) |
 | `drilling/06-pd201-strict-amb13.md` | strict AMB-13 treatment for PD-201: eligibility not established, conditional amount only (no invoice comparison) |
+| `drilling/07-audit-invoice-comparison.md` | the drilling audit: the twelve checks, invoice comparison, findings, draft outputs in `outputs/drilling/`, adversarial review (no combined submission) |
+| `drilling/08-audit-review-decisions.md` | audit review: AMB-12/14/15/23 approved, AMB-25 evidence not provided, AMB-05 changed to PER_DAY_THEN_MINIMUM, well-class findings kept |
+| `drilling/09-well-class-decision-and-freeze.md` | well-class decision (the invoice's class is descriptive: non-flagging AMB-13 query) and the drilling freeze checks |
 
 ## How AI was used in Phase 1
 
@@ -89,3 +92,19 @@ and no reading was chosen because it reconciles billed amounts. No invoice was c
 
 Following the user's instruction (`06-pd201-strict-amb13.md`), the assistant extended the same treatment to PD-201.
 Its calculated rate is kept as a conditional, not-payable amount. Tests show that no invoice claim can make it canonically payable.
+
+## How AI was used in Drilling Phase 5
+
+The AI assistant wrote the audit layer, its draft outputs, the adversarial review and the tests. The rules are deterministic
+Python; no language model is called at runtime. Contract-side prices are built from the reports before any invoice is read,
+and the invoice's class, codes, quantities and rates are only compared with them. The five audit-phase readings are working
+readings chosen from the contract text, not approved; every alternative is measured by re-running the audit. The approved
+readings were not changed. Where billing agrees with an alternative reading better than with an approved one (AMB-05), this
+is reported for decision, not acted on. The task's 5-8 per cent statement was not used to create, remove or grade a finding.
+
+## How AI was used in the drilling audit review
+
+The AI assistant recorded the user's decisions verbatim in `approved_readings.json`, including the superseded AMB-05 reading
+and the reason for the change. It applied them, re-ran pricing and the audit, and reported what changed. It also checked the
+contract before touching the well-class findings: Clause 34 and the Appendix B form do not include a well class, so it
+reported this and kept the findings as they were. No other approved reading was changed.

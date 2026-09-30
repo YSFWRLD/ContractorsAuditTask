@@ -52,10 +52,13 @@ def test_approvals_are_recorded_and_cannot_be_overridden(switches, approved):
         "appendix_g_reading": "LITERAL", "dd121_condition": "STANDBY_DAY_RSS_IN_HOLE", "metre_source": "DAILY_DEPTH_ADVANCE",
         "dd102_basis": "PER_COORDINATOR_RECORDED", "hc630_basis": "DAILY_COUNT", "lih_hours": "PART_E_STATED",
         "unranked_precedence": "NO_RANK_CASE_BY_CASE", "pd210_class_factor": "DO_NOT_APPLY", "standby_section_factor": "OMIT",
-        "rig_services_index": "APPLY_FROM_FIRST_MONTH", "rig_up_hour": "PER_BHA_RUN", "dd120_hours": "CIRCULATING_ONLY",
+        "rig_services_index": "APPLY_FROM_FIRST_MONTH", "rig_up_hour": "PER_DAY_THEN_MINIMUM", "dd120_hours": "CIRCULATING_ONLY",
         "dd120_rate_from_feb_2026": "LATER_ISSUED_GOVERNS", "monthly_rate_basis": "BASE_RATE_THEN_BUILD_UP", "volume_tier_scope": "PER_WELL",
         "contract_year_2": "STARTS_2026_01_01", "lih_replacement_value": "SCHEDULE_2D_CONVERTED", "ds900_threshold_basis": "SERVICES_ONLY",
-        "calloff_evidence": "UNVERIFIABLE_QUERY"}
+        "calloff_evidence": "UNVERIFIABLE_QUERY",
+        # audit-phase decisions (prompts/drilling/08): AMB-12, 14, 15, 23 approved; AMB-25 EVIDENCE_NOT_PROVIDED
+        "backdated_adjustment": "CONTRACT_WIDE_ON_OR_AFTER", "record_signatories": "DDR_SIGNATURES_COVER_PARTS",
+        "report_vocabulary": "RIG_WORDS_VALID", "missing_record_consequence": "PART_REJECT", "submission_date": "UNKNOWN_QUERY"}
     with pytest.raises(ValueError, match="may not replace"):
         build_selection(switches, approved, {"metre_source": "PART_B_RUN_METRES"})
     assert build_selection(switches, approved).canonical
@@ -275,8 +278,7 @@ def test_sensitivity_is_hypothetical_and_nothing_is_audited_or_submitted():
     assert data["reference_canonical"] is True and "HYPOTHETICAL" in data["note"]
     assert {r["background"] for r in data["switches"]} == {"canonical", "claimed_class"}
     flipped = {(r["switch"], r["alternative"]) for r in data["switches"]}
-    assert ("rig_up_hour", "PER_DAY_THEN_MINIMUM") in flipped and ("volume_tier_scope", "CONTRACT_WIDE") in flipped
-    assert not paths.outputs_dir("drilling").exists()
+    assert ("rig_up_hour", "PER_BHA_RUN") in flipped and ("volume_tier_scope", "CONTRACT_WIDE") in flipped
     assert not (paths.REPO_ROOT / "outputs" / "submission.csv").exists()
     names = {p.name for p in ART.iterdir()}
     assert not {n for n in names if "finding" in n or "submission" in n or "audit" in n}
